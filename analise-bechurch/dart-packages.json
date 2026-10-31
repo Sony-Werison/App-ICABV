@@ -1,0 +1,4618 @@
+[
+  {
+    "uri": "package:collection/src/canonicalized_map.dart",
+    "offset": 233259
+  },
+  {
+    "uri": "package:flutter/src/widgets/app_lifecycle_listener.dart",
+    "offset": 234575
+  },
+  {
+    "uri": "package:json_path/src/fun/fun.dart",
+    "offset": 237577
+  },
+  {
+    "uri": "package:source_span/src/span_exception.dart",
+    "offset": 238313
+  },
+  {
+    "uri": "package:flutter/src/widgets/widget_span.dart",
+    "offset": 238737
+  },
+  {
+    "uri": "package:json_path/src/fun/fun_factory.dart",
+    "offset": 239083
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/webview_flutter_original_utils.dart",
+    "offset": 240075
+  },
+  {
+    "uri": "package:aligned_tooltip/src/aligned_tooltip.dart",
+    "offset": 242427
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/object_member.dart",
+    "offset": 242650
+  },
+  {
+    "uri": "package:flutter/src/animation/animation_controller.dart",
+    "offset": 242993
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/platform_webview_widget.dart",
+    "offset": 243243
+  },
+  {
+    "uri": "package:flutter/src/widgets/restoration_properties.dart",
+    "offset": 244331
+  },
+  {
+    "uri": "package:json_path/src/grammar/json_path.dart",
+    "offset": 244914
+  },
+  {
+    "uri": "package:be_church/components/bs_recusar_escala_widget.dart",
+    "offset": 247069
+  },
+  {
+    "uri": "package:flutter/src/widgets/sliver_prototype_extent_list.dart",
+    "offset": 247537
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/string_matcher.dart",
+    "offset": 247609
+  },
+  {
+    "uri": "package:webviewx_plus/src/controller/impl/mobile.dart",
+    "offset": 248978
+  },
+  {
+    "uri": "package:intl/src/intl/string_stack.dart",
+    "offset": 250531
+  },
+  {
+    "uri": "package:flutter/src/widgets/icon.dart",
+    "offset": 251143
+  },
+  {
+    "uri": "package:flutter/src/widgets/interactive_viewer.dart",
+    "offset": 251392
+  },
+  {
+    "uri": "package:mime_type/mime_type.dart",
+    "offset": 252198
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/logout_one_signal.dart",
+    "offset": 253358
+  },
+  {
+    "uri": "package:flutter/src/material/segmented_button_theme.dart",
+    "offset": 254841
+  },
+  {
+    "uri": "package:be_church/components/popup_igreja_model.dart",
+    "offset": 255577
+  },
+  {
+    "uri": "package:flutter/src/material/theme.dart",
+    "offset": 256680
+  },
+  {
+    "uri": "package:flutter/src/material/bottom_sheet.dart",
+    "offset": 258190
+  },
+  {
+    "uri": "package:supabase_flutter/src/local_storage.dart",
+    "offset": 259348
+  },
+  {
+    "uri": "package:petitparser/src/parser/action/map.dart",
+    "offset": 260499
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_r.g.dart",
+    "offset": 260912
+  },
+  {
+    "uri": "package:flutter/src/widgets/gesture_detector.dart",
+    "offset": 261435
+  },
+  {
+    "uri": "package:flutter/src/foundation/diagnostics.dart",
+    "offset": 264331
+  },
+  {
+    "uri": "package:source_span/src/span_with_context.dart",
+    "offset": 265264
+  },
+  {
+    "uri": "package:flutter/src/foundation/change_notifier.dart",
+    "offset": 266029
+  },
+  {
+    "uri": "package:gotrue/src/constants.dart",
+    "offset": 267712
+  },
+  {
+    "uri": "package:petitparser/src/parser/misc/newline.dart",
+    "offset": 270201
+  },
+  {
+    "uri": "package:vector_math/src/vector_math_64/matrix4.dart",
+    "offset": 270387
+  },
+  {
+    "uri": "package:flutter/src/foundation/binding.dart",
+    "offset": 271093
+  },
+  {
+    "uri": "package:flutter/src/foundation/synchronous_future.dart",
+    "offset": 272398
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard.dart",
+    "offset": 275288
+  },
+  {
+    "uri": "package:flutter/src/painting/box_border.dart",
+    "offset": 277248
+  },
+  {
+    "uri": "package:flutter/src/foundation/consolidate_response.dart",
+    "offset": 278712
+  },
+  {
+    "uri": "package:chewie/src/chewie_player.dart",
+    "offset": 279964
+  },
+  {
+    "uri": "package:be_church/pages/k_celulas/k_celulas_model.dart",
+    "offset": 280366
+  },
+  {
+    "uri": "package:flutter/src/material/checkbox_list_tile.dart",
+    "offset": 281190
+  },
+  {
+    "uri": "package:image_picker_platform_interface/src/method_channel/method_channel_image_picker.dart",
+    "offset": 282085
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/platform_interface/platform_interface_firebase_plugin.dart",
+    "offset": 282276
+  },
+  {
+    "uri": "package:json_path/src/expression/nodes.dart",
+    "offset": 285346
+  },
+  {
+    "uri": "package:flutter/src/painting/_network_image_io.dart",
+    "offset": 285517
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_q.g.dart",
+    "offset": 287498
+  },
+  {
+    "uri": "package:file_picker/src/file_picker_io.dart",
+    "offset": 289285
+  },
+  {
+    "uri": "package:app_links_platform_interface/app_links_platform_interface.dart",
+    "offset": 291922
+  },
+  {
+    "uri": "package:petitparser/src/parser/utils/resolvable.dart",
+    "offset": 292210
+  },
+  {
+    "uri": "package:flutter/src/rendering/rotated_box.dart",
+    "offset": 293243
+  },
+  {
+    "uri": "package:video_player_platform_interface/video_player_platform_interface.dart",
+    "offset": 293481
+  },
+  {
+    "uri": "package:lock_orientation_library_opafp4/custom_code/actions/lock_orientation.dart",
+    "offset": 294502
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/web_specific_params.dart",
+    "offset": 296700
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/firebase_core_platform_interface.dart",
+    "offset": 297192
+  },
+  {
+    "uri": "package:flutter/src/material/progress_indicator_theme.dart",
+    "offset": 297403
+  },
+  {
+    "uri": "package:async/src/result/error.dart",
+    "offset": 297575
+  },
+  {
+    "uri": "package:flutter/src/material/button_bar_theme.dart",
+    "offset": 297858
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/tables/lancamentos.dart",
+    "offset": 298462
+  },
+  {
+    "uri": "package:crypto/src/digest_sink.dart",
+    "offset": 298628
+  },
+  {
+    "uri": "package:flutter/src/material/icon_button.dart",
+    "offset": 299194
+  },
+  {
+    "uri": "package:flutter/src/material/menu_button_theme.dart",
+    "offset": 299574
+  },
+  {
+    "uri": "package:flutter/src/material/radio.dart",
+    "offset": 300069
+  },
+  {
+    "uri": "package:flutter/src/rendering/object.dart",
+    "offset": 301033
+  },
+  {
+    "uri": "package:flutter/src/gestures/tap.dart",
+    "offset": 301861
+  },
+  {
+    "uri": "package:json_path/src/grammar/union_selector.dart",
+    "offset": 302086
+  },
+  {
+    "uri": "package:flutter/src/widgets/annotated_region.dart",
+    "offset": 302295
+  },
+  {
+    "uri": "package:flutter/src/material/page.dart",
+    "offset": 302791
+  },
+  {
+    "uri": "package:intl/src/intl/constants.dart",
+    "offset": 304149
+  },
+  {
+    "uri": "package:material_color_utilities/hct/hct.dart",
+    "offset": 306353
+  },
+  {
+    "uri": "package:url_launcher_android/url_launcher_android.dart",
+    "offset": 306399
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/firebase_exception.dart",
+    "offset": 307114
+  },
+  {
+    "uri": "package:flutter/src/material/text_selection_toolbar_text_button.dart",
+    "offset": 308451
+  },
+  {
+    "uri": "package:gotrue/src/types/auth_state.dart",
+    "offset": 309489
+  },
+  {
+    "uri": "package:flutter/src/painting/border_radius.dart",
+    "offset": 310542
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/init.dart",
+    "offset": 311674
+  },
+  {
+    "uri": "package:rxdart/src/streams/defer.dart",
+    "offset": 314299
+  },
+  {
+    "uri": "package:flutter/src/material/snack_bar.dart",
+    "offset": 314360
+  },
+  {
+    "uri": "package:json_path/src/grammar/filter_selector.dart",
+    "offset": 314566
+  },
+  {
+    "uri": "package:flutter/src/material/data_table_theme.dart",
+    "offset": 314793
+  },
+  {
+    "uri": "package:url_launcher_platform_interface/src/url_launcher_platform.dart",
+    "offset": 316365
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_celula_model.dart",
+    "offset": 316821
+  },
+  {
+    "uri": "package:be_church/flutter_flow/instant_timer.dart",
+    "offset": 316951
+  },
+  {
+    "uri": "package:be_church/pages/kk_encontros/kk_encontros_model.dart",
+    "offset": 317539
+  },
+  {
+    "uri": "package:petitparser/src/core/result.dart",
+    "offset": 318226
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_delegate.dart",
+    "offset": 318935
+  },
+  {
+    "uri": "package:http/src/multipart_request.dart",
+    "offset": 319722
+  },
+  {
+    "uri": "package:be_church/pages/zz_emocoes/zz_emocoes_widget.dart",
+    "offset": 320356
+  },
+  {
+    "uri": "package:page_transition/src/enum.dart",
+    "offset": 320414
+  },
+  {
+    "uri": "package:sqflite_common/src/open_options.dart",
+    "offset": 321667
+  },
+  {
+    "uri": "package:json_path/src/json_path_parser.dart",
+    "offset": 321749
+  },
+  {
+    "uri": "package:be_church/components/popup_voluntario_widget.dart",
+    "offset": 323022
+  },
+  {
+    "uri": "package:flutter/src/widgets/modal_barrier.dart",
+    "offset": 323634
+  },
+  {
+    "uri": "package:crypto/src/hash.dart",
+    "offset": 327493
+  },
+  {
+    "uri": "package:be_church/pages/e_ministerios/e_ministerios_model.dart",
+    "offset": 327665
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/player_value.dart",
+    "offset": 327977
+  },
+  {
+    "uri": "package:flutter/src/material/dropdown.dart",
+    "offset": 328254
+  },
+  {
+    "uri": "package:http/src/multipart_file.dart",
+    "offset": 328888
+  },
+  {
+    "uri": "package:flutter/src/material/list_tile_theme.dart",
+    "offset": 329598
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/custom_auth_manager.dart",
+    "offset": 330009
+  },
+  {
+    "uri": "package:be_church/pages/l_configuracoes/l_configuracoes_widget.dart",
+    "offset": 331065
+  },
+  {
+    "uri": "package:flutter/src/material/floating_action_button_theme.dart",
+    "offset": 331401
+  },
+  {
+    "uri": "package:flutter/src/material/search_bar_theme.dart",
+    "offset": 332958
+  },
+  {
+    "uri": "package:flutter/src/rendering/view.dart",
+    "offset": 334058
+  },
+  {
+    "uri": "package:flutter/src/foundation/persistent_hash_map.dart",
+    "offset": 334965
+  },
+  {
+    "uri": "package:ff_commons/api_requests/api_manager.dart",
+    "offset": 336790
+  },
+  {
+    "uri": "package:be_church/pages/m_minha_conta/m_minha_conta_widget.dart",
+    "offset": 337010
+  },
+  {
+    "uri": "package:intl/date_symbols.dart",
+    "offset": 337969
+  },
+  {
+    "uri": "package:flutter/src/physics/friction_simulation.dart",
+    "offset": 339508
+  },
+  {
+    "uri": "package:sqflite_common/src/database.dart",
+    "offset": 340047
+  },
+  {
+    "uri": "package:mime/src/mime_type.dart",
+    "offset": 340127
+  },
+  {
+    "uri": "package:http_parser/src/utils.dart",
+    "offset": 340485
+  },
+  {
+    "uri": "package:rxdart/src/utils/forwarding_sink.dart",
+    "offset": 340590
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/controller/youtube_player_controller.dart",
+    "offset": 340718
+  },
+  {
+    "uri": "package:flutter/src/services/undo_manager.dart",
+    "offset": 341114
+  },
+  {
+    "uri": "package:flutter/src/foundation/platform.dart",
+    "offset": 341690
+  },
+  {
+    "uri": "package:petitparser/src/parser/repeater/possessive.dart",
+    "offset": 341927
+  },
+  {
+    "uri": "package:flutter/src/widgets/binding.dart",
+    "offset": 342177
+  },
+  {
+    "uri": "package:retry/retry.dart",
+    "offset": 342646
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_widgets.dart",
+    "offset": 343438
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_m.g.dart",
+    "offset": 345711
+  },
+  {
+    "uri": "package:webviewx_plus/src/view/interface.dart",
+    "offset": 347212
+  },
+  {
+    "uri": "package:path/src/utils.dart",
+    "offset": 348365
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/variant.dart",
+    "offset": 348658
+  },
+  {
+    "uri": "package:json_path/src/json_path_internal.dart",
+    "offset": 348941
+  },
+  {
+    "uri": "package:flutter/src/material/scrollbar_theme.dart",
+    "offset": 351592
+  },
+  {
+    "uri": "package:path_provider_android/messages.g.dart",
+    "offset": 351676
+  },
+  {
+    "uri": "package:path/src/style/windows.dart",
+    "offset": 352071
+  },
+  {
+    "uri": "package:flutter/src/material/banner.dart",
+    "offset": 352170
+  },
+  {
+    "uri": "package:vector_math/src/vector_math_64/vector4.dart",
+    "offset": 352781
+  },
+  {
+    "uri": "package:auto_orientation/auto_orientation.dart",
+    "offset": 355973
+  },
+  {
+    "uri": "package:equatable/src/equatable_utils.dart",
+    "offset": 356333
+  },
+  {
+    "uri": "package:sqflite_common/src/database_mixin.dart",
+    "offset": 356592
+  },
+  {
+    "uri": "package:flutter/src/foundation/licenses.dart",
+    "offset": 357406
+  },
+  {
+    "uri": "package:async/src/result/value.dart",
+    "offset": 359300
+  },
+  {
+    "uri": "package:flutter/src/widgets/sliver_fill.dart",
+    "offset": 359414
+  },
+  {
+    "uri": "package:flutter/src/services/font_loader.dart",
+    "offset": 360088
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_linux.dart",
+    "offset": 361452
+  },
+  {
+    "uri": "package:http/src/byte_stream.dart",
+    "offset": 362702
+  },
+  {
+    "uri": "package:flutter/src/painting/text_style.dart",
+    "offset": 363547
+  },
+  {
+    "uri": "package:intl/src/global_state.dart",
+    "offset": 366187
+  },
+  {
+    "uri": "package:flutter/src/rendering/shifted_box.dart",
+    "offset": 366772
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/meta_data.dart",
+    "offset": 367115
+  },
+  {
+    "uri": "package:source_span/src/utils.dart",
+    "offset": 367312
+  },
+  {
+    "uri": "package:be_church/teste/teste_widget.dart",
+    "offset": 370377
+  },
+  {
+    "uri": "package:sqflite_common/src/mixin/factory.dart",
+    "offset": 370526
+  },
+  {
+    "uri": "package:sqflite_common/src/path_utils.dart",
+    "offset": 370672
+  },
+  {
+    "uri": "package:flutter/src/painting/circle_border.dart",
+    "offset": 371143
+  },
+  {
+    "uri": "package:json_path/src/grammar/dot_name.dart",
+    "offset": 372100
+  },
+  {
+    "uri": "package:flutter/src/widgets/page_transitions_builder.dart",
+    "offset": 372944
+  },
+  {
+    "uri": "package:json_path/src/json_path_match.dart",
+    "offset": 375989
+  },
+  {
+    "uri": "package:flutter/src/material/input_border.dart",
+    "offset": 376767
+  },
+  {
+    "uri": "package:material_color_utilities/hct/cam16.dart",
+    "offset": 379656
+  },
+  {
+    "uri": "package:storage_client/src/fetch.dart",
+    "offset": 380629
+  },
+  {
+    "uri": "package:synchronized/src/reentrant_lock.dart",
+    "offset": 381485
+  },
+  {
+    "uri": "package:go_router/src/route.dart",
+    "offset": 382544
+  },
+  {
+    "uri": "package:flutter/src/painting/stadium_border.dart",
+    "offset": 382848
+  },
+  {
+    "uri": "package:flutter/src/physics/utils.dart",
+    "offset": 383574
+  },
+  {
+    "uri": "package:flutter/src/rendering/image.dart",
+    "offset": 383705
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/helpers/youtube_value_provider.dart",
+    "offset": 385584
+  },
+  {
+    "uri": "package:rxdart/src/subjects/subject.dart",
+    "offset": 386395
+  },
+  {
+    "uri": "package:flutter/src/widgets/notification_listener.dart",
+    "offset": 386469
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/not.dart",
+    "offset": 386872
+  },
+  {
+    "uri": "package:be_church/components/popup_enviado_celula_widget.dart",
+    "offset": 389455
+  },
+  {
+    "uri": "package:flutter/src/services/text_input.dart",
+    "offset": 390041
+  },
+  {
+    "uri": "package:flutter/src/services/text_editing.dart",
+    "offset": 390970
+  },
+  {
+    "uri": "package:dropdown_button2/src/dropdown_button2.dart",
+    "offset": 391049
+  },
+  {
+    "uri": "package:flutter/src/painting/text_span.dart",
+    "offset": 391453
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart",
+    "offset": 392337
+  },
+  {
+    "uri": "package:be_church/pages/nnn_orar/nnn_orar_model.dart",
+    "offset": 394087
+  },
+  {
+    "uri": "package:flutter_animate/src/effects/fade_effect.dart",
+    "offset": 394655
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_j.g.dart",
+    "offset": 397584
+  },
+  {
+    "uri": "package:flutter/src/material/material_localizations.dart",
+    "offset": 397883
+  },
+  {
+    "uri": "package:petitparser/src/parser/predicate/string.dart",
+    "offset": 398107
+  },
+  {
+    "uri": "package:supabase_flutter/src/supabase_auth.dart",
+    "offset": 398456
+  },
+  {
+    "uri": "package:flutter/src/cupertino/localizations.dart",
+    "offset": 398849
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_family_with_variant.dart",
+    "offset": 398995
+  },
+  {
+    "uri": "package:collection/src/iterable_extensions.dart",
+    "offset": 400622
+  },
+  {
+    "uri": "package:flutter/src/material/bottom_app_bar_theme.dart",
+    "offset": 400701
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/init_one_signal.dart",
+    "offset": 401450
+  },
+  {
+    "uri": "package:flutter/src/foundation/_isolates_io.dart",
+    "offset": 401632
+  },
+  {
+    "uri": "package:be_church/pages/g1_devocional/g1_devocional_model.dart",
+    "offset": 401794
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/mobile_specific_params.dart",
+    "offset": 402082
+  },
+  {
+    "uri": "package:flutter/src/services/system_sound.dart",
+    "offset": 402390
+  },
+  {
+    "uri": "package:webview_flutter_android/src/android_proxy.dart",
+    "offset": 402699
+  },
+  {
+    "uri": "package:flutter/src/widgets/dual_transition_builder.dart",
+    "offset": 404584
+  },
+  {
+    "uri": "package:realtime_client/src/retry_timer.dart",
+    "offset": 406276
+  },
+  {
+    "uri": "package:url_launcher_android/src/messages.g.dart",
+    "offset": 406699
+  },
+  {
+    "uri": "package:flutter/src/gestures/velocity_tracker.dart",
+    "offset": 408470
+  },
+  {
+    "uri": "package:flutter/src/painting/inline_span.dart",
+    "offset": 409202
+  },
+  {
+    "uri": "package:be_church/components/lista_vazia_widget.dart",
+    "offset": 410838
+  },
+  {
+    "uri": "package:sqflite/src/sqflite_impl.dart",
+    "offset": 413418
+  },
+  {
+    "uri": "package:image_picker_android/image_picker_android.dart",
+    "offset": 413459
+  },
+  {
+    "uri": "package:async/src/cancelable_operation.dart",
+    "offset": 414265
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluida/zz_excluida_widget.dart",
+    "offset": 414646
+  },
+  {
+    "uri": "package:flutter/src/material/button_style.dart",
+    "offset": 415448
+  },
+  {
+    "uri": "package:rxdart/src/utils/empty.dart",
+    "offset": 415577
+  },
+  {
+    "uri": "package:material_color_utilities/utils/color_utils.dart",
+    "offset": 416235
+  },
+  {
+    "uri": "package:material_color_utilities/palettes/tonal_palette.dart",
+    "offset": 419348
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/firebase_core_exceptions.dart",
+    "offset": 420615
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_encontro_model.dart",
+    "offset": 420829
+  },
+  {
+    "uri": "package:ff_commons/flutter_flow/upload_data_class.dart",
+    "offset": 423003
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_k.g.dart",
+    "offset": 424500
+  },
+  {
+    "uri": "package:flutter/src/widgets/heroes.dart",
+    "offset": 424797
+  },
+  {
+    "uri": "package:be_church/pages/d_criar_cadastro/d_criar_cadastro_model.dart",
+    "offset": 426791
+  },
+  {
+    "uri": "package:gotrue/src/types/mfa.dart",
+    "offset": 426885
+  },
+  {
+    "uri": "package:flutter/src/material/text_selection_toolbar.dart",
+    "offset": 427240
+  },
+  {
+    "uri": "package:flutter/src/services/system_chrome.dart",
+    "offset": 430473
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/lowercase.dart",
+    "offset": 432340
+  },
+  {
+    "uri": "package:json_path/src/node.dart",
+    "offset": 433600
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/webview_content_model.dart",
+    "offset": 433772
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/helpers/youtube_value_builder.dart",
+    "offset": 434210
+  },
+  {
+    "uri": "package:onesignal_flutter/onesignal_flutter.dart",
+    "offset": 437986
+  },
+  {
+    "uri": "package:flutter/src/widgets/default_selection_style.dart",
+    "offset": 438220
+  },
+  {
+    "uri": "package:json_path/src/node_match.dart",
+    "offset": 438645
+  },
+  {
+    "uri": "package:petitparser/src/core/context.dart",
+    "offset": 438953
+  },
+  {
+    "uri": "package:be_church/pages/f_cultos/f_cultos_model.dart",
+    "offset": 439744
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/digit.dart",
+    "offset": 439970
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/generated/sequence_2.dart",
+    "offset": 441675
+  },
+  {
+    "uri": "package:flutter/src/cupertino/nav_bar.dart",
+    "offset": 442186
+  },
+  {
+    "uri": "package:flutter/src/material/ink_highlight.dart",
+    "offset": 442587
+  },
+  {
+    "uri": "package:term_glyph/term_glyph.dart",
+    "offset": 443031
+  },
+  {
+    "uri": "package:json_path/src/grammar/wildcard.dart",
+    "offset": 444343
+  },
+  {
+    "uri": "package:flutter/src/services/text_layout_metrics.dart",
+    "offset": 444866
+  },
+  {
+    "uri": "package:be_church/pages/zz_emocoes/zz_emocoes_model.dart",
+    "offset": 446103
+  },
+  {
+    "uri": "package:flutter/src/rendering/custom_paint.dart",
+    "offset": 446160
+  },
+  {
+    "uri": "package:http/src/base_client.dart",
+    "offset": 446549
+  },
+  {
+    "uri": "package:rxdart/src/rx.dart",
+    "offset": 446995
+  },
+  {
+    "uri": "package:flutter/src/widgets/feedback.dart",
+    "offset": 448955
+  },
+  {
+    "uri": "package:flutter/src/widgets/text_selection_toolbar_layout_delegate.dart",
+    "offset": 450116
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_base.dart",
+    "offset": 450498
+  },
+  {
+    "uri": "package:flutter/src/services/binary_messenger.dart",
+    "offset": 450604
+  },
+  {
+    "uri": "package:source_span/src/span_mixin.dart",
+    "offset": 451292
+  },
+  {
+    "uri": "package:be_church/components/popup_logado_model.dart",
+    "offset": 451440
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/method_channel/method_channel_firebase_app.dart",
+    "offset": 452318
+  },
+  {
+    "uri": "package:flutter/src/rendering/custom_layout.dart",
+    "offset": 452891
+  },
+  {
+    "uri": "package:intl/src/plural_rules.dart",
+    "offset": 453780
+  },
+  {
+    "uri": "package:flutter/src/widgets/selection_container.dart",
+    "offset": 454001
+  },
+  {
+    "uri": "package:flutter/src/semantics/binding.dart",
+    "offset": 454301
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_variant.dart",
+    "offset": 455295
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/search.dart",
+    "offset": 455436
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/javascript_mode.dart",
+    "offset": 456786
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/pigeon/messages.pigeon.dart",
+    "offset": 457316
+  },
+  {
+    "uri": "package:go_router/src/delegate.dart",
+    "offset": 459172
+  },
+  {
+    "uri": "package:path_provider_android/path_provider_android.dart",
+    "offset": 459763
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/dynamic_scheme.dart",
+    "offset": 460543
+  },
+  {
+    "uri": "package:gotrue/src/types/session.dart",
+    "offset": 462665
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_util.dart",
+    "offset": 463140
+  },
+  {
+    "uri": "package:shared_preferences_android/src/messages_async.g.dart",
+    "offset": 463597
+  },
+  {
+    "uri": "package:webview_flutter_android/src/weak_reference_utils.dart",
+    "offset": 464127
+  },
+  {
+    "uri": "package:flutter/src/material/tabs.dart",
+    "offset": 465063
+  },
+  {
+    "uri": "package:be_church/pages/b_bemvindo/b_bemvindo_model.dart",
+    "offset": 465852
+  },
+  {
+    "uri": "package:flutter/src/painting/alignment.dart",
+    "offset": 466633
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_h.g.dart",
+    "offset": 466747
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_youtube_player.dart",
+    "offset": 468372
+  },
+  {
+    "uri": "package:flutter/src/gestures/pointer_signal_resolver.dart",
+    "offset": 469138
+  },
+  {
+    "uri": "package:be_church/pages/kkk_detalhes_encontros/kkk_detalhes_encontros_widget.dart",
+    "offset": 469447
+  },
+  {
+    "uri": "package:be_church/pages/mm_minha_jornada/mm_minha_jornada_widget.dart",
+    "offset": 469846
+  },
+  {
+    "uri": "package:characters/src/extensions.dart",
+    "offset": 470688
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_radio_button.dart",
+    "offset": 473012
+  },
+  {
+    "uri": "package:flutter/src/cupertino/button.dart",
+    "offset": 473642
+  },
+  {
+    "uri": "package:http/src/response.dart",
+    "offset": 473733
+  },
+  {
+    "uri": "package:flutter/src/gestures/pointer_router.dart",
+    "offset": 474928
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/platform_interface/platform_interface_query.dart",
+    "offset": 476471
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_web.dart",
+    "offset": 478956
+  },
+  {
+    "uri": "package:flutter/src/material/tooltip_theme.dart",
+    "offset": 480016
+  },
+  {
+    "uri": "package:be_church/components/popup_apenas_app_model.dart",
+    "offset": 483259
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_multi_box_adaptor.dart",
+    "offset": 483538
+  },
+  {
+    "uri": "package:flutter/src/cupertino/text_selection_toolbar.dart",
+    "offset": 483616
+  },
+  {
+    "uri": "package:flutter/src/material/theme_data.dart",
+    "offset": 484437
+  },
+  {
+    "uri": "package:flutter/src/widgets/scrollbar.dart",
+    "offset": 484503
+  },
+  {
+    "uri": "package:flutter/src/widgets/primary_scroll_controller.dart",
+    "offset": 485106
+  },
+  {
+    "uri": "package:be_church/backend/supabase/storage/storage.dart",
+    "offset": 485330
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/web_url_bypass_proxy.dart",
+    "offset": 488357
+  },
+  {
+    "uri": "package:be_church/pages/f_cultos/f_cultos_widget.dart",
+    "offset": 489197
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/load_request_params.dart",
+    "offset": 489643
+  },
+  {
+    "uri": "package:petitparser/src/parser/action/trimming.dart",
+    "offset": 490000
+  },
+  {
+    "uri": "package:be_church/pages/i_eventos/i_eventos_widget.dart",
+    "offset": 490813
+  },
+  {
+    "uri": "package:json_path/src/grammar/fun_name.dart",
+    "offset": 492128
+  },
+  {
+    "uri": "package:flutter/src/material/navigation_rail_theme.dart",
+    "offset": 492997
+  },
+  {
+    "uri": "package:chewie/src/player_with_controls.dart",
+    "offset": 495259
+  },
+  {
+    "uri": "package:petitparser/src/core/token.dart",
+    "offset": 496309
+  },
+  {
+    "uri": "package:flutter/src/material/flexible_space_bar.dart",
+    "offset": 497144
+  },
+  {
+    "uri": "package:flutter/src/material/text_button.dart",
+    "offset": 497197
+  },
+  {
+    "uri": "package:flutter/src/painting/basic_types.dart",
+    "offset": 498919
+  },
+  {
+    "uri": "package:json_path/src/expression/static_expression.dart",
+    "offset": 499821
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_notification_observer.dart",
+    "offset": 500180
+  },
+  {
+    "uri": "package:flutter/src/widgets/localizations.dart",
+    "offset": 500760
+  },
+  {
+    "uri": "package:flutter/src/material/text_form_field.dart",
+    "offset": 501775
+  },
+  {
+    "uri": "package:firebase_core/firebase_core.dart",
+    "offset": 502324
+  },
+  {
+    "uri": "package:flutter/src/widgets/autofill.dart",
+    "offset": 504846
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/count.dart",
+    "offset": 505955
+  },
+  {
+    "uri": "package:go_router/src/state.dart",
+    "offset": 506662
+  },
+  {
+    "uri": "package:flutter/src/widgets/nested_scroll_view.dart",
+    "offset": 506959
+  },
+  {
+    "uri": "package:flutter/src/semantics/semantics.dart",
+    "offset": 524687
+  },
+  {
+    "uri": "package:flutter/src/gestures/scale.dart",
+    "offset": 525636
+  },
+  {
+    "uri": "package:source_span/src/file.dart",
+    "offset": 526946
+  },
+  {
+    "uri": "package:flutter/src/material/checkbox.dart",
+    "offset": 527053
+  },
+  {
+    "uri": "package:be_church/pages/pp_minhas_escalas/pp_minhas_escalas_model.dart",
+    "offset": 527482
+  },
+  {
+    "uri": "package:flutter/src/widgets/tap_region.dart",
+    "offset": 528819
+  },
+  {
+    "uri": "package:sqflite_common/src/exception.dart",
+    "offset": 533321
+  },
+  {
+    "uri": "package:be_church/pages/l_configuracoes/l_configuracoes_model.dart",
+    "offset": 533541
+  },
+  {
+    "uri": "package:flutter/src/widgets/stretch_effect.dart",
+    "offset": 534030
+  },
+  {
+    "uri": "package:be_church/backend/api_requests/api_calls.dart",
+    "offset": 538051
+  },
+  {
+    "uri": "package:mime/src/magic_number.dart",
+    "offset": 538238
+  },
+  {
+    "uri": "package:flutter/src/material/scrollbar.dart",
+    "offset": 538346
+  },
+  {
+    "uri": "package:flutter/src/animation/animations.dart",
+    "offset": 540461
+  },
+  {
+    "uri": "package:flutter/src/widgets/focus_traversal.dart",
+    "offset": 542393
+  },
+  {
+    "uri": "package:json_path/src/normalized/index_selector.dart",
+    "offset": 543795
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/src/functions/video_information.dart",
+    "offset": 545066
+  },
+  {
+    "uri": "package:rfc_6901/src/json_pointer.dart",
+    "offset": 547037
+  },
+  {
+    "uri": "package:be_church/pages/zz_sobre_desenvolvedor/zz_sobre_desenvolvedor_widget.dart",
+    "offset": 547407
+  },
+  {
+    "uri": "package:webviewx_plus/src/view/impl/io.dart",
+    "offset": 547679
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/platform_navigation_delegate.dart",
+    "offset": 549051
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_web_view.dart",
+    "offset": 550217
+  },
+  {
+    "uri": "package:be_church/components/popup_emocao_enviada_widget.dart",
+    "offset": 551009
+  },
+  {
+    "uri": "package:flutter/src/rendering/paragraph.dart",
+    "offset": 564588
+  },
+  {
+    "uri": "package:vector_math/src/vector_math_64/vector.dart",
+    "offset": 566414
+  },
+  {
+    "uri": "package:flutter/src/widgets/radio_group.dart",
+    "offset": 566465
+  },
+  {
+    "uri": "package:flutter/src/painting/image_provider.dart",
+    "offset": 566546
+  },
+  {
+    "uri": "package:be_church/components/popup_logado_widget.dart",
+    "offset": 566595
+  },
+  {
+    "uri": "package:be_church/pages/hh_detalhes_e_b_d/hh_detalhes_e_b_d_model.dart",
+    "offset": 569002
+  },
+  {
+    "uri": "package:flutter/src/widgets/image.dart",
+    "offset": 569211
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluir_conta/zz_excluir_conta_widget.dart",
+    "offset": 569251
+  },
+  {
+    "uri": "package:be_church/pages/z_dados_cadastrais/z_dados_cadastrais_model.dart",
+    "offset": 569563
+  },
+  {
+    "uri": "package:http/src/io_client.dart",
+    "offset": 569836
+  },
+  {
+    "uri": "package:collection/src/queue_list.dart",
+    "offset": 570475
+  },
+  {
+    "uri": "package:path/src/style/url.dart",
+    "offset": 570637
+  },
+  {
+    "uri": "package:supabase/src/supabase_client.dart",
+    "offset": 570923
+  },
+  {
+    "uri": "package:flutter/src/widgets/scrollable.dart",
+    "offset": 571144
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/web_resource_error.dart",
+    "offset": 574190
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/src/functions/player_settings.dart",
+    "offset": 574491
+  },
+  {
+    "uri": "package:flutter/src/widgets/visibility.dart",
+    "offset": 574980
+  },
+  {
+    "uri": "package:be_church/backend/supabase/supabase.dart",
+    "offset": 575577
+  },
+  {
+    "uri": "package:flutter/src/material/ink_decoration.dart",
+    "offset": 575822
+  },
+  {
+    "uri": "package:rxdart/src/transformers/start_with.dart",
+    "offset": 575899
+  },
+  {
+    "uri": "package:json_path/src/grammar/strings.dart",
+    "offset": 576207
+  },
+  {
+    "uri": "package:be_church/components/popup_voluntario_model.dart",
+    "offset": 576695
+  },
+  {
+    "uri": "package:flutter/src/services/restoration.dart",
+    "offset": 576830
+  },
+  {
+    "uri": "package:flutter/src/widgets/animated_switcher.dart",
+    "offset": 577148
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_position.dart",
+    "offset": 578614
+  },
+  {
+    "uri": "package:flutter/src/cupertino/desktop_text_selection_toolbar_button.dart",
+    "offset": 578795
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/whitespace.dart",
+    "offset": 579277
+  },
+  {
+    "uri": "package:flutter/src/rendering/flex.dart",
+    "offset": 579692
+  },
+  {
+    "uri": "package:dropdown_button2/src/dropdown_button2_data.dart",
+    "offset": 579866
+  },
+  {
+    "uri": "package:flutter/src/material/input_decorator.dart",
+    "offset": 580122
+  },
+  {
+    "uri": "package:flutter/src/material/adaptive_text_selection_toolbar.dart",
+    "offset": 581042
+  },
+  {
+    "uri": "package:flutter/src/material/button.dart",
+    "offset": 582615
+  },
+  {
+    "uri": "package:logging/src/log_record.dart",
+    "offset": 583401
+  },
+  {
+    "uri": "package:web_socket_channel/src/channel.dart",
+    "offset": 584416
+  },
+  {
+    "uri": "package:petitparser/src/core/parser.dart",
+    "offset": 584707
+  },
+  {
+    "uri": "package:rxdart/src/subjects/behavior_subject.dart",
+    "offset": 585100
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/autoorientationhorizontal.dart",
+    "offset": 591097
+  },
+  {
+    "uri": "package:cloud_firestore/src/document_reference.dart",
+    "offset": 591304
+  },
+  {
+    "uri": "package:flutter/src/widgets/magnifier.dart",
+    "offset": 593074
+  },
+  {
+    "uri": "package:http/src/io_streamed_response.dart",
+    "offset": 593262
+  },
+  {
+    "uri": "package:be_church/components/excluir_widget.dart",
+    "offset": 593322
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/predicate.dart",
+    "offset": 593371
+  },
+  {
+    "uri": "package:flutter/src/gestures/gesture_settings.dart",
+    "offset": 594325
+  },
+  {
+    "uri": "package:share_plus/share_plus.dart",
+    "offset": 595807
+  },
+  {
+    "uri": "package:jwt_decode/jwt_decode.dart",
+    "offset": 597858
+  },
+  {
+    "uri": "package:flutter/src/widgets/media_query.dart",
+    "offset": 598761
+  },
+  {
+    "uri": "package:flutter/src/foundation/collections.dart",
+    "offset": 600836
+  },
+  {
+    "uri": "package:q_r_code_render_widget_by_kai_library_8e3lee/pages/home_page/home_page_widget.dart",
+    "offset": 601550
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_n.g.dart",
+    "offset": 601707
+  },
+  {
+    "uri": "package:flutter/src/services/message_codecs.dart",
+    "offset": 602603
+  },
+  {
+    "uri": "package:vector_math/src/vector_math_64/vector3.dart",
+    "offset": 604190
+  },
+  {
+    "uri": "package:flutter/src/material/text_selection.dart",
+    "offset": 605261
+  },
+  {
+    "uri": "package:share_plus_platform_interface/platform_interface/share_plus_platform.dart",
+    "offset": 606432
+  },
+  {
+    "uri": "package:flutter/src/painting/box_fit.dart",
+    "offset": 608178
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/custom_auth_user_provider.dart",
+    "offset": 608831
+  },
+  {
+    "uri": "package:petitparser/src/definition/grammar.dart",
+    "offset": 608897
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_fuchsia.dart",
+    "offset": 609854
+  },
+  {
+    "uri": "package:flutter/src/services/platform_channel.dart",
+    "offset": 610073
+  },
+  {
+    "uri": "package:flutter/src/widgets/text_selection_toolbar_anchors.dart",
+    "offset": 611352
+  },
+  {
+    "uri": "package:flutter/src/widgets/async.dart",
+    "offset": 611456
+  },
+  {
+    "uri": "package:be_church/pages/a_pagina_inicial/a_pagina_inicial_model.dart",
+    "offset": 612259
+  },
+  {
+    "uri": "package:share_plus_platform_interface/method_channel/method_channel_share.dart",
+    "offset": 615773
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/embedded_js_content.dart",
+    "offset": 615981
+  },
+  {
+    "uri": "package:font_awesome_flutter/src/fa_icon.dart",
+    "offset": 618373
+  },
+  {
+    "uri": "package:flutter/src/material/divider.dart",
+    "offset": 619060
+  },
+  {
+    "uri": "package:gotrue/src/types/auth_response.dart",
+    "offset": 620399
+  },
+  {
+    "uri": "package:firebase_core/src/firebase.dart",
+    "offset": 620510
+  },
+  {
+    "uri": "package:go_router/src/builder.dart",
+    "offset": 622151
+  },
+  {
+    "uri": "package:video_player_android/src/platform_view_player.dart",
+    "offset": 624021
+  },
+  {
+    "uri": "package:flutter/src/cupertino/activity_indicator.dart",
+    "offset": 624635
+  },
+  {
+    "uri": "package:lock_orientation_library_opafp4/pages/home_page/home_page_model.dart",
+    "offset": 627964
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_ios.dart",
+    "offset": 628223
+  },
+  {
+    "uri": "package:flutter/src/foundation/assertions.dart",
+    "offset": 632045
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_u.g.dart",
+    "offset": 632349
+  },
+  {
+    "uri": "package:flutter/src/material/button_style_button.dart",
+    "offset": 633431
+  },
+  {
+    "uri": "package:supabase/src/auth_http_client.dart",
+    "offset": 634284
+  },
+  {
+    "uri": "package:be_church/backend/firebase/firebase_config.dart",
+    "offset": 635566
+  },
+  {
+    "uri": "package:flutter/src/services/_background_isolate_binary_messenger_io.dart",
+    "offset": 635623
+  },
+  {
+    "uri": "package:be_church/pages/d_home/d_home_model.dart",
+    "offset": 636591
+  },
+  {
+    "uri": "package:flutter/src/widgets/scrollable_helpers.dart",
+    "offset": 637203
+  },
+  {
+    "uri": "package:be_church/backend/schema/util/firestore_util.dart",
+    "offset": 639180
+  },
+  {
+    "uri": "package:be_church/components/popup_excluir_conta_model.dart",
+    "offset": 639457
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/lookup.dart",
+    "offset": 639944
+  },
+  {
+    "uri": "package:flutter/src/foundation/basic_types.dart",
+    "offset": 643054
+  },
+  {
+    "uri": "package:petitparser/src/parser/repeater/repeating.dart",
+    "offset": 643322
+  },
+  {
+    "uri": "package:q_r_code_render_widget_by_kai_library_8e3lee/flutter_flow/nav/nav.dart",
+    "offset": 644877
+  },
+  {
+    "uri": "package:flutter/src/material/banner_theme.dart",
+    "offset": 646216
+  },
+  {
+    "uri": "package:flutter/src/foundation/observer_list.dart",
+    "offset": 649831
+  },
+  {
+    "uri": "package:flutter/src/widgets/navigation_toolbar.dart",
+    "offset": 651108
+  },
+  {
+    "uri": "package:be_church/biblia/capitulos/capitulos_widget.dart",
+    "offset": 651414
+  },
+  {
+    "uri": "package:flutter/src/widgets/inherited_theme.dart",
+    "offset": 654328
+  },
+  {
+    "uri": "package:auto_size_text/src/auto_size_text.dart",
+    "offset": 654405
+  },
+  {
+    "uri": "package:json_path/src/fun/fun_validator.dart",
+    "offset": 655883
+  },
+  {
+    "uri": "package:flutter/src/material/desktop_text_selection_toolbar.dart",
+    "offset": 657938
+  },
+  {
+    "uri": "package:flutter/src/cupertino/colors.dart",
+    "offset": 659800
+  },
+  {
+    "uri": "package:intl/number_symbols_data.dart",
+    "offset": 660537
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/empty_json_pointer.dart",
+    "offset": 661861
+  },
+  {
+    "uri": "package:flutter/src/material/tooltip.dart",
+    "offset": 662223
+  },
+  {
+    "uri": "package:be_church/pages/h_e_b_d/h_e_b_d_widget.dart",
+    "offset": 662639
+  },
+  {
+    "uri": "package:be_church/components/popup_enviado_celula_model.dart",
+    "offset": 662725
+  },
+  {
+    "uri": "package:maybe_just_nothing/src/maybe.dart",
+    "offset": 666310
+  },
+  {
+    "uri": "package:http_parser/src/scan.dart",
+    "offset": 667149
+  },
+  {
+    "uri": "package:flutter/src/widgets/view.dart",
+    "offset": 668145
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_w.g.dart",
+    "offset": 669527
+  },
+  {
+    "uri": "package:flutter/src/widgets/size_changed_layout_notifier.dart",
+    "offset": 669651
+  },
+  {
+    "uri": "package:flutter/src/material/selectable_text.dart",
+    "offset": 670366
+  },
+  {
+    "uri": "package:flutter/src/gestures/drag.dart",
+    "offset": 671151
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_b.g.dart",
+    "offset": 671807
+  },
+  {
+    "uri": "package:flutter/src/services/asset_manifest.dart",
+    "offset": 672887
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_descriptor.dart",
+    "offset": 674002
+  },
+  {
+    "uri": "package:flutter/src/gestures/gesture_details.dart",
+    "offset": 674451
+  },
+  {
+    "uri": "package:flutter/src/painting/image_stream.dart",
+    "offset": 676478
+  },
+  {
+    "uri": "package:realtime_client/src/realtime_channel.dart",
+    "offset": 679057
+  },
+  {
+    "uri": "package:be_church/app_state.dart",
+    "offset": 680051
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/platform_navigation_delegate_creation_params.dart",
+    "offset": 681555
+  },
+  {
+    "uri": "package:flutter/src/widgets/disposable_build_context.dart",
+    "offset": 683018
+  },
+  {
+    "uri": "package:flutter/src/animation/curves.dart",
+    "offset": 684911
+  },
+  {
+    "uri": "package:webview_flutter/src/webview_controller.dart",
+    "offset": 685217
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/javascript_message.dart",
+    "offset": 687260
+  },
+  {
+    "uri": "package:flutter/src/scheduler/binding.dart",
+    "offset": 689167
+  },
+  {
+    "uri": "package:flutter/src/material/elevated_button_theme.dart",
+    "offset": 691741
+  },
+  {
+    "uri": "package:flutter/src/gestures/tap_and_drag.dart",
+    "offset": 692152
+  },
+  {
+    "uri": "package:lock_orientation_library_opafp4/flutter_flow/nav/nav.dart",
+    "offset": 693051
+  },
+  {
+    "uri": "package:flutter/src/animation/listener_helpers.dart",
+    "offset": 693211
+  },
+  {
+    "uri": "package:flutter/src/material/date_picker_theme.dart",
+    "offset": 693720
+  },
+  {
+    "uri": "package:flutter/src/widgets/icon_theme_data.dart",
+    "offset": 694128
+  },
+  {
+    "uri": "package:petitparser/src/parser/action/flatten.dart",
+    "offset": 694770
+  },
+  {
+    "uri": "package:flutter/src/gestures/team.dart",
+    "offset": 694821
+  },
+  {
+    "uri": "package:url_launcher_platform_interface/method_channel_url_launcher.dart",
+    "offset": 695090
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/platform_interface/platform_interface_document_reference.dart",
+    "offset": 695547
+  },
+  {
+    "uri": "package:lock_orientation_library_opafp4/pages/home_page/home_page_widget.dart",
+    "offset": 697427
+  },
+  {
+    "uri": "package:flutter/src/foundation/isolates.dart",
+    "offset": 698978
+  },
+  {
+    "uri": "package:web_socket_channel/io.dart",
+    "offset": 699223
+  },
+  {
+    "uri": "package:flutter/src/material/app_bar_theme.dart",
+    "offset": 699986
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/char.dart",
+    "offset": 700152
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/update.dart",
+    "offset": 700309
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_fixed_extent_list.dart",
+    "offset": 701192
+  },
+  {
+    "uri": "package:nested/nested.dart",
+    "offset": 702019
+  },
+  {
+    "uri": "package:flutter/src/rendering/stack.dart",
+    "offset": 702157
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/src/functions/playback_status.dart",
+    "offset": 702477
+  },
+  {
+    "uri": "package:mask_text_input_formatter/mask_text_input_formatter.dart",
+    "offset": 703851
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_animations.dart",
+    "offset": 704025
+  },
+  {
+    "uri": "package:cross_file/src/types/io.dart",
+    "offset": 705189
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/generated/sequence_3.dart",
+    "offset": 705227
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/reference.dart",
+    "offset": 705354
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/method_channel/method_channel_firestore.dart",
+    "offset": 706336
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/src/functions/playback_controls.dart",
+    "offset": 707362
+  },
+  {
+    "uri": "package:flutter/src/physics/spring_simulation.dart",
+    "offset": 709227
+  },
+  {
+    "uri": "package:intl/src/intl/compact_number_format.dart",
+    "offset": 709704
+  },
+  {
+    "uri": "package:flutter/src/widgets/text.dart",
+    "offset": 709940
+  },
+  {
+    "uri": "package:flutter/src/material/scaffold.dart",
+    "offset": 710805
+  },
+  {
+    "uri": "package:petitparser/src/core/exception.dart",
+    "offset": 710848
+  },
+  {
+    "uri": "package:gotrue/src/gotrue_mfa_api.dart",
+    "offset": 711718
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/firebase_options.dart",
+    "offset": 711824
+  },
+  {
+    "uri": "package:provider/src/listenable_provider.dart",
+    "offset": 712228
+  },
+  {
+    "uri": "package:be_church/pages/ee_detalhes_ministerios/ee_detalhes_ministerios_widget.dart",
+    "offset": 714115
+  },
+  {
+    "uri": "package:synchronized/synchronized.dart",
+    "offset": 714352
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/dart_callback/impl/io.dart",
+    "offset": 714980
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/match.dart",
+    "offset": 715039
+  },
+  {
+    "uri": "package:provider/src/inherited_provider.dart",
+    "offset": 718031
+  },
+  {
+    "uri": "package:sqflite/src/factory_impl.dart",
+    "offset": 719559
+  },
+  {
+    "uri": "package:provider/src/consumer.dart",
+    "offset": 719991
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_z.g.dart",
+    "offset": 720678
+  },
+  {
+    "uri": "package:cloud_firestore/src/query.dart",
+    "offset": 722314
+  },
+  {
+    "uri": "package:be_church/pages/m_minha_conta/m_minha_conta_model.dart",
+    "offset": 724294
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_autocomplete_options_list.dart",
+    "offset": 724574
+  },
+  {
+    "uri": "package:be_church/flutter_flow/upload_data.dart",
+    "offset": 725252
+  },
+  {
+    "uri": "package:be_church/pages/k_detalhes_celulas/k_detalhes_celulas_model.dart",
+    "offset": 725441
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_notification.dart",
+    "offset": 727541
+  },
+  {
+    "uri": "package:flutter/src/widgets/desktop_text_selection_toolbar_layout_delegate.dart",
+    "offset": 728000
+  },
+  {
+    "uri": "package:shared_preferences/src/shared_preferences_legacy.dart",
+    "offset": 728080
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/lock_orientation.dart",
+    "offset": 729870
+  },
+  {
+    "uri": "package:flutter/src/material/bottom_sheet_theme.dart",
+    "offset": 729946
+  },
+  {
+    "uri": "package:file_picker/src/platform_file.dart",
+    "offset": 730242
+  },
+  {
+    "uri": "package:gotrue/src/gotrue_admin_mfa_api.dart",
+    "offset": 731399
+  },
+  {
+    "uri": "package:sqflite_common/src/collection_utils.dart",
+    "offset": 731958
+  },
+  {
+    "uri": "package:be_church/pages/dd_detalhes_igreja/dd_detalhes_igreja_widget.dart",
+    "offset": 733333
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_p.g.dart",
+    "offset": 733569
+  },
+  {
+    "uri": "package:video_player_android/src/messages.g.dart",
+    "offset": 733627
+  },
+  {
+    "uri": "package:flutter_localizations/src/l10n/generated_material_localizations.dart",
+    "offset": 735629
+  },
+  {
+    "uri": "package:shared_preferences_android/src/messages.g.dart",
+    "offset": 736063
+  },
+  {
+    "uri": "package:flutter/src/widgets/lookup_boundary.dart",
+    "offset": 739422
+  },
+  {
+    "uri": "package:term_glyph/src/generated/top_level.dart",
+    "offset": 739813
+  },
+  {
+    "uri": "package:be_church/pages/i_eventos/i_eventos_model.dart",
+    "offset": 742280
+  },
+  {
+    "uri": "package:sqflite/src/sqflite_plugin.dart",
+    "offset": 743007
+  },
+  {
+    "uri": "package:be_church/pages/hh_detalhes_e_b_d/hh_detalhes_e_b_d_widget.dart",
+    "offset": 743138
+  },
+  {
+    "uri": "package:flutter_animate/src/flutter_animate.dart",
+    "offset": 743892
+  },
+  {
+    "uri": "package:page_transition/src/page_transition.dart",
+    "offset": 744143
+  },
+  {
+    "uri": "package:flutter/src/rendering/animated_size.dart",
+    "offset": 745004
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_windows.dart",
+    "offset": 745403
+  },
+  {
+    "uri": "package:flutter_localizations/src/utils/date_localizations.dart",
+    "offset": 746826
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/platform_interface/platform_interface_firebase_app.dart",
+    "offset": 747109
+  },
+  {
+    "uri": "package:flutter/src/rendering/proxy_box.dart",
+    "offset": 749978
+  },
+  {
+    "uri": "package:flutter/src/cupertino/constants.dart",
+    "offset": 751357
+  },
+  {
+    "uri": "package:flutter/src/widgets/icon_data.dart",
+    "offset": 751443
+  },
+  {
+    "uri": "package:flutter/src/widgets/page_storage.dart",
+    "offset": 752066
+  },
+  {
+    "uri": "package:provider/src/provider.dart",
+    "offset": 753073
+  },
+  {
+    "uri": "package:sqflite_common/sqlite_api.dart",
+    "offset": 753589
+  },
+  {
+    "uri": "package:crypto/src/sha256.dart",
+    "offset": 754198
+  },
+  {
+    "uri": "package:flutter/src/semantics/semantics_service.dart",
+    "offset": 754902
+  },
+  {
+    "uri": "package:rfc_6901/src/json_pointer_segment.dart",
+    "offset": 755277
+  },
+  {
+    "uri": "package:petitparser/src/matcher/matches/matches_iterator.dart",
+    "offset": 755850
+  },
+  {
+    "uri": "package:go_router/src/pages/material.dart",
+    "offset": 756516
+  },
+  {
+    "uri": "package:flutter/src/material/checkbox_theme.dart",
+    "offset": 756723
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_model.dart",
+    "offset": 757332
+  },
+  {
+    "uri": "package:flutter/src/widgets/inherited_model.dart",
+    "offset": 757846
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/delegate.dart",
+    "offset": 758100
+  },
+  {
+    "uri": "package:gotrue/src/types/user.dart",
+    "offset": 761031
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/configurar_clique_notificacao.dart",
+    "offset": 762519
+  },
+  {
+    "uri": "package:be_church/biblia/biblia_home/biblia_home_widget.dart",
+    "offset": 763701
+  },
+  {
+    "uri": "package:flutter/src/widgets/sliver.dart",
+    "offset": 764519
+  },
+  {
+    "uri": "package:petitparser/src/parser/repeater/character.dart",
+    "offset": 765262
+  },
+  {
+    "uri": "package:url_launcher/src/type_conversion.dart",
+    "offset": 765494
+  },
+  {
+    "uri": "package:aligned_tooltip/src/utils/get_axis_direction.dart",
+    "offset": 765890
+  },
+  {
+    "uri": "package:flutter/src/widgets/page_view.dart",
+    "offset": 766704
+  },
+  {
+    "uri": "package:flutter/src/services/text_boundary.dart",
+    "offset": 768703
+  },
+  {
+    "uri": "package:realtime_client/src/realtime_client.dart",
+    "offset": 768847
+  },
+  {
+    "uri": "package:ff_commons/flutter_flow/uploaded_file.dart",
+    "offset": 769610
+  },
+  {
+    "uri": "package:flutter/src/gestures/converter.dart",
+    "offset": 770393
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/src/functions/queueing_functions.dart",
+    "offset": 770585
+  },
+  {
+    "uri": "package:substring_highlight/substring_highlight.dart",
+    "offset": 771544
+  },
+  {
+    "uri": "package:string_scanner/src/utils.dart",
+    "offset": 771802
+  },
+  {
+    "uri": "package:sqflite/src/exception_impl.dart",
+    "offset": 772770
+  },
+  {
+    "uri": "package:webview_flutter_android/src/platform_views_service_proxy.dart",
+    "offset": 773020
+  },
+  {
+    "uri": "package:flutter/src/services/platform_views.dart",
+    "offset": 775024
+  },
+  {
+    "uri": "package:be_church/components/popup_emocao_enviada_model.dart",
+    "offset": 775439
+  },
+  {
+    "uri": "package:flutter/src/material/desktop_text_selection_toolbar_button.dart",
+    "offset": 776024
+  },
+  {
+    "uri": "package:go_router/src/router.dart",
+    "offset": 777321
+  },
+  {
+    "uri": "package:sqflite_common/src/factory_mixin.dart",
+    "offset": 778207
+  },
+  {
+    "uri": "package:material_color_utilities/hct/viewing_conditions.dart",
+    "offset": 778379
+  },
+  {
+    "uri": "package:characters/src/characters_impl.dart",
+    "offset": 779222
+  },
+  {
+    "uri": "package:flutter/src/material/action_icons_theme.dart",
+    "offset": 779749
+  },
+  {
+    "uri": "package:flutter/src/material/page_transitions_theme.dart",
+    "offset": 780610
+  },
+  {
+    "uri": "package:json_path/src/grammar/number.dart",
+    "offset": 780923
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_configuration.dart",
+    "offset": 783016
+  },
+  {
+    "uri": "package:be_church/biblia/personalizar/personalizar_model.dart",
+    "offset": 785998
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/platform_interface/platform_interface_firestore.dart",
+    "offset": 787113
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/set_badge_count.dart",
+    "offset": 787873
+  },
+  {
+    "uri": "package:be_church/pages/nn_fazer_pedido/nn_fazer_pedido_model.dart",
+    "offset": 788140
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/enums/youtube_error.dart",
+    "offset": 788278
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_grid.dart",
+    "offset": 789271
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/not.dart",
+    "offset": 789338
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_c.g.dart",
+    "offset": 789741
+  },
+  {
+    "uri": "package:crypto/src/digest.dart",
+    "offset": 791112
+  },
+  {
+    "uri": "package:flutter/src/widgets/automatic_keep_alive.dart",
+    "offset": 791476
+  },
+  {
+    "uri": "package:flutter/src/widgets/display_feature_sub_screen.dart",
+    "offset": 791997
+  },
+  {
+    "uri": "package:image_picker_platform_interface/src/types/image_options.dart",
+    "offset": 793138
+  },
+  {
+    "uri": "package:iregexp/src/ext.dart",
+    "offset": 793428
+  },
+  {
+    "uri": "package:be_church/biblia/livros/livros_model.dart",
+    "offset": 795001
+  },
+  {
+    "uri": "package:flutter/src/material/elevation_overlay.dart",
+    "offset": 796186
+  },
+  {
+    "uri": "package:flutter/src/painting/image_resolution.dart",
+    "offset": 797027
+  },
+  {
+    "uri": "package:be_church/pages/j_aniversariantes/j_aniversariantes_model.dart",
+    "offset": 797216
+  },
+  {
+    "uri": "package:provider/src/change_notifier_provider.dart",
+    "offset": 797426
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_x.g.dart",
+    "offset": 797480
+  },
+  {
+    "uri": "package:flutter/src/foundation/stack_frame.dart",
+    "offset": 797823
+  },
+  {
+    "uri": "package:intl/src/intl/date_format.dart",
+    "offset": 800137
+  },
+  {
+    "uri": "package:flutter_localizations/src/l10n/generated_cupertino_localizations.dart",
+    "offset": 800308
+  },
+  {
+    "uri": "package:realtime_client/src/websocket/websocket_io.dart",
+    "offset": 800801
+  },
+  {
+    "uri": "package:flutter/src/widgets/form.dart",
+    "offset": 801246
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/array_index.dart",
+    "offset": 803136
+  },
+  {
+    "uri": "package:flutter/src/material/dialog_theme.dart",
+    "offset": 803406
+  },
+  {
+    "uri": "package:onesignal_flutter/src/inappmessage.dart",
+    "offset": 803459
+  },
+  {
+    "uri": "package:go_router/src/pages/custom_transition_page.dart",
+    "offset": 804878
+  },
+  {
+    "uri": "package:be_church/backend/schema/util/schema_util.dart",
+    "offset": 805389
+  },
+  {
+    "uri": "package:postgrest/src/postgrest.dart",
+    "offset": 806551
+  },
+  {
+    "uri": "package:flutter_localizations/src/widgets_localizations.dart",
+    "offset": 808995
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/widgets/youtube_player.dart",
+    "offset": 809281
+  },
+  {
+    "uri": "package:flutter_animate/src/warn.dart",
+    "offset": 809577
+  },
+  {
+    "uri": "package:maybe_just_nothing/src/just.dart",
+    "offset": 809837
+  },
+  {
+    "uri": "package:flutter/src/physics/tolerance.dart",
+    "offset": 809997
+  },
+  {
+    "uri": "package:term_glyph/src/generated/unicode_glyph_set.dart",
+    "offset": 810061
+  },
+  {
+    "uri": "package:flutter/src/widgets/icon_theme.dart",
+    "offset": 810390
+  },
+  {
+    "uri": "package:flutter/src/material/expansion_tile_theme.dart",
+    "offset": 811345
+  },
+  {
+    "uri": "package:flutter/src/material/menu_bar_theme.dart",
+    "offset": 814105
+  },
+  {
+    "uri": "package:characters/src/grapheme_clusters/breaks.dart",
+    "offset": 814907
+  },
+  {
+    "uri": "package:be_church/components/bs_recusar_escala_model.dart",
+    "offset": 816529
+  },
+  {
+    "uri": "package:material_color_utilities/contrast/contrast.dart",
+    "offset": 817856
+  },
+  {
+    "uri": "package:flutter/src/widgets/focus_scope.dart",
+    "offset": 817978
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_position_with_single_context.dart",
+    "offset": 818555
+  },
+  {
+    "uri": "package:web_socket_channel/src/exception.dart",
+    "offset": 818642
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/html_utils.dart",
+    "offset": 818764
+  },
+  {
+    "uri": "package:vector_math/vector_math_64.dart",
+    "offset": 819266
+  },
+  {
+    "uri": "package:flutter/src/widgets/single_child_scroll_view.dart",
+    "offset": 819532
+  },
+  {
+    "uri": "package:flutter/src/material/tab_bar_theme.dart",
+    "offset": 819639
+  },
+  {
+    "uri": "package:flutter/src/widgets/text_editing_intents.dart",
+    "offset": 819709
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_o.g.dart",
+    "offset": 821512
+  },
+  {
+    "uri": "package:petitparser/src/parser/predicate/character.dart",
+    "offset": 821570
+  },
+  {
+    "uri": "package:flutter/src/widgets/widget_state.dart",
+    "offset": 824630
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/optimize.dart",
+    "offset": 826240
+  },
+  {
+    "uri": "package:flutter/src/painting/image_cache.dart",
+    "offset": 826637
+  },
+  {
+    "uri": "package:flutter/src/gestures/recognizer.dart",
+    "offset": 826801
+  },
+  {
+    "uri": "package:json_path/src/grammar/child_selector.dart",
+    "offset": 829529
+  },
+  {
+    "uri": "package:flutter/src/widgets/overflow_bar.dart",
+    "offset": 830385
+  },
+  {
+    "uri": "package:easy_debounce/easy_debounce.dart",
+    "offset": 832002
+  },
+  {
+    "uri": "package:flutter/src/painting/decoration.dart",
+    "offset": 832250
+  },
+  {
+    "uri": "package:flutter/src/gestures/monodrag.dart",
+    "offset": 833609
+  },
+  {
+    "uri": "package:be_church/components/sem_comentarios_widget.dart",
+    "offset": 833652
+  },
+  {
+    "uri": "package:web_socket/src/utils.dart",
+    "offset": 834359
+  },
+  {
+    "uri": "package:http_parser/src/case_insensitive_map.dart",
+    "offset": 835640
+  },
+  {
+    "uri": "package:characters/src/characters.dart",
+    "offset": 837054
+  },
+  {
+    "uri": "package:web_socket_channel/adapter_web_socket_channel.dart",
+    "offset": 838213
+  },
+  {
+    "uri": "package:flutter/src/widgets/image_filter.dart",
+    "offset": 838914
+  },
+  {
+    "uri": "package:be_church/pages/z_doacoes/z_doacoes_model.dart",
+    "offset": 840166
+  },
+  {
+    "uri": "package:video_player_android/src/android_video_player.dart",
+    "offset": 840521
+  },
+  {
+    "uri": "package:flutter/src/gestures/drag_details.dart",
+    "offset": 840634
+  },
+  {
+    "uri": "package:flutter/src/cupertino/app.dart",
+    "offset": 841942
+  },
+  {
+    "uri": "package:webviewx_plus/src/view/impl/mobile.dart",
+    "offset": 842116
+  },
+  {
+    "uri": "package:json_path/src/grammar/compare.dart",
+    "offset": 842899
+  },
+  {
+    "uri": "package:flutter/src/widgets/draggable_scrollable_sheet.dart",
+    "offset": 844577
+  },
+  {
+    "uri": "package:flutter/src/material/slider_theme.dart",
+    "offset": 844719
+  },
+  {
+    "uri": "package:flutter/src/painting/rounded_rectangle_border.dart",
+    "offset": 846336
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/skip.dart",
+    "offset": 847391
+  },
+  {
+    "uri": "package:intl/src/intl/number_format_parser.dart",
+    "offset": 848450
+  },
+  {
+    "uri": "package:flutter_localizations/src/cupertino_localizations.dart",
+    "offset": 848862
+  },
+  {
+    "uri": "package:shared_preferences_platform_interface/shared_preferences_async_platform_interface.dart",
+    "offset": 850171
+  },
+  {
+    "uri": "package:flutter/src/widgets/default_text_editing_shortcuts.dart",
+    "offset": 852094
+  },
+  {
+    "uri": "package:go_router/src/match.dart",
+    "offset": 852640
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/optional.dart",
+    "offset": 852847
+  },
+  {
+    "uri": "package:flutter/src/widgets/viewport.dart",
+    "offset": 852903
+  },
+  {
+    "uri": "package:flutter/src/painting/decoration_image.dart",
+    "offset": 854248
+  },
+  {
+    "uri": "package:petitparser/src/definition/internal/reference.dart",
+    "offset": 854365
+  },
+  {
+    "uri": "package:flutter/src/material/predictive_back_page_transitions_builder.dart",
+    "offset": 854625
+  },
+  {
+    "uri": "package:source_span/src/highlighter.dart",
+    "offset": 854972
+  },
+  {
+    "uri": "package:flutter/src/material/colors.dart",
+    "offset": 855596
+  },
+  {
+    "uri": "package:flutter/src/widgets/_window.dart",
+    "offset": 856155
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/platform_webview_controller.dart",
+    "offset": 856669
+  },
+  {
+    "uri": "package:path_provider/path_provider.dart",
+    "offset": 857504
+  },
+  {
+    "uri": "package:be_church/components/sem_comentarios_model.dart",
+    "offset": 858063
+  },
+  {
+    "uri": "package:flutter/src/gestures/hit_test.dart",
+    "offset": 858286
+  },
+  {
+    "uri": "package:flutter/src/scheduler/ticker.dart",
+    "offset": 859217
+  },
+  {
+    "uri": "package:flutter/src/gestures/long_press.dart",
+    "offset": 859325
+  },
+  {
+    "uri": "package:source_span/src/location.dart",
+    "offset": 859438
+  },
+  {
+    "uri": "package:async/src/stream_queue.dart",
+    "offset": 860742
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_drop_down.dart",
+    "offset": 860871
+  },
+  {
+    "uri": "package:flutter/src/material/ink_splash.dart",
+    "offset": 861718
+  },
+  {
+    "uri": "package:be_church/pages/k_celulas/k_celulas_widget.dart",
+    "offset": 862085
+  },
+  {
+    "uri": "package:material_color_utilities/dislike/dislike_analyzer.dart",
+    "offset": 866971
+  },
+  {
+    "uri": "package:be_church/flutter_flow/request_manager.dart",
+    "offset": 867654
+  },
+  {
+    "uri": "package:path/path.dart",
+    "offset": 868276
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_fill.dart",
+    "offset": 868797
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/range.dart",
+    "offset": 869436
+  },
+  {
+    "uri": "package:flutter/src/material/menu_style.dart",
+    "offset": 869668
+  },
+  {
+    "uri": "package:flutter/src/material/carousel_theme.dart",
+    "offset": 869888
+  },
+  {
+    "uri": "package:be_church/pages/nnn_orar/nnn_orar_widget.dart",
+    "offset": 871614
+  },
+  {
+    "uri": "package:flutter/src/widgets/basic.dart",
+    "offset": 871991
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/method_channel/method_channel_collection_reference.dart",
+    "offset": 874248
+  },
+  {
+    "uri": "package:flutter/src/rendering/debug_overflow_indicator.dart",
+    "offset": 875151
+  },
+  {
+    "uri": "package:flutter/src/material/badge_theme.dart",
+    "offset": 876643
+  },
+  {
+    "uri": "package:stream_channel/stream_channel.dart",
+    "offset": 879662
+  },
+  {
+    "uri": "package:flutter/src/painting/shape_decoration.dart",
+    "offset": 883733
+  },
+  {
+    "uri": "package:sqflite_common/src/arg_utils.dart",
+    "offset": 884328
+  },
+  {
+    "uri": "package:sqflite_common/sqflite.dart",
+    "offset": 884694
+  },
+  {
+    "uri": "package:intl/src/date_format_internal.dart",
+    "offset": 885035
+  },
+  {
+    "uri": "package:flutter/src/widgets/autocomplete.dart",
+    "offset": 885647
+  },
+  {
+    "uri": "package:intl/number_symbols.dart",
+    "offset": 885831
+  },
+  {
+    "uri": "package:url_launcher/src/url_launcher_uri.dart",
+    "offset": 888483
+  },
+  {
+    "uri": "package:flutter/src/painting/borders.dart",
+    "offset": 889125
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_aware_image_provider.dart",
+    "offset": 889225
+  },
+  {
+    "uri": "package:be_church/pages/d_criar_cadastro/d_criar_cadastro_widget.dart",
+    "offset": 890844
+  },
+  {
+    "uri": "package:petitparser/src/matcher/matches.dart",
+    "offset": 890989
+  },
+  {
+    "uri": "package:flutter/src/material/menu_theme.dart",
+    "offset": 893937
+  },
+  {
+    "uri": "package:flutter/src/widgets/spell_check.dart",
+    "offset": 894188
+  },
+  {
+    "uri": "package:be_church/components/bs_observacoes_escala_widget.dart",
+    "offset": 894482
+  },
+  {
+    "uri": "package:sqflite_common/src/factory.dart",
+    "offset": 895815
+  },
+  {
+    "uri": "package:video_player/src/closed_caption_file.dart",
+    "offset": 896394
+  },
+  {
+    "uri": "package:stream_channel/src/guarantee_channel.dart",
+    "offset": 897185
+  },
+  {
+    "uri": "package:flutter/src/material/radio_theme.dart",
+    "offset": 897352
+  },
+  {
+    "uri": "package:flutter/src/widgets/safe_area.dart",
+    "offset": 897716
+  },
+  {
+    "uri": "package:flutter/src/cupertino/text_selection.dart",
+    "offset": 897759
+  },
+  {
+    "uri": "package:rxdart/src/utils/forwarding_stream.dart",
+    "offset": 901234
+  },
+  {
+    "uri": "package:image_picker_platform_interface/src/platform_interface/image_picker_platform.dart",
+    "offset": 902247
+  },
+  {
+    "uri": "package:json_path/src/grammar/array_index.dart",
+    "offset": 902699
+  },
+  {
+    "uri": "package:flutter/src/widgets/container.dart",
+    "offset": 904481
+  },
+  {
+    "uri": "package:equatable/src/equatable.dart",
+    "offset": 904892
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_i.g.dart",
+    "offset": 905364
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_context.dart",
+    "offset": 906018
+  },
+  {
+    "uri": "package:flutter/src/material/tooltip_visibility.dart",
+    "offset": 906066
+  },
+  {
+    "uri": "package:rxdart/src/transformers/start_with_error.dart",
+    "offset": 907233
+  },
+  {
+    "uri": "package:http/src/base_response.dart",
+    "offset": 907375
+  },
+  {
+    "uri": "package:aligned_tooltip/src/utils/get_position_dependent_offset.dart",
+    "offset": 909000
+  },
+  {
+    "uri": "package:http/src/utils.dart",
+    "offset": 909324
+  },
+  {
+    "uri": "package:flutter/src/painting/clip.dart",
+    "offset": 910354
+  },
+  {
+    "uri": "package:cloud_firestore/src/firestore.dart",
+    "offset": 912898
+  },
+  {
+    "uri": "package:gotrue/src/types/fetch_options.dart",
+    "offset": 913983
+  },
+  {
+    "uri": "package:go_router/src/configuration.dart",
+    "offset": 914721
+  },
+  {
+    "uri": "package:flutter/src/widgets/transitions.dart",
+    "offset": 914802
+  },
+  {
+    "uri": "package:be_church/flutter_flow/internationalization.dart",
+    "offset": 915324
+  },
+  {
+    "uri": "package:be_church/biblia/versoes/versoes_model.dart",
+    "offset": 915495
+  },
+  {
+    "uri": "package:be_church/pages/ii_detalhes_evento/ii_detalhes_evento_widget.dart",
+    "offset": 917391
+  },
+  {
+    "uri": "package:onesignal_flutter/src/notifications.dart",
+    "offset": 917711
+  },
+  {
+    "uri": "package:onesignal_flutter/src/subscription.dart",
+    "offset": 917856
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_activity.dart",
+    "offset": 918027
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/material_dynamic_colors.dart",
+    "offset": 919879
+  },
+  {
+    "uri": "package:flutter/src/widgets/app.dart",
+    "offset": 920042
+  },
+  {
+    "uri": "package:dropdown_button2/src/enums.dart",
+    "offset": 922507
+  },
+  {
+    "uri": "package:be_church/flutter_flow/form_field_controller.dart",
+    "offset": 922855
+  },
+  {
+    "uri": "package:flutter/src/animation/tween.dart",
+    "offset": 923443
+  },
+  {
+    "uri": "package:flutter_animate/src/animate.dart",
+    "offset": 923684
+  },
+  {
+    "uri": "package:be_church/pages/n_pedidos_oracao/n_pedidos_oracao_model.dart",
+    "offset": 924098
+  },
+  {
+    "uri": "package:path/src/parsed_path.dart",
+    "offset": 925701
+  },
+  {
+    "uri": "package:source_span/src/location_mixin.dart",
+    "offset": 927362
+  },
+  {
+    "uri": "package:flutter/src/painting/text_painter.dart",
+    "offset": 927885
+  },
+  {
+    "uri": "package:flutter/src/material/date.dart",
+    "offset": 928396
+  },
+  {
+    "uri": "package:gotrue/src/types/types.dart",
+    "offset": 928435
+  },
+  {
+    "uri": "package:flutter/src/widgets/value_listenable_builder.dart",
+    "offset": 928894
+  },
+  {
+    "uri": "package:image_picker_platform_interface/src/types/camera_device.dart",
+    "offset": 929476
+  },
+  {
+    "uri": "package:path/src/style.dart",
+    "offset": 930742
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/settings.dart",
+    "offset": 930785
+  },
+  {
+    "uri": "package:flutter/src/widgets/shared_app_data.dart",
+    "offset": 934970
+  },
+  {
+    "uri": "package:pointer_interceptor_platform_interface/src/default_pointer_interceptor.dart",
+    "offset": 936124
+  },
+  {
+    "uri": "package:json_path/src/grammar/parser_ext.dart",
+    "offset": 936838
+  },
+  {
+    "uri": "package:ff_theme/flutter_flow/flutter_flow_theme.dart",
+    "offset": 938807
+  },
+  {
+    "uri": "package:flutter/src/services/mouse_cursor.dart",
+    "offset": 941497
+  },
+  {
+    "uri": "package:flutter/src/animation/animation.dart",
+    "offset": 941843
+  },
+  {
+    "uri": "package:flutter/src/foundation/_features.dart",
+    "offset": 942240
+  },
+  {
+    "uri": "package:flutter/src/material/tab_controller.dart",
+    "offset": 942303
+  },
+  {
+    "uri": "package:flutter/src/rendering/wrap.dart",
+    "offset": 942482
+  },
+  {
+    "uri": "package:flutter/src/painting/gradient.dart",
+    "offset": 944300
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/dart_callback/impl/facade.dart",
+    "offset": 950245
+  },
+  {
+    "uri": "package:path_provider_platform_interface/src/method_channel_path_provider.dart",
+    "offset": 953596
+  },
+  {
+    "uri": "package:flutter/src/material/search_view_theme.dart",
+    "offset": 954374
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_e.g.dart",
+    "offset": 954567
+  },
+  {
+    "uri": "package:go_router/src/path_utils.dart",
+    "offset": 955865
+  },
+  {
+    "uri": "package:be_church/pages/kkk_detalhes_encontros/kkk_detalhes_encontros_model.dart",
+    "offset": 958316
+  },
+  {
+    "uri": "package:flutter/src/painting/edge_insets.dart",
+    "offset": 958767
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/internal/pointer.dart",
+    "offset": 959574
+  },
+  {
+    "uri": "package:flutter/src/widgets/dismissible.dart",
+    "offset": 968694
+  },
+  {
+    "uri": "package:json_path/src/grammar/array_index_selector.dart",
+    "offset": 968796
+  },
+  {
+    "uri": "package:sqflite_common/src/utils.dart",
+    "offset": 969435
+  },
+  {
+    "uri": "package:flutter/src/gestures/binding.dart",
+    "offset": 970561
+  },
+  {
+    "uri": "package:be_church/components/carteirinha_model.dart",
+    "offset": 970825
+  },
+  {
+    "uri": "package:plugin_platform_interface/plugin_platform_interface.dart",
+    "offset": 970878
+  },
+  {
+    "uri": "package:flutter/src/cupertino/text_selection_toolbar_button.dart",
+    "offset": 971045
+  },
+  {
+    "uri": "package:flutter/src/widgets/framework.dart",
+    "offset": 974708
+  },
+  {
+    "uri": "package:flutter/src/widgets/context_menu_controller.dart",
+    "offset": 976765
+  },
+  {
+    "uri": "package:shared_preferences_platform_interface/method_channel_shared_preferences.dart",
+    "offset": 977269
+  },
+  {
+    "uri": "package:http/src/base_request.dart",
+    "offset": 977668
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/method_channel/method_channel_document_reference.dart",
+    "offset": 978425
+  },
+  {
+    "uri": "package:flutter/src/widgets/focus_manager.dart",
+    "offset": 979178
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/pigeon/messages.pigeon.dart",
+    "offset": 980058
+  },
+  {
+    "uri": "package:flutter/src/cupertino/scrollbar.dart",
+    "offset": 980307
+  },
+  {
+    "uri": "package:petitparser/src/parser/misc/epsilon.dart",
+    "offset": 982152
+  },
+  {
+    "uri": "package:flutter/src/widgets/standard_component_type.dart",
+    "offset": 982219
+  },
+  {
+    "uri": "package:flutter/src/widgets/shortcuts.dart",
+    "offset": 985689
+  },
+  {
+    "uri": "package:flutter/src/painting/placeholder_span.dart",
+    "offset": 985779
+  },
+  {
+    "uri": "package:storage_client/src/storage_client.dart",
+    "offset": 987537
+  },
+  {
+    "uri": "package:path_provider_platform_interface/path_provider_platform_interface.dart",
+    "offset": 987998
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_view.dart",
+    "offset": 989093
+  },
+  {
+    "uri": "package:url_launcher_platform_interface/src/types.dart",
+    "offset": 989158
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/iframe_api/youtube_player_iframe_api.dart",
+    "offset": 989364
+  },
+  {
+    "uri": "package:flutter/src/services/keyboard_key.g.dart",
+    "offset": 989641
+  },
+  {
+    "uri": "package:flutter/src/services/message_codec.dart",
+    "offset": 990185
+  },
+  {
+    "uri": "package:go_router/src/logging.dart",
+    "offset": 990902
+  },
+  {
+    "uri": "package:be_church/pages/a_pagina_inicial/a_pagina_inicial_widget.dart",
+    "offset": 992307
+  },
+  {
+    "uri": "package:json_path/src/grammar/select_all_recursively.dart",
+    "offset": 993314
+  },
+  {
+    "uri": "package:flutter/src/rendering/texture.dart",
+    "offset": 993715
+  },
+  {
+    "uri": "package:flutter/src/foundation/key.dart",
+    "offset": 993851
+  },
+  {
+    "uri": "package:flutter/src/rendering/layout_helper.dart",
+    "offset": 995499
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/platform_webview_widget_creation_params.dart",
+    "offset": 996032
+  },
+  {
+    "uri": "package:flutter/src/widgets/undo_history.dart",
+    "offset": 996321
+  },
+  {
+    "uri": "package:string_scanner/src/string_scanner.dart",
+    "offset": 996367
+  },
+  {
+    "uri": "package:functions_client/src/functions_client.dart",
+    "offset": 997762
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/player_params.dart",
+    "offset": 999657
+  },
+  {
+    "uri": "package:be_church/pages/z_redefinir_senha/z_redefinir_senha_model.dart",
+    "offset": 999711
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/length.dart",
+    "offset": 1000659
+  },
+  {
+    "uri": "package:flutter/src/services/binding.dart",
+    "offset": 1001152
+  },
+  {
+    "uri": "package:json_path/src/grammar/sequence_selector.dart",
+    "offset": 1001671
+  },
+  {
+    "uri": "package:flutter/src/rendering/mouse_tracker.dart",
+    "offset": 1001866
+  },
+  {
+    "uri": "package:flutter/src/cupertino/desktop_text_selection_toolbar.dart",
+    "offset": 1004398
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_a.g.dart",
+    "offset": 1004604
+  },
+  {
+    "uri": "package:iregexp/src/iregexp_grammar_definition.dart",
+    "offset": 1005286
+  },
+  {
+    "uri": "package:flutter/src/material/card_theme.dart",
+    "offset": 1005533
+  },
+  {
+    "uri": "package:storage_client/src/types.dart",
+    "offset": 1006128
+  },
+  {
+    "uri": "package:flutter/src/material/navigation_bar_theme.dart",
+    "offset": 1006353
+  },
+  {
+    "uri": "package:be_church/pages/g1_devocional/g1_devocional_widget.dart",
+    "offset": 1008534
+  },
+  {
+    "uri": "package:gotrue/src/fetch.dart",
+    "offset": 1010469
+  },
+  {
+    "uri": "package:json_path/src/fun/fun_call.dart",
+    "offset": 1010950
+  },
+  {
+    "uri": "package:flutter/src/material/ink_ripple.dart",
+    "offset": 1011138
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_controller.dart",
+    "offset": 1011707
+  },
+  {
+    "uri": "package:rxdart/src/utils/error_and_stacktrace.dart",
+    "offset": 1013761
+  },
+  {
+    "uri": "package:flutter/src/material/material.dart",
+    "offset": 1019224
+  },
+  {
+    "uri": "package:lock_orientation_library_opafp4/flutter_flow/flutter_flow_model.dart",
+    "offset": 1019690
+  },
+  {
+    "uri": "package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart",
+    "offset": 1020836
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_metrics.dart",
+    "offset": 1021801
+  },
+  {
+    "uri": "package:onesignal_flutter/src/notification.dart",
+    "offset": 1022392
+  },
+  {
+    "uri": "package:flutter/src/material/text_theme.dart",
+    "offset": 1023235
+  },
+  {
+    "uri": "package:flutter/src/foundation/print.dart",
+    "offset": 1024666
+  },
+  {
+    "uri": "package:flutter/src/widgets/will_pop_scope.dart",
+    "offset": 1025819
+  },
+  {
+    "uri": "package:json_path/src/fun/standard/value.dart",
+    "offset": 1026586
+  },
+  {
+    "uri": "package:flutter/src/widgets/toggleable.dart",
+    "offset": 1026729
+  },
+  {
+    "uri": "package:be_church/biblia/biblia_home/biblia_home_model.dart",
+    "offset": 1026869
+  },
+  {
+    "uri": "package:path/src/path_exception.dart",
+    "offset": 1027564
+  },
+  {
+    "uri": "package:shared_preferences_platform_interface/types.dart",
+    "offset": 1029125
+  },
+  {
+    "uri": "package:http/src/exception.dart",
+    "offset": 1031062
+  },
+  {
+    "uri": "package:flutter/src/material/navigation_drawer_theme.dart",
+    "offset": 1031281
+  },
+  {
+    "uri": "package:flutter/src/services/asset_bundle.dart",
+    "offset": 1032844
+  },
+  {
+    "uri": "package:flutter/src/cupertino/text_theme.dart",
+    "offset": 1033081
+  },
+  {
+    "uri": "package:flutter/src/widgets/system_context_menu.dart",
+    "offset": 1033616
+  },
+  {
+    "uri": "package:be_church/components/popup_apenas_app_widget.dart",
+    "offset": 1034027
+  },
+  {
+    "uri": "package:q_r_code_render_widget_by_kai_library_8e3lee/pages/home_page/home_page_model.dart",
+    "offset": 1034834
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_l.g.dart",
+    "offset": 1035269
+  },
+  {
+    "uri": "package:flutter/src/material/drawer_theme.dart",
+    "offset": 1036748
+  },
+  {
+    "uri": "package:flutter/src/widgets/text_selection.dart",
+    "offset": 1037079
+  },
+  {
+    "uri": "package:flutter/src/services/autofill.dart",
+    "offset": 1038300
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_video_player.dart",
+    "offset": 1038797
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_android.dart",
+    "offset": 1039134
+  },
+  {
+    "uri": "package:flutter/src/material/toggle_buttons_theme.dart",
+    "offset": 1040530
+  },
+  {
+    "uri": "package:petitparser/src/parser/predicate/predicate.dart",
+    "offset": 1041089
+  },
+  {
+    "uri": "package:flutter/src/painting/matrix_utils.dart",
+    "offset": 1042404
+  },
+  {
+    "uri": "package:flutter_animate/src/effects/scale_effect.dart",
+    "offset": 1042806
+  },
+  {
+    "uri": "package:flutter/src/widgets/animated_size.dart",
+    "offset": 1043079
+  },
+  {
+    "uri": "package:be_church/pages/pp_minhas_escalas/pp_minhas_escalas_widget.dart",
+    "offset": 1045037
+  },
+  {
+    "uri": "package:json_path/src/normalized/name_selector.dart",
+    "offset": 1045993
+  },
+  {
+    "uri": "package:be_church/teste/teste_model.dart",
+    "offset": 1046334
+  },
+  {
+    "uri": "package:flutter/src/services/live_text.dart",
+    "offset": 1047580
+  },
+  {
+    "uri": "package:be_church/pages/ee_detalhes_ministerios/ee_detalhes_ministerios_model.dart",
+    "offset": 1048409
+  },
+  {
+    "uri": "package:be_church/pages/mm_minha_jornada/mm_minha_jornada_model.dart",
+    "offset": 1051166
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver.dart",
+    "offset": 1051442
+  },
+  {
+    "uri": "package:be_church/biblia/versoes/versoes_widget.dart",
+    "offset": 1051567
+  },
+  {
+    "uri": "package:cloud_firestore/src/collection_reference.dart",
+    "offset": 1052944
+  },
+  {
+    "uri": "package:flutter/src/painting/binding.dart",
+    "offset": 1055054
+  },
+  {
+    "uri": "package:flutter/src/material/dialog.dart",
+    "offset": 1055422
+  },
+  {
+    "uri": "package:onesignal_flutter/src/inappmessages.dart",
+    "offset": 1056384
+  },
+  {
+    "uri": "package:flutter/src/material/progress_indicator.dart",
+    "offset": 1056511
+  },
+  {
+    "uri": "package:be_church/pages/ii_detalhes_evento/ii_detalhes_evento_model.dart",
+    "offset": 1057005
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_all_parts.g.dart",
+    "offset": 1057713
+  },
+  {
+    "uri": "package:json_path/src/grammar/comparison_expression.dart",
+    "offset": 1059789
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/controller/youtube_player_event_handler.dart",
+    "offset": 1060222
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/pattern.dart",
+    "offset": 1060308
+  },
+  {
+    "uri": "package:flutter/src/widgets/actions.dart",
+    "offset": 1064872
+  },
+  {
+    "uri": "package:flutter/src/widgets/platform_menu_bar.dart",
+    "offset": 1067761
+  },
+  {
+    "uri": "package:flutter/src/material/desktop_text_selection.dart",
+    "offset": 1068163
+  },
+  {
+    "uri": "package:aligned_tooltip/src/models/aligned_controller.dart",
+    "offset": 1068388
+  },
+  {
+    "uri": "package:flutter/src/services/raw_keyboard_macos.dart",
+    "offset": 1069787
+  },
+  {
+    "uri": "package:http/src/streamed_response.dart",
+    "offset": 1070013
+  },
+  {
+    "uri": "package:be_church/pages/c_login/c_login_widget.dart",
+    "offset": 1070845
+  },
+  {
+    "uri": "package:flutter/src/painting/strut_style.dart",
+    "offset": 1072113
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/table.dart",
+    "offset": 1073588
+  },
+  {
+    "uri": "package:flutter/src/painting/colors.dart",
+    "offset": 1074360
+  },
+  {
+    "uri": "package:url_launcher/src/types.dart",
+    "offset": 1075176
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_icon_button.dart",
+    "offset": 1075388
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/method_channel/method_channel_query.dart",
+    "offset": 1076157
+  },
+  {
+    "uri": "package:webview_flutter_android/src/android_webkit.g.dart",
+    "offset": 1076663
+  },
+  {
+    "uri": "package:flutter/src/material/outlined_button_theme.dart",
+    "offset": 1076927
+  },
+  {
+    "uri": "package:intl/src/intl/number_format.dart",
+    "offset": 1078206
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/row.dart",
+    "offset": 1078481
+  },
+  {
+    "uri": "package:json_path/src/grammar/array_slice_selector.dart",
+    "offset": 1079327
+  },
+  {
+    "uri": "package:pointer_interceptor/src/pointer_interceptor.dart",
+    "offset": 1083069
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/constant.dart",
+    "offset": 1083457
+  },
+  {
+    "uri": "package:file_picker/src/file_picker.dart",
+    "offset": 1084881
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_y.g.dart",
+    "offset": 1085062
+  },
+  {
+    "uri": "package:aligned_tooltip/src/positioned_tooltip.dart",
+    "offset": 1085230
+  },
+  {
+    "uri": "package:flutter/src/rendering/editable.dart",
+    "offset": 1085862
+  },
+  {
+    "uri": "package:petitparser/src/parser/action/cast.dart",
+    "offset": 1086482
+  },
+  {
+    "uri": "package:source_span/src/span.dart",
+    "offset": 1087880
+  },
+  {
+    "uri": "package:flutter/src/widgets/router.dart",
+    "offset": 1088328
+  },
+  {
+    "uri": "package:gotrue/src/types/gotrue_async_storage.dart",
+    "offset": 1090290
+  },
+  {
+    "uri": "package:be_church/components/popup_excluir_conta_widget.dart",
+    "offset": 1090644
+  },
+  {
+    "uri": "package:flutter/src/widgets/overscroll_indicator.dart",
+    "offset": 1091462
+  },
+  {
+    "uri": "package:flutter/src/rendering/platform_view.dart",
+    "offset": 1091811
+  },
+  {
+    "uri": "package:flutter/src/widgets/ticker_provider.dart",
+    "offset": 1091985
+  },
+  {
+    "uri": "package:go_router/src/misc/errors.dart",
+    "offset": 1092328
+  },
+  {
+    "uri": "package:flutter/src/material/text_button_theme.dart",
+    "offset": 1093811
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/auth_util.dart",
+    "offset": 1093936
+  },
+  {
+    "uri": "package:flutter/src/services/text_editing_delta.dart",
+    "offset": 1094102
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/letter.dart",
+    "offset": 1094345
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_encontro_widget.dart",
+    "offset": 1095024
+  },
+  {
+    "uri": "package:http_parser/src/media_type.dart",
+    "offset": 1098022
+  },
+  {
+    "uri": "package:be_church/pages/j_aniversariantes/j_aniversariantes_widget.dart",
+    "offset": 1098184
+  },
+  {
+    "uri": "package:file_picker/src/file_picker_result.dart",
+    "offset": 1099588
+  },
+  {
+    "uri": "package:petitparser/src/definition/resolve.dart",
+    "offset": 1100731
+  },
+  {
+    "uri": "package:flutter_animate/src/extensions/num_duration_extensions.dart",
+    "offset": 1100936
+  },
+  {
+    "uri": "package:auto_size_text/auto_size_text.dart",
+    "offset": 1101317
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_s.g.dart",
+    "offset": 1101744
+  },
+  {
+    "uri": "package:flutter/src/material/color_scheme.dart",
+    "offset": 1103049
+  },
+  {
+    "uri": "package:flutter/src/widgets/implicit_animations.dart",
+    "offset": 1106911
+  },
+  {
+    "uri": "package:flutter/src/gestures/events.dart",
+    "offset": 1107209
+  },
+  {
+    "uri": "package:q_r_code_render_widget_by_kai_library_8e3lee/flutter_flow/flutter_flow_model.dart",
+    "offset": 1109462
+  },
+  {
+    "uri": "package:flutter/src/material/text_field.dart",
+    "offset": 1110210
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluir_conta/zz_excluir_conta_model.dart",
+    "offset": 1110256
+  },
+  {
+    "uri": "package:flutter/src/services/hardware_keyboard.dart",
+    "offset": 1111107
+  },
+  {
+    "uri": "package:stream_channel/src/stream_channel_controller.dart",
+    "offset": 1111746
+  },
+  {
+    "uri": "package:flutter/src/material/button_theme.dart",
+    "offset": 1113925
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_simulation.dart",
+    "offset": 1114412
+  },
+  {
+    "uri": "package:be_church/pages/x_ao_vivo/x_ao_vivo_widget.dart",
+    "offset": 1115366
+  },
+  {
+    "uri": "package:be_church/pages/zz_sobre_desenvolvedor/zz_sobre_desenvolvedor_model.dart",
+    "offset": 1116330
+  },
+  {
+    "uri": "package:image_picker_platform_interface/src/types/image_source.dart",
+    "offset": 1117396
+  },
+  {
+    "uri": "package:flutter_animate/src/effects/effect.dart",
+    "offset": 1118511
+  },
+  {
+    "uri": "package:json_path/src/grammar/array_slice.dart",
+    "offset": 1118997
+  },
+  {
+    "uri": "package:json_path/src/grammar/negatable.dart",
+    "offset": 1119375
+  },
+  {
+    "uri": "package:flutter/src/material/dropdown_menu_theme.dart",
+    "offset": 1120207
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/sqlite_manager.dart",
+    "offset": 1120642
+  },
+  {
+    "uri": "package:be_church/pages/e_ministerios/e_ministerios_widget.dart",
+    "offset": 1121795
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluida/zz_excluida_model.dart",
+    "offset": 1122348
+  },
+  {
+    "uri": "package:be_church/flutter_flow/nav/nav.dart",
+    "offset": 1123798
+  },
+  {
+    "uri": "package:flutter/src/material/action_buttons.dart",
+    "offset": 1125508
+  },
+  {
+    "uri": "package:flutter/src/material/list_tile.dart",
+    "offset": 1126682
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/css_loader.dart",
+    "offset": 1128777
+  },
+  {
+    "uri": "package:webview_flutter/src/webview_widget.dart",
+    "offset": 1129747
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/cloud_firestore_platform_interface.dart",
+    "offset": 1131750
+  },
+  {
+    "uri": "package:petitparser/src/matcher/matches/matches_iterable.dart",
+    "offset": 1132115
+  },
+  {
+    "uri": "package:be_church/pages/k_detalhes_celulas/k_detalhes_celulas_widget.dart",
+    "offset": 1132210
+  },
+  {
+    "uri": "package:flutter/src/widgets/inherited_notifier.dart",
+    "offset": 1135655
+  },
+  {
+    "uri": "package:flutter/src/widgets/preferred_size.dart",
+    "offset": 1136626
+  },
+  {
+    "uri": "package:collection/src/equality.dart",
+    "offset": 1140614
+  },
+  {
+    "uri": "package:gotrue/src/gotrue_admin_api.dart",
+    "offset": 1141574
+  },
+  {
+    "uri": "package:gotrue/src/types/auth_exception.dart",
+    "offset": 1141763
+  },
+  {
+    "uri": "package:from_css_color/from_css_color.dart",
+    "offset": 1142126
+  },
+  {
+    "uri": "package:flutter_animate/src/effects/move_effect.dart",
+    "offset": 1142272
+  },
+  {
+    "uri": "package:collection/src/priority_queue.dart",
+    "offset": 1142697
+  },
+  {
+    "uri": "package:be_church/backend/schema/structs/biblia_user_struct.dart",
+    "offset": 1143728
+  },
+  {
+    "uri": "package:shared_preferences_android/src/shared_preferences_android.dart",
+    "offset": 1144139
+  },
+  {
+    "uri": "package:flutter/src/services/haptic_feedback.dart",
+    "offset": 1147206
+  },
+  {
+    "uri": "package:webview_flutter_android/src/android_webview_platform.dart",
+    "offset": 1148057
+  },
+  {
+    "uri": "package:flutter/src/widgets/context_menu_button_item.dart",
+    "offset": 1148154
+  },
+  {
+    "uri": "package:flutter/src/physics/simulation.dart",
+    "offset": 1148304
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/new_element.dart",
+    "offset": 1148348
+  },
+  {
+    "uri": "package:flutter/src/rendering/selection.dart",
+    "offset": 1149852
+  },
+  {
+    "uri": "package:rfc_6901/src/_internal/encoding_mixin.dart",
+    "offset": 1150089
+  },
+  {
+    "uri": "package:flutter/src/widgets/editable_text.dart",
+    "offset": 1152353
+  },
+  {
+    "uri": "package:flutter/src/animation/tween_sequence.dart",
+    "offset": 1160825
+  },
+  {
+    "uri": "package:flutter/src/widgets/orientation_builder.dart",
+    "offset": 1161300
+  },
+  {
+    "uri": "package:go_router/src/parser.dart",
+    "offset": 1161419
+  },
+  {
+    "uri": "package:be_church/main.dart",
+    "offset": 1163629
+  },
+  {
+    "uri": "package:shared_preferences_android/src/shared_preferences_async_android.dart",
+    "offset": 1163697
+  },
+  {
+    "uri": "package:intl/src/intl_helpers.dart",
+    "offset": 1164378
+  },
+  {
+    "uri": "package:http/src/request.dart",
+    "offset": 1165196
+  },
+  {
+    "uri": "package:be_church/pages/z_notificacoes/z_notificacoes_model.dart",
+    "offset": 1165673
+  },
+  {
+    "uri": "package:flutter/src/widgets/raw_radio.dart",
+    "offset": 1166745
+  },
+  {
+    "uri": "package:flutter/src/material/material_state_mixin.dart",
+    "offset": 1166934
+  },
+  {
+    "uri": "package:logging/src/logger.dart",
+    "offset": 1168253
+  },
+  {
+    "uri": "package:web_socket/src/web_socket.dart",
+    "offset": 1169496
+  },
+  {
+    "uri": "package:flutter/src/material/divider_theme.dart",
+    "offset": 1170411
+  },
+  {
+    "uri": "package:flutter/src/material/tab_indicator.dart",
+    "offset": 1172608
+  },
+  {
+    "uri": "package:be_church/components/popup_email_enviado_model.dart",
+    "offset": 1174135
+  },
+  {
+    "uri": "package:onesignal_flutter/src/user.dart",
+    "offset": 1174351
+  },
+  {
+    "uri": "package:flutter/src/cupertino/route.dart",
+    "offset": 1176486
+  },
+  {
+    "uri": "package:flutter/src/painting/box_shadow.dart",
+    "offset": 1176615
+  },
+  {
+    "uri": "package:firebase_core_platform_interface/src/platform_interface/platform_interface_firebase.dart",
+    "offset": 1177967
+  },
+  {
+    "uri": "package:http/src/client.dart",
+    "offset": 1179215
+  },
+  {
+    "uri": "package:firebase_core/src/firebase_app.dart",
+    "offset": 1179945
+  },
+  {
+    "uri": "package:be_church/pages/gg_detalhes_devocional/gg_detalhes_devocional_widget.dart",
+    "offset": 1181723
+  },
+  {
+    "uri": "package:http/http.dart",
+    "offset": 1182129
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/webview_platform.dart",
+    "offset": 1183368
+  },
+  {
+    "uri": "package:flutter/src/widgets/texture.dart",
+    "offset": 1185180
+  },
+  {
+    "uri": "package:flutter/src/foundation/serialization.dart",
+    "offset": 1185702
+  },
+  {
+    "uri": "package:be_church/pages/z_notificacoes/z_notificacoes_widget.dart",
+    "offset": 1187693
+  },
+  {
+    "uri": "package:flutter/src/widgets/scroll_physics.dart",
+    "offset": 1188249
+  },
+  {
+    "uri": "package:supabase/src/supabase_client_options.dart",
+    "offset": 1188505
+  },
+  {
+    "uri": "package:flutter/src/material/bottom_navigation_bar_theme.dart",
+    "offset": 1189560
+  },
+  {
+    "uri": "package:app_links/src/app_links.dart",
+    "offset": 1190123
+  },
+  {
+    "uri": "package:flutter/src/widgets/platform_view.dart",
+    "offset": 1190563
+  },
+  {
+    "uri": "package:sqflite_common/src/transaction.dart",
+    "offset": 1192023
+  },
+  {
+    "uri": "package:font_awesome_flutter/src/icon_data.dart",
+    "offset": 1192067
+  },
+  {
+    "uri": "package:webviewx_plus/src/controller/interface.dart",
+    "offset": 1192166
+  },
+  {
+    "uri": "package:path/src/context.dart",
+    "offset": 1193020
+  },
+  {
+    "uri": "package:be_church/pages/gg_detalhes_devocional/gg_detalhes_devocional_model.dart",
+    "offset": 1193777
+  },
+  {
+    "uri": "package:be_church/biblia/capitulos/capitulos_model.dart",
+    "offset": 1195156
+  },
+  {
+    "uri": "package:flutter/src/material/constants.dart",
+    "offset": 1195447
+  },
+  {
+    "uri": "package:flutter/src/material/range_slider.dart",
+    "offset": 1195642
+  },
+  {
+    "uri": "package:flutter/src/material/typography.dart",
+    "offset": 1198118
+  },
+  {
+    "uri": "package:be_church/pages/x_ao_vivo/x_ao_vivo_model.dart",
+    "offset": 1198659
+  },
+  {
+    "uri": "package:intl/intl.dart",
+    "offset": 1201052
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/choice.dart",
+    "offset": 1202132
+  },
+  {
+    "uri": "package:rxdart/src/streams/value_stream.dart",
+    "offset": 1202433
+  },
+  {
+    "uri": "package:app_links_platform_interface/app_links_method_channel.dart",
+    "offset": 1202723
+  },
+  {
+    "uri": "package:material_color_utilities/scheme/scheme_tonal_spot.dart",
+    "offset": 1204007
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/dynamic_color.dart",
+    "offset": 1204452
+  },
+  {
+    "uri": "package:petitparser/src/parser/misc/eof.dart",
+    "offset": 1204972
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_celula_widget.dart",
+    "offset": 1205051
+  },
+  {
+    "uri": "package:be_church/pages/d_home/d_home_widget.dart",
+    "offset": 1205172
+  },
+  {
+    "uri": "package:supabase_flutter/src/supabase.dart",
+    "offset": 1207033
+  },
+  {
+    "uri": "package:pointer_interceptor_platform_interface/src/pointer_interceptor_platform.dart",
+    "offset": 1211281
+  },
+  {
+    "uri": "package:flutter/src/cupertino/icon_theme_data.dart",
+    "offset": 1213005
+  },
+  {
+    "uri": "package:supabase_flutter/src/flutter_go_true_client_options.dart",
+    "offset": 1213244
+  },
+  {
+    "uri": "package:sqflite_common/src/sqflite_database_factory.dart",
+    "offset": 1214322
+  },
+  {
+    "uri": "package:maybe_just_nothing/src/nothing.dart",
+    "offset": 1215358
+  },
+  {
+    "uri": "package:storage_client/src/storage_bucket_api.dart",
+    "offset": 1216280
+  },
+  {
+    "uri": "package:petitparser/src/parser/utils/failure_joiner.dart",
+    "offset": 1217540
+  },
+  {
+    "uri": "package:material_color_utilities/hct/src/hct_solver.dart",
+    "offset": 1218373
+  },
+  {
+    "uri": "package:be_church/biblia/personalizar/personalizar_widget.dart",
+    "offset": 1219593
+  },
+  {
+    "uri": "package:flutter/src/material/magnifier.dart",
+    "offset": 1220304
+  },
+  {
+    "uri": "package:flutter/src/material/app_bar.dart",
+    "offset": 1220516
+  },
+  {
+    "uri": "package:be_church/components/excluir_model.dart",
+    "offset": 1221003
+  },
+  {
+    "uri": "package:be_church/pages/dd_detalhes_igreja/dd_detalhes_igreja_model.dart",
+    "offset": 1221308
+  },
+  {
+    "uri": "package:google_fonts/src/file_io_desktop_and_mobile.dart",
+    "offset": 1222568
+  },
+  {
+    "uri": "package:onesignal_flutter/src/pushsubscription.dart",
+    "offset": 1222976
+  },
+  {
+    "uri": "package:chewie/src/notifiers/player_notifier.dart",
+    "offset": 1223071
+  },
+  {
+    "uri": "package:async/src/result/result.dart",
+    "offset": 1224562
+  },
+  {
+    "uri": "package:go_router/src/information_provider.dart",
+    "offset": 1225269
+  },
+  {
+    "uri": "package:be_church/components/popup_igreja_widget.dart",
+    "offset": 1226402
+  },
+  {
+    "uri": "package:be_church/pages/kk_encontros/kk_encontros_widget.dart",
+    "offset": 1226901
+  },
+  {
+    "uri": "package:flutter/src/widgets/restoration.dart",
+    "offset": 1227848
+  },
+  {
+    "uri": "package:flutter/src/widgets/overlay.dart",
+    "offset": 1227915
+  },
+  {
+    "uri": "package:be_church/pages/b_bemvindo/b_bemvindo_widget.dart",
+    "offset": 1228404
+  },
+  {
+    "uri": "package:json_path/src/grammar/negation.dart",
+    "offset": 1229766
+  },
+  {
+    "uri": "package:flutter/src/gestures/lsq_solver.dart",
+    "offset": 1229810
+  },
+  {
+    "uri": "package:gotrue/src/gotrue_client.dart",
+    "offset": 1230844
+  },
+  {
+    "uri": "package:json_path/src/json_path.dart",
+    "offset": 1232408
+  },
+  {
+    "uri": "package:flutter/src/material/icon_button_theme.dart",
+    "offset": 1233030
+  },
+  {
+    "uri": "package:petitparser/src/parser/predicate/any.dart",
+    "offset": 1234083
+  },
+  {
+    "uri": "package:flutter/src/rendering/viewport.dart",
+    "offset": 1236608
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/any_of.dart",
+    "offset": 1236862
+  },
+  {
+    "uri": "package:flutter/src/widgets/routes.dart",
+    "offset": 1237024
+  },
+  {
+    "uri": "package:be_church/pages/c_login/c_login_model.dart",
+    "offset": 1238400
+  },
+  {
+    "uri": "package:go_router/src/pages/cupertino.dart",
+    "offset": 1239831
+  },
+  {
+    "uri": "package:flutter/src/widgets/layout_builder.dart",
+    "offset": 1240645
+  },
+  {
+    "uri": "package:flutter/src/cupertino/radio.dart",
+    "offset": 1240848
+  },
+  {
+    "uri": "package:flutter/src/rendering/error.dart",
+    "offset": 1240939
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/src/contrast_curve.dart",
+    "offset": 1241906
+  },
+  {
+    "uri": "package:path/src/internal_style.dart",
+    "offset": 1242053
+  },
+  {
+    "uri": "package:intl/src/intl/date_format_field.dart",
+    "offset": 1242393
+  },
+  {
+    "uri": "package:flutter/src/widgets/snapshot_widget.dart",
+    "offset": 1242515
+  },
+  {
+    "uri": "package:cloud_firestore/cloud_firestore.dart",
+    "offset": 1243375
+  },
+  {
+    "uri": "package:json_path/src/grammar/literal.dart",
+    "offset": 1244189
+  },
+  {
+    "uri": "package:onesignal_flutter/src/utils.dart",
+    "offset": 1244320
+  },
+  {
+    "uri": "package:petitparser/src/definition/reference.dart",
+    "offset": 1245722
+  },
+  {
+    "uri": "package:crypto/src/hash_sink.dart",
+    "offset": 1247796
+  },
+  {
+    "uri": "package:flutter/src/dart_plugin_registrant.dart",
+    "offset": 1249069
+  },
+  {
+    "uri": "package:be_church/pages/n_pedidos_oracao/n_pedidos_oracao_widget.dart",
+    "offset": 1250006
+  },
+  {
+    "uri": "package:flutter/src/material/filled_button_theme.dart",
+    "offset": 1250241
+  },
+  {
+    "uri": "package:flutter/src/material/time_picker_theme.dart",
+    "offset": 1250537
+  },
+  {
+    "uri": "package:ff_commons/flutter_flow/place.dart",
+    "offset": 1251813
+  },
+  {
+    "uri": "package:flutter/src/material/drawer.dart",
+    "offset": 1251878
+  },
+  {
+    "uri": "package:async/src/delegate/stream_sink.dart",
+    "offset": 1253822
+  },
+  {
+    "uri": "package:flutter/src/cupertino/interface_level.dart",
+    "offset": 1253866
+  },
+  {
+    "uri": "package:petitparser/src/parser/character/code.dart",
+    "offset": 1258445
+  },
+  {
+    "uri": "package:onesignal_flutter/src/debug.dart",
+    "offset": 1258633
+  },
+  {
+    "uri": "package:flutter/src/cupertino/checkbox.dart",
+    "offset": 1260681
+  },
+  {
+    "uri": "package:flutter/src/rendering/binding.dart",
+    "offset": 1260823
+  },
+  {
+    "uri": "package:flutter/src/material/ink_sparkle.dart",
+    "offset": 1261243
+  },
+  {
+    "uri": "package:flutter/src/painting/text_scaler.dart",
+    "offset": 1262024
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/sqlite_row.dart",
+    "offset": 1262137
+  },
+  {
+    "uri": "package:flutter_animate/src/effects/visibility_effect.dart",
+    "offset": 1262480
+  },
+  {
+    "uri": "package:flutter/src/services/text_formatter.dart",
+    "offset": 1263081
+  },
+  {
+    "uri": "package:flutter/src/material/ink_well.dart",
+    "offset": 1263169
+  },
+  {
+    "uri": "package:be_church/biblia/livros/livros_widget.dart",
+    "offset": 1263457
+  },
+  {
+    "uri": "package:be_church/pages/z_redefinir_senha/z_redefinir_senha_widget.dart",
+    "offset": 1266465
+  },
+  {
+    "uri": "package:flutter/src/widgets/navigator.dart",
+    "offset": 1269247
+  },
+  {
+    "uri": "package:material_color_utilities/utils/math_utils.dart",
+    "offset": 1270501
+  },
+  {
+    "uri": "package:flutter/src/material/chip_theme.dart",
+    "offset": 1270621
+  },
+  {
+    "uri": "package:flutter/src/rendering/layer.dart",
+    "offset": 1271040
+  },
+  {
+    "uri": "package:flutter/src/material/app.dart",
+    "offset": 1272528
+  },
+  {
+    "uri": "package:collection/src/functions.dart",
+    "offset": 1272728
+  },
+  {
+    "uri": "package:flutter/src/gestures/force_press.dart",
+    "offset": 1274760
+  },
+  {
+    "uri": "package:intl/src/intl/date_computation.dart",
+    "offset": 1274806
+  },
+  {
+    "uri": "package:synchronized/src/basic_lock.dart",
+    "offset": 1275075
+  },
+  {
+    "uri": "package:flutter/src/material/elevated_button.dart",
+    "offset": 1276746
+  },
+  {
+    "uri": "package:flutter/src/widgets/title.dart",
+    "offset": 1277089
+  },
+  {
+    "uri": "package:flutter/src/material/switch_theme.dart",
+    "offset": 1277151
+  },
+  {
+    "uri": "package:flutter/src/services/process_text.dart",
+    "offset": 1277390
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/webview_aware.dart",
+    "offset": 1277862
+  },
+  {
+    "uri": "package:flutter/src/painting/geometry.dart",
+    "offset": 1278385
+  },
+  {
+    "uri": "package:yet_another_json_isolate/src/_isolates_io.dart",
+    "offset": 1279641
+  },
+  {
+    "uri": "package:petitparser/src/parser/action/token.dart",
+    "offset": 1282679
+  },
+  {
+    "uri": "package:material_color_utilities/dynamiccolor/src/tone_delta_pair.dart",
+    "offset": 1283834
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/navigation_decision.dart",
+    "offset": 1284257
+  },
+  {
+    "uri": "package:flutter/src/services/mouse_tracking.dart",
+    "offset": 1285236
+  },
+  {
+    "uri": "package:be_church/components/bs_observacoes_escala_model.dart",
+    "offset": 1286082
+  },
+  {
+    "uri": "package:intl/date_symbol_data_custom.dart",
+    "offset": 1286724
+  },
+  {
+    "uri": "package:image_picker_android/src/messages.g.dart",
+    "offset": 1287846
+  },
+  {
+    "uri": "package:aligned_tooltip/src/models/aligned_interface.dart",
+    "offset": 1289178
+  },
+  {
+    "uri": "package:flutter/src/gestures/arena.dart",
+    "offset": 1289236
+  },
+  {
+    "uri": "package:flutter/src/rendering/viewport_offset.dart",
+    "offset": 1290085
+  },
+  {
+    "uri": "package:term_glyph/src/generated/glyph_set.dart",
+    "offset": 1291243
+  },
+  {
+    "uri": "package:flutter_localizations/src/l10n/generated_date_localizations.dart",
+    "offset": 1291911
+  },
+  {
+    "uri": "package:be_church/pages/h_e_b_d/h_e_b_d_model.dart",
+    "offset": 1292790
+  },
+  {
+    "uri": "package:ff_commons/flutter_flow/lat_lng.dart",
+    "offset": 1293824
+  },
+  {
+    "uri": "package:webview_flutter/src/navigation_delegate.dart",
+    "offset": 1295816
+  },
+  {
+    "uri": "package:flutter/src/widgets/pages.dart",
+    "offset": 1296388
+  },
+  {
+    "uri": "package:vector_math/src/vector_math_64/vector2.dart",
+    "offset": 1299646
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_g.g.dart",
+    "offset": 1301875
+  },
+  {
+    "uri": "package:flutter/src/material/floating_action_button.dart",
+    "offset": 1302721
+  },
+  {
+    "uri": "package:realtime_client/src/message.dart",
+    "offset": 1302808
+  },
+  {
+    "uri": "package:path/src/style/posix.dart",
+    "offset": 1304593
+  },
+  {
+    "uri": "package:string_scanner/src/exception.dart",
+    "offset": 1305102
+  },
+  {
+    "uri": "package:logging/src/level.dart",
+    "offset": 1305319
+  },
+  {
+    "uri": "package:be_church/flutter_flow/custom_functions.dart",
+    "offset": 1305690
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/enums/player_state.dart",
+    "offset": 1308197
+  },
+  {
+    "uri": "package:json_path/src/grammar/slice_indices.dart",
+    "offset": 1310111
+  },
+  {
+    "uri": "package:realtime_client/src/constants.dart",
+    "offset": 1311847
+  },
+  {
+    "uri": "package:json_path/src/expression/expression.dart",
+    "offset": 1311890
+  },
+  {
+    "uri": "package:flutter/src/services/system_navigator.dart",
+    "offset": 1311982
+  },
+  {
+    "uri": "package:flutter/src/services/predictive_back_event.dart",
+    "offset": 1315430
+  },
+  {
+    "uri": "package:cloud_firestore_platform_interface/src/platform_interface/platform_interface_collection_reference.dart",
+    "offset": 1320011
+  },
+  {
+    "uri": "package:webview_flutter_android/src/android_webview_controller.dart",
+    "offset": 1320693
+  },
+  {
+    "uri": "package:flutter/src/services/keyboard_inserted_content.dart",
+    "offset": 1322663
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_v.g.dart",
+    "offset": 1323114
+  },
+  {
+    "uri": "package:go_router/src/misc/extensions.dart",
+    "offset": 1323185
+  },
+  {
+    "uri": "package:flutter/src/semantics/semantics_event.dart",
+    "offset": 1324350
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/platform_webview_controller_creation_params.dart",
+    "offset": 1325643
+  },
+  {
+    "uri": "package:petitparser/src/parser/utils/sequential.dart",
+    "offset": 1326413
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_d.g.dart",
+    "offset": 1326570
+  },
+  {
+    "uri": "package:video_player/video_player.dart",
+    "offset": 1326638
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/list.dart",
+    "offset": 1326810
+  },
+  {
+    "uri": "package:flutter/src/services/clipboard.dart",
+    "offset": 1333532
+  },
+  {
+    "uri": "package:flutter/src/material/snack_bar_theme.dart",
+    "offset": 1334781
+  },
+  {
+    "uri": "package:be_church/pages/nn_fazer_pedido/nn_fazer_pedido_widget.dart",
+    "offset": 1334893
+  },
+  {
+    "uri": "package:flutter/src/widgets/pop_scope.dart",
+    "offset": 1335327
+  },
+  {
+    "uri": "package:gotrue/src/types/api_version.dart",
+    "offset": 1335504
+  },
+  {
+    "uri": "package:iregexp/src/iregexp.dart",
+    "offset": 1339214
+  },
+  {
+    "uri": "package:storage_client/src/storage_file_api.dart",
+    "offset": 1341420
+  },
+  {
+    "uri": "package:flutter/src/gestures/resampler.dart",
+    "offset": 1341900
+  },
+  {
+    "uri": "package:flutter/src/material/floating_action_button_location.dart",
+    "offset": 1342426
+  },
+  {
+    "uri": "package:be_church/pages/z_dados_cadastrais/z_dados_cadastrais_widget.dart",
+    "offset": 1343105
+  },
+  {
+    "uri": "package:web_socket/src/io_web_socket.dart",
+    "offset": 1343951
+  },
+  {
+    "uri": "package:webview_flutter_platform_interface/src/types/navigation_request.dart",
+    "offset": 1344692
+  },
+  {
+    "uri": "package:flutter/src/material/popup_menu_theme.dart",
+    "offset": 1344900
+  },
+  {
+    "uri": "package:flutter/src/material/text_selection_theme.dart",
+    "offset": 1346886
+  },
+  {
+    "uri": "package:youtube_player_iframe/src/widgets/youtube_player_scaffold.dart",
+    "offset": 1349770
+  },
+  {
+    "uri": "package:flutter_localizations/src/material_localizations.dart",
+    "offset": 1351107
+  },
+  {
+    "uri": "package:cross_file/src/types/base.dart",
+    "offset": 1352469
+  },
+  {
+    "uri": "package:flutter/src/rendering/box.dart",
+    "offset": 1354028
+  },
+  {
+    "uri": "package:flutter/src/cupertino/theme.dart",
+    "offset": 1354475
+  },
+  {
+    "uri": "package:be_church/components/carteirinha_widget.dart",
+    "offset": 1354643
+  },
+  {
+    "uri": "package:flutter/src/cupertino/desktop_text_selection.dart",
+    "offset": 1354696
+  },
+  {
+    "uri": "package:flutter/src/services/scribe.dart",
+    "offset": 1355565
+  },
+  {
+    "uri": "package:image_picker/image_picker.dart",
+    "offset": 1356077
+  },
+  {
+    "uri": "package:be_church/components/popup_email_enviado_widget.dart",
+    "offset": 1356761
+  },
+  {
+    "uri": "package:webviewx_plus/src/utils/source_type.dart",
+    "offset": 1358473
+  },
+  {
+    "uri": "package:flutter/src/material/autocomplete.dart",
+    "offset": 1360452
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_t.g.dart",
+    "offset": 1361019
+  },
+  {
+    "uri": "package:flutter/src/widgets/slotted_render_object_widget.dart",
+    "offset": 1361267
+  },
+  {
+    "uri": "package:google_fonts/src/google_fonts_parts/part_f.g.dart",
+    "offset": 1361765
+  },
+  {
+    "uri": "package:aligned_tooltip/src/models/target_information.dart",
+    "offset": 1361919
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_list.dart",
+    "offset": 1361978
+  },
+  {
+    "uri": "package:flutter/src/painting/box_decoration.dart",
+    "offset": 1362693
+  },
+  {
+    "uri": "package:flutter_localizations/src/l10n/generated_widgets_localizations.dart",
+    "offset": 1365097
+  },
+  {
+    "uri": "package:flutter/src/material/arc.dart",
+    "offset": 1366105
+  },
+  {
+    "uri": "package:be_church/components/lista_vazia_model.dart",
+    "offset": 1366253
+  },
+  {
+    "uri": "package:be_church/flutter_flow/nav/serialization_util.dart",
+    "offset": 1366518
+  },
+  {
+    "uri": "package:flutter/src/rendering/sliver_padding.dart",
+    "offset": 1367361
+  },
+  {
+    "uri": "package:go_router/src/misc/inherited_router.dart",
+    "offset": 1368703
+  },
+  {
+    "uri": "package:be_church/pages/z_doacoes/z_doacoes_widget.dart",
+    "offset": 1369183
+  },
+  {
+    "uri": "package:petitparser/src/parser/combinator/sequence.dart",
+    "offset": 1369308
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/read.dart",
+    "offset": 1370471
+  }
+]

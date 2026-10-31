@@ -1,0 +1,646 @@
+[
+  {
+    "uri": "package:be_church/components/bs_recusar_escala_widget.dart",
+    "offset": 247069
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/logout_one_signal.dart",
+    "offset": 253358
+  },
+  {
+    "uri": "package:be_church/components/popup_igreja_model.dart",
+    "offset": 255577
+  },
+  {
+    "uri": "package:be_church/pages/k_celulas/k_celulas_model.dart",
+    "offset": 280366
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/tables/lancamentos.dart",
+    "offset": 298462
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/init.dart",
+    "offset": 311674
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_celula_model.dart",
+    "offset": 316821
+  },
+  {
+    "uri": "package:be_church/flutter_flow/instant_timer.dart",
+    "offset": 316951
+  },
+  {
+    "uri": "package:be_church/pages/kk_encontros/kk_encontros_model.dart",
+    "offset": 317539
+  },
+  {
+    "uri": "package:be_church/pages/zz_emocoes/zz_emocoes_widget.dart",
+    "offset": 320356
+  },
+  {
+    "uri": "package:be_church/components/popup_voluntario_widget.dart",
+    "offset": 323022
+  },
+  {
+    "uri": "package:be_church/pages/e_ministerios/e_ministerios_model.dart",
+    "offset": 327665
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/custom_auth_manager.dart",
+    "offset": 330009
+  },
+  {
+    "uri": "package:be_church/pages/l_configuracoes/l_configuracoes_widget.dart",
+    "offset": 331065
+  },
+  {
+    "uri": "package:be_church/pages/m_minha_conta/m_minha_conta_widget.dart",
+    "offset": 337010
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_widgets.dart",
+    "offset": 343438
+  },
+  {
+    "uri": "package:be_church/teste/teste_widget.dart",
+    "offset": 370377
+  },
+  {
+    "uri": "package:be_church/components/popup_enviado_celula_widget.dart",
+    "offset": 389455
+  },
+  {
+    "uri": "package:be_church/pages/nnn_orar/nnn_orar_model.dart",
+    "offset": 394087
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/init_one_signal.dart",
+    "offset": 401450
+  },
+  {
+    "uri": "package:be_church/pages/g1_devocional/g1_devocional_model.dart",
+    "offset": 401794
+  },
+  {
+    "uri": "package:be_church/components/lista_vazia_widget.dart",
+    "offset": 410838
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluida/zz_excluida_widget.dart",
+    "offset": 414646
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_encontro_model.dart",
+    "offset": 420829
+  },
+  {
+    "uri": "package:be_church/pages/d_criar_cadastro/d_criar_cadastro_model.dart",
+    "offset": 426791
+  },
+  {
+    "uri": "package:be_church/pages/f_cultos/f_cultos_model.dart",
+    "offset": 439744
+  },
+  {
+    "uri": "package:be_church/pages/zz_emocoes/zz_emocoes_model.dart",
+    "offset": 446103
+  },
+  {
+    "uri": "package:be_church/components/popup_logado_model.dart",
+    "offset": 451440
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_util.dart",
+    "offset": 463140
+  },
+  {
+    "uri": "package:be_church/pages/b_bemvindo/b_bemvindo_model.dart",
+    "offset": 465852
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_youtube_player.dart",
+    "offset": 468372
+  },
+  {
+    "uri": "package:be_church/pages/kkk_detalhes_encontros/kkk_detalhes_encontros_widget.dart",
+    "offset": 469447
+  },
+  {
+    "uri": "package:be_church/pages/mm_minha_jornada/mm_minha_jornada_widget.dart",
+    "offset": 469846
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_radio_button.dart",
+    "offset": 473012
+  },
+  {
+    "uri": "package:be_church/components/popup_apenas_app_model.dart",
+    "offset": 483259
+  },
+  {
+    "uri": "package:be_church/backend/supabase/storage/storage.dart",
+    "offset": 485330
+  },
+  {
+    "uri": "package:be_church/pages/f_cultos/f_cultos_widget.dart",
+    "offset": 489197
+  },
+  {
+    "uri": "package:be_church/pages/i_eventos/i_eventos_widget.dart",
+    "offset": 490813
+  },
+  {
+    "uri": "package:be_church/pages/pp_minhas_escalas/pp_minhas_escalas_model.dart",
+    "offset": 527482
+  },
+  {
+    "uri": "package:be_church/pages/l_configuracoes/l_configuracoes_model.dart",
+    "offset": 533541
+  },
+  {
+    "uri": "package:be_church/backend/api_requests/api_calls.dart",
+    "offset": 538051
+  },
+  {
+    "uri": "package:be_church/pages/zz_sobre_desenvolvedor/zz_sobre_desenvolvedor_widget.dart",
+    "offset": 547407
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_web_view.dart",
+    "offset": 550217
+  },
+  {
+    "uri": "package:be_church/components/popup_emocao_enviada_widget.dart",
+    "offset": 551009
+  },
+  {
+    "uri": "package:be_church/components/popup_logado_widget.dart",
+    "offset": 566595
+  },
+  {
+    "uri": "package:be_church/pages/hh_detalhes_e_b_d/hh_detalhes_e_b_d_model.dart",
+    "offset": 569002
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluir_conta/zz_excluir_conta_widget.dart",
+    "offset": 569251
+  },
+  {
+    "uri": "package:be_church/pages/z_dados_cadastrais/z_dados_cadastrais_model.dart",
+    "offset": 569563
+  },
+  {
+    "uri": "package:be_church/backend/supabase/supabase.dart",
+    "offset": 575577
+  },
+  {
+    "uri": "package:be_church/components/popup_voluntario_model.dart",
+    "offset": 576695
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/autoorientationhorizontal.dart",
+    "offset": 591097
+  },
+  {
+    "uri": "package:be_church/components/excluir_widget.dart",
+    "offset": 593322
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/custom_auth_user_provider.dart",
+    "offset": 608831
+  },
+  {
+    "uri": "package:be_church/pages/a_pagina_inicial/a_pagina_inicial_model.dart",
+    "offset": 612259
+  },
+  {
+    "uri": "package:be_church/backend/firebase/firebase_config.dart",
+    "offset": 635566
+  },
+  {
+    "uri": "package:be_church/pages/d_home/d_home_model.dart",
+    "offset": 636591
+  },
+  {
+    "uri": "package:be_church/backend/schema/util/firestore_util.dart",
+    "offset": 639180
+  },
+  {
+    "uri": "package:be_church/components/popup_excluir_conta_model.dart",
+    "offset": 639457
+  },
+  {
+    "uri": "package:be_church/biblia/capitulos/capitulos_widget.dart",
+    "offset": 651414
+  },
+  {
+    "uri": "package:be_church/pages/h_e_b_d/h_e_b_d_widget.dart",
+    "offset": 662639
+  },
+  {
+    "uri": "package:be_church/components/popup_enviado_celula_model.dart",
+    "offset": 662725
+  },
+  {
+    "uri": "package:be_church/app_state.dart",
+    "offset": 680051
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/update.dart",
+    "offset": 700309
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_animations.dart",
+    "offset": 704025
+  },
+  {
+    "uri": "package:be_church/pages/ee_detalhes_ministerios/ee_detalhes_ministerios_widget.dart",
+    "offset": 714115
+  },
+  {
+    "uri": "package:be_church/pages/m_minha_conta/m_minha_conta_model.dart",
+    "offset": 724294
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_autocomplete_options_list.dart",
+    "offset": 724574
+  },
+  {
+    "uri": "package:be_church/flutter_flow/upload_data.dart",
+    "offset": 725252
+  },
+  {
+    "uri": "package:be_church/pages/k_detalhes_celulas/k_detalhes_celulas_model.dart",
+    "offset": 725441
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/lock_orientation.dart",
+    "offset": 729870
+  },
+  {
+    "uri": "package:be_church/pages/dd_detalhes_igreja/dd_detalhes_igreja_widget.dart",
+    "offset": 733333
+  },
+  {
+    "uri": "package:be_church/pages/i_eventos/i_eventos_model.dart",
+    "offset": 742280
+  },
+  {
+    "uri": "package:be_church/pages/hh_detalhes_e_b_d/hh_detalhes_e_b_d_widget.dart",
+    "offset": 743138
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_model.dart",
+    "offset": 757332
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/configurar_clique_notificacao.dart",
+    "offset": 762519
+  },
+  {
+    "uri": "package:be_church/biblia/biblia_home/biblia_home_widget.dart",
+    "offset": 763701
+  },
+  {
+    "uri": "package:be_church/components/popup_emocao_enviada_model.dart",
+    "offset": 775439
+  },
+  {
+    "uri": "package:be_church/biblia/personalizar/personalizar_model.dart",
+    "offset": 785998
+  },
+  {
+    "uri": "package:be_church/custom_code/actions/set_badge_count.dart",
+    "offset": 787873
+  },
+  {
+    "uri": "package:be_church/pages/nn_fazer_pedido/nn_fazer_pedido_model.dart",
+    "offset": 788140
+  },
+  {
+    "uri": "package:be_church/biblia/livros/livros_model.dart",
+    "offset": 795001
+  },
+  {
+    "uri": "package:be_church/pages/j_aniversariantes/j_aniversariantes_model.dart",
+    "offset": 797216
+  },
+  {
+    "uri": "package:be_church/backend/schema/util/schema_util.dart",
+    "offset": 805389
+  },
+  {
+    "uri": "package:be_church/components/bs_recusar_escala_model.dart",
+    "offset": 816529
+  },
+  {
+    "uri": "package:be_church/components/sem_comentarios_widget.dart",
+    "offset": 833652
+  },
+  {
+    "uri": "package:be_church/pages/z_doacoes/z_doacoes_model.dart",
+    "offset": 840166
+  },
+  {
+    "uri": "package:be_church/components/sem_comentarios_model.dart",
+    "offset": 858063
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_drop_down.dart",
+    "offset": 860871
+  },
+  {
+    "uri": "package:be_church/pages/k_celulas/k_celulas_widget.dart",
+    "offset": 862085
+  },
+  {
+    "uri": "package:be_church/flutter_flow/request_manager.dart",
+    "offset": 867654
+  },
+  {
+    "uri": "package:be_church/pages/nnn_orar/nnn_orar_widget.dart",
+    "offset": 871614
+  },
+  {
+    "uri": "package:be_church/pages/d_criar_cadastro/d_criar_cadastro_widget.dart",
+    "offset": 890844
+  },
+  {
+    "uri": "package:be_church/components/bs_observacoes_escala_widget.dart",
+    "offset": 894482
+  },
+  {
+    "uri": "package:be_church/flutter_flow/internationalization.dart",
+    "offset": 915324
+  },
+  {
+    "uri": "package:be_church/biblia/versoes/versoes_model.dart",
+    "offset": 915495
+  },
+  {
+    "uri": "package:be_church/pages/ii_detalhes_evento/ii_detalhes_evento_widget.dart",
+    "offset": 917391
+  },
+  {
+    "uri": "package:be_church/flutter_flow/form_field_controller.dart",
+    "offset": 922855
+  },
+  {
+    "uri": "package:be_church/pages/n_pedidos_oracao/n_pedidos_oracao_model.dart",
+    "offset": 924098
+  },
+  {
+    "uri": "package:be_church/pages/kkk_detalhes_encontros/kkk_detalhes_encontros_model.dart",
+    "offset": 958316
+  },
+  {
+    "uri": "package:be_church/components/carteirinha_model.dart",
+    "offset": 970825
+  },
+  {
+    "uri": "package:be_church/pages/a_pagina_inicial/a_pagina_inicial_widget.dart",
+    "offset": 992307
+  },
+  {
+    "uri": "package:be_church/pages/z_redefinir_senha/z_redefinir_senha_model.dart",
+    "offset": 999711
+  },
+  {
+    "uri": "package:be_church/pages/g1_devocional/g1_devocional_widget.dart",
+    "offset": 1008534
+  },
+  {
+    "uri": "package:be_church/biblia/biblia_home/biblia_home_model.dart",
+    "offset": 1026869
+  },
+  {
+    "uri": "package:be_church/components/popup_apenas_app_widget.dart",
+    "offset": 1034027
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_video_player.dart",
+    "offset": 1038797
+  },
+  {
+    "uri": "package:be_church/pages/pp_minhas_escalas/pp_minhas_escalas_widget.dart",
+    "offset": 1045037
+  },
+  {
+    "uri": "package:be_church/teste/teste_model.dart",
+    "offset": 1046334
+  },
+  {
+    "uri": "package:be_church/pages/ee_detalhes_ministerios/ee_detalhes_ministerios_model.dart",
+    "offset": 1048409
+  },
+  {
+    "uri": "package:be_church/pages/mm_minha_jornada/mm_minha_jornada_model.dart",
+    "offset": 1051166
+  },
+  {
+    "uri": "package:be_church/biblia/versoes/versoes_widget.dart",
+    "offset": 1051567
+  },
+  {
+    "uri": "package:be_church/pages/ii_detalhes_evento/ii_detalhes_evento_model.dart",
+    "offset": 1057005
+  },
+  {
+    "uri": "package:be_church/pages/c_login/c_login_widget.dart",
+    "offset": 1070845
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/table.dart",
+    "offset": 1073588
+  },
+  {
+    "uri": "package:be_church/flutter_flow/flutter_flow_icon_button.dart",
+    "offset": 1075388
+  },
+  {
+    "uri": "package:be_church/backend/supabase/database/row.dart",
+    "offset": 1078481
+  },
+  {
+    "uri": "package:be_church/components/popup_excluir_conta_widget.dart",
+    "offset": 1090644
+  },
+  {
+    "uri": "package:be_church/auth/custom_auth/auth_util.dart",
+    "offset": 1093936
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_encontro_widget.dart",
+    "offset": 1095024
+  },
+  {
+    "uri": "package:be_church/pages/j_aniversariantes/j_aniversariantes_widget.dart",
+    "offset": 1098184
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluir_conta/zz_excluir_conta_model.dart",
+    "offset": 1110256
+  },
+  {
+    "uri": "package:be_church/pages/x_ao_vivo/x_ao_vivo_widget.dart",
+    "offset": 1115366
+  },
+  {
+    "uri": "package:be_church/pages/zz_sobre_desenvolvedor/zz_sobre_desenvolvedor_model.dart",
+    "offset": 1116330
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/sqlite_manager.dart",
+    "offset": 1120642
+  },
+  {
+    "uri": "package:be_church/pages/e_ministerios/e_ministerios_widget.dart",
+    "offset": 1121795
+  },
+  {
+    "uri": "package:be_church/pages/zz_excluida/zz_excluida_model.dart",
+    "offset": 1122348
+  },
+  {
+    "uri": "package:be_church/flutter_flow/nav/nav.dart",
+    "offset": 1123798
+  },
+  {
+    "uri": "package:be_church/pages/k_detalhes_celulas/k_detalhes_celulas_widget.dart",
+    "offset": 1132210
+  },
+  {
+    "uri": "package:be_church/backend/schema/structs/biblia_user_struct.dart",
+    "offset": 1143728
+  },
+  {
+    "uri": "package:be_church/main.dart",
+    "offset": 1163629
+  },
+  {
+    "uri": "package:be_church/pages/z_notificacoes/z_notificacoes_model.dart",
+    "offset": 1165673
+  },
+  {
+    "uri": "package:be_church/components/popup_email_enviado_model.dart",
+    "offset": 1174135
+  },
+  {
+    "uri": "package:be_church/pages/gg_detalhes_devocional/gg_detalhes_devocional_widget.dart",
+    "offset": 1181723
+  },
+  {
+    "uri": "package:be_church/pages/z_notificacoes/z_notificacoes_widget.dart",
+    "offset": 1187693
+  },
+  {
+    "uri": "package:be_church/pages/gg_detalhes_devocional/gg_detalhes_devocional_model.dart",
+    "offset": 1193777
+  },
+  {
+    "uri": "package:be_church/biblia/capitulos/capitulos_model.dart",
+    "offset": 1195156
+  },
+  {
+    "uri": "package:be_church/pages/x_ao_vivo/x_ao_vivo_model.dart",
+    "offset": 1198659
+  },
+  {
+    "uri": "package:be_church/components/popup_participar_celula_widget.dart",
+    "offset": 1205051
+  },
+  {
+    "uri": "package:be_church/pages/d_home/d_home_widget.dart",
+    "offset": 1205172
+  },
+  {
+    "uri": "package:be_church/biblia/personalizar/personalizar_widget.dart",
+    "offset": 1219593
+  },
+  {
+    "uri": "package:be_church/components/excluir_model.dart",
+    "offset": 1221003
+  },
+  {
+    "uri": "package:be_church/pages/dd_detalhes_igreja/dd_detalhes_igreja_model.dart",
+    "offset": 1221308
+  },
+  {
+    "uri": "package:be_church/components/popup_igreja_widget.dart",
+    "offset": 1226402
+  },
+  {
+    "uri": "package:be_church/pages/kk_encontros/kk_encontros_widget.dart",
+    "offset": 1226901
+  },
+  {
+    "uri": "package:be_church/pages/b_bemvindo/b_bemvindo_widget.dart",
+    "offset": 1228404
+  },
+  {
+    "uri": "package:be_church/pages/c_login/c_login_model.dart",
+    "offset": 1238400
+  },
+  {
+    "uri": "package:be_church/pages/n_pedidos_oracao/n_pedidos_oracao_widget.dart",
+    "offset": 1250006
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/sqlite_row.dart",
+    "offset": 1262137
+  },
+  {
+    "uri": "package:be_church/biblia/livros/livros_widget.dart",
+    "offset": 1263457
+  },
+  {
+    "uri": "package:be_church/pages/z_redefinir_senha/z_redefinir_senha_widget.dart",
+    "offset": 1266465
+  },
+  {
+    "uri": "package:be_church/components/bs_observacoes_escala_model.dart",
+    "offset": 1286082
+  },
+  {
+    "uri": "package:be_church/pages/h_e_b_d/h_e_b_d_model.dart",
+    "offset": 1292790
+  },
+  {
+    "uri": "package:be_church/flutter_flow/custom_functions.dart",
+    "offset": 1305690
+  },
+  {
+    "uri": "package:be_church/pages/nn_fazer_pedido/nn_fazer_pedido_widget.dart",
+    "offset": 1334893
+  },
+  {
+    "uri": "package:be_church/pages/z_dados_cadastrais/z_dados_cadastrais_widget.dart",
+    "offset": 1343105
+  },
+  {
+    "uri": "package:be_church/components/carteirinha_widget.dart",
+    "offset": 1354643
+  },
+  {
+    "uri": "package:be_church/components/popup_email_enviado_widget.dart",
+    "offset": 1356761
+  },
+  {
+    "uri": "package:be_church/components/lista_vazia_model.dart",
+    "offset": 1366253
+  },
+  {
+    "uri": "package:be_church/flutter_flow/nav/serialization_util.dart",
+    "offset": 1366518
+  },
+  {
+    "uri": "package:be_church/pages/z_doacoes/z_doacoes_widget.dart",
+    "offset": 1369183
+  },
+  {
+    "uri": "package:be_church/backend/sqlite/queries/read.dart",
+    "offset": 1370471
+  }
+]

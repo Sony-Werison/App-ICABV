@@ -1,0 +1,295 @@
+{
+  "sha256": {
+    "base.apk": "0ae1a3b89cc64b7df17032fedc613bc680643dfdccec283cf6957deb59be98c5",
+    "split_config.arm64_v8a.apk": "e53624164cf9d8a3b82921020996ce95a19876dc334bd052e08bcd86970785a0",
+    "split_config.pt.apk": "3c1b951706ddc8567c02626c60da7964b9ca52958bb4029888e7db6dbde9dc0b"
+  },
+  "manifest": [
+    {
+      "tag": "manifest",
+      "attrs": {
+        "versionCode": 108,
+        "versionName": "1.0.0",
+        "compileSdkVersion": 36,
+        "compileSdkVersionCodename": "16",
+        "requiredSplitTypes": "base__abi,base__density",
+        "splitTypes": "",
+        "package": "com.tribusapp.dashboard",
+        "platformBuildVersionCode": 36,
+        "platformBuildVersionName": 16
+      }
+    },
+    {
+      "tag": "uses-sdk",
+      "attrs": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.INTERNET"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.USE_BIOMETRIC"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.READ_EXTERNAL_STORAGE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.INTERNET"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.RECORD_AUDIO"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.WAKE_LOCK"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.VIBRATE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.CAMERA"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.ACCESS_NETWORK_STATE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.POST_NOTIFICATIONS"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "com.android.launcher.permission.UNINSTALL_SHORTCUT"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.USE_FINGERPRINT"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "com.google.android.c2dm.permission.RECEIVE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "android.permission.ACCESS_ADSERVICES_AD_ID"
+      }
+    },
+    {
+      "tag": "uses-permission",
+      "attrs": {
+        "name": "com.tribusapp.dashboard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      }
+    },
+    {
+      "tag": "application",
+      "attrs": {
+        "label": "Tribus - Gestão de igrejas",
+        "icon": 2131689472,
+        "name": "android.app.Application",
+        "extractNativeLibs": false,
+        "networkSecurityConfig": 2132082691,
+        "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+        "enableOnBackInvokedCallback": true
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131951908,
+        "name": "com.tribusapp.dashboard.MainActivity",
+        "exported": true,
+        "taskAffinity": "",
+        "launchMode": 1,
+        "configChanges": 1073758132,
+        "windowSoftInputMode": 16,
+        "hardwareAccelerated": true
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 16973831,
+        "name": "io.flutter.plugins.urllauncher.WebViewActivity",
+        "exported": false
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131951624,
+        "name": "com.pichillilorenzo.flutter_inappwebview_android.in_app_browser.InAppBrowserActivity",
+        "exported": false,
+        "configChanges": 1073755572
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131952364,
+        "name": "com.pichillilorenzo.flutter_inappwebview_android.chrome_custom_tabs.ChromeCustomTabsActivity",
+        "exported": false
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131952364,
+        "name": "com.pichillilorenzo.flutter_inappwebview_android.chrome_custom_tabs.TrustedWebActivity",
+        "exported": false
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131952364,
+        "name": "com.pichillilorenzo.flutter_inappwebview_android.chrome_custom_tabs.ChromeCustomTabsActivitySingleInstance",
+        "exported": false,
+        "launchMode": 3
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 2131952364,
+        "name": "com.pichillilorenzo.flutter_inappwebview_android.chrome_custom_tabs.TrustedWebActivitySingleInstance",
+        "exported": false,
+        "launchMode": 3
+      }
+    },
+    {
+      "tag": "activity",
+      "attrs": {
+        "theme": 16973840,
+        "name": "com.google.android.gms.common.api.GoogleApiActivity",
+        "exported": false
+      }
+    }
+  ],
+  "assets": [
+    "assets/flutter_assets/assets/audio/accent.wav",
+    "assets/flutter_assets/assets/audio/bell/accent.wav",
+    "assets/flutter_assets/assets/audio/bell/click.wav",
+    "assets/flutter_assets/assets/audio/click.wav",
+    "assets/flutter_assets/assets/audio/clicks/accent.wav",
+    "assets/flutter_assets/assets/audio/clicks/click.wav",
+    "assets/flutter_assets/assets/audio/digital/accent.wav",
+    "assets/flutter_assets/assets/audio/digital/click.wav",
+    "assets/flutter_assets/assets/bible/nvi.json",
+    "assets/flutter_assets/assets/fonts/NotoColorEmoji.ttf",
+    "assets/flutter_assets/assets/icon/en-US.png",
+    "assets/flutter_assets/assets/icon/es-ES.png",
+    "assets/flutter_assets/assets/icon/icon.png",
+    "assets/flutter_assets/assets/icon/logo-monochrome.png",
+    "assets/flutter_assets/assets/icon/praying.svg",
+    "assets/flutter_assets/assets/icon/pt-BR.png",
+    "assets/flutter_assets/assets/icon/tribus.svg",
+    "assets/flutter_assets/assets/images/2048.png",
+    "assets/flutter_assets/assets/images/3d_backward.png",
+    "assets/flutter_assets/assets/images/3d_bell.png",
+    "assets/flutter_assets/assets/images/3d_calculator.png",
+    "assets/flutter_assets/assets/images/3d_chat_text.png",
+    "assets/flutter_assets/assets/images/3d_clock.png",
+    "assets/flutter_assets/assets/images/3d_crown.png",
+    "assets/flutter_assets/assets/images/3d_file_text.png",
+    "assets/flutter_assets/assets/images/3d_flag.png",
+    "assets/flutter_assets/assets/images/3d_gift.png",
+    "assets/flutter_assets/assets/images/3d_heart.png",
+    "assets/flutter_assets/assets/images/3d_link.png",
+    "assets/flutter_assets/assets/images/3d_location.png",
+    "assets/flutter_assets/assets/images/3d_mail.png",
+    "assets/flutter_assets/assets/images/3d_money.png",
+    "assets/flutter_assets/assets/images/3d_pin.png",
+    "assets/flutter_assets/assets/images/3d_puzzle.png",
+    "assets/flutter_assets/assets/images/3d_shield.png",
+    "assets/flutter_assets/assets/images/3d_target.png",
+    "assets/flutter_assets/assets/images/3d_wallet.png",
+    "assets/flutter_assets/assets/images/3d_zoom.png",
+    "assets/flutter_assets/assets/images/background_verse_of_day.jpg",
+    "assets/flutter_assets/assets/images/card_1.png",
+    "assets/flutter_assets/assets/images/card_2.png",
+    "assets/flutter_assets/assets/images/card_3.png",
+    "assets/flutter_assets/assets/images/card_4.png",
+    "assets/flutter_assets/assets/images/confetes.gif",
+    "assets/flutter_assets/assets/images/day.png",
+    "assets/flutter_assets/assets/images/dmg_background.png",
+    "assets/flutter_assets/assets/images/empty.png",
+    "assets/flutter_assets/assets/images/maintenance.png",
+    "assets/flutter_assets/assets/images/night.png",
+    "assets/flutter_assets/assets/images/slide_1_final.mp4",
+    "assets/flutter_assets/assets/images/slide_2_final.mp4",
+    "assets/flutter_assets/assets/images/slide_3_final.mp4",
+    "assets/flutter_assets/assets/images/slide_4_final.mp4",
+    "assets/flutter_assets/assets/images/tic_tac_toe.png",
+    "assets/flutter_assets/assets/images/who_am_i.png",
+    "assets/flutter_assets/assets/images/word_game.png",
+    "assets/flutter_assets/assets/images/word_puzzle.png",
+    "assets/flutter_assets/assets/images/wordle.png"
+  ],
+  "stringCount": 250653
+}

@@ -1,0 +1,5290 @@
+{
+  "people": [
+    {
+      "uri": "package:dashboard/features/people/people_home_page.dart",
+      "offset": 435203
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/entities/check_if_people_exists_entity.dart",
+      "offset": 475962
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/usecases/get_people.dart",
+      "offset": 480611
+    },
+    {
+      "uri": "package:dashboard/features/people/details/not_accepted_page.dart",
+      "offset": 488699
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/people_reports_factory.dart",
+      "offset": 511107
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/entities/people.dart",
+      "offset": 518421
+    },
+    {
+      "uri": "package:dashboard/features/people/add/add_people_options_page.dart",
+      "offset": 557673
+    },
+    {
+      "uri": "package:dashboard/features/people/import/result_import_people_page.dart",
+      "offset": 566896
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/usecases/check_if_people_exists.dart",
+      "offset": 593460
+    },
+    {
+      "uri": "package:dashboard/features/people/add/review_add_people_page.dart",
+      "offset": 598495
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/entities/people_imports_result_entity.dart",
+      "offset": 610532
+    },
+    {
+      "uri": "package:dashboard/features/people/details/people_details_page.dart",
+      "offset": 645573
+    },
+    {
+      "uri": "package:dashboard/features/people/membership/membership_card_widget.dart",
+      "offset": 657348
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/marital_status_people_widget.dart",
+      "offset": 670567
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/reports_people_page.dart",
+      "offset": 717651
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/entities/statistics_people_church.dart",
+      "offset": 817703
+    },
+    {
+      "uri": "package:dashboard/features/people/form/share_form_page.dart",
+      "offset": 853435
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/list_pendings_peoples_in_church_factory.dart",
+      "offset": 860995
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/list_peoples_factory.dart",
+      "offset": 864093
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/age_people_widget.dart",
+      "offset": 877549
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/monthly_growth_people_widget.dart",
+      "offset": 894629
+    },
+    {
+      "uri": "package:dashboard/features/people/people_list_page.dart",
+      "offset": 963384
+    },
+    {
+      "uri": "package:dashboard/features/people/import/import_people_page.dart",
+      "offset": 1114094
+    },
+    {
+      "uri": "package:dashboard/features/people/details/update_people_page.dart",
+      "offset": 1158016
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/count_people_widget.dart",
+      "offset": 1159604
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/find_people_factory.dart",
+      "offset": 1206424
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/recent_church_registrations_widget.dart",
+      "offset": 1252175
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/get_statistics_people_church_factory.dart",
+      "offset": 1276814
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/list_connections_factory.dart",
+      "offset": 1304787
+    },
+    {
+      "uri": "package:dashboard/features/people/add/check_user_exists_page.dart",
+      "offset": 1311621
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/datasource.dart",
+      "offset": 1322504
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/remote_people_import_result.dart",
+      "offset": 1330005
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/remote_get_statistics_people_church.dart",
+      "offset": 1335750
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/unlink_people_factory.dart",
+      "offset": 1339200
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/generate_token_factory.dart",
+      "offset": 1366810
+    },
+    {
+      "uri": "package:dashboard/features/people/filters_people_screen.dart",
+      "offset": 1406260
+    },
+    {
+      "uri": "package:dashboard/features/people/details/awaiting_church_approval_page.dart",
+      "offset": 1418510
+    },
+    {
+      "uri": "package:dashboard/features/people/details/address_by_people_in_church_page.dart",
+      "offset": 1442901
+    },
+    {
+      "uri": "package:dashboard/features/people/add/user_exists_page.dart",
+      "offset": 1452387
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/find_people.dart",
+      "offset": 1570795
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/link_people_factory.dart",
+      "offset": 1586577
+    },
+    {
+      "uri": "package:dashboard/features/people/details/people_detail_page.dart",
+      "offset": 1607215
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/export_report_list_page.dart",
+      "offset": 1613782
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/update_factory.dart",
+      "offset": 1628996
+    },
+    {
+      "uri": "package:dashboard/features/people/reports/gender_people_widget.dart",
+      "offset": 1657323
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/people_import_result_factory.dart",
+      "offset": 1680643
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/check_if_people_exists_factory.dart",
+      "offset": 1744181
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/insert_people.dart",
+      "offset": 1811116
+    },
+    {
+      "uri": "package:dashboard/features/people/settings/settings_people_page.dart",
+      "offset": 1818686
+    },
+    {
+      "uri": "package:dashboard/features/people/form/form_news_peoples_page.dart",
+      "offset": 1837019
+    },
+    {
+      "uri": "package:dashboard/features/people/add/add_people_complete_page.dart",
+      "offset": 1868640
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/usecases/list_peoples.dart",
+      "offset": 1956099
+    },
+    {
+      "uri": "package:dashboard/features/people/commemorative_dates_page.dart",
+      "offset": 2028163
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/remote_list_peoples.dart",
+      "offset": 2090364
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/usecase/remote_check_if_people_exists.dart",
+      "offset": 2134460
+    },
+    {
+      "uri": "package:dashboard/features/people/users_pending_page.dart",
+      "offset": 2157220
+    },
+    {
+      "uri": "package:dashboard/features/people/details/waiting_for_user_link_church_page.dart",
+      "offset": 2181245
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/usecases/get_statistics_people_church.dart",
+      "offset": 2186864
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/domain/usecases/get_people_import_result.dart",
+      "offset": 2197858
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/insert_people_factory.dart",
+      "offset": 2198119
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/request_connection_in_church_factory.dart",
+      "offset": 2240206
+    },
+    {
+      "uri": "package:dashboard/features/people/membership/membership_page.dart",
+      "offset": 2370876
+    },
+    {
+      "uri": "package:tribus_core/src/features/people/data/repositories/list_peoples_without_permissions_factory.dart",
+      "offset": 2378858
+    }
+  ],
+  "canteen": [
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/repositories/update_canteen_factory.dart",
+      "offset": 439721
+    },
+    {
+      "uri": "package:dashboard/features/canteen/canteen_home_page.dart",
+      "offset": 447691
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/usecase/remote_insert_canteen.dart",
+      "offset": 636532
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/repositories/datasource.dart",
+      "offset": 645300
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/usecase/remote_update_canteen.dart",
+      "offset": 664837
+    },
+    {
+      "uri": "package:dashboard/features/canteen/canteen_details_page.dart",
+      "offset": 1117232
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/repositories/delete_canteen_factory.dart",
+      "offset": 1129799
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/usecase/remote_list_canteen.dart",
+      "offset": 1568491
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/repositories/list_canteen_dashboard_factory.dart",
+      "offset": 1709733
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/domain/entities/canteen.dart",
+      "offset": 1712913
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/domain/usecases/list_canteen.dart",
+      "offset": 2009050
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/domain/usecases/get_canteen.dart",
+      "offset": 2152565
+    },
+    {
+      "uri": "package:tribus_core/src/features/canteen/data/repositories/insert_canteen_factory.dart",
+      "offset": 2277387
+    }
+  ],
+  "auth": [
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/entities/register_params_entity.dart",
+      "offset": 444639
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/logout_factory.dart",
+      "offset": 518180
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_send_email_recover_password.dart",
+      "offset": 521925
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/get_user.dart",
+      "offset": 687413
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_logout.dart",
+      "offset": 728209
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/login.dart",
+      "offset": 735578
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_refresh_token.dart",
+      "offset": 841300
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/register_factory.dart",
+      "offset": 851388
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_check_if_user_exists.dart",
+      "offset": 851935
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_register.dart",
+      "offset": 937436
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/entities/check_if_user_exists_entity.dart",
+      "offset": 1279263
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/change_password.dart",
+      "offset": 1377225
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/send_email_verification.dart",
+      "offset": 1428337
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/entities/login_params_entity.dart",
+      "offset": 1431125
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/datasource.dart",
+      "offset": 1662487
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/register.dart",
+      "offset": 1694794
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/check_if_user_exists_factory.dart",
+      "offset": 1730104
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_send_email_verification.dart",
+      "offset": 1762874
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/send_email_recover_password.dart",
+      "offset": 1789748
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/check_if_user_exists.dart",
+      "offset": 1830561
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/change_password_factory.dart",
+      "offset": 1906936
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_login.dart",
+      "offset": 2042184
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/new_refresh_token.dart",
+      "offset": 2081265
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/send_email_recover_password_factory.dart",
+      "offset": 2229798
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/domain/usecases/logout.dart",
+      "offset": 2302780
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/login_factory.dart",
+      "offset": 2304017
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/usecases/remote_change_password.dart",
+      "offset": 2323889
+    },
+    {
+      "uri": "package:tribus_core/src/features/auth/data/repositories/send_email_verification_factory.dart",
+      "offset": 2357151
+    }
+  ],
+  "finance": [
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/transaction/remote_insert_transaction_finance.dart",
+      "offset": 444772
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/dashboard_finance_entity.dart",
+      "offset": 456675
+    },
+    {
+      "uri": "package:dashboard/features/finance/filters_transactions_screen.dart",
+      "offset": 470821
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/get_finance_report_dashboard_factory.dart",
+      "offset": 480965
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/costCenter/list_cost_center_finance_dashboard_factory.dart",
+      "offset": 528343
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/category/remote_update_category_finance.dart",
+      "offset": 540980
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/account/update_account_finance_factory.dart",
+      "offset": 571536
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/account/remote_update_account_finance.dart",
+      "offset": 580629
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/get_trial_balance_finance_dashboard_factory.dart",
+      "offset": 589884
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/account/list_account_finance.dart",
+      "offset": 598183
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/dashboard_finance_dashboard_factory.dart",
+      "offset": 608619
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/accounts_finance_home_page.dart",
+      "offset": 628109
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/transaction/list_cost_center_finance.dart",
+      "offset": 675683
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_get_surplus_deficit_finance.dart",
+      "offset": 725477
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/datasource.dart",
+      "offset": 764563
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/recalculate_finance_factory.dart",
+      "offset": 809035
+    },
+    {
+      "uri": "package:dashboard/features/finance/audit/audit_details_page.dart",
+      "offset": 848337
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/costCenter/list_cost_center_finance.dart",
+      "offset": 888799
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_surplus_deficit_finance.dart",
+      "offset": 903104
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/account/remote_insert_account_finance.dart",
+      "offset": 925416
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/costCenter/update_cost_center_finance_factory.dart",
+      "offset": 980975
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/trial_balance_finance_entity.dart",
+      "offset": 983370
+    },
+    {
+      "uri": "package:dashboard/features/finance/transactions/transaction_finance_crud_page.dart",
+      "offset": 1043580
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/get_surplus_deficit_factory.dart",
+      "offset": 1044971
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/account/get_account_finance.dart",
+      "offset": 1046314
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_get_balance_finance.dart",
+      "offset": 1078725
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/transaction/remote_list_transaction_finance.dart",
+      "offset": 1126982
+    },
+    {
+      "uri": "package:dashboard/features/finance/reconciliation/bank_reconciliation_page.dart",
+      "offset": 1147456
+    },
+    {
+      "uri": "package:dashboard/features/finance/dashboard/dashboard_finance_page.dart",
+      "offset": 1162613
+    },
+    {
+      "uri": "package:dashboard/features/finance/category/category_finance_crud_page.dart",
+      "offset": 1184877
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/category/get_category_finance.dart",
+      "offset": 1194717
+    },
+    {
+      "uri": "package:dashboard/features/finance/assistant/finance_assistant_dashboard_page.dart",
+      "offset": 1197289
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/list_bank_resource_finance_dashboard_factory.dart",
+      "offset": 1214938
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/transaction_finance_entity.dart",
+      "offset": 1233397
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/transaction/insert_transaction_finance_factory.dart",
+      "offset": 1262704
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/surplus_deficit_finance_entity.dart",
+      "offset": 1280577
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_filters_finance.dart",
+      "offset": 1282430
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/balance_finance_entity.dart",
+      "offset": 1367241
+    },
+    {
+      "uri": "package:dashboard/features/finance/cost_center/cost_center_finance_crud_page.dart",
+      "offset": 1371196
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/category/list_category_finance_dashboard_factory.dart",
+      "offset": 1378087
+    },
+    {
+      "uri": "package:dashboard/features/finance/transactions/transactions_finance_home_page.dart",
+      "offset": 1395870
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_dashboard_finance.dart",
+      "offset": 1477972
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_get_trial_balance_finance.dart",
+      "offset": 1498397
+    },
+    {
+      "uri": "package:dashboard/features/finance/snapshot/financial_snapshot_page.dart",
+      "offset": 1501300
+    },
+    {
+      "uri": "package:dashboard/features/finance/dashboard/tutorial_metric_finance_page.dart",
+      "offset": 1503243
+    },
+    {
+      "uri": "package:dashboard/features/finance/recalculate/transaction_recalculation_page.dart",
+      "offset": 1516497
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/category/insert_category_finance_factory.dart",
+      "offset": 1527801
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/category/remote_list_category_finance.dart",
+      "offset": 1542064
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/costCenter/remote_insert_cost_center_finance.dart",
+      "offset": 1574512
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/category/update_category_finance_factory.dart",
+      "offset": 1576066
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/costCenter/get_cost_center_finance.dart",
+      "offset": 1583464
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/transaction/remote_update_transaction_finance.dart",
+      "offset": 1586951
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/get_filters_finance_dashboard_factory.dart",
+      "offset": 1591975
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/account_finance_crud_page.dart",
+      "offset": 1624599
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/account_finance_entity.dart",
+      "offset": 1636224
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/list_bank_resource_finance.dart",
+      "offset": 1671911
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/transaction/list_transaction_finance_dashboard_factory.dart",
+      "offset": 1703146
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/costCenter/insert_cost_center_finance_factory.dart",
+      "offset": 1719297
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/transactions_by_account_finance_page.dart",
+      "offset": 1721843
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_dashboard_finance.dart",
+      "offset": 1743740
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/costCenter/remote_update_cost_center_finance.dart",
+      "offset": 1769823
+    },
+    {
+      "uri": "package:dashboard/features/finance/cost_center/cost_center_finance_home_page.dart",
+      "offset": 1828861
+    },
+    {
+      "uri": "package:dashboard/features/finance/result/financial_results_page.dart",
+      "offset": 1877540
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_balance_finance.dart",
+      "offset": 1878648
+    },
+    {
+      "uri": "package:dashboard/features/finance/audit/audit_overview_page.dart",
+      "offset": 1905419
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/bank_resource_entity.dart",
+      "offset": 1907250
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/account_finance_detail_page.dart",
+      "offset": 1912858
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/transaction/delete_transaction_finance_factory.dart",
+      "offset": 1918721
+    },
+    {
+      "uri": "package:dashboard/features/finance/reports/reports_finance_home_page.dart",
+      "offset": 1954779
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/get_balance_finance_dashboard_factory.dart",
+      "offset": 1956311
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/costCenter/delete_cost_center_finance_factory.dart",
+      "offset": 1978144
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_finance_report.dart",
+      "offset": 1979983
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/costCenter/remote_list_cost_center_finance.dart",
+      "offset": 1981487
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_get_finance_report.dart",
+      "offset": 1986079
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/switch_account_screen.dart",
+      "offset": 1991870
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/select_resource_screen.dart",
+      "offset": 1994729
+    },
+    {
+      "uri": "package:dashboard/features/finance/manager_finance_dashboard_page.dart",
+      "offset": 2022741
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/filters_finance_entity.dart",
+      "offset": 2033738
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/category_finance_entity.dart",
+      "offset": 2041008
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/cost_center_finance_entity.dart",
+      "offset": 2069179
+    },
+    {
+      "uri": "package:dashboard/features/finance/accounts/archive_account_finance_page.dart",
+      "offset": 2077924
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/entities/report_finance_entity.dart",
+      "offset": 2091067
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/account/list_account_finance_dashboard_factory.dart",
+      "offset": 2103123
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/transaction/get_cost_center_finance.dart",
+      "offset": 2115952
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/get_trial_balance_finance.dart",
+      "offset": 2208356
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/account/remote_list_account_finance.dart",
+      "offset": 2214940
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/category/remote_insert_category_finance.dart",
+      "offset": 2243138
+    },
+    {
+      "uri": "package:dashboard/features/finance/category/categories_finance_home_page.dart",
+      "offset": 2246281
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/domain/usecases/category/list_category_finance.dart",
+      "offset": 2246984
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/transaction/update_transaction_finance_factory.dart",
+      "offset": 2259559
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/repositories/account/insert_account_finance_factory.dart",
+      "offset": 2259725
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_get_filters_finance.dart",
+      "offset": 2264983
+    },
+    {
+      "uri": "package:tribus_core/src/features/finance/data/usecase/remote_list_bank_resource.dart",
+      "offset": 2300981
+    },
+    {
+      "uri": "package:dashboard/features/finance/more/more_finance_page.dart",
+      "offset": 2343512
+    }
+  ],
+  "feedback": [
+    {
+      "uri": "package:tribus_core/src/features/feedback/domain/entities/feedback_item.dart",
+      "offset": 447302
+    },
+    {
+      "uri": "package:tribus_core/src/features/feedback/data/repositories/datasource.dart",
+      "offset": 635834
+    },
+    {
+      "uri": "package:tribus_core/src/features/feedback/data/usecase/remote_insert_feedback.dart",
+      "offset": 1103541
+    },
+    {
+      "uri": "package:tribus_core/src/features/feedback/data/repositories/insert_feedback_factory.dart",
+      "offset": 1640046
+    },
+    {
+      "uri": "package:tribus_core/src/features/feedback/domain/usecases/get_feedback.dart",
+      "offset": 2034968
+    }
+  ],
+  "cloud": [
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/remove_file_factory.dart",
+      "offset": 449076
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/generate_upload_url_factory.dart",
+      "offset": 549422
+    },
+    {
+      "uri": "package:dashboard/features/cloud/info_cloud_page.dart",
+      "offset": 610297
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/upload_file.dart",
+      "offset": 639615
+    },
+    {
+      "uri": "package:dashboard/features/cloud/drag_file_widget.dart",
+      "offset": 720871
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/list_files_factory.dart",
+      "offset": 748816
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_create_folder.dart",
+      "offset": 753202
+    },
+    {
+      "uri": "package:dashboard/features/cloud/views/image_page.dart",
+      "offset": 782929
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/list_folders_factory.dart",
+      "offset": 802194
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/remove_folder_factory.dart",
+      "offset": 858498
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/download_file_factory.dart",
+      "offset": 864490
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_list_folders.dart",
+      "offset": 886286
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_upload_url.dart",
+      "offset": 961035
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/upload_file_factory.dart",
+      "offset": 992999
+    },
+    {
+      "uri": "package:dashboard/features/cloud/views/document_page.dart",
+      "offset": 1018932
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/get_folder.dart",
+      "offset": 1077751
+    },
+    {
+      "uri": "package:dashboard/features/cloud/file_details_page.dart",
+      "offset": 1079645
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/download_folder_factory.dart",
+      "offset": 1188090
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/download_link.dart",
+      "offset": 1337350
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/upload_url.dart",
+      "offset": 1410489
+    },
+    {
+      "uri": "package:dashboard/features/cloud/upload_cloud_page.dart",
+      "offset": 1411319
+    },
+    {
+      "uri": "package:dashboard/features/cloud/views/video_page.dart",
+      "offset": 1577543
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/list_files.dart",
+      "offset": 1720123
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_list_files.dart",
+      "offset": 1778202
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_upload_file.dart",
+      "offset": 1778948
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/domain/usecases/list_folders.dart",
+      "offset": 1811438
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/datasource.dart",
+      "offset": 1910843
+    },
+    {
+      "uri": "package:dashboard/features/cloud/views/vector_page.dart",
+      "offset": 1929745
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/usecases/remote_download_link.dart",
+      "offset": 2034623
+    },
+    {
+      "uri": "package:tribus_core/src/features/cloud/data/repositories/create_folder_factory.dart",
+      "offset": 2059262
+    },
+    {
+      "uri": "package:dashboard/features/cloud/cloud_home_page.dart",
+      "offset": 2082380
+    },
+    {
+      "uri": "package:dashboard/features/cloud/file_viewer_page.dart",
+      "offset": 2140771
+    },
+    {
+      "uri": "package:dashboard/features/cloud/views/audio_page.dart",
+      "offset": 2230473
+    }
+  ],
+  "form": [
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_list_forms_by_church.dart",
+      "offset": 449658
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/list_forms_by_church_dashboard_factory.dart",
+      "offset": 462183
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/update_form.dart",
+      "offset": 463229
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/entities/form.dart",
+      "offset": 492403
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/get_form.dart",
+      "offset": 695639
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/insert_form_factory.dart",
+      "offset": 732809
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/list_forms_by_church.dart",
+      "offset": 960920
+    },
+    {
+      "uri": "package:dashboard/features/form/form_home_page.dart",
+      "offset": 1012059
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/update_form_factory.dart",
+      "offset": 1015910
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/get_form_factory.dart",
+      "offset": 1135152
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_get_form_statistics.dart",
+      "offset": 1217506
+    },
+    {
+      "uri": "package:dashboard/features/form/form_responses_page.dart",
+      "offset": 1300571
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/get_form_statistics.dart",
+      "offset": 1301049
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_get_form.dart",
+      "offset": 1357542
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_update_form.dart",
+      "offset": 1477517
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/get_form_statistics_factory.dart",
+      "offset": 1668706
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_delete_form.dart",
+      "offset": 1713893
+    },
+    {
+      "uri": "package:dashboard/features/form/form_details_page.dart",
+      "offset": 1852998
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/delete_form_factory.dart",
+      "offset": 1891854
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/delete_form.dart",
+      "offset": 2039986
+    },
+    {
+      "uri": "package:dashboard/features/form/form_list_dashboard_page.dart",
+      "offset": 2044051
+    },
+    {
+      "uri": "package:dashboard/features/form/reports/reports_form_page.dart",
+      "offset": 2067377
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/repositories/datasource.dart",
+      "offset": 2166244
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/data/usecase/remote_insert_form.dart",
+      "offset": 2334826
+    },
+    {
+      "uri": "package:tribus_core/src/features/form/domain/usecases/insert_form.dart",
+      "offset": 2364381
+    }
+  ],
+  "channel": [
+    {
+      "uri": "package:tribus_core/src/features/channel/domain/usecases/list_channel.dart",
+      "offset": 451969
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/delete_channel_factory.dart",
+      "offset": 555952
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/find_channel_factory.dart",
+      "offset": 912578
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/usecase/remote_update_channel.dart",
+      "offset": 1099994
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/list_channel_by_church_dashboard_factory.dart",
+      "offset": 1166729
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/update_channel_factory.dart",
+      "offset": 1179637
+    },
+    {
+      "uri": "package:dashboard/features/channel/channel_dashboard_page.dart",
+      "offset": 1313523
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/domain/usecases/get_channel.dart",
+      "offset": 1349616
+    },
+    {
+      "uri": "package:dashboard/features/channel/channel_details_page.dart",
+      "offset": 1527475
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/usecase/remote_find_channel.dart",
+      "offset": 1632417
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/usecase/remote_list_channel.dart",
+      "offset": 1946182
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/insert_channel_factory.dart",
+      "offset": 1956544
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/domain/entities/channel.dart",
+      "offset": 2009435
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/usecase/remote_insert_channel.dart",
+      "offset": 2209361
+    },
+    {
+      "uri": "package:tribus_core/src/features/channel/data/repositories/datasource.dart",
+      "offset": 2375074
+    }
+  ],
+  "payment": [
+    {
+      "uri": "package:tribus_core/src/features/payment/data/repositories/get_charge_factory.dart",
+      "offset": 452357
+    },
+    {
+      "uri": "package:dashboard/features/payment/details_payment_dashboard_page.dart",
+      "offset": 595414
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/balance_entity.dart",
+      "offset": 708232
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/usecase/list_payments.dart",
+      "offset": 862311
+    },
+    {
+      "uri": "package:dashboard/features/payment/alls_payments_dashboard_page.dart",
+      "offset": 870682
+    },
+    {
+      "uri": "package:dashboard/features/payment/charges_payments_dashboard_page.dart",
+      "offset": 1101068
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/payable_payment_entity.dart",
+      "offset": 1337711
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/data/repositories/datasource.dart",
+      "offset": 1363426
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/withdrawals_entity.dart",
+      "offset": 1399896
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/operation_payment_entity.dart",
+      "offset": 1442774
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/data/usecase/remote_list_payments.dart",
+      "offset": 1458273
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/charge_entity.dart",
+      "offset": 1574617
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/resume_day_entity.dart",
+      "offset": 1631799
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/recipient_entity.dart",
+      "offset": 1739715
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/data/repositories/list_by_church_factory.dart",
+      "offset": 1787562
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/transaction_payment_entity.dart",
+      "offset": 2085685
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/usecase/get_charge.dart",
+      "offset": 2160656
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/domain/entities/payment_entity.dart",
+      "offset": 2217207
+    },
+    {
+      "uri": "package:tribus_core/src/features/payment/data/usecase/remote_get_charge.dart",
+      "offset": 2309349
+    }
+  ],
+  "scheduleTeam": [
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/domain/usecases/list_schedule_team.dart",
+      "offset": 453053
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/repositories/list_schedule_team_factory.dart",
+      "offset": 483128
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/domain/usecases/insert_schedule_team.dart",
+      "offset": 786252
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/repositories/datasource.dart",
+      "offset": 1010382
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/domain/usecases/delete_schedule_team.dart",
+      "offset": 1070082
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/domain/usecases/update_schedule_team.dart",
+      "offset": 1275242
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/repositories/update_schedule_team_factory.dart",
+      "offset": 1333436
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/domain/entities/schedule_team.dart",
+      "offset": 1489723
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/repositories/insert_schedule_team_factory.dart",
+      "offset": 1819751
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/usecase/delete_schedule_team.dart",
+      "offset": 1867029
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/repositories/delete_schedule_team_factory.dart",
+      "offset": 1867702
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/usecase/insert_schedule_team.dart",
+      "offset": 1897243
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/usecase/list_schedule_team.dart",
+      "offset": 2014668
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTeam/data/usecase/update_schedule_team.dart",
+      "offset": 2106784
+    }
+  ],
+  "donationDetail": [
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/usecase/remote_get_donation_details.dart",
+      "offset": 455251
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/repositories/datasource.dart",
+      "offset": 515086
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/repositories/get_statistics_people_church_factory.dart",
+      "offset": 640249
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/domain/usecases/get_statistics_donation_church.dart",
+      "offset": 856665
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/repositories/find_donation_details_factory.dart",
+      "offset": 869224
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/repositories/list_donations_by_church_factory.dart",
+      "offset": 959669
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/domain/entities/donation_detail.dart",
+      "offset": 1013090
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/repositories/list_donations_by_user_factory.dart",
+      "offset": 1038042
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/usecase/remote_list_donation_details.dart",
+      "offset": 1777291
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/domain/usecases/list_donation_detail.dart",
+      "offset": 1786706
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/domain/entities/statistics_donation_detail_entity.dart",
+      "offset": 2023237
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/domain/usecases/get_donation_detail.dart",
+      "offset": 2134597
+    },
+    {
+      "uri": "package:tribus_core/src/features/donationDetail/data/usecase/remote_get_statistics_donation_church.dart",
+      "offset": 2301842
+    }
+  ],
+  "scheduleRole": [
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/usecase/update_schedule_role.dart",
+      "offset": 458595
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/repositories/datasource.dart",
+      "offset": 568826
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/repositories/update_schedule_role_factory.dart",
+      "offset": 1101625
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/domain/usecases/update_schedule_role.dart",
+      "offset": 1277806
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/repositories/list_schedule_role_factory.dart",
+      "offset": 1422950
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/repositories/delete_schedule_role_factory.dart",
+      "offset": 1432730
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/domain/usecases/insert_schedule_role.dart",
+      "offset": 1477134
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/domain/usecases/delete_schedule_role.dart",
+      "offset": 1538926
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/usecase/insert_schedule_role.dart",
+      "offset": 1670419
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/domain/usecases/list_schedule_role.dart",
+      "offset": 1903961
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/usecase/list_schedule_role.dart",
+      "offset": 1943303
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/repositories/insert_schedule_role_factory.dart",
+      "offset": 1984136
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/domain/entities/schedule_role.dart",
+      "offset": 1990522
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleRole/data/usecase/delete_schedule_role.dart",
+      "offset": 2203753
+    }
+  ],
+  "user": [
+    {
+      "uri": "package:tribus_core/src/features/user/data/repositories/update_user_factory.dart",
+      "offset": 461063
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/repositories/datasource.dart",
+      "offset": 490241
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/domain/usecases/get_user.dart",
+      "offset": 517103
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/domain/entities/user.dart",
+      "offset": 556628
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/domain/entities/personal_data_user.dart",
+      "offset": 670431
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/domain/usecases/list_users_basic.dart",
+      "offset": 672656
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/usecase/get_personal_data_user.dart",
+      "offset": 913384
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/controller/user_sm.dart",
+      "offset": 1208231
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/repositories/find_user_factory.dart",
+      "offset": 1640354
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/usecase/remote_list_users_basic.dart",
+      "offset": 1676511
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/repositories/delete_account_user_factory.dart",
+      "offset": 1709488
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/domain/usecases/get_personal_data_user.dart",
+      "offset": 1753634
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/controller/user_sm.g.dart",
+      "offset": 1775962
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/usecase/update_user.dart",
+      "offset": 1796102
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/repositories/request_my_data_user_factory.dart",
+      "offset": 2127410
+    },
+    {
+      "uri": "package:tribus_core/src/features/user/data/usecase/remote_find_user.dart",
+      "offset": 2329050
+    }
+  ],
+  "topic": [
+    {
+      "uri": "package:tribus_core/src/features/topic/domain/entities/topic.dart",
+      "offset": 463927
+    },
+    {
+      "uri": "package:tribus_core/src/features/topic/domain/usecases/list_topics.dart",
+      "offset": 622760
+    },
+    {
+      "uri": "package:tribus_core/src/features/topic/data/usecase/remote_list_topics.dart",
+      "offset": 840350
+    },
+    {
+      "uri": "package:tribus_core/src/features/topic/data/repositories/datasource.dart",
+      "offset": 1545119
+    },
+    {
+      "uri": "package:tribus_core/src/features/topic/data/repositories/list_topics_factory.dart",
+      "offset": 2001416
+    }
+  ],
+  "address": [
+    {
+      "uri": "package:tribus_core/src/features/address/domain/usecases/list_address.dart",
+      "offset": 465993
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/update_address_factory.dart",
+      "offset": 637085
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/get_address_by_postalcode_factory.dart",
+      "offset": 829109
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/find_address_factory.dart",
+      "offset": 1026290
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/delete_address_factory.dart",
+      "offset": 1143002
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/usecases/remote_insert_address.dart",
+      "offset": 1310897
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/datasource.dart",
+      "offset": 1366675
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/list_address_by_people_factory.dart",
+      "offset": 1573711
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/usecases/remote_list_address.dart",
+      "offset": 1721256
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/insert_address_factory.dart",
+      "offset": 1870257
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/domain/usecases/get_address.dart",
+      "offset": 1892563
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/find_address_by_church_factory.dart",
+      "offset": 2035975
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/repositories/list_address_by_user_factory.dart",
+      "offset": 2079638
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/usecases/remote_get_address.dart",
+      "offset": 2109312
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/data/usecases/remote_update_address.dart",
+      "offset": 2130915
+    },
+    {
+      "uri": "package:tribus_core/src/features/address/domain/entities/address.dart",
+      "offset": 2298144
+    }
+  ],
+  "event": [
+    {
+      "uri": "package:dashboard/features/event/ticket_detail_dashboard_page.dart",
+      "offset": 466599
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/usecase/remote_update_event.dart",
+      "offset": 531327
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/entities/organizer.dart",
+      "offset": 565561
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/list_event_by_church_dashboard_factory.dart",
+      "offset": 577457
+    },
+    {
+      "uri": "package:dashboard/features/event/event_dialogs.dart",
+      "offset": 697472
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/usecase/remote_insert_event.dart",
+      "offset": 718571
+    },
+    {
+      "uri": "package:dashboard/features/event/qr_code_scanner_page.dart",
+      "offset": 800293
+    },
+    {
+      "uri": "package:dashboard/features/event/models/participant_filters.dart",
+      "offset": 804397
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/entities/schedule.dart",
+      "offset": 978209
+    },
+    {
+      "uri": "package:dashboard/features/event/participant_details_page.dart",
+      "offset": 1156104
+    },
+    {
+      "uri": "package:dashboard/features/event/utils/participant_filter_utils.dart",
+      "offset": 1364951
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/usecase/remote_find_event.dart",
+      "offset": 1394663
+    },
+    {
+      "uri": "package:dashboard/features/event/sale_details_page.dart",
+      "offset": 1469596
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/datasource.dart",
+      "offset": 1472632
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/usecases/get_event.dart",
+      "offset": 1481251
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/delete_event_factory.dart",
+      "offset": 1486330
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/entities/guest.dart",
+      "offset": 1542657
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/usecases/list_event.dart",
+      "offset": 1581867
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/insert_event_factory.dart",
+      "offset": 1666953
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/find_event_factory.dart",
+      "offset": 1673896
+    },
+    {
+      "uri": "package:dashboard/features/event/event_detail_dashboard_page.dart",
+      "offset": 1785511
+    },
+    {
+      "uri": "package:dashboard/features/event/event_dashboard_page.dart",
+      "offset": 1786387
+    },
+    {
+      "uri": "package:dashboard/features/event/receipt_of_payment_ticket_page.dart",
+      "offset": 1798176
+    },
+    {
+      "uri": "package:dashboard/features/event/event_ticket_dashboard_page.dart",
+      "offset": 1802583
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/repositories/update_event_factory.dart",
+      "offset": 2084946
+    },
+    {
+      "uri": "package:dashboard/features/event/widgets/participant_filters_widget.dart",
+      "offset": 2181109
+    },
+    {
+      "uri": "package:dashboard/features/event/qr_scanner_info_page.dart",
+      "offset": 2201163
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/domain/entities/event.dart",
+      "offset": 2201362
+    },
+    {
+      "uri": "package:tribus_core/src/features/event/data/usecase/remote_list_event.dart",
+      "offset": 2251841
+    },
+    {
+      "uri": "package:dashboard/features/event/widgets/participants_table_widget.dart",
+      "offset": 2263999
+    },
+    {
+      "uri": "package:dashboard/features/event/event_new_dashboard_page.dart",
+      "offset": 2364773
+    }
+  ],
+  "cnpj": [
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/repositories/datasource.dart",
+      "offset": 467197
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/usecases/remote_consult_cnpj.dart",
+      "offset": 673970
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/repositories/consult_cnpj_factory.dart",
+      "offset": 905707
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/repositories/consult_certificate_factory.dart",
+      "offset": 1113181
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/usecases/remote_consult_company.dart",
+      "offset": 1203926
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/domain/usecases/consult_cnpj.dart",
+      "offset": 1218232
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/data/repositories/consult_company_factory.dart",
+      "offset": 1268810
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/domain/entities/company_entity.dart",
+      "offset": 1306115
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/domain/entities/cnpj.dart",
+      "offset": 1562857
+    },
+    {
+      "uri": "package:dashboard/features/cnpj/cnpj_home_page.dart",
+      "offset": 1743172
+    },
+    {
+      "uri": "package:tribus_core/src/features/cnpj/domain/usecases/consult_company.dart",
+      "offset": 1925160
+    }
+  ],
+  "scheduleTemplate": [
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/repositories/insert_schedule_template_factory.dart",
+      "offset": 467545
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/domain/usecases/list_schedule_template.dart",
+      "offset": 561723
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/repositories/datasource.dart",
+      "offset": 616671
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/domain/usecases/update_schedule_template.dart",
+      "offset": 690865
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/repositories/update_schedule_template_factory.dart",
+      "offset": 771543
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/domain/entities/schedule_template.dart",
+      "offset": 905328
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/usecase/list_schedule_template.dart",
+      "offset": 1118280
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/repositories/list_schedule_template_factory.dart",
+      "offset": 1220457
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/domain/usecases/insert_schedule_template.dart",
+      "offset": 1386237
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/usecase/insert_schedule_template.dart",
+      "offset": 1403075
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/usecase/delete_schedule_template.dart",
+      "offset": 1484583
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/usecase/update_schedule_template.dart",
+      "offset": 1881776
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/domain/usecases/delete_schedule_template.dart",
+      "offset": 2185508
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleTemplate/data/repositories/delete_schedule_template_factory.dart",
+      "offset": 2259929
+    }
+  ],
+  "testimony": [
+    {
+      "uri": "package:dashboard/features/testimony/reports/category_testimony_widget.dart",
+      "offset": 468675
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/domain/entities/testimony_statistics.dart",
+      "offset": 489462
+    },
+    {
+      "uri": "package:dashboard/features/testimony/testimony_dashboard_page.dart",
+      "offset": 554991
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/usecase/remote_update_testimony.dart",
+      "offset": 606788
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/list_testimony_by_church_dashboard_factory.dart",
+      "offset": 698243
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/find_testimony_factory.dart",
+      "offset": 716320
+    },
+    {
+      "uri": "package:dashboard/features/testimony/reports/reports_testimony_page.dart",
+      "offset": 769229
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/delete_testimony_factory.dart",
+      "offset": 784557
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/domain/usecases/list_testimony.dart",
+      "offset": 840823
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/get_testimony_report_factory.dart",
+      "offset": 896290
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/domain/usecases/get_testimony_report.dart",
+      "offset": 935453
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/domain/usecases/get_testimony.dart",
+      "offset": 937332
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/domain/entities/testimony.dart",
+      "offset": 1037664
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/usecase/remote_insert_testimony.dart",
+      "offset": 1040652
+    },
+    {
+      "uri": "package:dashboard/features/testimony/reports/count_testimony_widget.dart",
+      "offset": 1070760
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/usecase/remote_list_testimony.dart",
+      "offset": 1143671
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/update_testimony_factory.dart",
+      "offset": 1284326
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/usecase/remote_find_testimony.dart",
+      "offset": 1522467
+    },
+    {
+      "uri": "package:dashboard/features/testimony/testimony_list_dashboard_page.dart",
+      "offset": 1575788
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/list_testimony_by_user_factory.dart",
+      "offset": 1589566
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/insert_testimony_factory.dart",
+      "offset": 1811736
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/usecase/remote_get_testimony_report.dart",
+      "offset": 1971515
+    },
+    {
+      "uri": "package:dashboard/features/testimony/testimony_details_page.dart",
+      "offset": 2104646
+    },
+    {
+      "uri": "package:tribus_core/src/features/testimony/data/repositories/datasource.dart",
+      "offset": 2158087
+    },
+    {
+      "uri": "package:dashboard/features/testimony/reports/monthly_testimony_widget.dart",
+      "offset": 2255108
+    }
+  ],
+  "socialIntegrations": [
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_update_social_integration.dart",
+      "offset": 476704
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/entities/social_integration.dart",
+      "offset": 794526
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/get_social_integration.dart",
+      "offset": 825425
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/delete_social_integration.dart",
+      "offset": 917027
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/datasource.dart",
+      "offset": 1006288
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/list_social_integration_by_church_dashboard_factory.dart",
+      "offset": 1084037
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/get_available_platforms.dart",
+      "offset": 1162147
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_get_available_platforms.dart",
+      "offset": 1203595
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/get_auth_status_factory.dart",
+      "offset": 1208522
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/list_social_integration.dart",
+      "offset": 1282312
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/update_social_integration_factory.dart",
+      "offset": 1435568
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_get_auth_status.dart",
+      "offset": 1490530
+    },
+    {
+      "uri": "package:dashboard/features/socialIntegrations/social_integrations_details_page.dart",
+      "offset": 1632497
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/generate_auth_url.dart",
+      "offset": 1635315
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/insert_social_integration_factory.dart",
+      "offset": 1733252
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/domain/usecases/get_auth_status.dart",
+      "offset": 1785639
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/get_available_platforms_factory.dart",
+      "offset": 1964796
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/generate_auth_url_factory.dart",
+      "offset": 1996624
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_list_social_integration.dart",
+      "offset": 2079187
+    },
+    {
+      "uri": "package:dashboard/features/socialIntegrations/social_integrations_dashboard_page.dart",
+      "offset": 2196021
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/repositories/delete_social_integration_factory.dart",
+      "offset": 2196477
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_delete_social_integration.dart",
+      "offset": 2204740
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_generate_auth_url.dart",
+      "offset": 2296138
+    },
+    {
+      "uri": "package:tribus_core/src/features/socialIntegrations/data/usecase/remote_insert_social_integration.dart",
+      "offset": 2367993
+    }
+  ],
+  "sermon": [
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/usecase/remote_list_sermon.dart",
+      "offset": 476958
+    },
+    {
+      "uri": "package:dashboard/features/sermon/sermon_details_page.dart",
+      "offset": 590602
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/domain/usecases/list_sermon.dart",
+      "offset": 670755
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/domain/entities/sermon.dart",
+      "offset": 847258
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/repositories/datasource.dart",
+      "offset": 941023
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/repositories/update_schedule_factory.dart",
+      "offset": 1071964
+    },
+    {
+      "uri": "package:dashboard/features/sermon/sermon_dashboard_page.dart",
+      "offset": 1477029
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/usecase/remote_insert_sermon.dart",
+      "offset": 1515395
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/usecase/remote_update_sermon.dart",
+      "offset": 1545193
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/domain/usecases/get_sermon.dart",
+      "offset": 2186733
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/repositories/insert_schedule_factory.dart",
+      "offset": 2230223
+    },
+    {
+      "uri": "package:tribus_core/src/features/sermon/data/repositories/list_schedule_by_church_dashboard_factory.dart",
+      "offset": 2264354
+    }
+  ],
+  "_matias": [
+    {
+      "uri": "package:tribus_core/src/features/_matias/domain/entities/message_matias.dart",
+      "offset": 477241
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/domain/usecases/list_matias.dart",
+      "offset": 769661
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/data/repositories/datasource.dart",
+      "offset": 1050627
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/data/repositories/insert_message_matias_factory.dart",
+      "offset": 1248763
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/data/repositories/list_message_matias_factory.dart",
+      "offset": 1366378
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/data/usecase/remote_list_matias.dart",
+      "offset": 1634640
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/data/repositories/list_matias_factory.dart",
+      "offset": 1948102
+    },
+    {
+      "uri": "package:tribus_core/src/features/_matias/domain/entities/list_matias_entity.dart",
+      "offset": 1966461
+    }
+  ],
+  "roadmap": [
+    {
+      "uri": "package:tribus_core/src/features/roadmap/data/usecase/remote_list_roadmap.dart",
+      "offset": 478218
+    },
+    {
+      "uri": "package:tribus_core/src/features/roadmap/domain/entities/roadmap_item.dart",
+      "offset": 651139
+    },
+    {
+      "uri": "package:tribus_core/src/features/roadmap/domain/usecases/list_roadmap.dart",
+      "offset": 832265
+    },
+    {
+      "uri": "package:tribus_core/src/features/roadmap/data/repositories/datasource.dart",
+      "offset": 854214
+    },
+    {
+      "uri": "package:dashboard/features/roadmap/roadmap_home_page.dart",
+      "offset": 976059
+    },
+    {
+      "uri": "package:dashboard/features/roadmap/request_feature_screen.dart",
+      "offset": 1169303
+    },
+    {
+      "uri": "package:dashboard/features/roadmap/roadmap_details_page.dart",
+      "offset": 1382412
+    },
+    {
+      "uri": "package:tribus_core/src/features/roadmap/data/repositories/list_roadmap_factory.dart",
+      "offset": 1696238
+    }
+  ],
+  "select": [
+    {
+      "uri": "package:dashboard/features/select/select_people_page.dart",
+      "offset": 486121
+    },
+    {
+      "uri": "package:dashboard/features/select/select_sermons_page.dart",
+      "offset": 543283
+    },
+    {
+      "uri": "package:dashboard/features/select/select_playlists_page.dart",
+      "offset": 861995
+    },
+    {
+      "uri": "package:dashboard/features/select/select_speakers_page.dart",
+      "offset": 943894
+    },
+    {
+      "uri": "package:dashboard/features/select/select_downloads_page.dart",
+      "offset": 1127555
+    },
+    {
+      "uri": "package:dashboard/features/select/select_channel_page.dart",
+      "offset": 1465527
+    },
+    {
+      "uri": "package:dashboard/features/select/view_icons_list_page.dart",
+      "offset": 1658285
+    },
+    {
+      "uri": "package:dashboard/features/select/select_topics_page.dart",
+      "offset": 2211232
+    }
+  ],
+  "subscription": [
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/subscribe_factory.dart",
+      "offset": 486337
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/usecase/remote_get_current_subscription.dart",
+      "offset": 562770
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/update_payment_method_subscription_factory.dart",
+      "offset": 740431
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/usecase/remote_update_payment_method.dart",
+      "offset": 1003023
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/datasource.dart",
+      "offset": 1037916
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/domain/usecases/list_subscriptions.dart",
+      "offset": 1066279
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/usecase/remote_list_subscriptions_by_church.dart",
+      "offset": 1093840
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/domain/entities/subscription_entity.dart",
+      "offset": 1182948
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/get_current_subscription_factory.dart",
+      "offset": 1190463
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/list_invoices_by_subscription_id_factory.dart",
+      "offset": 1451299
+    },
+    {
+      "uri": "package:dashboard/features/subscription/subscription_dashboard_page.dart",
+      "offset": 1698191
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/list_subscriptions_by_church_factory.dart",
+      "offset": 1731547
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/domain/usecases/get_subscription.dart",
+      "offset": 1770418
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/repositories/cancel_subscription_factory.dart",
+      "offset": 1996526
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/domain/usecases/subscribe.dart",
+      "offset": 2058354
+    },
+    {
+      "uri": "package:tribus_core/src/features/subscription/data/usecase/remote_subscribe.dart",
+      "offset": 2353005
+    }
+  ],
+  "_faqQuestion": [
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/data/usecase/remote_list_faq_question.dart",
+      "offset": 488332
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/data/repositories/datasource.dart",
+      "offset": 629489
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/data/repositories/list_faq_question_by_church_dashboard_factory.dart",
+      "offset": 1004821
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/data/repositories/find_faq_question_factory.dart",
+      "offset": 1244329
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/domain/usecases/list_faq_question.dart",
+      "offset": 1277336
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/domain/entities/faq_question.dart",
+      "offset": 1341536
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/domain/usecases/get_faq_question.dart",
+      "offset": 2154025
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqQuestion/data/usecase/remote_find_faq_question.dart",
+      "offset": 2303137
+    }
+  ],
+  "journey": [
+    {
+      "uri": "package:dashboard/features/journey/journey_stage_add_page.dart",
+      "offset": 493058
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_update_journey_track.dart",
+      "offset": 534446
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_crud_page.dart",
+      "offset": 549791
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/get_journey_track.dart",
+      "offset": 586952
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_stage_details_page.dart",
+      "offset": 610739
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_insert_journey_step.dart",
+      "offset": 721330
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/list_journey_steps.dart",
+      "offset": 724590
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_update_journey_stage.dart",
+      "offset": 742175
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/update_journey_stage_factory.dart",
+      "offset": 954276
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_insert_journey_stage.dart",
+      "offset": 961504
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/insert_journey_track_factory.dart",
+      "offset": 987003
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/entities/journey_track.dart",
+      "offset": 994057
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/delete_journey_track_factory.dart",
+      "offset": 999898
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_add_page.dart",
+      "offset": 1058052
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/entities/journey_user_progress.dart",
+      "offset": 1136959
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/entities/journey_stage.dart",
+      "offset": 1175119
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_list_journey_stages.dart",
+      "offset": 1180179
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/insert_journey_stage_factory.dart",
+      "offset": 1246887
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_reports_page.dart",
+      "offset": 1320747
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/list_journey_user_progress_factory.dart",
+      "offset": 1339668
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/delete_journey_step_factory.dart",
+      "offset": 1362121
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_dashboard_page.dart",
+      "offset": 1367344
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_insert_journey_track.dart",
+      "offset": 1371669
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/delete_journey_stage_factory.dart",
+      "offset": 1424348
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/datasource.dart",
+      "offset": 1529563
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_details_page.dart",
+      "offset": 1531532
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_list_journey_steps.dart",
+      "offset": 1611653
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/list_journey_tracks.dart",
+      "offset": 1617368
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/list_journey_user_progress.dart",
+      "offset": 1631176
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_list_journey_user_progress.dart",
+      "offset": 1658673
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/entities/journey_step.dart",
+      "offset": 1672180
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/list_journey_stages.dart",
+      "offset": 1946412
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_participants_page.dart",
+      "offset": 1952027
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/list_dashboard_journey_step_factory.dart",
+      "offset": 1997489
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_step_details_page.dart",
+      "offset": 2018921
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/list_dashboard_journey_stage_factory.dart",
+      "offset": 2027809
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/update_journey_track_factory.dart",
+      "offset": 2053978
+    },
+    {
+      "uri": "package:dashboard/features/journey/journey_track_stages_page.dart",
+      "offset": 2128464
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/usecase/remote_list_journey_tracks.dart",
+      "offset": 2208592
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/get_journey_step.dart",
+      "offset": 2228194
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/domain/usecases/get_journey_stage.dart",
+      "offset": 2229407
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/insert_journey_step_factory.dart",
+      "offset": 2254385
+    },
+    {
+      "uri": "package:tribus_core/src/features/journey/data/repositories/list_dashboard_journey_track_factory.dart",
+      "offset": 2344891
+    }
+  ],
+  "prayer": [
+    {
+      "uri": "package:tribus_core/src/features/prayer/domain/usecases/get_prayer.dart",
+      "offset": 499230
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/domain/usecases/get_prayer_report.dart",
+      "offset": 538801
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/get_prayer_report_factory.dart",
+      "offset": 572805
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/delete_prayer_factory.dart",
+      "offset": 817463
+    },
+    {
+      "uri": "package:dashboard/features/prayer/reports/reports_prayer_page.dart",
+      "offset": 894730
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/usecase/remote_update_prayer.dart",
+      "offset": 952058
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/domain/entities/prayer.dart",
+      "offset": 967281
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/usecase/remote_get_prayer_report.dart",
+      "offset": 1005248
+    },
+    {
+      "uri": "package:dashboard/features/prayer/prayer_dashboard_page.dart",
+      "offset": 1279469
+    },
+    {
+      "uri": "package:dashboard/features/prayer/prayer_detail_dashboard_page.dart",
+      "offset": 1293113
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/domain/usecases/list_prayer.dart",
+      "offset": 1487369
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/datasource.dart",
+      "offset": 1552955
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/list_prayer_by_church_dashboard_factory.dart",
+      "offset": 1588236
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/update_prayer_factory.dart",
+      "offset": 1634384
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/usecase/remote_list_prayer.dart",
+      "offset": 2005937
+    },
+    {
+      "uri": "package:dashboard/features/prayer/prayer_list_dashboard_page.dart",
+      "offset": 2073987
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/data/repositories/list_prayer_by_user_factory.dart",
+      "offset": 2114791
+    },
+    {
+      "uri": "package:tribus_core/src/features/prayer/domain/entities/report_prayer_entity.dart",
+      "offset": 2228111
+    }
+  ],
+  "download": [
+    {
+      "uri": "package:tribus_core/src/features/download/domain/usecases/get_download.dart",
+      "offset": 499756
+    },
+    {
+      "uri": "package:dashboard/features/download/downloads_home_page.dart",
+      "offset": 508352
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/list_downloads_dashboard_factory.dart",
+      "offset": 515802
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/usecase/remote_find_download.dart",
+      "offset": 523672
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/datasource.dart",
+      "offset": 901639
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/domain/entities/download.dart",
+      "offset": 1091738
+    },
+    {
+      "uri": "package:dashboard/features/download/download_details_page.dart",
+      "offset": 1149103
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/update_download_factory.dart",
+      "offset": 1503072
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/domain/usecases/list_downloads.dart",
+      "offset": 1558238
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/find_download_factory.dart",
+      "offset": 1868781
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/delete_download_factory.dart",
+      "offset": 2133026
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/repositories/insert_download_factory.dart",
+      "offset": 2162244
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/usecase/remote_insert_download.dart",
+      "offset": 2190675
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/usecase/remote_update_download.dart",
+      "offset": 2225565
+    },
+    {
+      "uri": "package:tribus_core/src/features/download/data/usecase/remote_list_downloads.dart",
+      "offset": 2281867
+    }
+  ],
+  "group": [
+    {
+      "uri": "package:tribus_core/src/features/group/domain/usecases/list_group.dart",
+      "offset": 501758
+    },
+    {
+      "uri": "package:dashboard/features/group/group_details_page.dart",
+      "offset": 675357
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/usecase/remote_insert_group.dart",
+      "offset": 798654
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/domain/entities/group.dart",
+      "offset": 1092978
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/usecase/remote_list_group.dart",
+      "offset": 1126703
+    },
+    {
+      "uri": "package:dashboard/features/group/groups_home_page.dart",
+      "offset": 1216132
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/repositories/datasource.dart",
+      "offset": 1453272
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/repositories/list_group_by_church_dashboard_factory.dart",
+      "offset": 1879025
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/domain/usecases/get_group.dart",
+      "offset": 1904320
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/repositories/update_group_factory.dart",
+      "offset": 2000212
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/repositories/insert_group_factory.dart",
+      "offset": 2089886
+    },
+    {
+      "uri": "package:tribus_core/src/features/group/data/usecase/remote_update_group.dart",
+      "offset": 2116058
+    }
+  ],
+  "post": [
+    {
+      "uri": "package:tribus_core/src/features/post/domain/usecases/list_posts.dart",
+      "offset": 504116
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/list_posts_alls_factory.dart",
+      "offset": 790082
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/insert_post_factory.dart",
+      "offset": 873041
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/usecase/remote_list_posts.dart",
+      "offset": 911290
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/delete_post_factory.dart",
+      "offset": 947728
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/datasource.dart",
+      "offset": 1076023
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/usecase/remote_find_post.dart",
+      "offset": 1247286
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/domain/entities/post_entity.dart",
+      "offset": 1264141
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/domain/usecases/get_post.dart",
+      "offset": 2099448
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/usecase/remote_insert_post.dart",
+      "offset": 2181399
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/usecase/remote_update_post.dart",
+      "offset": 2320124
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/update_post_factory.dart",
+      "offset": 2355768
+    },
+    {
+      "uri": "package:tribus_core/src/features/post/data/repositories/find_post_factory.dart",
+      "offset": 2370603
+    }
+  ],
+  "generativeMedia": [
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/list_generative_media_factory.dart",
+      "offset": 507819
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/delete_generative_media_factory.dart",
+      "offset": 559597
+    },
+    {
+      "uri": "package:dashboard/features/generativeMedia/generative_media_home_page.dart",
+      "offset": 610045
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/usecases/check_status.dart",
+      "offset": 618184
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/generate_image_factory.dart",
+      "offset": 721821
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/usecases/delete_generative_media.dart",
+      "offset": 995388
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/entities/generation_response.dart",
+      "offset": 1079783
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/entities/generative_media.dart",
+      "offset": 1292415
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/check_status_factory.dart",
+      "offset": 1517577
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/usecases/generate_image.dart",
+      "offset": 1631564
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/usecase/remote_check_status.dart",
+      "offset": 1644265
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/entities/status_response.dart",
+      "offset": 1713350
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/usecase/remote_generate_image.dart",
+      "offset": 1804809
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/usecase/remote_delete_generative_media.dart",
+      "offset": 1870468
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/domain/usecases/list_generative_media.dart",
+      "offset": 1976393
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/repositories/datasource.dart",
+      "offset": 2043926
+    },
+    {
+      "uri": "package:dashboard/features/generativeMedia/generative_media_insert_page.dart",
+      "offset": 2199472
+    },
+    {
+      "uri": "package:tribus_core/src/features/generativeMedia/data/usecase/remote_list_generative_media.dart",
+      "offset": 2286001
+    }
+  ],
+  "billboard": [
+    {
+      "uri": "package:tribus_core/src/features/billboard/domain/usecases/list_billboard.dart",
+      "offset": 510922
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/usecase/remote_insert_billboard.dart",
+      "offset": 570344
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/domain/usecases/get_billboard.dart",
+      "offset": 1112497
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/insert_billboard_factory.dart",
+      "offset": 1265480
+    },
+    {
+      "uri": "package:dashboard/features/billboard/billboard_details_page.dart",
+      "offset": 1272239
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/usecase/remote_find_billboard.dart",
+      "offset": 1328801
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/find_billboard_factory.dart",
+      "offset": 1443501
+    },
+    {
+      "uri": "package:dashboard/features/billboard/billboard_home_page.dart",
+      "offset": 1624330
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/list_billboard_dashboard_factory.dart",
+      "offset": 1760096
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/update_billboard_factory.dart",
+      "offset": 1786023
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/delete_billboard_factory.dart",
+      "offset": 1946605
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/usecase/remote_list_billboard.dart",
+      "offset": 2146852
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/repositories/datasource.dart",
+      "offset": 2349470
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/domain/entities/billboard.dart",
+      "offset": 2365132
+    },
+    {
+      "uri": "package:tribus_core/src/features/billboard/data/usecase/remote_update_billboard.dart",
+      "offset": 2371014
+    }
+  ],
+  "_explore": [
+    {
+      "uri": "package:tribus_core/src/features/_explore/domain/entities/explore_entity.dart",
+      "offset": 513182
+    },
+    {
+      "uri": "package:tribus_core/src/features/_explore/data/repositories/list_explore_factory.dart",
+      "offset": 1324385
+    },
+    {
+      "uri": "package:tribus_core/src/features/_explore/domain/usecases/list_explore.dart",
+      "offset": 1385656
+    },
+    {
+      "uri": "package:tribus_core/src/features/_explore/data/repositories/datasource.dart",
+      "offset": 1419478
+    },
+    {
+      "uri": "package:tribus_core/src/features/_explore/data/usecase/remote_list_explore.dart",
+      "offset": 1960850
+    }
+  ],
+  "church": [
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/update_church.dart",
+      "offset": 513455
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_address_church_dashboard_page.dart",
+      "offset": 518278
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/generate_validate_church_factory.dart",
+      "offset": 527244
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_bank_account_church_dashboard_page.dart",
+      "offset": 549123
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_payment_onboarding_page.dart",
+      "offset": 556420
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_list_withdrawals.dart",
+      "offset": 567779
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/find_church.dart",
+      "offset": 609137
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/default_bank_account_entity.dart",
+      "offset": 622401
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_generate_validate_church.dart",
+      "offset": 625098
+    },
+    {
+      "uri": "package:dashboard/features/church/share_church_app_page.dart",
+      "offset": 647735
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_onboarding_dashboard_page.dart",
+      "offset": 675166
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/register_payments.dart",
+      "offset": 703767
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_basic_payment_church_dashboard_page.dart",
+      "offset": 704277
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/get_balance.dart",
+      "offset": 712818
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_banks_list_church_dashboard_page.dart",
+      "offset": 778292
+    },
+    {
+      "uri": "package:dashboard/features/church/edit_church_page.dart",
+      "offset": 793644
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_review_payment_church_dashboard_page.dart",
+      "offset": 800489
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_get_operation_day_range.dart",
+      "offset": 820243
+    },
+    {
+      "uri": "package:dashboard/features/church/remove_church_page.dart",
+      "offset": 831816
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_basic_church_dashboard_page.dart",
+      "offset": 833752
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/list_payables.dart",
+      "offset": 881452
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/payables_factory.dart",
+      "offset": 897680
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_list_payables.dart",
+      "offset": 943164
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/list_church.dart",
+      "offset": 943663
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/exists_church_factory.dart",
+      "offset": 954452
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_find_church.dart",
+      "offset": 993740
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/church.dart",
+      "offset": 1046903
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/create_withdrawals_factory.dart",
+      "offset": 1085288
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/list_operations.dart",
+      "offset": 1106500
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/list_withdrawals.dart",
+      "offset": 1112280
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/register_payments_factory.dart",
+      "offset": 1112627
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/datasource.dart",
+      "offset": 1132395
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/list_church_dashboard_factory.dart",
+      "offset": 1138217
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_review_church_dashboard_page.dart",
+      "offset": 1139384
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_list_church.dart",
+      "offset": 1148954
+    },
+    {
+      "uri": "package:dashboard/features/church/church_home_page.dart",
+      "offset": 1194205
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_church_state.dart",
+      "offset": 1209099
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/get_operation_day_range_factory.dart",
+      "offset": 1211121
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/get_balance_factory.dart",
+      "offset": 1217887
+    },
+    {
+      "uri": "package:dashboard/features/church/customize_dashboard_page.dart",
+      "offset": 1219978
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/get_generate_withdrawals.dart",
+      "offset": 1243156
+    },
+    {
+      "uri": "package:dashboard/features/church/edit_address_page.dart",
+      "offset": 1284176
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_apps_selection_church_dashboard_page.dart",
+      "offset": 1285164
+    },
+    {
+      "uri": "package:dashboard/features/church/register_payment/register_complementar_church_dashboard_page.dart",
+      "offset": 1336184
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/list_withdrawals_factory.dart",
+      "offset": 1347099
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/kyc_details_entity.dart",
+      "offset": 1355931
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/insert_church_factory.dart",
+      "offset": 1398572
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/controller/church_sm.dart",
+      "offset": 1406922
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/controller/church_sm.g.dart",
+      "offset": 1478841
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/transfer_settings_entity.dart",
+      "offset": 1483098
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_get_operation_day.dart",
+      "offset": 1523311
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/insert_church.dart",
+      "offset": 1535358
+    },
+    {
+      "uri": "package:dashboard/features/church/menu_expanded_page.dart",
+      "offset": 1565175
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_update_church.dart",
+      "offset": 1584427
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/list_church_factory.dart",
+      "offset": 1606231
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/register_params_entity.dart",
+      "offset": 1620105
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_register_payments.dart",
+      "offset": 1625115
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/register_payment_params_entity.dart",
+      "offset": 1722036
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/delete_church_factory.dart",
+      "offset": 1731926
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/get_operation_day_range.dart",
+      "offset": 1733755
+    },
+    {
+      "uri": "package:dashboard/features/church/edit_complementar_data_page.dart",
+      "offset": 1768918
+    },
+    {
+      "uri": "package:dashboard/features/church/connection/church_exists_page.dart",
+      "offset": 1775323
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/get_operation_day_factory.dart",
+      "offset": 1859457
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_generate_withdrawals.dart",
+      "offset": 1863291
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/update_church_factory.dart",
+      "offset": 1898241
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/entities/automatic_anticipation_settings_entity.dart",
+      "offset": 2007674
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/find_church_by_username_or_id_factory.dart",
+      "offset": 2039002
+    },
+    {
+      "uri": "package:dashboard/features/church/register/register_check_cnpj_dashboard_page.dart",
+      "offset": 2103950
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/get_kyc_details.dart",
+      "offset": 2123695
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_insert_church.dart",
+      "offset": 2168543
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/domain/usecases/get_operation_day.dart",
+      "offset": 2232305
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_get_balance.dart",
+      "offset": 2241933
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/repositories/operations_factory.dart",
+      "offset": 2318999
+    },
+    {
+      "uri": "package:tribus_core/src/features/church/data/usecases/remote_list_operations.dart",
+      "offset": 2369162
+    }
+  ],
+  "permission": [
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/update_permissions_by_user_factory.dart",
+      "offset": 519833
+    },
+    {
+      "uri": "package:dashboard/features/permission/peoples/users_by_module_page.dart",
+      "offset": 854999
+    },
+    {
+      "uri": "package:dashboard/features/permission/modules/save_by_people_page.dart",
+      "offset": 1031098
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/list_modules_by_user_factory.dart",
+      "offset": 1123654
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/domain/entities/permission.dart",
+      "offset": 1166871
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/update_permissions_by_module_factory.dart",
+      "offset": 1200133
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/domain/usecases/save_permissions.dart",
+      "offset": 1211457
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/list_users_by_module_factory.dart",
+      "offset": 1436425
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/datasource.dart",
+      "offset": 1446897
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/usecase/remote_list_permission_resource.dart",
+      "offset": 1493912
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/list_users_by_church_factory.dart",
+      "offset": 1550117
+    },
+    {
+      "uri": "package:dashboard/features/permission/select/select_module_church_page.dart",
+      "offset": 1773803
+    },
+    {
+      "uri": "package:dashboard/features/permission/select/select_user_page.dart",
+      "offset": 1889151
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/usecase/remote_list_permission_people.dart",
+      "offset": 2019606
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/usecase/save_permissions.dart",
+      "offset": 2098109
+    },
+    {
+      "uri": "package:dashboard/features/permission/permissions_home_page.dart",
+      "offset": 2106434
+    },
+    {
+      "uri": "package:dashboard/features/permission/modules/modules_by_user_page.dart",
+      "offset": 2111918
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/domain/usecases/list_permission.dart",
+      "offset": 2208224
+    },
+    {
+      "uri": "package:dashboard/features/permission/peoples/save_by_module_page.dart",
+      "offset": 2210638
+    },
+    {
+      "uri": "package:tribus_core/src/features/permission/data/repositories/list_module_by_church_factory.dart",
+      "offset": 2294949
+    }
+  ],
+  "onlineRadio": [
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/insert_online_radio_factory.dart",
+      "offset": 522018
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/usecase/remote_find_online_radio.dart",
+      "offset": 550767
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/datasource.dart",
+      "offset": 580971
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/update_online_radio_factory.dart",
+      "offset": 668902
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/domain/entities/online_radio.dart",
+      "offset": 749308
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/usecase/remote_update_online_radio.dart",
+      "offset": 905867
+    },
+    {
+      "uri": "package:dashboard/features/onlineRadio/online_radio_home_page.dart",
+      "offset": 1385466
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/domain/usecases/list_online_radio.dart",
+      "offset": 1469954
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/usecase/remote_insert_online_radio.dart",
+      "offset": 1537325
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/find_online_radio_factory.dart",
+      "offset": 1637518
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/list_online_radios_dashboard_factory.dart",
+      "offset": 1728772
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/repositories/delete_online_radio_factory.dart",
+      "offset": 1853116
+    },
+    {
+      "uri": "package:dashboard/features/onlineRadio/online_radio_details_page.dart",
+      "offset": 1913470
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/domain/usecases/get_online_radio.dart",
+      "offset": 2245042
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineRadio/data/usecase/remote_list_online_radios.dart",
+      "offset": 2275058
+    }
+  ],
+  "_blog": [
+    {
+      "uri": "package:tribus_core/src/features/_blog/data/repositories/list_blog_categories_with_posts_factory.dart",
+      "offset": 524400
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/domain/entities/blog_post_entity.dart",
+      "offset": 751807
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/data/repositories/datasource.dart",
+      "offset": 1295279
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/data/usecase/remote_get_blog_post.dart",
+      "offset": 1396066
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/data/repositories/get_blog_post_factory.dart",
+      "offset": 1458431
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/domain/usecases/get_blog_post.dart",
+      "offset": 1483978
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/data/usecase/remote_list_blog_category.dart",
+      "offset": 1695018
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/domain/entities/blog_category_entity.dart",
+      "offset": 2020496
+    },
+    {
+      "uri": "package:tribus_core/src/features/_blog/domain/usecases/list_blog_categories.dart",
+      "offset": 2378077
+    }
+  ],
+  "scheduleScale": [
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/entities/schedule_scale.dart",
+      "offset": 527359
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/assignment_schedule_scale_factory.dart",
+      "offset": 547391
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/upcoming_schedule_scale.dart",
+      "offset": 609278
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/delete_schedule_scale.dart",
+      "offset": 616209
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/insert_schedule_scale.dart",
+      "offset": 665581
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/update_schedule_scale.dart",
+      "offset": 678198
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/assignment_schedule_scale.dart",
+      "offset": 684629
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/insert_schedule_scale_factory.dart",
+      "offset": 846835
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/publish_schedule_scale.dart",
+      "offset": 857564
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/list_schedule_scale.dart",
+      "offset": 886725
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScale/schedule_scale_home_page.dart",
+      "offset": 1014408
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/datasource.dart",
+      "offset": 1086788
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/delete_schedule_scale_factory.dart",
+      "offset": 1155574
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/update_schedule_scale_factory.dart",
+      "offset": 1273251
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/publish_schedule_scale_factory.dart",
+      "offset": 1436611
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/insert_schedule_scale.dart",
+      "offset": 1482173
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/list_schedule_scale_factory.dart",
+      "offset": 1596468
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/update_schedule_scale.dart",
+      "offset": 1781194
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/assignment_schedule_scale.dart",
+      "offset": 1785085
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/list_schedule_scale.dart",
+      "offset": 1983034
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/publish_schedule_scale.dart",
+      "offset": 1994585
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/repositories/upcoming_schedule_scale_factory.dart",
+      "offset": 2110340
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/data/usecase/delete_schedule_scale.dart",
+      "offset": 2164603
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleScale/domain/usecases/upcoming_schedule_scale.dart",
+      "offset": 2353515
+    }
+  ],
+  "pollVote": [
+    {
+      "uri": "package:tribus_core/src/features/pollVote/data/usecase/remote_get_poll_results_church.dart",
+      "offset": 534810
+    },
+    {
+      "uri": "package:tribus_core/src/features/pollVote/domain/usecases/get_poll_results_church.dart",
+      "offset": 626893
+    },
+    {
+      "uri": "package:tribus_core/src/features/pollVote/domain/entities/poll_results.dart",
+      "offset": 1401960
+    },
+    {
+      "uri": "package:tribus_core/src/features/pollVote/data/repositories/get_poll_results_church_factory.dart",
+      "offset": 1724679
+    },
+    {
+      "uri": "package:tribus_core/src/features/pollVote/data/repositories/datasource.dart",
+      "offset": 1987052
+    }
+  ],
+  "podcast": [
+    {
+      "uri": "package:tribus_core/src/features/podcast/domain/usecases/get_podcast.dart",
+      "offset": 537150
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/repositories/datasource.dart",
+      "offset": 832895
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/domain/entities/podcast.dart",
+      "offset": 1369620
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/repositories/list_podcast_by_church_dashboard_factory.dart",
+      "offset": 1872904
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/repositories/insert_podcast_factory.dart",
+      "offset": 2013139
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/usecase/remote_list_podcast.dart",
+      "offset": 2031651
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/repositories/update_podcast_factory.dart",
+      "offset": 2043721
+    },
+    {
+      "uri": "package:dashboard/features/podcast/podcast_detail_page.dart",
+      "offset": 2068862
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/usecase/remote_insert_podcast.dart",
+      "offset": 2160998
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/repositories/delete_podcast_factory.dart",
+      "offset": 2187424
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/domain/usecases/list_podcast.dart",
+      "offset": 2198433
+    },
+    {
+      "uri": "package:dashboard/features/podcast/podcast_dashboard_page.dart",
+      "offset": 2314315
+    },
+    {
+      "uri": "package:tribus_core/src/features/podcast/data/usecase/remote_update_podcast.dart",
+      "offset": 2361179
+    }
+  ],
+  "onlineWorship": [
+    {
+      "uri": "package:dashboard/features/onlineWorship/online_worship_home_page.dart",
+      "offset": 537592
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/domain/entities/online_worship.dart",
+      "offset": 593104
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/usecase/remote_update_online_worship.dart",
+      "offset": 645161
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/delete_online_worship_factory.dart",
+      "offset": 653706
+    },
+    {
+      "uri": "package:dashboard/features/onlineWorship/online_worship_details_page.dart",
+      "offset": 674999
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/datasource.dart",
+      "offset": 687268
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/update_online_worship_factory.dart",
+      "offset": 1184464
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/usecase/remote_find_online_worship.dart",
+      "offset": 1300956
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/list_online_worships_dashboard_factory.dart",
+      "offset": 1335405
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/usecase/remote_list_online_worships.dart",
+      "offset": 1401030
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/usecase/remote_insert_online_worship.dart",
+      "offset": 1429036
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/find_online_worship_factory.dart",
+      "offset": 1498068
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/domain/usecases/list_online_worship.dart",
+      "offset": 2288986
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/data/repositories/insert_online_worship_factory.dart",
+      "offset": 2295965
+    },
+    {
+      "uri": "package:tribus_core/src/features/onlineWorship/domain/usecases/get_online_worship.dart",
+      "offset": 2334199
+    }
+  ],
+  "adminPanel": [
+    {
+      "uri": "package:tribus_core/src/features/adminPanel/domain/entities/admin_dashboard_entity.dart",
+      "offset": 539792
+    },
+    {
+      "uri": "package:tribus_core/src/features/adminPanel/data/repositories/datasource.dart",
+      "offset": 566513
+    },
+    {
+      "uri": "package:dashboard/features/adminPanel/feedback_details_page.dart",
+      "offset": 653482
+    },
+    {
+      "uri": "package:tribus_core/src/features/adminPanel/data/usecase/remote_dashboard.dart",
+      "offset": 992445
+    },
+    {
+      "uri": "package:tribus_core/src/features/adminPanel/data/repositories/dashboard_factory.dart",
+      "offset": 1723486
+    },
+    {
+      "uri": "package:tribus_core/src/features/adminPanel/domain/usecases/dashboard.dart",
+      "offset": 2063696
+    },
+    {
+      "uri": "package:dashboard/features/adminPanel/admin_panel_page.dart",
+      "offset": 2146791
+    }
+  ],
+  "plan": [
+    {
+      "uri": "package:dashboard/features/plan/edit_payment_method_subscription_page.dart",
+      "offset": 542952
+    },
+    {
+      "uri": "package:dashboard/features/plan/new/select_voucher_page.dart",
+      "offset": 682015
+    },
+    {
+      "uri": "package:dashboard/features/plan/details_payment_by_subscription_page.dart",
+      "offset": 883020
+    },
+    {
+      "uri": "package:dashboard/features/plan/confirm_cancel_subscription_page.dart",
+      "offset": 921098
+    },
+    {
+      "uri": "package:tribus_core/src/features/plan/domain/entities/plan.dart",
+      "offset": 1008814
+    },
+    {
+      "uri": "package:dashboard/features/plan/cancel_subscription_page.dart",
+      "offset": 1185918
+    },
+    {
+      "uri": "package:dashboard/features/plan/historic_subscription_page.dart",
+      "offset": 1209314
+    },
+    {
+      "uri": "package:tribus_core/src/features/plan/data/repositories/list_plan_factory.dart",
+      "offset": 1228181
+    },
+    {
+      "uri": "package:dashboard/features/plan/subscription_detail_page.dart",
+      "offset": 1244253
+    },
+    {
+      "uri": "package:dashboard/features/plan/new/select_plan_page.dart",
+      "offset": 1256955
+    },
+    {
+      "uri": "package:dashboard/features/plan/current_subscription_page.dart",
+      "offset": 1440571
+    },
+    {
+      "uri": "package:dashboard/features/plan/new/hire_subscription_page.dart",
+      "offset": 1578473
+    },
+    {
+      "uri": "package:tribus_core/src/features/plan/data/usecase/remote_list_plan.dart",
+      "offset": 1635633
+    },
+    {
+      "uri": "package:tribus_core/src/features/plan/data/repositories/datasource.dart",
+      "offset": 2058954
+    },
+    {
+      "uri": "package:tribus_core/src/features/plan/domain/usecases/list_plan.dart",
+      "offset": 2234144
+    }
+  ],
+  "pastoralCare": [
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/domain/entities/report_pastoral_care_entity.dart",
+      "offset": 543618
+    },
+    {
+      "uri": "package:dashboard/features/pastoralCare/filters_pastoral_care_screen.dart",
+      "offset": 592627
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/domain/usecases/get_pastoral_care.dart",
+      "offset": 610173
+    },
+    {
+      "uri": "package:dashboard/features/pastoralCare/pastoral_care_list_dashboard_page.dart",
+      "offset": 640031
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_pastoral_care_news.dart",
+      "offset": 827350
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_update_pastoral_care.dart",
+      "offset": 883921
+    },
+    {
+      "uri": "package:dashboard/features/pastoralCare/pastoral_care_details_page.dart",
+      "offset": 1040492
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_list_filters_pastoral_care.dart",
+      "offset": 1113649
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/insert_pastoral_care_factory.dart",
+      "offset": 1253137
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/find_pastoral_care_factory.dart",
+      "offset": 1546074
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/domain/usecases/get_report_pastoral_care.dart",
+      "offset": 1549105
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/domain/entities/pastoral_care.dart",
+      "offset": 1561920
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_find_pastoral_care.dart",
+      "offset": 1774342
+    },
+    {
+      "uri": "package:dashboard/features/pastoralCare/pastoral_care_home_page.dart",
+      "offset": 1798852
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/delete_pastoral_care_factory.dart",
+      "offset": 1804450
+    },
+    {
+      "uri": "package:dashboard/features/pastoralCare/reports/reports_pastoral_care_page.dart",
+      "offset": 1999877
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/domain/usecases/list_pastoral_care.dart",
+      "offset": 2016188
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/get_report_pastoral_care_factory.dart",
+      "offset": 2035150
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/list_pastoral_care_by_church_dashboard_factory.dart",
+      "offset": 2035444
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_report_pastoral_care.dart",
+      "offset": 2128544
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/usecase/remote_list_pastoral_care.dart",
+      "offset": 2165684
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/list_pastoral_care_by_user_factory.dart",
+      "offset": 2179386
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/datasource.dart",
+      "offset": 2201281
+    },
+    {
+      "uri": "package:tribus_core/src/features/pastoralCare/data/repositories/update_pastoral_care_factory.dart",
+      "offset": 2379647
+    }
+  ],
+  "_notification": [
+    {
+      "uri": "package:tribus_core/src/features/_notification/data/repositories/list_notification_factory.dart",
+      "offset": 551449
+    },
+    {
+      "uri": "package:tribus_core/src/features/_notification/domain/entities/notification.dart",
+      "offset": 749750
+    },
+    {
+      "uri": "package:tribus_core/src/features/_notification/data/repositories/datasource.dart",
+      "offset": 960555
+    },
+    {
+      "uri": "package:tribus_core/src/features/_notification/data/usecase/remote_list_notification.dart",
+      "offset": 1429823
+    },
+    {
+      "uri": "package:tribus_core/src/features/_notification/domain/usecases/list_notification.dart",
+      "offset": 2134084
+    }
+  ],
+  "ticket": [
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/usecase/remote_list_tickets.dart",
+      "offset": 555235
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/usecases/insert_ticket.dart",
+      "offset": 637371
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/usecase/remote_update_ticket.dart",
+      "offset": 689752
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/list_tickets_dashboard_factory.dart",
+      "offset": 785674
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/usecase/remote_insert_ticket.dart",
+      "offset": 964558
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/usecases/delete_ticket.dart",
+      "offset": 980724
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/update_ticket_factory.dart",
+      "offset": 1030761
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/entities/required_field.dart",
+      "offset": 1450000
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/datasource.dart",
+      "offset": 1453114
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/usecase/remote_get_ticket_statistics.dart",
+      "offset": 1596959
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/usecases/list_tickets.dart",
+      "offset": 1616937
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/usecases/update_ticket.dart",
+      "offset": 1736968
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/get_ticket_statistics_factory.dart",
+      "offset": 1867870
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/insert_ticket_factory.dart",
+      "offset": 2097557
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/usecase/remote_delete_ticket.dart",
+      "offset": 2155895
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/entities/ticket_statistics.dart",
+      "offset": 2162022
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/domain/entities/ticket.dart",
+      "offset": 2249890
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticket/data/repositories/delete_ticket_factory.dart",
+      "offset": 2305289
+    }
+  ],
+  "scheduleAvailability": [
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/data/usecase/delete_schedule_availability.dart",
+      "offset": 560945
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/domain/entities/schedule_availability.dart",
+      "offset": 830329
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/data/repositories/delete_schedule_availability_factory.dart",
+      "offset": 934377
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/domain/usecases/delete_schedule_availability.dart",
+      "offset": 1133368
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/data/usecase/list_schedule_availability.dart",
+      "offset": 1460634
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/data/repositories/list_schedule_availability_factory.dart",
+      "offset": 1545833
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/domain/usecases/list_schedule_availability.dart",
+      "offset": 1809527
+    },
+    {
+      "uri": "package:tribus_core/src/features/scheduleAvailability/data/repositories/datasource.dart",
+      "offset": 2271676
+    }
+  ],
+  "album": [
+    {
+      "uri": "package:tribus_core/src/features/album/domain/usecases/list_album.dart",
+      "offset": 561504
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/domain/entities/album.dart",
+      "offset": 577979
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/insert_album_factory.dart",
+      "offset": 710648
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/list_album_by_church_dashboard_factory.dart",
+      "offset": 985913
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/delete_album_factory.dart",
+      "offset": 1263967
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/datasource.dart",
+      "offset": 1281140
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/usecase/remote_list_album_dashboard.dart",
+      "offset": 1641818
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/usecase/remote_insert_album.dart",
+      "offset": 1761091
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/find_album_factory.dart",
+      "offset": 1796954
+    },
+    {
+      "uri": "package:dashboard/features/album/album_dashboard_page.dart",
+      "offset": 1935933
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/list_files_album_factory.dart",
+      "offset": 1949744
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/repositories/update_album_factory.dart",
+      "offset": 2010943
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/usecase/remote_update_album.dart",
+      "offset": 2181504
+    },
+    {
+      "uri": "package:dashboard/features/album/album_details_page.dart",
+      "offset": 2218144
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/data/usecase/remote_find_album.dart",
+      "offset": 2252525
+    },
+    {
+      "uri": "package:tribus_core/src/features/album/domain/usecases/get_album.dart",
+      "offset": 2336358
+    }
+  ],
+  "donation": [
+    {
+      "uri": "package:tribus_core/src/features/donation/data/repositories/delete_download_factory.dart",
+      "offset": 564142
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/domain/usecases/list_donations.dart",
+      "offset": 587968
+    },
+    {
+      "uri": "package:dashboard/features/donation/reports/reports_donation_page.dart",
+      "offset": 651366
+    },
+    {
+      "uri": "package:dashboard/features/donation/made/donations_made_list_dashboard_page.dart",
+      "offset": 670985
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/repositories/insert_donation_factory.dart",
+      "offset": 785857
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/usecase/remote_list_donations.dart",
+      "offset": 844773
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/repositories/update_donation_factory.dart",
+      "offset": 877201
+    },
+    {
+      "uri": "package:dashboard/features/donation/donations_list_dashboard_page.dart",
+      "offset": 929421
+    },
+    {
+      "uri": "package:dashboard/features/donation/reports/payment_methods_widget.dart",
+      "offset": 991595
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/usecase/remote_insert_donation.dart",
+      "offset": 1023524
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/repositories/datasource.dart",
+      "offset": 1090060
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/domain/entities/donation.dart",
+      "offset": 1128435
+    },
+    {
+      "uri": "package:dashboard/features/donation/reports/donation_type_widget.dart",
+      "offset": 1189852
+    },
+    {
+      "uri": "package:dashboard/features/donation/made/receipt_of_payment_donation_page.dart",
+      "offset": 1235714
+    },
+    {
+      "uri": "package:dashboard/features/donation/crud_donation_dashboard_page.dart",
+      "offset": 1406719
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/domain/usecases/get_donation.dart",
+      "offset": 1545616
+    },
+    {
+      "uri": "package:dashboard/features/donation/reports/charges_donation_widget.dart",
+      "offset": 1572406
+    },
+    {
+      "uri": "package:dashboard/features/donation/made/donations_made_details_church_page.dart",
+      "offset": 1587659
+    },
+    {
+      "uri": "package:dashboard/features/donation/reports/count_donation_widget.dart",
+      "offset": 1729200
+    },
+    {
+      "uri": "package:dashboard/features/donation/donation_dashboard_page.dart",
+      "offset": 1863402
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/usecase/remote_update_donation.dart",
+      "offset": 2012441
+    },
+    {
+      "uri": "package:tribus_core/src/features/donation/data/repositories/list_donations_dashboard_factory.dart",
+      "offset": 2297074
+    }
+  ],
+  "formResponse": [
+    {
+      "uri": "package:tribus_core/src/features/formResponse/domain/entities/form_response.dart",
+      "offset": 573249
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/domain/usecases/delete_form_response.dart",
+      "offset": 580022
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/data/usecase/remote_delete_form_response.dart",
+      "offset": 659081
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/data/usecase/remote_list_form_responses_by_church_dashboard.dart",
+      "offset": 696503
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/data/repositories/datasource.dart",
+      "offset": 937200
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/data/repositories/delete_form_response_factory.dart",
+      "offset": 1349906
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/data/repositories/list_form_responses_by_church_dashboard_factory.dart",
+      "offset": 1516883
+    },
+    {
+      "uri": "package:tribus_core/src/features/formResponse/domain/usecases/list_form_responses_by_church_dashboard.dart",
+      "offset": 1767800
+    }
+  ],
+  "banner": [
+    {
+      "uri": "package:tribus_core/src/features/banner/data/repositories/list_banners_dashboard_factory.dart",
+      "offset": 577060
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/repositories/datasource.dart",
+      "offset": 1015493
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/usecase/remote_update_banner.dart",
+      "offset": 1130923
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/domain/usecases/list_banners.dart",
+      "offset": 1351042
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/usecase/remote_insert_banner.dart",
+      "offset": 1431444
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/usecase/remote_list_banners.dart",
+      "offset": 1616126
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/domain/usecases/get_banner.dart",
+      "offset": 1801353
+    },
+    {
+      "uri": "package:dashboard/features/banner/banners_home_page.dart",
+      "offset": 2007387
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/domain/entities/banner.dart",
+      "offset": 2057944
+    },
+    {
+      "uri": "package:dashboard/features/banner/banner_details_page.dart",
+      "offset": 2136731
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/repositories/insert_banner_factory.dart",
+      "offset": 2251317
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/repositories/delete_banner_factory.dart",
+      "offset": 2258270
+    },
+    {
+      "uri": "package:tribus_core/src/features/banner/data/repositories/update_banner_factory.dart",
+      "offset": 2301328
+    }
+  ],
+  "bible": [
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/entities/verse_entity.dart",
+      "offset": 587788
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/usecases/get_verse_of_day.dart",
+      "offset": 861423
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/data/repositories/get_verse_of_day_factory.dart",
+      "offset": 961779
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/entities/chapter_entity.dart",
+      "offset": 1627178
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/data/usecase/remote_get_verse_of_day.dart",
+      "offset": 1738410
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/entities/bible_entity.dart",
+      "offset": 1878814
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/entities/book_entity.dart",
+      "offset": 2007930
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/data/repositories/datasource.dart",
+      "offset": 2183654
+    },
+    {
+      "uri": "package:tribus_core/src/features/bible/domain/entities/verse_of_day_entity.dart",
+      "offset": 2360515
+    }
+  ],
+  "news": [
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/insert_news_factory.dart",
+      "offset": 596735
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/usecase/remote_update_news.dart",
+      "offset": 701053
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/domain/entities/news.dart",
+      "offset": 866006
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/datasource.dart",
+      "offset": 1110630
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/find_news_factory.dart",
+      "offset": 1150215
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/usecase/remote_list_news.dart",
+      "offset": 1325742
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/update_news_factory.dart",
+      "offset": 1355296
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/domain/usecases/delete.dart",
+      "offset": 1459179
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/usecase/remote_find_news.dart",
+      "offset": 1526666
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/delete_news_factory.dart",
+      "offset": 1546646
+    },
+    {
+      "uri": "package:dashboard/features/news/news_home_page.dart",
+      "offset": 1585259
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/repositories/list_news_by_church_dashboard_factory.dart",
+      "offset": 1790030
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/domain/usecases/list_news.dart",
+      "offset": 1821445
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/usecase/remote_delete.dart",
+      "offset": 1833063
+    },
+    {
+      "uri": "package:dashboard/features/news/news_details_page.dart",
+      "offset": 1871297
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/data/usecase/remote_insert_news.dart",
+      "offset": 1940120
+    },
+    {
+      "uri": "package:tribus_core/src/features/news/domain/usecases/get_news.dart",
+      "offset": 2039786
+    }
+  ],
+  "ministry": [
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/datasource.dart",
+      "offset": 615361
+    },
+    {
+      "uri": "package:dashboard/features/ministry/ministry_home_page.dart",
+      "offset": 724144
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/domain/usecases/list_ministries.dart",
+      "offset": 735793
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/usecase/remote_insert_ministry.dart",
+      "offset": 754552
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/delete_ministry_factory.dart",
+      "offset": 755346
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/usecase/remote_list_ministries.dart",
+      "offset": 761985
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/usecase/remote_find_ministry.dart",
+      "offset": 998579
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/find_ministry_factory.dart",
+      "offset": 1180666
+    },
+    {
+      "uri": "package:dashboard/features/ministry/ministry_details_page.dart",
+      "offset": 1751719
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/domain/entities/ministry.dart",
+      "offset": 1930344
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/insert_ministry_factory.dart",
+      "offset": 1967635
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/usecase/remote_update_ministry.dart",
+      "offset": 1977959
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/list_ministries_dashboard_factory.dart",
+      "offset": 2000704
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/data/repositories/update_ministry_factory.dart",
+      "offset": 2340156
+    },
+    {
+      "uri": "package:tribus_core/src/features/ministry/domain/usecases/get_ministry.dart",
+      "offset": 2367434
+    }
+  ],
+  "poll": [
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/usecases/get_poll.dart",
+      "offset": 616095
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/usecases/insert_poll.dart",
+      "offset": 705803
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/usecase/remote_list_polls.dart",
+      "offset": 799875
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/usecases/delete_poll.dart",
+      "offset": 822257
+    },
+    {
+      "uri": "package:dashboard/features/poll/widgets/poll_votes_pie_chart.dart",
+      "offset": 840998
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/usecases/list_polls.dart",
+      "offset": 961210
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/usecase/remote_delete_poll.dart",
+      "offset": 1018354
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/insert_poll_factory.dart",
+      "offset": 1116844
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/find_poll_factory.dart",
+      "offset": 1254224
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/delete_poll_factory.dart",
+      "offset": 1255249
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/entities/poll.dart",
+      "offset": 1263817
+    },
+    {
+      "uri": "package:dashboard/features/poll/widgets/poll_votes_bar_chart.dart",
+      "offset": 1323292
+    },
+    {
+      "uri": "package:dashboard/features/poll/poll_dashboard_page.dart",
+      "offset": 1425059
+    },
+    {
+      "uri": "package:dashboard/features/poll/widgets/poll_statistics_cards.dart",
+      "offset": 1438191
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/usecase/remote_get_poll.dart",
+      "offset": 1528745
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/domain/usecases/update_poll.dart",
+      "offset": 1561831
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/datasource.dart",
+      "offset": 1673555
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/update_poll_factory.dart",
+      "offset": 1837664
+    },
+    {
+      "uri": "package:dashboard/features/poll/widgets/poll_users_list.dart",
+      "offset": 1888443
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/repositories/list_polls_by_church_dashboard_factory.dart",
+      "offset": 2046895
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/usecase/remote_insert_poll.dart",
+      "offset": 2050151
+    },
+    {
+      "uri": "package:dashboard/features/poll/poll_details_page.dart",
+      "offset": 2053773
+    },
+    {
+      "uri": "package:tribus_core/src/features/poll/data/usecase/remote_update_poll.dart",
+      "offset": 2095648
+    },
+    {
+      "uri": "package:dashboard/features/poll/poll_reports_page.dart",
+      "offset": 2365963
+    }
+  ],
+  "home": [
+    {
+      "uri": "package:dashboard/features/home/home_page.dart",
+      "offset": 634808
+    },
+    {
+      "uri": "package:dashboard/features/home/widgets/recent_features_cards.dart",
+      "offset": 1358155
+    }
+  ],
+  "document": [
+    {
+      "uri": "package:tribus_core/src/features/document/data/usecase/remote_insert_document.dart",
+      "offset": 643282
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/domain/usecases/list_documents.dart",
+      "offset": 769872
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/datasource.dart",
+      "offset": 909004
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/usecase/remote_update_document.dart",
+      "offset": 957239
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/usecase/remote_list_document_dashboard.dart",
+      "offset": 1102256
+    },
+    {
+      "uri": "package:dashboard/features/document/document_details_page.dart",
+      "offset": 1138869
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/download_document_factory.dart",
+      "offset": 1268516
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/domain/usecases/get_document.dart",
+      "offset": 1531163
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/update_document_factory.dart",
+      "offset": 1596021
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/delete_document_factory.dart",
+      "offset": 1637982
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/domain/entities/document_entity.dart",
+      "offset": 1884133
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/insert_document_factory.dart",
+      "offset": 1938666
+    },
+    {
+      "uri": "package:tribus_core/src/features/document/data/repositories/list_documents_dashboard_factory.dart",
+      "offset": 2152829
+    },
+    {
+      "uri": "package:dashboard/features/document/document_dashboard_page.dart",
+      "offset": 2362518
+    }
+  ],
+  "playlist": [
+    {
+      "uri": "package:tribus_core/src/features/playlist/domain/entities/playlist.dart",
+      "offset": 654460
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/repositories/insert_playlist_factory.dart",
+      "offset": 697141
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/repositories/datasource.dart",
+      "offset": 947141
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/repositories/list_playlist_by_church_dashboard_factory.dart",
+      "offset": 1245994
+    },
+    {
+      "uri": "package:dashboard/features/playlist/playlist_dashboard_page.dart",
+      "offset": 1447620
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/domain/usecases/list_playlist.dart",
+      "offset": 1661503
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/repositories/update_playlist_factory.dart",
+      "offset": 1770528
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/usecase/remote_list_playlist.dart",
+      "offset": 2007040
+    },
+    {
+      "uri": "package:dashboard/features/playlist/playlist_details_page.dart",
+      "offset": 2124445
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/usecase/remote_insert_playlist.dart",
+      "offset": 2139525
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/data/usecase/remote_update_playlist.dart",
+      "offset": 2176548
+    },
+    {
+      "uri": "package:tribus_core/src/features/playlist/domain/usecases/get_playlist.dart",
+      "offset": 2252690
+    }
+  ],
+  "explore": [
+    {
+      "uri": "package:dashboard/features/explore/explore_home_page.dart",
+      "offset": 665878
+    },
+    {
+      "uri": "package:dashboard/features/explore/video_explore_page.dart",
+      "offset": 1583005
+    },
+    {
+      "uri": "package:dashboard/features/explore/short_explore_page.dart",
+      "offset": 2171530
+    },
+    {
+      "uri": "package:dashboard/features/explore/article_explore_page.dart",
+      "offset": 2313539
+    }
+  ],
+  "_faqCategory": [
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/data/usecase/remote_find_faq_category.dart",
+      "offset": 696286
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/domain/usecases/list_faq_category.dart",
+      "offset": 813631
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/domain/entities/faq_category.dart",
+      "offset": 1038276
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/domain/usecases/get_faq_category.dart",
+      "offset": 1192500
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/data/repositories/list_faq_category_by_church_dashboard_factory.dart",
+      "offset": 1196212
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/data/usecase/remote_list_faq_category.dart",
+      "offset": 1368805
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/data/repositories/find_faq_category_factory.dart",
+      "offset": 1463386
+    },
+    {
+      "uri": "package:tribus_core/src/features/_faqCategory/data/repositories/datasource.dart",
+      "offset": 1575570
+    }
+  ],
+  "scheduleScaleList": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleList/schedule_scale_upcoming_page.dart",
+      "offset": 705308
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScaleList/schedule_scale_list_page.dart",
+      "offset": 1087918
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScaleList/schedule_scale_form_page.dart",
+      "offset": 1456366
+    }
+  ],
+  "invoice": [
+    {
+      "uri": "package:tribus_core/src/features/invoice/data/usecase/remote_list_invoices.dart",
+      "offset": 742007
+    },
+    {
+      "uri": "package:tribus_core/src/features/invoice/domain/usecases/list_invoices.dart",
+      "offset": 2103235
+    },
+    {
+      "uri": "package:tribus_core/src/features/invoice/domain/entities/invoice.dart",
+      "offset": 2300227
+    }
+  ],
+  "episode": [
+    {
+      "uri": "package:tribus_core/src/features/episode/data/repositories/delete_episode_factory.dart",
+      "offset": 749876
+    },
+    {
+      "uri": "package:dashboard/features/episode/episode_home_page.dart",
+      "offset": 973320
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/domain/usecases/get_episode.dart",
+      "offset": 994382
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/repositories/datasource.dart",
+      "offset": 997389
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/usecase/remote_insert_episode.dart",
+      "offset": 1093455
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/repositories/list_episode_by_church_dashboard_factory.dart",
+      "offset": 1520969
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/repositories/insert_episode_factory.dart",
+      "offset": 1548661
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/domain/entities/episode.dart",
+      "offset": 1771952
+    },
+    {
+      "uri": "package:dashboard/features/episode/episode_details_page.dart",
+      "offset": 1850982
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/usecase/remote_list_episode.dart",
+      "offset": 1858127
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/usecase/remote_update_episode.dart",
+      "offset": 2031243
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/domain/usecases/list_episode.dart",
+      "offset": 2046474
+    },
+    {
+      "uri": "package:tribus_core/src/features/episode/data/repositories/update_episode_factory.dart",
+      "offset": 2211942
+    }
+  ],
+  "voucher": [
+    {
+      "uri": "package:tribus_core/src/features/voucher/data/repositories/datasource.dart",
+      "offset": 773134
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/domain/usecases/list_vouchers.dart",
+      "offset": 799950
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/domain/entities/voucher.dart",
+      "offset": 1245703
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/domain/usecases/get_voucher.dart",
+      "offset": 1250297
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/data/repositories/list_vouchers_factory.dart",
+      "offset": 1407432
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/data/repositories/get_voucher_by_code_factory.dart",
+      "offset": 1409201
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/data/usecase/remote_list_vouchers.dart",
+      "offset": 1509520
+    },
+    {
+      "uri": "package:tribus_core/src/features/voucher/data/usecase/remote_get_voucher.dart",
+      "offset": 2347014
+    }
+  ],
+  "account": [
+    {
+      "uri": "package:dashboard/features/account/payables/payable_details_page.dart",
+      "offset": 782203
+    },
+    {
+      "uri": "package:dashboard/features/account/cards/my_credit_card_church_page.dart",
+      "offset": 1041918
+    },
+    {
+      "uri": "package:dashboard/features/account/withdrawals/list_withdrawals_page.dart",
+      "offset": 1082442
+    },
+    {
+      "uri": "package:dashboard/features/account/cards/select_payment_method_page.dart",
+      "offset": 1274093
+    },
+    {
+      "uri": "package:dashboard/features/account/withdrawals/withdrawals_amount_page.dart",
+      "offset": 1611401
+    },
+    {
+      "uri": "package:dashboard/features/account/payables/receipt_of_payment_page.dart",
+      "offset": 1796193
+    },
+    {
+      "uri": "package:dashboard/features/account/withdrawals/review_withdrawals_page.dart",
+      "offset": 1820043
+    },
+    {
+      "uri": "package:dashboard/features/account/payables/payables_list_page.dart",
+      "offset": 1836170
+    },
+    {
+      "uri": "package:dashboard/features/account/operations/receipt_of_operation_page.dart",
+      "offset": 1959945
+    },
+    {
+      "uri": "package:dashboard/features/account/detailsDay/details_of_the_day_page.dart",
+      "offset": 2058278
+    },
+    {
+      "uri": "package:dashboard/features/account/withdrawals/receipt_of_withdrawals_page.dart",
+      "offset": 2105353
+    },
+    {
+      "uri": "package:dashboard/features/account/extract/extract_dashboard_page.dart",
+      "offset": 2116643
+    },
+    {
+      "uri": "package:dashboard/features/account/account_dashboard_page.dart",
+      "offset": 2263187
+    },
+    {
+      "uri": "package:dashboard/features/account/cards/new_credit_card_church_page.dart",
+      "offset": 2292196
+    },
+    {
+      "uri": "package:dashboard/features/account/operations/operations_list_page.dart",
+      "offset": 2298661
+    }
+  ],
+  "moduleSection": [
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/domain/usecases/list_module_section.dart",
+      "offset": 798523
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/data/repositories/list_module_section_factory.dart",
+      "offset": 884359
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/domain/entities/module_section.dart",
+      "offset": 1215837
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/data/repositories/list_dashboard_module_section_factory.dart",
+      "offset": 1579586
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/data/usecase/remote_list_module_section.dart",
+      "offset": 1586105
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleSection/data/repositories/datasource.dart",
+      "offset": 2171876
+    }
+  ],
+  "wallet": [
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/repositories/list_credit_card_factory.dart",
+      "offset": 813323
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/usecase/remote_insert_card.dart",
+      "offset": 1074792
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/repositories/insert_card_factory.dart",
+      "offset": 1092634
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/repositories/delete_credit_card_factory.dart",
+      "offset": 1157834
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/usecase/remote_list_credit_card.dart",
+      "offset": 1183614
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/data/repositories/datasource.dart",
+      "offset": 1308967
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/domain/usecases/list_credit_card.dart",
+      "offset": 1380452
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/domain/entities/card_entity.dart",
+      "offset": 1666431
+    },
+    {
+      "uri": "package:tribus_core/src/features/wallet/domain/usecases/insert_card.dart",
+      "offset": 2104064
+    }
+  ],
+  "_settings": [
+    {
+      "uri": "package:tribus_core/src/features/_settings/controller/settings_sm.g.dart",
+      "offset": 819342
+    },
+    {
+      "uri": "package:tribus_core/src/features/_settings/controller/settings_sm.dart",
+      "offset": 1244565
+    }
+  ],
+  "schedule": [
+    {
+      "uri": "package:tribus_core/src/features/schedule/domain/entities/schedule.dart",
+      "offset": 823272
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/domain/usecases/get_schedule.dart",
+      "offset": 900822
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/datasource.dart",
+      "offset": 1080260
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/list_schedule_by_church_dashboard_factory.dart",
+      "offset": 1142115
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/usecase/remote_find_schedule.dart",
+      "offset": 1174443
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/usecase/remote_insert_news.dart",
+      "offset": 1280681
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/delete_schedule_factory.dart",
+      "offset": 1288362
+    },
+    {
+      "uri": "package:dashboard/features/schedule/schedule_details_page.dart",
+      "offset": 1513768
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/insert_schedule_factory.dart",
+      "offset": 1526426
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/usecase/remote_update_news.dart",
+      "offset": 1622726
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/usecase/remote_list_news.dart",
+      "offset": 2102324
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/find_schedule_factory.dart",
+      "offset": 2211701
+    },
+    {
+      "uri": "package:dashboard/features/schedule/schedule_dashboard_page.dart",
+      "offset": 2288724
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/domain/usecases/list_schedule.dart",
+      "offset": 2305047
+    },
+    {
+      "uri": "package:tribus_core/src/features/schedule/data/repositories/update_schedule_factory.dart",
+      "offset": 2349223
+    }
+  ],
+  "moduleChurch": [
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/remove_module_factory.dart",
+      "offset": 832488
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/usecase/remove_module_church.dart",
+      "offset": 1082810
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/update_module_factory.dart",
+      "offset": 1239756
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/domain/usecases/update_module_church.dart",
+      "offset": 1286125
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/list_module_church_without_permissions_factory.dart",
+      "offset": 1397987
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/install_module_factory.dart",
+      "offset": 1450188
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/domain/usecases/list_module_church.dart",
+      "offset": 1476014
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/usecase/install_module_church.dart",
+      "offset": 1573930
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/domain/entities/module_church.dart",
+      "offset": 1673054
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/datasource.dart",
+      "offset": 1824005
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/list_not_installed_factory.dart",
+      "offset": 1936070
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/domain/usecases/install_module_church.dart",
+      "offset": 2019248
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/domain/usecases/remove_module_church.dart",
+      "offset": 2047848
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/usecase/remote_list_module_church.dart",
+      "offset": 2053128
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/repositories/list_installed_factory.dart",
+      "offset": 2117179
+    },
+    {
+      "uri": "package:tribus_core/src/features/moduleChurch/data/usecase/update_module_church.dart",
+      "offset": 2168372
+    }
+  ],
+  "photo": [
+    {
+      "uri": "package:dashboard/features/photo/photo_insert_page.dart",
+      "offset": 844273
+    },
+    {
+      "uri": "package:dashboard/features/photo/photo_home_page.dart",
+      "offset": 1198437
+    }
+  ],
+  "ticketDetailIndividual": [
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/domain/entities/ticket_validation_response.dart",
+      "offset": 863654
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/usecase/remote_list_ticket_detail_individual.dart",
+      "offset": 934159
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/repositories/list_ticket_details_individual_by_ticket_factory.dart",
+      "offset": 1059286
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/domain/entities/ticket_detail_individual.dart",
+      "offset": 1210960
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/repositories/validate_ticket_factory.dart",
+      "offset": 1250687
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/repositories/datasource.dart",
+      "offset": 1332832
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/usecase/remote_validate_ticket.dart",
+      "offset": 1620519
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/domain/usecases/validate_ticket.dart",
+      "offset": 1668263
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/data/repositories/list_ticket_details_individual_by_church_dashboard_factory.dart",
+      "offset": 1795963
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetailIndividual/domain/usecases/list_ticket_detail_individual.dart",
+      "offset": 1901869
+    }
+  ],
+  "service": [
+    {
+      "uri": "package:dashboard/features/service/manager_services_dashboard_page.dart",
+      "offset": 896444
+    }
+  ],
+  "_card": [
+    {
+      "uri": "package:tribus_core/src/features/_card/data/repositories/list_cards_factory.dart",
+      "offset": 900119
+    },
+    {
+      "uri": "package:tribus_core/src/features/_card/domain/entities/card_entity.dart",
+      "offset": 931086
+    },
+    {
+      "uri": "package:tribus_core/src/features/_card/data/repositories/datasource.dart",
+      "offset": 1198688
+    },
+    {
+      "uri": "package:tribus_core/src/features/_card/domain/usecases/list_cards.dart",
+      "offset": 1824438
+    },
+    {
+      "uri": "package:tribus_core/src/features/_card/data/usecase/remote_list_cards.dart",
+      "offset": 1957829
+    }
+  ],
+  "cloudFolder": [
+    {
+      "uri": "package:tribus_core/src/features/cloudFolder/domain/entities/cloud_folder.dart",
+      "offset": 924476
+    }
+  ],
+  "speaker": [
+    {
+      "uri": "package:tribus_core/src/features/speaker/domain/usecases/list_speakers.dart",
+      "offset": 946547
+    },
+    {
+      "uri": "package:tribus_core/src/features/speaker/data/repositories/datasource.dart",
+      "offset": 1038803
+    },
+    {
+      "uri": "package:tribus_core/src/features/speaker/data/usecase/remote_list_speakers.dart",
+      "offset": 1241773
+    },
+    {
+      "uri": "package:tribus_core/src/features/speaker/domain/entities/speaker.dart",
+      "offset": 1793761
+    },
+    {
+      "uri": "package:tribus_core/src/features/speaker/data/repositories/list_speaker_by_church_dashboard_factory.dart",
+      "offset": 2141302
+    }
+  ],
+  "ticketDetail": [
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/usecase/remote_list_tickets_details.dart",
+      "offset": 953613
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/usecases/list_tickets_detail.dart",
+      "offset": 982890
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/refund_ticket_detail_factory.dart",
+      "offset": 1381671
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/list_tickets_by_church_factory.dart",
+      "offset": 1523729
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/usecase/remote_refund_ticket_by_church.dart",
+      "offset": 1597784
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/find_ticket_details_factory.dart",
+      "offset": 1723388
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/list_tickets_by_user_factory.dart",
+      "offset": 1782692
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/usecase/remote_get_ticket_details.dart",
+      "offset": 1945016
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/datasource.dart",
+      "offset": 2022906
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/usecases/get_ticket_detail.dart",
+      "offset": 2119215
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/entities/refund_response.dart",
+      "offset": 2122120
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/entities/ticket_detail.dart",
+      "offset": 2225978
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/usecases/refund_ticket_detail.dart",
+      "offset": 2276675
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/usecase/remote_refund_ticket_detail.dart",
+      "offset": 2330573
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/data/repositories/refund_ticket_by_church_factory.dart",
+      "offset": 2354878
+    },
+    {
+      "uri": "package:tribus_core/src/features/ticketDetail/domain/usecases/refund_ticket_by_church.dart",
+      "offset": 2361871
+    }
+  ],
+  "manager-app": [
+    {
+      "uri": "package:dashboard/features/manager-app/manager_apps_home_page.dart",
+      "offset": 1054742
+    },
+    {
+      "uri": "package:dashboard/features/manager-app/manager_app_installed_page.dart",
+      "offset": 1744347
+    },
+    {
+      "uri": "package:dashboard/features/manager-app/display_type_selection_page.dart",
+      "offset": 1916989
+    },
+    {
+      "uri": "package:dashboard/features/manager-app/app_detail_page.dart",
+      "offset": 2243946
+    },
+    {
+      "uri": "package:dashboard/features/manager-app/apps_installed_page.dart",
+      "offset": 2300386
+    }
+  ],
+  "scheduleScaleReports": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleReports/schedule_scale_reports_page.dart",
+      "offset": 1073898
+    }
+  ],
+  "readingPlan": [
+    {
+      "uri": "package:dashboard/features/readingPlan/reading_plan_home_page.dart",
+      "offset": 1122277
+    }
+  ],
+  "kids": [
+    {
+      "uri": "package:dashboard/features/kids/kids_dashboard_page.dart",
+      "offset": 1175390
+    }
+  ],
+  "module": [
+    {
+      "uri": "package:tribus_core/src/features/module/data/repositories/datasource.dart",
+      "offset": 1201055
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/data/repositories/list_module_store_factory.dart",
+      "offset": 1360094
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/domain/usecases/list_module.dart",
+      "offset": 1408065
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/domain/usecases/list_module_store.dart",
+      "offset": 1876650
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/data/usecase/remote_list_module.dart",
+      "offset": 1954917
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/domain/entities/module.dart",
+      "offset": 2066700
+    },
+    {
+      "uri": "package:tribus_core/src/features/module/data/usecase/remote_list_module_store.dart",
+      "offset": 2379980
+    }
+  ],
+  "scheduleScaleTeams": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleTeams/schedule_scale_team_form_page.dart",
+      "offset": 1209631
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScaleTeams/schedule_scale_teams_page.dart",
+      "offset": 2263529
+    }
+  ],
+  "scheduleScaleTemplates": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleTemplates/schedule_scale_template_form_page.dart",
+      "offset": 1219484
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScaleTemplates/schedule_scale_templates_page.dart",
+      "offset": 1848591
+    }
+  ],
+  "push": [
+    {
+      "uri": "package:dashboard/features/push/push_home_page.dart",
+      "offset": 1262576
+    }
+  ],
+  "course": [
+    {
+      "uri": "package:dashboard/features/course/course_dashboard_page.dart",
+      "offset": 1292529
+    }
+  ],
+  "empower": [
+    {
+      "uri": "package:dashboard/features/empower/quick_flip_card_page.dart",
+      "offset": 1378934
+    },
+    {
+      "uri": "package:dashboard/features/empower/illustrative_flip_card_page.dart",
+      "offset": 1488061
+    },
+    {
+      "uri": "package:dashboard/features/empower/article_empower_page.dart",
+      "offset": 1507963
+    },
+    {
+      "uri": "package:dashboard/features/empower/applicability_flip_card_page.dart",
+      "offset": 1866899
+    },
+    {
+      "uri": "package:dashboard/features/empower/empower_home_page.dart",
+      "offset": 1898996
+    },
+    {
+      "uri": "package:dashboard/features/empower/card_page.dart",
+      "offset": 2109252
+    },
+    {
+      "uri": "package:dashboard/features/empower/question_flip_card_page.dart",
+      "offset": 2345674
+    }
+  ],
+  "store": [
+    {
+      "uri": "package:dashboard/features/store/store_page.dart",
+      "offset": 1381236
+    }
+  ],
+  "tax": [
+    {
+      "uri": "package:dashboard/features/tax/fees_and_terms_page.dart",
+      "offset": 1410710
+    },
+    {
+      "uri": "package:dashboard/features/tax/tax_details_page.dart",
+      "offset": 1679667
+    },
+    {
+      "uri": "package:dashboard/features/tax/validate_account_page.dart",
+      "offset": 2297451
+    }
+  ],
+  "quiz": [
+    {
+      "uri": "package:dashboard/features/quiz/quiz_home_page.dart",
+      "offset": 1413845
+    }
+  ],
+  "mission": [
+    {
+      "uri": "package:dashboard/features/mission/manager_mission_dashboard_page.dart",
+      "offset": 1564822
+    }
+  ],
+  "cloudFile": [
+    {
+      "uri": "package:tribus_core/src/features/cloudFile/domain/entities/cloud_file.dart",
+      "offset": 1570123
+    }
+  ],
+  "indicate": [
+    {
+      "uri": "package:dashboard/features/indicate/indicate_app_page.dart",
+      "offset": 1735707
+    }
+  ],
+  "cell": [
+    {
+      "uri": "package:dashboard/features/cell/cell_dashboard_page.dart",
+      "offset": 1761938
+    }
+  ],
+  "community": [
+    {
+      "uri": "package:dashboard/features/community/community_home_page.dart",
+      "offset": 1806371
+    }
+  ],
+  "cadastralSituation": [
+    {
+      "uri": "package:dashboard/features/cadastralSituation/cadastral_situation_page.dart",
+      "offset": 1815659
+    }
+  ],
+  "onboarding": [
+    {
+      "uri": "package:dashboard/features/onboarding/onboarding_page.dart",
+      "offset": 1837960
+    }
+  ],
+  "canvas": [
+    {
+      "uri": "package:dashboard/features/canvas/canvas_editor_page.dart",
+      "offset": 1900355
+    }
+  ],
+  "scheduleScaleRoles": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleRoles/schedule_scale_role_form_page.dart",
+      "offset": 1931035
+    },
+    {
+      "uri": "package:dashboard/features/scheduleScaleRoles/schedule_scale_roles_page.dart",
+      "offset": 2225234
+    }
+  ],
+  "scheduleScaleAvailability": [
+    {
+      "uri": "package:dashboard/features/scheduleScaleAvailability/schedule_scale_availability_page.dart",
+      "offset": 2077215
+    }
+  ],
+  "reminder": [
+    {
+      "uri": "package:dashboard/features/reminder/reminder_home_page.dart",
+      "offset": 2080641
+    }
+  ],
+  "vollunters": [
+    {
+      "uri": "package:dashboard/features/vollunters/manager_vollunters_dashboard_page.dart",
+      "offset": 2149237
+    }
+  ],
+  "story": [
+    {
+      "uri": "package:dashboard/features/story/story_dashboard_page.dart",
+      "offset": 2191139
+    }
+  ]
+}

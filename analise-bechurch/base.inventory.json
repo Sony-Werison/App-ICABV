@@ -1,0 +1,1674 @@
+[
+  {
+    "FullName": "AndroidManifest.xml",
+    "Length": 35776
+  },
+  {
+    "FullName": "DebugProbesKt.bin",
+    "Length": 1738
+  },
+  {
+    "FullName": "META-INF/DEPENDENCIES",
+    "Length": 704
+  },
+  {
+    "FullName": "META-INF/androidx/annotation/annotation/LICENSE.txt",
+    "Length": 10175
+  },
+  {
+    "FullName": "META-INF/androidx.activity_activity-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.activity_activity.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.annotation_annotation-experimental.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.appcompat_appcompat-resources.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.appcompat_appcompat.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.arch.core_core-runtime.version",
+    "Length": 67
+  },
+  {
+    "FullName": "META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.browser_browser.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.cardview_cardview.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.coordinatorlayout_coordinatorlayout.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.core_core-ktx.version",
+    "Length": 7
+  },
+  {
+    "FullName": "META-INF/androidx.core_core.version",
+    "Length": 7
+  },
+  {
+    "FullName": "META-INF/androidx.cursoradapter_cursoradapter.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.customview_customview.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.datastore_datastore-core.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.datastore_datastore-preferences.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.datastore_datastore.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.documentfile_documentfile.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.drawerlayout_drawerlayout.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.emoji2_emoji2-views-helper.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.emoji2_emoji2.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.exifinterface_exifinterface.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.fragment_fragment-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.fragment_fragment.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.interpolator_interpolator.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.legacy_legacy-support-core-ui.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.legacy_legacy-support-core-utils.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-livedata-core.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-livedata.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-process.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-runtime.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-service.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.lifecycle_lifecycle-viewmodel.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.loader_loader.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.preference_preference.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.print_print.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.profileinstaller_profileinstaller.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.recyclerview_recyclerview.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.room_room-runtime.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.savedstate_savedstate-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.savedstate_savedstate.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.slidingpanelayout_slidingpanelayout.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.sqlite_sqlite-framework.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.sqlite_sqlite.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.startup_startup-runtime.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.tracing_tracing.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.transition_transition.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.vectordrawable_vectordrawable-animated.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.vectordrawable_vectordrawable.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.versionedparcelable_versionedparcelable.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.viewpager_viewpager.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.webkit_webkit.version",
+    "Length": 7
+  },
+  {
+    "FullName": "META-INF/androidx.window.extensions.core_core.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.window_window-java.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.window_window.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.work_work-runtime-ktx.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/androidx.work_work-runtime.version",
+    "Length": 6
+  },
+  {
+    "FullName": "META-INF/com/android/build/gradle/app-metadata.properties",
+    "Length": 56
+  },
+  {
+    "FullName": "META-INF/com.google.dagger_dagger.version",
+    "Length": 7
+  },
+  {
+    "FullName": "META-INF/kotlinx_coroutines_android.version",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/kotlinx_coroutines_core.version",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/kotlinx_coroutines_play_services.version",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/native-image/io.opentelemetry/opentelemetry-api/native-image.properties",
+    "Length": 74
+  },
+  {
+    "FullName": "META-INF/native-image/io.opentelemetry/opentelemetry-api/reflect-config.json",
+    "Length": 740
+  },
+  {
+    "FullName": "META-INF/native-image/io.opentelemetry/opentelemetry-api/resource-config.json",
+    "Length": 148
+  },
+  {
+    "FullName": "META-INF/native-image/io.opentelemetry/opentelemetry-sdk-trace/reflect-config.json",
+    "Length": 924
+  },
+  {
+    "FullName": "META-INF/native-image/io.opentelemetry.opentelemetry-exporter-common/reflect-config.json",
+    "Length": 339
+  },
+  {
+    "FullName": "META-INF/native-image/okhttp/okhttp/native-image.properties",
+    "Length": 144
+  },
+  {
+    "FullName": "META-INF/services/Ea.H",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/services/Ja.t",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/services/org.apache.tika.metadata.filter.MetadataFilter",
+    "Length": 43
+  },
+  {
+    "FullName": "META-INF/services/t9.q",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/services/u8.T",
+    "Length": 16
+  },
+  {
+    "FullName": "META-INF/services/u8.X",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/services/u8.d0",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/services/u8.j0",
+    "Length": 5
+  },
+  {
+    "FullName": "META-INF/version-control-info.textproto",
+    "Length": 46
+  },
+  {
+    "FullName": "assets/PublicSuffixDatabase.list",
+    "Length": 132737
+  },
+  {
+    "FullName": "assets/dexopt/baseline.prof",
+    "Length": 4339
+  },
+  {
+    "FullName": "assets/dexopt/baseline.profm",
+    "Length": 577
+  },
+  {
+    "FullName": "assets/flutter_assets/AssetManifest.bin",
+    "Length": 6090
+  },
+  {
+    "FullName": "assets/flutter_assets/FontManifest.json",
+    "Length": 670
+  },
+  {
+    "FullName": "assets/flutter_assets/NOTICES.Z",
+    "Length": 122389
+  },
+  {
+    "FullName": "assets/flutter_assets/NativeAssetsManifest.json",
+    "Length": 45
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/audios/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/fonts/Lexend%20Deca-SemiBold.ttf",
+    "Length": 78272
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/fonts/Roboto-Regular.ttf",
+    "Length": 168260
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/fonts/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/Bechurch_(4).png",
+    "Length": 387229
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/Bechurch_(6).png",
+    "Length": 324767
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/Bechurch_splash.png",
+    "Length": 394594
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/ChatGPT_Image_27_de_ago._de_2025__15_12_09-removebg-preview.png",
+    "Length": 38034
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/ICP_APP_(1).png",
+    "Length": 14218
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/ICP_APP_(2).png",
+    "Length": 15837
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/IMG_3409-removebg-preview.png",
+    "Length": 19237
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/Perfil.png",
+    "Length": 5334
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/abencoado-removebg-preview.png",
+    "Length": 4013
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/addImage@2x.png",
+    "Length": 9188
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/agradecido-removebg-preview.png",
+    "Length": 5032
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/alegre-removebg-preview.png",
+    "Length": 5502
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/ansioso-removebg-preview.png",
+    "Length": 5269
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/app_launcher_icon.png",
+    "Length": 14218
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/bechurch_(4).png",
+    "Length": 7328
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/bechurch_(5).png",
+    "Length": 7356
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/cuidado-removebg-preview.png",
+    "Length": 5714
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/deprimido-removebg-preview.png",
+    "Length": 5466
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/desanimado-removebg-preview.png",
+    "Length": 5070
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/doente-removebg-preview.png",
+    "Length": 5728
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/isolado-removebg-preview.png",
+    "Length": 5291
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/images/user.png",
+    "Length": 10777
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/jsons/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/pdfs/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/rive_animations/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/sqlite_db_files/bibliaSQL1.3.db",
+    "Length": 15020032
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/videos/VIDEO_DE_FUNDO_BECHURCH.mp4",
+    "Length": 265239
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/videos/Video_-_app_bechurch.mp4",
+    "Length": 80149651
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/videos/Video_-_app_bechurch_-_otimizado.mp4",
+    "Length": 13823436
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/videos/Video_-_app_bechurch_oficial.mp4",
+    "Length": 2536694
+  },
+  {
+    "FullName": "assets/flutter_assets/assets/videos/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/fonts/MaterialIcons-Regular.otf",
+    "Length": 12800
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
+    "Length": 1500
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf",
+    "Length": 2092
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf",
+    "Length": 1524
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf",
+    "Length": 1812
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/audios/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/fonts/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/images/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/jsons/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/pdfs/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/rive_animations/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/lock_orientation_library_opafp4/assets/videos/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/audios/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/fonts/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/images/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/jsons/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/pdfs/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/rive_animations/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/q_r_code_render_widget_by_kai_library_8e3lee/assets/videos/favicon.png",
+    "Length": 917
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/wakelock_plus/assets/no_sleep.js",
+    "Length": 13344
+  },
+  {
+    "FullName": "assets/flutter_assets/packages/youtube_player_iframe/assets/player.html",
+    "Length": 5164
+  },
+  {
+    "FullName": "assets/flutter_assets/shaders/ink_sparkle.frag",
+    "Length": 21320
+  },
+  {
+    "FullName": "assets/flutter_assets/shaders/stretch_effect.frag",
+    "Length": 17368
+  },
+  {
+    "FullName": "classes.dex",
+    "Length": 7201124
+  },
+  {
+    "FullName": "classes2.dex",
+    "Length": 36652
+  },
+  {
+    "FullName": "classes3.dex",
+    "Length": 187012
+  },
+  {
+    "FullName": "classes4.dex",
+    "Length": 1329592
+  },
+  {
+    "FullName": "client_analytics.proto",
+    "Length": 2982
+  },
+  {
+    "FullName": "firebase/perf/v1/perf_metric.proto",
+    "Length": 16609
+  },
+  {
+    "FullName": "firebase-annotations.properties",
+    "Length": 78
+  },
+  {
+    "FullName": "firebase-auth-interop.properties",
+    "Length": 80
+  },
+  {
+    "FullName": "firebase-database-collection.properties",
+    "Length": 94
+  },
+  {
+    "FullName": "firebase-encoders-proto.properties",
+    "Length": 84
+  },
+  {
+    "FullName": "firebase-encoders.properties",
+    "Length": 72
+  },
+  {
+    "FullName": "firebase-iid-interop.properties",
+    "Length": 78
+  },
+  {
+    "FullName": "firebase-measurement-connector.properties",
+    "Length": 98
+  },
+  {
+    "FullName": "google/api/annotations.proto",
+    "Length": 1051
+  },
+  {
+    "FullName": "google/api/auth.proto",
+    "Length": 8795
+  },
+  {
+    "FullName": "google/api/backend.proto",
+    "Length": 6961
+  },
+  {
+    "FullName": "google/api/billing.proto",
+    "Length": 2501
+  },
+  {
+    "FullName": "google/api/client.proto",
+    "Length": 3396
+  },
+  {
+    "FullName": "google/api/config_change.proto",
+    "Length": 3170
+  },
+  {
+    "FullName": "google/api/consumer.proto",
+    "Length": 2718
+  },
+  {
+    "FullName": "google/api/context.proto",
+    "Length": 3066
+  },
+  {
+    "FullName": "google/api/control.proto",
+    "Length": 1227
+  },
+  {
+    "FullName": "google/api/distribution.proto",
+    "Length": 8650
+  },
+  {
+    "FullName": "google/api/documentation.proto",
+    "Length": 6180
+  },
+  {
+    "FullName": "google/api/endpoint.proto",
+    "Length": 2811
+  },
+  {
+    "FullName": "google/api/field_behavior.proto",
+    "Length": 3023
+  },
+  {
+    "FullName": "google/api/http.proto",
+    "Length": 15144
+  },
+  {
+    "FullName": "google/api/httpbody.proto",
+    "Length": 2675
+  },
+  {
+    "FullName": "google/api/label.proto",
+    "Length": 1393
+  },
+  {
+    "FullName": "google/api/launch_stage.proto",
+    "Length": 2910
+  },
+  {
+    "FullName": "google/api/log.proto",
+    "Length": 2047
+  },
+  {
+    "FullName": "google/api/logging.proto",
+    "Length": 3171
+  },
+  {
+    "FullName": "google/api/metric.proto",
+    "Length": 10025
+  },
+  {
+    "FullName": "google/api/monitored_resource.proto",
+    "Length": 5530
+  },
+  {
+    "FullName": "google/api/monitoring.proto",
+    "Length": 3832
+  },
+  {
+    "FullName": "google/api/quota.proto",
+    "Length": 7357
+  },
+  {
+    "FullName": "google/api/resource.proto",
+    "Length": 10024
+  },
+  {
+    "FullName": "google/api/service.proto",
+    "Length": 6309
+  },
+  {
+    "FullName": "google/api/source_info.proto",
+    "Length": 1095
+  },
+  {
+    "FullName": "google/api/system_parameter.proto",
+    "Length": 3474
+  },
+  {
+    "FullName": "google/api/usage.proto",
+    "Length": 3475
+  },
+  {
+    "FullName": "google/apphosting/datastore/testing/datastore_test_trace.proto",
+    "Length": 6693
+  },
+  {
+    "FullName": "google/cloud/audit/audit_log.proto",
+    "Length": 4623
+  },
+  {
+    "FullName": "google/firebase/firestore/proto/bundle.proto",
+    "Length": 3775
+  },
+  {
+    "FullName": "google/firebase/firestore/proto/maybe_document.proto",
+    "Length": 2443
+  },
+  {
+    "FullName": "google/firebase/firestore/proto/mutation.proto",
+    "Length": 2864
+  },
+  {
+    "FullName": "google/firebase/firestore/proto/target.proto",
+    "Length": 4772
+  },
+  {
+    "FullName": "google/firestore/admin/index.proto",
+    "Length": 6063
+  },
+  {
+    "FullName": "google/firestore/v1/aggregation_result.proto",
+    "Length": 1745
+  },
+  {
+    "FullName": "google/firestore/v1/bloom_filter.proto",
+    "Length": 3028
+  },
+  {
+    "FullName": "google/firestore/v1/common.proto",
+    "Length": 3257
+  },
+  {
+    "FullName": "google/firestore/v1/document.proto",
+    "Length": 5234
+  },
+  {
+    "FullName": "google/firestore/v1/firestore.proto",
+    "Length": 34638
+  },
+  {
+    "FullName": "google/firestore/v1/query.proto",
+    "Length": 15832
+  },
+  {
+    "FullName": "google/firestore/v1/write.proto",
+    "Length": 12119
+  },
+  {
+    "FullName": "google/geo/type/viewport.proto",
+    "Length": 2416
+  },
+  {
+    "FullName": "google/logging/type/http_request.proto",
+    "Length": 3397
+  },
+  {
+    "FullName": "google/logging/type/log_severity.proto",
+    "Length": 2506
+  },
+  {
+    "FullName": "google/longrunning/operations.proto",
+    "Length": 10515
+  },
+  {
+    "FullName": "google/protobuf/any.proto",
+    "Length": 6154
+  },
+  {
+    "FullName": "google/protobuf/api.proto",
+    "Length": 7728
+  },
+  {
+    "FullName": "google/protobuf/descriptor.proto",
+    "Length": 38092
+  },
+  {
+    "FullName": "google/protobuf/duration.proto",
+    "Length": 4892
+  },
+  {
+    "FullName": "google/protobuf/empty.proto",
+    "Length": 2363
+  },
+  {
+    "FullName": "google/protobuf/field_mask.proto",
+    "Length": 8185
+  },
+  {
+    "FullName": "google/protobuf/source_context.proto",
+    "Length": 2341
+  },
+  {
+    "FullName": "google/protobuf/struct.proto",
+    "Length": 3778
+  },
+  {
+    "FullName": "google/protobuf/timestamp.proto",
+    "Length": 6449
+  },
+  {
+    "FullName": "google/protobuf/type.proto",
+    "Length": 6367
+  },
+  {
+    "FullName": "google/protobuf/wrappers.proto",
+    "Length": 4044
+  },
+  {
+    "FullName": "google/rpc/code.proto",
+    "Length": 7125
+  },
+  {
+    "FullName": "google/rpc/context/attribute_context.proto",
+    "Length": 12015
+  },
+  {
+    "FullName": "google/rpc/error_details.proto",
+    "Length": 9500
+  },
+  {
+    "FullName": "google/rpc/status.proto",
+    "Length": 1924
+  },
+  {
+    "FullName": "google/type/calendar_period.proto",
+    "Length": 1766
+  },
+  {
+    "FullName": "google/type/color.proto",
+    "Length": 6193
+  },
+  {
+    "FullName": "google/type/date.proto",
+    "Length": 1933
+  },
+  {
+    "FullName": "google/type/datetime.proto",
+    "Length": 3508
+  },
+  {
+    "FullName": "google/type/dayofweek.proto",
+    "Length": 1337
+  },
+  {
+    "FullName": "google/type/expr.proto",
+    "Length": 1834
+  },
+  {
+    "FullName": "google/type/fraction.proto",
+    "Length": 1176
+  },
+  {
+    "FullName": "google/type/latlng.proto",
+    "Length": 1444
+  },
+  {
+    "FullName": "google/type/money.proto",
+    "Length": 1603
+  },
+  {
+    "FullName": "google/type/postal_address.proto",
+    "Length": 6239
+  },
+  {
+    "FullName": "google/type/quaternion.proto",
+    "Length": 3795
+  },
+  {
+    "FullName": "google/type/timeofday.proto",
+    "Length": 1668
+  },
+  {
+    "FullName": "io/opentelemetry/api/incubator/version.properties",
+    "Length": 24
+  },
+  {
+    "FullName": "io/opentelemetry/api/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/common/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/context/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/contrib/exporters/disk/version.properties",
+    "Length": 28
+  },
+  {
+    "FullName": "io/opentelemetry/exporter/internal/otlp/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/exporter/internal/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/exporter/otlp/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/exporter/sender/okhttp/internal/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/autoconfigure/spi/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/common/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/logs/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/metrics/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/trace/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "io/opentelemetry/sdk/version.properties",
+    "Length": 18
+  },
+  {
+    "FullName": "kotlin/annotation/annotation.kotlin_builtins",
+    "Length": 1006
+  },
+  {
+    "FullName": "kotlin/collections/collections.kotlin_builtins",
+    "Length": 8308
+  },
+  {
+    "FullName": "kotlin/concurrent/atomics/atomics.kotlin_builtins",
+    "Length": 2674
+  },
+  {
+    "FullName": "kotlin/coroutines/coroutines.kotlin_builtins",
+    "Length": 137
+  },
+  {
+    "FullName": "kotlin/internal/internal.kotlin_builtins",
+    "Length": 590
+  },
+  {
+    "FullName": "kotlin/kotlin.kotlin_builtins",
+    "Length": 29399
+  },
+  {
+    "FullName": "kotlin/ranges/ranges.kotlin_builtins",
+    "Length": 4184
+  },
+  {
+    "FullName": "kotlin/reflect/reflect.kotlin_builtins",
+    "Length": 4827
+  },
+  {
+    "FullName": "kotlin-tooling-metadata.json",
+    "Length": 626
+  },
+  {
+    "FullName": "messaging_event.proto",
+    "Length": 2381
+  },
+  {
+    "FullName": "messaging_event_extension.proto",
+    "Length": 883
+  },
+  {
+    "FullName": "org/apache/tika/detect/tika-example.nnmodel",
+    "Length": 5187
+  },
+  {
+    "FullName": "org/apache/tika/mime/tika-mimetypes.xml",
+    "Length": 327637
+  },
+  {
+    "FullName": "org/apache/tika/parser/external/tika-external-parsers.xml",
+    "Length": 5220
+  },
+  {
+    "FullName": "pipes-fork-server-default-log4j2.xml",
+    "Length": 1166
+  },
+  {
+    "FullName": "play-services-base.properties",
+    "Length": 74
+  },
+  {
+    "FullName": "play-services-basement.properties",
+    "Length": 82
+  },
+  {
+    "FullName": "play-services-cloud-messaging.properties",
+    "Length": 96
+  },
+  {
+    "FullName": "play-services-stats.properties",
+    "Length": 76
+  },
+  {
+    "FullName": "play-services-tasks.properties",
+    "Length": 76
+  },
+  {
+    "FullName": "res/anim/abc_tooltip_enter.xml",
+    "Length": 388
+  },
+  {
+    "FullName": "res/anim/abc_tooltip_exit.xml",
+    "Length": 388
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+    "Length": 2124
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+    "Length": 2780
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+    "Length": 1196
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+    "Length": 2360
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+    "Length": 2520
+  },
+  {
+    "FullName": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+    "Length": 1196
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+    "Length": 1656
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+    "Length": 1656
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+    "Length": 1028
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+    "Length": 1656
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+    "Length": 1656
+  },
+  {
+    "FullName": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+    "Length": 1028
+  },
+  {
+    "FullName": "res/anim/onesignal_fade_in.xml",
+    "Length": 388
+  },
+  {
+    "FullName": "res/anim/onesignal_fade_out.xml",
+    "Length": 388
+  },
+  {
+    "FullName": "res/anim-v21/fragment_fast_out_extra_slow_in.xml",
+    "Length": 364
+  },
+  {
+    "FullName": "res/animator/fragment_close_enter.xml",
+    "Length": 1128
+  },
+  {
+    "FullName": "res/animator/fragment_close_exit.xml",
+    "Length": 1128
+  },
+  {
+    "FullName": "res/animator/fragment_fade_enter.xml",
+    "Length": 452
+  },
+  {
+    "FullName": "res/animator/fragment_fade_exit.xml",
+    "Length": 452
+  },
+  {
+    "FullName": "res/animator/fragment_open_enter.xml",
+    "Length": 1128
+  },
+  {
+    "FullName": "res/animator/fragment_open_exit.xml",
+    "Length": 1128
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_btn_checkable.xml",
+    "Length": 624
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_default.xml",
+    "Length": 1120
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_edittext.xml",
+    "Length": 668
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_seek_thumb.xml",
+    "Length": 500
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_spinner.xml",
+    "Length": 668
+  },
+  {
+    "FullName": "res/color-v23/abc_tint_switch_track.xml",
+    "Length": 664
+  },
+  {
+    "FullName": "res/drawable/abc_btn_borderless_material.xml",
+    "Length": 588
+  },
+  {
+    "FullName": "res/drawable/abc_btn_check_material.xml",
+    "Length": 464
+  },
+  {
+    "FullName": "res/drawable/abc_btn_check_material_anim.xml",
+    "Length": 816
+  },
+  {
+    "FullName": "res/drawable/abc_btn_default_mtrl_shape.xml",
+    "Length": 932
+  },
+  {
+    "FullName": "res/drawable/abc_btn_radio_material.xml",
+    "Length": 464
+  },
+  {
+    "FullName": "res/drawable/abc_btn_radio_material_anim.xml",
+    "Length": 816
+  },
+  {
+    "FullName": "res/drawable/abc_cab_background_internal_bg.xml",
+    "Length": 372
+  },
+  {
+    "FullName": "res/drawable/abc_cab_background_top_material.xml",
+    "Length": 336
+  },
+  {
+    "FullName": "res/drawable/abc_ic_ab_back_material.xml",
+    "Length": 692
+  },
+  {
+    "FullName": "res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+    "Length": 756
+  },
+  {
+    "FullName": "res/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+    "Length": 1096
+  },
+  {
+    "FullName": "res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+    "Length": 796
+  },
+  {
+    "FullName": "res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+    "Length": 920
+  },
+  {
+    "FullName": "res/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+    "Length": 980
+  },
+  {
+    "FullName": "res/drawable/abc_ratingbar_indicator_material.xml",
+    "Length": 124
+  },
+  {
+    "FullName": "res/drawable/abc_ratingbar_material.xml",
+    "Length": 124
+  },
+  {
+    "FullName": "res/drawable/abc_ratingbar_small_material.xml",
+    "Length": 124
+  },
+  {
+    "FullName": "res/drawable/abc_seekbar_thumb_material.xml",
+    "Length": 1100
+  },
+  {
+    "FullName": "res/drawable/abc_seekbar_tick_mark_material.xml",
+    "Length": 516
+  },
+  {
+    "FullName": "res/drawable/abc_seekbar_track_material.xml",
+    "Length": 1408
+  },
+  {
+    "FullName": "res/drawable/abc_spinner_textfield_background_material.xml",
+    "Length": 1160
+  },
+  {
+    "FullName": "res/drawable/abc_star_black_48dp.xml",
+    "Length": 640
+  },
+  {
+    "FullName": "res/drawable/abc_star_half_black_48dp.xml",
+    "Length": 600
+  },
+  {
+    "FullName": "res/drawable/abc_switch_thumb_material.xml",
+    "Length": 464
+  },
+  {
+    "FullName": "res/drawable/abc_tab_indicator_material.xml",
+    "Length": 468
+  },
+  {
+    "FullName": "res/drawable/abc_text_cursor_material.xml",
+    "Length": 516
+  },
+  {
+    "FullName": "res/drawable/abc_textfield_search_material.xml",
+    "Length": 756
+  },
+  {
+    "FullName": "res/drawable/abc_vector_test.xml",
+    "Length": 612
+  },
+  {
+    "FullName": "res/drawable/btn_checkbox_checked_mtrl.xml",
+    "Length": 2688
+  },
+  {
+    "FullName": "res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+    "Length": 688
+  },
+  {
+    "FullName": "res/drawable/btn_checkbox_unchecked_mtrl.xml",
+    "Length": 2660
+  },
+  {
+    "FullName": "res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+    "Length": 688
+  },
+  {
+    "FullName": "res/drawable/btn_radio_off_mtrl.xml",
+    "Length": 1728
+  },
+  {
+    "FullName": "res/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+    "Length": 680
+  },
+  {
+    "FullName": "res/drawable/btn_radio_on_mtrl.xml",
+    "Length": 1656
+  },
+  {
+    "FullName": "res/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+    "Length": 680
+  },
+  {
+    "FullName": "res/drawable/launch_background.xml",
+    "Length": 344
+  },
+  {
+    "FullName": "res/drawable/notification_bg.xml",
+    "Length": 532
+  },
+  {
+    "FullName": "res/drawable/notification_bg_low.xml",
+    "Length": 532
+  },
+  {
+    "FullName": "res/drawable/notification_icon_background.xml",
+    "Length": 372
+  },
+  {
+    "FullName": "res/drawable/notification_tile_bg.xml",
+    "Length": 304
+  },
+  {
+    "FullName": "res/drawable/test_level_drawable.xml",
+    "Length": 448
+  },
+  {
+    "FullName": "res/drawable/tooltip_frame_dark.xml",
+    "Length": 484
+  },
+  {
+    "FullName": "res/drawable/tooltip_frame_light.xml",
+    "Length": 484
+  },
+  {
+    "FullName": "res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png",
+    "Length": 909
+  },
+  {
+    "FullName": "res/drawable-v21/abc_btn_colored_material.xml",
+    "Length": 1716
+  },
+  {
+    "FullName": "res/drawable-v21/abc_dialog_material_background.xml",
+    "Length": 716
+  },
+  {
+    "FullName": "res/drawable-v21/abc_edit_text_material.xml",
+    "Length": 1172
+  },
+  {
+    "FullName": "res/drawable-v21/abc_list_divider_material.xml",
+    "Length": 516
+  },
+  {
+    "FullName": "res/drawable-v21/notification_action_background.xml",
+    "Length": 1180
+  },
+  {
+    "FullName": "res/drawable-v21/preference_list_divider_material.xml",
+    "Length": 516
+  },
+  {
+    "FullName": "res/drawable-watch-v20/abc_dialog_material_background.xml",
+    "Length": 372
+  },
+  {
+    "FullName": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml",
+    "Length": 316
+  },
+  {
+    "FullName": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml",
+    "Length": 328
+  },
+  {
+    "FullName": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml",
+    "Length": 316
+  },
+  {
+    "FullName": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml",
+    "Length": 328
+  },
+  {
+    "FullName": "res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml",
+    "Length": 320
+  },
+  {
+    "FullName": "res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml",
+    "Length": 320
+  },
+  {
+    "FullName": "res/interpolator/fast_out_slow_in.xml",
+    "Length": 400
+  },
+  {
+    "FullName": "res/layout/abc_action_bar_title_item.xml",
+    "Length": 872
+  },
+  {
+    "FullName": "res/layout/abc_action_menu_item_layout.xml",
+    "Length": 768
+  },
+  {
+    "FullName": "res/layout/abc_action_menu_layout.xml",
+    "Length": 576
+  },
+  {
+    "FullName": "res/layout/abc_action_mode_close_item_material.xml",
+    "Length": 840
+  },
+  {
+    "FullName": "res/layout/abc_cascading_menu_item_layout.xml",
+    "Length": 1868
+  },
+  {
+    "FullName": "res/layout/abc_list_menu_item_checkbox.xml",
+    "Length": 528
+  },
+  {
+    "FullName": "res/layout/abc_list_menu_item_icon.xml",
+    "Length": 780
+  },
+  {
+    "FullName": "res/layout/abc_list_menu_item_radio.xml",
+    "Length": 532
+  },
+  {
+    "FullName": "res/layout/abc_popup_menu_header_item_layout.xml",
+    "Length": 848
+  },
+  {
+    "FullName": "res/layout/abc_popup_menu_item_layout.xml",
+    "Length": 2072
+  },
+  {
+    "FullName": "res/layout/abc_tooltip.xml",
+    "Length": 1056
+  },
+  {
+    "FullName": "res/layout/browser_actions_context_menu_page.xml",
+    "Length": 1660
+  },
+  {
+    "FullName": "res/layout/browser_actions_context_menu_row.xml",
+    "Length": 1212
+  },
+  {
+    "FullName": "res/layout/custom_dialog.xml",
+    "Length": 612
+  },
+  {
+    "FullName": "res/layout/expand_button.xml",
+    "Length": 1720
+  },
+  {
+    "FullName": "res/layout/image_frame.xml",
+    "Length": 1088
+  },
+  {
+    "FullName": "res/layout/notification_template_part_chronometer.xml",
+    "Length": 440
+  },
+  {
+    "FullName": "res/layout/notification_template_part_time.xml",
+    "Length": 440
+  },
+  {
+    "FullName": "res/layout/onesignal_bgimage_notif_layout.xml",
+    "Length": 2048
+  },
+  {
+    "FullName": "res/layout/preference.xml",
+    "Length": 2352
+  },
+  {
+    "FullName": "res/layout/preference_category.xml",
+    "Length": 384
+  },
+  {
+    "FullName": "res/layout/preference_category_material.xml",
+    "Length": 1768
+  },
+  {
+    "FullName": "res/layout/preference_dialog_edittext.xml",
+    "Length": 1312
+  },
+  {
+    "FullName": "res/layout/preference_dropdown.xml",
+    "Length": 2544
+  },
+  {
+    "FullName": "res/layout/preference_dropdown_material.xml",
+    "Length": 712
+  },
+  {
+    "FullName": "res/layout/preference_information.xml",
+    "Length": 1732
+  },
+  {
+    "FullName": "res/layout/preference_information_material.xml",
+    "Length": 2056
+  },
+  {
+    "FullName": "res/layout/preference_list_fragment.xml",
+    "Length": 812
+  },
+  {
+    "FullName": "res/layout/preference_material.xml",
+    "Length": 2052
+  },
+  {
+    "FullName": "res/layout/preference_recyclerview.xml",
+    "Length": 544
+  },
+  {
+    "FullName": "res/layout/preference_widget_checkbox.xml",
+    "Length": 472
+  },
+  {
+    "FullName": "res/layout/preference_widget_seekbar.xml",
+    "Length": 2896
+  },
+  {
+    "FullName": "res/layout/preference_widget_seekbar_material.xml",
+    "Length": 3096
+  },
+  {
+    "FullName": "res/layout/preference_widget_switch.xml",
+    "Length": 472
+  },
+  {
+    "FullName": "res/layout/preference_widget_switch_compat.xml",
+    "Length": 504
+  },
+  {
+    "FullName": "res/layout/select_dialog_item_material.xml",
+    "Length": 640
+  },
+  {
+    "FullName": "res/layout/select_dialog_multichoice_material.xml",
+    "Length": 864
+  },
+  {
+    "FullName": "res/layout/select_dialog_singlechoice_material.xml",
+    "Length": 864
+  },
+  {
+    "FullName": "res/layout/support_simple_spinner_dropdown_item.xml",
+    "Length": 464
+  },
+  {
+    "FullName": "res/layout-v21/notification_action.xml",
+    "Length": 1052
+  },
+  {
+    "FullName": "res/layout-v21/notification_action_tombstone.xml",
+    "Length": 1228
+  },
+  {
+    "FullName": "res/layout-v21/notification_template_custom_big.xml",
+    "Length": 2456
+  },
+  {
+    "FullName": "res/layout-v21/notification_template_icon_group.xml",
+    "Length": 988
+  },
+  {
+    "FullName": "res/mipmap-hdpi-v4/ic_launcher.png",
+    "Length": 1539
+  },
+  {
+    "FullName": "res/mipmap-mdpi-v4/ic_launcher.png",
+    "Length": 1054
+  },
+  {
+    "FullName": "res/mipmap-xhdpi-v4/ic_launcher.png",
+    "Length": 1586
+  },
+  {
+    "FullName": "res/mipmap-xxhdpi-v4/ic_launcher.png",
+    "Length": 2203
+  },
+  {
+    "FullName": "res/mipmap-xxxhdpi-v4/ic_launcher.png",
+    "Length": 3998
+  },
+  {
+    "FullName": "res/raw/consumer_onesignal_keep.xml",
+    "Length": 840
+  },
+  {
+    "FullName": "res/raw/firebase_common_keep.xml",
+    "Length": 290
+  },
+  {
+    "FullName": "res/xml/flutter_image_picker_file_paths.xml",
+    "Length": 284
+  },
+  {
+    "FullName": "res/xml/flutter_share_file_paths.xml",
+    "Length": 396
+  },
+  {
+    "FullName": "res/xml/image_share_filepaths.xml",
+    "Length": 308
+  },
+  {
+    "FullName": "res/xml/splits0.xml",
+    "Length": 9588
+  },
+  {
+    "FullName": "resources.arsc",
+    "Length": 82668
+  },
+  {
+    "FullName": "stamp-cert-sha256",
+    "Length": 32
+  }
+]
