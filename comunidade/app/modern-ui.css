@@ -1084,6 +1084,53 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
  .schedule-inline-participants { font-size:12px; }
 }
 
+/* Mobile-first management directory and profile editor. */
+.people-workspace { gap: 20px; }
+.people-intro { max-width: 62ch; color: var(--muted); margin: 6px 0 0; }
+.people-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.person-card { align-items: flex-start !important; flex-wrap: wrap; gap: 12px !important; padding: 16px 0 !important; }
+.person-card .people-identity { flex: 1 1 260px; }
+.people-identity > span:last-child { min-width: 0; }
+.people-identity strong, .people-identity small { display: block; overflow-wrap: anywhere; }
+.people-identity small { color: var(--muted); font-size: 12px; margin-top: 3px; }
+.person-card-meta { display: flex; align-items: center; flex: 1 1 260px; flex-wrap: wrap; gap: 8px; min-width: 0; }
+.person-card-meta > small { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.people-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.people-tags > span { display: inline-flex; padding: 4px 8px; border-radius: 999px; background: var(--soft); color: var(--text); font-size: 12px; }
+.person-card > .secondary { margin-left: auto; }
+.profile-editor { display: grid; gap: 16px; }
+.profile-editor-hint { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.profile-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.profile-editor fieldset { display: grid; gap: 10px; min-width: 0; border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.profile-editor legend { padding-inline: 5px; font-size: 13px; font-weight: 650; }
+.profile-check-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; }
+.profile-check-grid label, .profile-inline-check { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.profile-editor input[type="checkbox"] { width: 18px; height: 18px; flex: 0 0 auto; }
+
+@media(max-width:700px) {
+ .church-admin .icabv-main { padding: 16px 12px 28px; }
+ .management-heading { align-items: flex-start; flex-direction: column; }
+ .management-heading .primary { width: 100%; justify-content: center; }
+ .management-stats { grid-template-columns: 1fr; }
+ .management-module-grid { grid-template-columns: 1fr; }
+ .management-lower { grid-template-columns: 1fr !important; }
+ .people-heading { align-items: stretch; }
+ .people-actions { justify-content: stretch; }
+ .people-actions > button { flex: 1 1 160px; }
+ .people-filters { grid-template-columns: 1fr; }
+ .people-filters > :first-child { grid-column: auto; }
+ .person-card { display: grid !important; grid-template-columns: 1fr auto; }
+ .person-card .people-identity, .person-card-meta { grid-column: 1 / -1; }
+ .person-card > .secondary { grid-column: 2; grid-row: 3; }
+ .profile-form-grid, .profile-check-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width:420px) {
+ .people-actions > button { flex-basis: 100%; }
+ .person-card { grid-template-columns: 1fr; }
+ .person-card > .secondary { grid-column: 1; grid-row: auto; width: 100%; justify-content: center; }
+}
+
 .ebd-weekly-status { margin:0; color:var(--muted); font-size:13px; }
 .ebd-weekly-error { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--soft); }
 @media(max-width:600px) {

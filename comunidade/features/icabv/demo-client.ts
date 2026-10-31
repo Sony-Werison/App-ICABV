@@ -247,6 +247,26 @@ export function createDemoClient(): SupabaseClient {
       return ok(existing?.id ?? tables[table].at(-1)!.id);
     }
     if (name === "module_capabilities") return ok({louvor_manager:manager,ebd_manager:manager,ebd_teacher:false,ebd_observer:manager});
+    if (name === "management_people") {
+      const items = tables.persons.map((p) => ({
+        ...p,
+        membership_reviewed_at: p.id === id ? new Date().toISOString() : null,
+        email: p.id === id ? "exemplo@demo.invalid" : "maria@demo.invalid",
+        phone: "",
+        roles: p.id === id ? roles : ["member"],
+        module_access: p.id === id ? [{ module: "louvor", role: "manager" }] : [],
+        units: p.id === id ? [{ id: "demo-unit", title: "[Fictício] Equipe de louvor", kind: "department" }] : [],
+        worship_roles: p.id === id ? ["vocal"] : [],
+        worship_active: p.id === id,
+        ebd_roles: [],
+      }));
+      const query = String(args.search_text ?? "").trim().toLocaleLowerCase("pt-BR");
+      const filtered = items.filter((p) => !query || String(p.full_name).toLocaleLowerCase("pt-BR").includes(query));
+      const page = Number(args.page_number ?? 0);
+      return ok({ total: filtered.length, items: filtered.slice(page * 25, page * 25 + 25) });
+    }
+    if (name === "normalize_person_records") return ok(1);
+    if (name === "set_person_unit_assignment") return ok(null);
     if (name === "browse_events") return ok(args.page ? [] : tables.events);
     if (name === "browse_links") return ok([]);
     if (name === "event_availability_for")
