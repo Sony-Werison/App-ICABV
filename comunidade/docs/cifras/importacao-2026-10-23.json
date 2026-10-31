@@ -1,0 +1,888 @@
+{
+  "files": 185,
+  "segments": 265,
+  "matched_songs": 103,
+  "versions": 154,
+  "multiple_versions": [
+    {
+      "id": "97416864-2ba8-4392-8aa7-26238023f870",
+      "title": "165 v.2 – “Quão bonito”",
+      "versions": [
+        {
+          "name": "E",
+          "files": [
+            "04 - HC 165 (adaptado).pdf",
+            "HC 165 (adaptado) - E.docx"
+          ]
+        },
+        {
+          "name": "G",
+          "files": [
+            "HC 165 (adaptado) - G.docx"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "HC 165 e HC 290 (Adaptados).docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8d95cb92-b999-4633-adc3-eef6bee32b3f",
+      "title": "186 – “O batismo”",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Cópia de Hino 186 - O Batismo.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "HC 186 - O batismo.docx",
+            "HC 186 - O batismo.pdf"
+          ]
+        },
+        {
+          "name": "v.3",
+          "files": [
+            "Hino 186 - O Batismo.docx",
+            "Hino 186 - O Batismo.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3c0993b-d40e-4e33-9ddc-bdab0cc041de",
+      "title": "290 – “Cristo, Rei triunfante”",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "10 - HC 290 - Cristo, Rei triunfante.pdf",
+            "Conferências 2026.docx",
+            "HC 290 - Cristo, Rei triunfante.docx"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "HC 165 e HC 290 (Adaptados).docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12034941-23a3-4e9d-9ce6-cdb47994d998",
+      "title": "468 – “Maravilhas divinas”",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Conferências 2026.docx",
+            "HC 468 - Maravilhas divinas  (v. 2).docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "HC 468 - Maravilhas divinas.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f918958f-a292-4fe8-8cee-d61140621a5d",
+      "title": "471 – “Chamada final”",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "04 HC 471 Chamada Final.docx"
+          ]
+        },
+        {
+          "name": "G",
+          "files": [
+            "HC 471 - Quando enfim chegar o dia.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c0bd24a4-5db4-4ab2-959b-fb864f1fabec",
+      "title": "555 – “Resplendor”",
+      "versions": [
+        {
+          "name": "Eb",
+          "files": [
+            "HC 555 - Resplendor.docx"
+          ]
+        },
+        {
+          "name": "D",
+          "files": [
+            "555 - Resplendor.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "028a8fe4-5d2b-4c5a-9d6d-5249b5cd8461",
+      "title": "7 cores da promessa",
+      "versions": [
+        {
+          "name": "Violão · Capotraste 1",
+          "files": [
+            "7 cores da promessa (violão).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "7 cores da promessa.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c777164e-a06c-4775-ae1d-b8f5653c6528",
+      "title": "Ao olhar pra cruz",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "02 Ao olhar pra Cruz.docx",
+            "Ao olhar pra Cruz.doc",
+            "Ao olhar pra Cruz.docx",
+            "Ao olhar pra Cruz.docx.pdf"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "Conferências.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a6861dd6-4bcb-421e-b40e-0fea8c608572",
+      "title": "Ao Único",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Ao Único.docx"
+          ]
+        },
+        {
+          "name": "C",
+          "files": [
+            "Ao único que é digno.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "939744fe-558d-442d-8f29-832896b50aa9",
+      "title": "Bondade de Deus",
+      "versions": [
+        {
+          "name": "IBAB · A",
+          "files": [
+            "11 Bondade de Deus IBAB (A).docx",
+            "Bondade de Deus IBAB (A).docx"
+          ]
+        },
+        {
+          "name": "IBAB · G",
+          "files": [
+            "11 Bondade de Deus IBAB (G).docx",
+            "Bondade de Deus IBAB (G).docx"
+          ]
+        },
+        {
+          "name": "A",
+          "files": [
+            "Bondade de Deus (A).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Jô.docx"
+          ]
+        },
+        {
+          "name": "v.3",
+          "files": [
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "226d22d1-ccf0-4e93-9033-8241298ff177",
+      "title": "Cântico da colheita",
+      "versions": [
+        {
+          "name": "Com capotraste · A",
+          "files": [
+            "Cântico da colheita (capo).docx"
+          ]
+        },
+        {
+          "name": "A",
+          "files": [
+            "Cântico da colheita.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "375ef80e-39a3-4bfb-9a5e-111697591d59",
+      "title": "Colossenses 1, da Vida, o Melhor",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "07 Colossenses 1, Da Vida o Melhor.docx",
+            "Colossenses 1, Da Vida o Melhor.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx",
+            "Colossenses 1, Da Vida o Melhor.pdf"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "Conferências.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1bfe4a1f-82d1-4fc4-be6a-5eb169a4c2d0",
+      "title": "Consumado",
+      "versions": [
+        {
+          "name": "A",
+          "files": [
+            "Consumado (All Sufficient Merit) - A.docx"
+          ]
+        },
+        {
+          "name": "G",
+          "files": [
+            "Consumado (All Sufficient Merit) - G.docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "11 - Consumado.pdf",
+            "Consumado.docx"
+          ]
+        },
+        {
+          "name": "Letra · inglês",
+          "files": [
+            "All Sufficient Merit - Shane & Shane.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1ac93de4-3433-41c7-9dd6-45eb3d760cc7",
+      "title": "Coração igual ao Teu",
+      "versions": [
+        {
+          "name": "Violão · Capotraste 1",
+          "files": [
+            "Coração igual ao Teu (violão).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Coração igual ao Teu.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8221c56a-8d1b-4265-85b3-4a9354e151bf",
+      "title": "Cristo venceu",
+      "versions": [
+        {
+          "name": "Capotraste 2 · G",
+          "files": [
+            "Conferências 2026.docx"
+          ]
+        },
+        {
+          "name": "Violão",
+          "files": [
+            "Cristo venceu (violão).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Cristo venceu.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5a61dbd9-378c-471e-9dfc-a22ae1141eb0",
+      "title": "De tudo, o Senhor",
+      "versions": [
+        {
+          "name": "Guitarra · Capotraste 5 · C",
+          "files": [
+            "Conferências 2026.docx",
+            "De tudo, o Senhor (Ancient of Days - CityAlight).docx"
+          ]
+        },
+        {
+          "name": "Letra · inglês",
+          "files": [
+            "Ancient of Days - CityAlight.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6f9212cc-d16c-467d-ab8c-613bb52b2f09",
+      "title": "Efésios 1",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "06 - Efésios 1.pdf",
+            "Efésios 1.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5ba72e8e-1c47-40ca-8b3d-99de88759896",
+      "title": "Ele é exaltado",
+      "versions": [
+        {
+          "name": "Violão",
+          "files": [
+            "Ele é exaltado (violão).docx",
+            "Ele é exaltado (violão).docx.pdf"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Ele é exaltado.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34b7ad25-862c-4175-99e7-eede7d4c87a4",
+      "title": "Eu me rendo",
+      "versions": [
+        {
+          "name": "C",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx",
+            "Eu me rendo (C).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Eu me rendo.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5fa3ad94-a5a2-4fdd-a571-a0e9e6444d50",
+      "title": "Glória e honra",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Glória e Honra.docx",
+            "Glória e Honra.pdf"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "Conferências.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9c90c22c-97bc-4179-af02-a0ecfb2ac967",
+      "title": "Isaías 53",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "10 Isaías 53.docx",
+            "Isaías 53.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx",
+            "Isaías 53.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0ed38c08-4b33-4428-932c-f205cec015d4",
+      "title": "Nosso General",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Nosso General é Cristo (v. 2).docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Nosso General é Cristo.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecac8ff9-92e1-45aa-87ed-2a4c2bac9af7",
+      "title": "O Amor de Deus [Logo Eu]",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx",
+            "O amor de Deus (Logo eu).docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Jô.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d813edc7-5524-4615-b0ae-97071c44b9b0",
+      "title": "Oleiro",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Oleiro.docx"
+          ]
+        },
+        {
+          "name": "Letra",
+          "files": [
+            "Oleiro sem cifra.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faa75df6-5733-46c1-b2a7-922d254169cb",
+      "title": "Ousado Amor",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "01 Ousado amor.docx",
+            "Ousado amor.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0186cd60-b195-496e-866b-6450e83804f7",
+      "title": "Pra sempre (Ressuscitou)",
+      "versions": [
+        {
+          "name": "A",
+          "files": [
+            "Pra sempre (Ressuscitou) - A.docx"
+          ]
+        },
+        {
+          "name": "G",
+          "files": [
+            "Pra sempre (Ressuscitou) - G.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "88a2ab2f-1872-4920-9903-786550c9c355",
+      "title": "Quem é esse?",
+      "versions": [
+        {
+          "name": "Violão",
+          "files": [
+            "Conferências 2026.docx",
+            "Quem é esse (violão).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Quem é esse.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27298b03-9521-4fa6-a9ca-5cedbf79245a",
+      "title": "Reina em mim",
+      "versions": [
+        {
+          "name": "Capotraste 3 · A",
+          "files": [
+            "Reina em mim (A).docx"
+          ]
+        },
+        {
+          "name": "C",
+          "files": [
+            "Reina em mim (C).docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7864181f-6a29-4b6d-8022-8e437e9ebf2e",
+      "title": "Salmo 136",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "136.docx",
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Conferências 2026.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a9604cfc-5175-4502-84b5-b2566b93ff23",
+      "title": "Salmo 63",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Conferências 2026.docx",
+            "Salmo 63.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "12 - Salmo 63.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31c976a0-5b0d-4dcb-92d0-1a4c353b5bb0",
+      "title": "Sua graça é maior",
+      "versions": [
+        {
+          "name": "Guitarra · Capotraste 2 · E",
+          "files": [
+            "05 - Sua graça é maior.pdf",
+            "Conferências 2026.docx",
+            "Sua graça é maior.docx"
+          ]
+        },
+        {
+          "name": "Letra · inglês",
+          "files": [
+            "His Mercy is More - Shane & Shane.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "305aa87b-f8f9-4fc7-8766-bb14971dc2a0",
+      "title": "Teu povo",
+      "versions": [
+        {
+          "name": "Guitarra · Capotraste 2 · A",
+          "files": [
+            "Conferências 2026.docx"
+          ]
+        },
+        {
+          "name": "G",
+          "files": [
+            "Teu Povo (G).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "09 - Teu povo.pdf",
+            "Teu povo.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2f22ebba-3e40-4354-b6c2-319749d08b1f",
+      "title": "Tu És",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "03 Tu és + Águas purificadoras.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx",
+            "Cifras Jô.docx",
+            "Cifras Rafa e Breno.docx"
+          ]
+        },
+        {
+          "name": "v.3",
+          "files": [
+            "Tu és + Águas purificadoras.docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42695ab2-a61d-4aea-9f52-9d43fda478f8",
+      "title": "Tu és meu Deus",
+      "versions": [
+        {
+          "name": "v.1",
+          "files": [
+            "Cifras Danilo Rosana Maysa.docx"
+          ]
+        },
+        {
+          "name": "v.2",
+          "files": [
+            "Cifras Jô.docx"
+          ]
+        },
+        {
+          "name": "v.3",
+          "files": [
+            "Cifras Rafa e Breno.docx",
+            "Cifras Sábado João.docx"
+          ]
+        },
+        {
+          "name": "Capotraste 2 · G",
+          "files": [
+            "Tu és meu Deus (Made me glad) - capo 2 (G).docx",
+            "Tu és meu Deus (Made me glad) - capo 2 (G).docx.pdf"
+          ]
+        },
+        {
+          "name": "v.4",
+          "files": [
+            "Tu és meu Deus (Made me glad).docx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2f224c76-f14f-463d-b961-5160d8765122",
+      "title": "Vós, criaturas do Senhor",
+      "versions": [
+        {
+          "name": "Violão · Capotraste 2",
+          "files": [
+            "Vós, criaturas do Senhor (violão).docx"
+          ]
+        },
+        {
+          "name": "v.1",
+          "files": [
+            "Vós, criaturas do Senhor.docx"
+          ]
+        },
+        {
+          "name": "Letra · inglês",
+          "files": [
+            "All creatures of our God and King.docx"
+          ]
+        }
+      ]
+    }
+  ],
+  "duplicate_sources": 94,
+  "unmatched": [
+    {
+      "file": "All my ways are known to You - CityAlight.docx",
+      "title": "All my ways are known to You",
+      "has_chords": false
+    },
+    {
+      "file": "Amazing grace (my chains are gone).docx",
+      "title": "Amazing grace (my chains are gone)",
+      "has_chords": false
+    },
+    {
+      "file": "Be Thou My Vision.docx",
+      "title": "Be Thou My Vision",
+      "has_chords": false
+    },
+    {
+      "file": "Carta à igreja em Laodiceia (Ap 3.14-22).docx",
+      "title": "Carta à igreja em Laodicéia – Ap 3.14-22",
+      "has_chords": false
+    },
+    {
+      "file": "Cristo vivo está (A).docx",
+      "title": "Cristo vivo está",
+      "has_chords": true
+    },
+    {
+      "file": "Cristo vivo está (violão).docx",
+      "title": "Cristo vivo está",
+      "has_chords": true
+    },
+    {
+      "file": "Cristo vivo está.docx",
+      "title": "Cristo vivo está",
+      "has_chords": true
+    },
+    {
+      "file": "Cry Holy.docx",
+      "title": "Cry Holy",
+      "has_chords": false
+    },
+    {
+      "file": "Everyday.docx",
+      "title": "Everyday",
+      "has_chords": false
+    },
+    {
+      "file": "God is for us.docx",
+      "title": "God is for us",
+      "has_chords": false
+    },
+    {
+      "file": "I will wait for You - Eu espero em Ti.docx",
+      "title": "I will wait for You - Eu espero em Ti",
+      "has_chords": false
+    },
+    {
+      "file": "It was finished upon that cross - CityAlight.docx",
+      "title": "It was finished upon that cross",
+      "has_chords": false
+    },
+    {
+      "file": "Jesus is alive.docx",
+      "title": "Jesus is alive",
+      "has_chords": false
+    },
+    {
+      "file": "Psalm 8 (How Majestic).docx",
+      "title": "Psalm 8 (How Majestic)",
+      "has_chords": false
+    },
+    {
+      "file": "The God We Love (Nicene Creed) - CityAlight.docx",
+      "title": "The God We Love (Nicene Creed)",
+      "has_chords": false
+    },
+    {
+      "file": "Tu comigo estás.docx",
+      "title": "Tu comigo estás",
+      "has_chords": true
+    },
+    {
+      "file": "Vinho e pão.docx",
+      "title": "Vinho e pão",
+      "has_chords": true
+    },
+    {
+      "file": "Yet not I but through Christ in me - CityAlight.docx",
+      "title": "Yet not I but through Christ in me",
+      "has_chords": false
+    }
+  ],
+  "text_only_songs": [
+    "383 – “A Ti, ó Amado”",
+    "393 – “Com Tua mão”",
+    "Senhor e Rei"
+  ],
+  "songs_with_imported_chords": 100,
+  "song_count_before": 859,
+  "song_count_after": 859,
+  "verified": true
+}

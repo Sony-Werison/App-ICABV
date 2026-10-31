@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { generateKeyPairSync } from "node:crypto";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
+import path from "node:path";
+
+const subject=process.env.VAPID_SUBJECT;
+assert.ok(subject&&/^(mailto:|https:\/\/)/.test(subject),"Set VAPID_SUBJECT to a valid contact email or HTTPS URL before generating keys.");
+const envFile=path.resolve(".env.local");
+const current=existsSync(envFile)?readFileSync(envFile,"utf8"):"";
+assert.ok(!/^NEXT_PUBLIC_VAPID_PUBLIC_KEY=/m.test(current),"A VAPID public key already exists. Do not rotate keys while devices are subscribed.");
+const {publicKey,privateKey}=generateKeyPairSync("ec",{namedCurve:"prime256v1"});
+const publicJwk=publicKey.export({format:"jwk"});
+const privateJwk=privateKey.export({format:"jwk"});
+const publicValue=Buffer.from(`04${Buffer.from(publicJwk.x,"base64url").toString("hex")}${Buffer.from(publicJwk.y,"base64url").toString("hex")}`,"hex").toString("base64url");
+const privateValue=privateJwk.d;
+const localData=process.env.LOCALAPPDATA||path.join(homedir(),"AppData","Local");
+const secretFolder=path.join(localData,"ICABV","push-secrets");
+mkdirSync(secretFolder,{recursive:true});
+const secretPath=path.join(secretFolder,"dispatch.env");
+writeFileSync(secretPath,`VAPID_PUBLIC_KEY=${publicValue}\nVAPID_PRIVATE_KEY=${privateValue}\nVAPID_SUBJECT=${subject}\n`,{encoding:"utf8",flag:"wx",mode:0o600});
+writeFileSync(envFile,`${current.trimEnd()}\nNEXT_PUBLIC_VAPID_PUBLIC_KEY=${publicValue}\n`,{encoding:"utf8"});
+console.log(JSON.stringify({serverSecretFile:secretPath,publicKeyAddedTo:envFile,keysPrinted:false}));

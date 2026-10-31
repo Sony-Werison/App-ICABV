@@ -1,0 +1,1610 @@
+/* ICABV identity, Tribus member hierarchy and BeChurch management structure. */
+:root {
+  --brand: #991b1b;
+  --brand-strong: #7f1d1d;
+  --brand-tint: #fdf0f0;
+  --surface: #fff;
+  --paper: #f7f8fa;
+  --soft: #f1f2f4;
+  --text: #18181b;
+  --muted: #71717a;
+  --line: #e6e7eb;
+  --green: #991b1b;
+  --green-dark: #7f1d1d;
+}
+html[data-theme="dark"] {
+  --surface: #191919;
+  --paper: #191919;
+  --soft: #242427;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --line: #333338;
+  --brand-tint: #35191d;
+}
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #c26767;
+  outline-offset: 3px;
+}
+.church-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+}
+.icabv-platform.church-member {
+  max-width: 640px;
+  background: var(--surface);
+  min-height: 100dvh;
+}
+.church-member .icabv-header {
+  height: 82px;
+  border-bottom: 0;
+  padding: 14px 24px;
+  background: var(--surface);
+}
+.church-member .icabv-identity img {
+  width: 38px;
+  height: 38px;
+}
+.church-member .icabv-identity strong {
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+.church-member .icabv-identity small {
+  font-size: 10px;
+  max-width: 210px;
+}
+.church-member .icabv-main {
+  padding: 10px 24px 108px;
+  gap: 28px;
+}
+.church-member .icabv-bottom {
+  width: min(640px, 100%);
+  padding-top: 9px;
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 -4px 18px #00000003;
+}
+.church-member .icabv-bottom button {
+  font-size: 10px;
+  gap: 5px;
+  min-width: 54px;
+}
+.church-member .icabv-bottom button[aria-current] {
+  background: none;
+  color: var(--brand);
+}
+.church-member .icabv-bottom button[aria-current]::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+.member-intro {
+  padding: 10px 0 0;
+}
+.member-intro .member-welcome {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+.icabv-main .member-intro h1 {
+  font-size: 32px;
+  line-height: 1.16;
+  letter-spacing: -1.1px;
+  font-weight: 750;
+  margin: 0 0 12px;
+}
+.member-intro > p:last-child {
+  font-size: 13px;
+  color: var(--muted);
+}
+.member-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+.member-heading h2 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+.member-heading button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  min-height: 40px;
+  white-space: nowrap;
+}
+.member-heading button:hover {
+  color: var(--brand);
+}
+.program-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding-bottom: 5px;
+}
+.program-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 83%;
+  min-height: 205px;
+  padding: 23px 22px;
+  background: var(--brand);
+  border-radius: 12px;
+  color: #fff;
+  text-align: left;
+  scroll-snap-align: start;
+  position: relative;
+}
+.program-card:only-child {
+  flex-basis: 100%;
+}
+.program-kicker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  opacity: 0.85;
+  text-transform: capitalize;
+}
+.program-card h3 {
+  font-size: 23px;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 16px 0 17px;
+  max-width: 310px;
+  overflow-wrap: anywhere;
+}
+.program-facts {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+  opacity: 0.85;
+  margin-bottom: 5px;
+}
+.program-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  border-top: 1px solid #ffffff30;
+  margin-top: 14px;
+  padding-top: 12px;
+}
+.church-empty {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 20px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+}
+div.church-empty > svg {
+  margin-bottom: 8px;
+}
+.member-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.member-shortcuts button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  color: var(--text);
+  min-height: 90px;
+}
+.member-shortcuts button > span {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--text);
+  transition: background 0.15s;
+}
+.member-shortcuts button:hover > span {
+  background: var(--brand-tint);
+  color: var(--brand);
+}
+.member-shortcuts strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+.member-participation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.member-participation > button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 86px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 15px 12px;
+  text-align: left;
+  background: var(--surface);
+  color: var(--text);
+}
+.member-participation > button > svg:first-child {
+  color: var(--brand);
+  flex-shrink: 0;
+}
+.member-participation > button > svg:last-child {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--muted);
+  width: 12px;
+}
+.member-participation strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 650;
+}
+.member-participation small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.member-news {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.member-news article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 21px;
+}
+.member-news article .church-label {
+  font-size: 9px;
+  color: var(--brand);
+}
+.member-news h3 {
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  line-height: 1.35;
+  margin: 9px 0;
+}
+.member-news p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+.member-menu h1 {
+  margin: 5px 0 26px;
+}
+.member-menu > div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.member-menu button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 67px;
+  padding: 14px 17px;
+  background: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.member-menu button:last-child {
+  border: 0;
+}
+.member-menu button > svg {
+  margin-left: auto;
+  color: var(--muted);
+}
+.member-menu strong {
+  font-size: 13px;
+  font-weight: 550;
+}
+.member-menu-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  color: var(--brand);
+  background: var(--brand-tint);
+  border-radius: 9px;
+}
+.icabv-main .icabv-card,
+.icabv-main .card {
+  border-radius: 10px;
+  padding: 20px;
+  border-color: var(--line);
+  box-shadow: 0 2px 5px #00000002;
+}
+.icabv-title {
+  border: 0;
+  padding: 0;
+  margin: 5px 0 8px;
+  font-size: 22px;
+  letter-spacing: -0.6px;
+}
+.icabv-main .primary,
+.icabv-main .secondary {
+  border-radius: 8px;
+  font-weight: 550;
+  font-size: 13px;
+}
+.icabv-main input,
+.icabv-main select,
+.icabv-main textarea {
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 14px;
+}
+.icabv-body {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.icabv-main .icabv-back {
+  font-size: 11px;
+  min-height: 32px;
+}
+.icabv-demo-banner {
+  border-style: dashed;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.icabv-demo-banner .secondary {
+  font-size: 11px;
+  padding: 7px 10px;
+  min-height: 34px;
+}
+.icabv-demo-banner strong {
+  font-size: 11px;
+}
+.icabv-demo-banner p {
+  font-size: 11px;
+}
+.icabv-footer {
+  font-size: 10px;
+  padding-top: 20px;
+  color: var(--muted);
+}
+/* Administrative workspace: persistent navigation, compact cards and dense tables. */
+.church-admin {
+  max-width: none;
+  width: 100%;
+  background: var(--paper);
+}
+.church-admin-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 248px;
+  z-index: 35;
+  background: #191919;
+  color: #e4e4e7;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 18px 18px;
+  overflow-y: auto;
+}
+.admin-church-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 9px;
+  color: white;
+}
+.admin-church-brand > span {
+  font-size: 23px;
+  letter-spacing: 0.5px;
+  font-weight: 750;
+}
+.admin-church-brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  margin-top: 2px;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+.admin-workspace {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 28px 4px 29px;
+  padding: 14px 10px;
+  border: 1px solid #ffffff16;
+  border-radius: 8px;
+  background: #ffffff04;
+}
+.workspace-mark {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  background: #991b1b;
+  border-radius: 6px;
+  color: white;
+  font-weight: 650;
+}
+.admin-workspace strong {
+  font-size: 11px;
+  display: block;
+}
+.admin-workspace small {
+  display: block;
+  font-size: 10px;
+  margin-top: 3px;
+  color: #a1a1aa;
+}
+.church-admin-sidebar nav p {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #71717a;
+  padding: 0 13px;
+  margin-bottom: 12px;
+}
+.church-admin-sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 13px;
+  border-radius: 7px;
+  text-align: left;
+  background: none;
+  color: #a1a1aa;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.church-admin-sidebar nav button:hover {
+  background: #ffffff07;
+  color: white;
+}
+.church-admin-sidebar nav button[aria-current] {
+  background: #991b1b;
+  color: white;
+}
+.admin-selected-dot {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.admin-sidebar-foot {
+  margin-top: auto;
+  padding: 28px 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.admin-sidebar-foot > button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 42px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #ffffff15;
+  background: none;
+  color: #a1a1aa;
+  text-align: left;
+  font-size: 11px;
+}
+.admin-account-avatar {
+  display: grid;
+  place-items: center;
+  height: 32px;
+  width: 32px;
+  background: #3f3f46;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+}
+.admin-sidebar-foot strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  max-width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.admin-sidebar-foot small {
+  font-size: 9px;
+  color: #71717a;
+}
+.church-admin .icabv-header {
+  margin-left: 248px;
+  padding: 15px 38px;
+  height: 76px;
+  border-bottom: 1px solid var(--line);
+}
+.church-admin .icabv-identity img {
+  display: none;
+}
+.church-admin .icabv-identity strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.church-admin .icabv-identity small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.church-admin .icabv-main {
+  margin-left: 248px;
+  max-width: none;
+  width: calc(100% - 248px);
+  padding: 35px 38px 24px;
+  gap: 27px;
+}
+.management-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.management-heading h1 {
+  font-size: 29px !important;
+  font-weight: 650;
+  margin: 5px 0 9px;
+}
+.management-heading p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.management-heading .primary {
+  min-height: 40px;
+}
+.management-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.management-stats article {
+  display: flex;
+  gap: 16px;
+  padding: 23px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.management-stat-icon {
+  display: grid;
+  place-items: center;
+  background: var(--brand-tint);
+  color: var(--brand);
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+.management-stats p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.management-stats strong {
+  font-size: 29px;
+  letter-spacing: -0.8px;
+  display: block;
+  font-weight: 650;
+  margin: 5px 0;
+}
+.management-stats small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.management-module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.management-module-grid > button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-align: left;
+  color: var(--text);
+}
+.management-module-grid > button:hover {
+  border-color: #c8a2a2;
+}
+.module-symbol {
+  height: 41px;
+  width: 41px;
+  display: grid;
+  place-items: center;
+  background: var(--soft);
+  border-radius: 9px;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+.management-module-grid strong {
+  display: block;
+  font-size: 13px;
+}
+.management-module-grid small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.management-module-grid > button > svg {
+  margin-left: auto;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.management-lower {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+.management-lower .icabv-card {
+  padding: 23px;
+  box-shadow: none;
+}
+.management-lower .member-heading {
+  margin: 0;
+}
+.management-agenda-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.management-agenda-row:last-child {
+  border: 0;
+}
+.agenda-date {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 45px;
+  border-radius: 8px;
+  background: var(--soft);
+  text-transform: uppercase;
+  color: var(--brand);
+}
+.management-agenda-row strong {
+  display: block;
+  font-size: 12px;
+}
+.management-agenda-row small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.management-help {
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  line-height: 1.8 !important;
+  margin: 14px 0 20px;
+}
+.church-admin .icabv-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 12px;
+}
+/* Existing record operations share the same BeChurch-inspired management shell. */
+.icabv-records .sidebar {
+  background: #191919 !important;
+  border: 0;
+  color: #e4e4e7;
+  padding: 30px 18px 20px;
+}
+.icabv-records .brand {
+  color: white;
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+.icabv-records .brand-symbol {
+  background: transparent;
+}
+.icabv-records .brand small {
+  color: #a1a1aa;
+  font-size: 8px;
+}
+.icabv-records .workspace {
+  background: #ffffff04;
+  border-color: #ffffff16;
+  color: #e4e4e7;
+}
+.icabv-records .workspace small {
+  color: #a1a1aa;
+}
+.icabv-records .workspace-icon {
+  background: #ffffff09;
+  border-color: #ffffff16;
+  color: #d4d4d8;
+}
+.icabv-records .nav-item {
+  color: #a1a1aa;
+  font-size: 12px;
+  border-radius: 7px;
+  padding: 12px 13px;
+}
+.icabv-records .nav-item.active {
+  color: white;
+  background: var(--brand);
+}
+.icabv-records .nav-item:hover {
+  background: #ffffff0a;
+  color: white;
+}
+.icabv-records .nav-item.active:hover {
+  background: var(--brand-strong);
+}
+.icabv-records .active-dot {
+  background: white;
+}
+.icabv-records .nav-label {
+  color: #71717a;
+  font-size: 9px;
+}
+.icabv-records .purpose {
+  display: none;
+}
+.icabv-records .profile {
+  border-color: #ffffff15;
+  color: #e4e4e7;
+}
+.icabv-records .profile .avatar {
+  background: #3f3f46;
+  color: white;
+}
+.icabv-records .profile small {
+  color: #a1a1aa;
+}
+.icabv-records .topbar {
+  background: var(--surface);
+  padding: 0 38px;
+}
+.icabv-records .main-shell > main {
+  padding: 34px 38px 24px;
+}
+.icabv-records .page-heading h1 {
+  font-size: 29px;
+  font-weight: 650;
+}
+.icabv-records .page-heading p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.icabv-records .eyebrow {
+  font-size: 9px;
+  color: var(--muted);
+}
+.icabv-records .stat {
+  padding: 23px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.icabv-records .stat-top {
+  font-size: 12px;
+  color: var(--muted);
+}
+.icabv-records .stat-icon {
+  color: var(--brand);
+  background: var(--brand-tint);
+}
+.icabv-records .stat > strong {
+  font-size: 28px;
+  font-weight: 650;
+}
+.icabv-records .stat > small {
+  color: var(--muted);
+}
+.icabv-records .care-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 10px;
+}
+.icabv-records .care-card h2 {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.icabv-records .care-icon {
+  background: var(--brand-tint);
+  color: var(--brand);
+  border: 0;
+  margin-bottom: 15px;
+}
+.icabv-records .care-card p {
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 280px;
+}
+.icabv-records .care-card .eyebrow {
+  color: var(--muted);
+}
+.icabv-records .care-card button {
+  color: var(--brand);
+  border-color: var(--line);
+  font-size: 11px;
+}
+.icabv-records .care-circles {
+  display: none;
+}
+.icabv-records .bars > div,
+.icabv-records .legend i {
+  background: #991b1b;
+}
+.icabv-records .bars > div + div,
+.icabv-records .legend span + span i {
+  background: #d4d4d8;
+}
+.icabv-records .panel {
+  border-radius: 10px;
+}
+.icabv-records .panel h2 {
+  font-size: 15px;
+}
+.icabv-records .panel-heading p,
+.icabv-records .footer,
+.icabv-records .event-row small,
+.icabv-records .schedule-row small {
+  color: var(--muted);
+}
+.icabv-records .date-tile,
+.icabv-records .avatar {
+  background: var(--soft);
+  color: var(--brand);
+}
+.icabv-records .badge.green {
+  background: var(--soft);
+  color: var(--text);
+}
+.icabv-records .toolbar {
+  padding: 20px 22px;
+}
+.icabv-records th {
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 10px;
+}
+.icabv-records td {
+  font-size: 12px;
+  color: var(--muted);
+}
+.icabv-records td strong {
+  color: var(--text);
+}
+.icabv-records .primary {
+  min-height: 42px;
+  border-radius: 8px;
+}
+.icabv-records .secondary {
+  min-height: 38px;
+  border-radius: 7px;
+}
+.icabv-records .records-return {
+  border-color: var(--line);
+}
+@media (max-width: 1100px) {
+  .management-stats article {
+    padding: 17px;
+    gap: 10px;
+  }
+  .management-module-grid {
+    gap: 10px;
+  }
+  .church-admin .icabv-main {
+    padding: 28px;
+  }
+  .management-lower {
+    grid-template-columns: 1fr;
+  }
+  .management-heading {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .church-admin-sidebar {
+    position: static;
+    width: 100%;
+    padding: 17px 20px;
+    display: block;
+  }
+  .admin-church-brand {
+    padding: 0;
+    display: inline-flex;
+  }
+  .admin-workspace,
+  .admin-sidebar-foot {
+    display: none;
+  }
+  .church-admin-sidebar nav {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    margin-top: 17px;
+    scrollbar-width: thin;
+  }
+  .church-admin-sidebar nav p {
+    display: none;
+  }
+  .church-admin-sidebar nav button {
+    width: auto;
+    min-width: max-content;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .church-admin-sidebar nav button svg {
+    width: 16px;
+  }
+  .church-admin .icabv-header {
+    margin: 0;
+    padding: 12px 25px;
+    height: 60px;
+  }
+  .church-admin .icabv-main {
+    margin: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .management-heading h1 {
+    font-size: 25px !important;
+  }
+  .management-stats {
+    gap: 10px;
+  }
+  .management-stats article {
+    flex-direction: column;
+    padding: 17px;
+  }
+  .management-stats strong {
+    font-size: 25px;
+  }
+  .icabv-records .sidebar {
+    padding: 15px 18px !important;
+  }
+  .icabv-records .main-shell > main {
+    padding: 26px;
+  }
+  .icabv-records .sidebar .brand {
+    color: white;
+  }
+  .icabv-records .sidebar nav {
+    margin-top: 15px;
+  }
+  .icabv-records .topbar {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 560px) {
+  .church-member .icabv-header {
+    padding-inline: 20px;
+    height: 75px;
+  }
+  .church-member .icabv-main {
+    padding: 8px 20px 100px;
+    gap: 26px;
+  }
+  .icabv-main .member-intro h1 {
+    font-size: 30px;
+  }
+  .member-heading h2 {
+    font-size: 16px;
+  }
+  .member-participation {
+    grid-template-columns: 1fr 1fr;
+  }
+  .member-participation > button {
+    padding: 13px 10px;
+    gap: 8px;
+  }
+  .member-participation > button > svg:first-child {
+    width: 18px;
+  }
+  .member-participation small {
+    font-size: 9px;
+  }
+  .member-participation strong {
+    font-size: 11px;
+  }
+  .member-shortcuts {
+    gap: 7px;
+  }
+  .member-shortcuts button > span {
+    width: 55px;
+    height: 55px;
+  }
+  .member-shortcuts strong {
+    font-size: 10px;
+  }
+  .church-admin .icabv-main {
+    padding: 23px 18px;
+  }
+  .management-heading {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .management-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .management-stats article:last-child {
+    grid-column: 1/-1;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+  .management-module-grid {
+    grid-template-columns: 1fr;
+  }
+  .management-module-grid > button {
+    padding: 17px;
+  }
+  .management-modules .member-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .management-heading p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .church-admin .icabv-main h1 {
+    font-size: 26px;
+  }
+  .icabv-records .main-shell > main {
+    padding: 23px 18px;
+  }
+  .icabv-records .page-heading h1 {
+    font-size: 25px;
+  }
+  .icabv-records .stat {
+    padding: 17px;
+  }
+  .icabv-records .stat > strong {
+    font-size: 23px;
+  }
+  .icabv-records .care-card {
+    padding: 23px;
+  }
+  .icabv-records .nav-item.active {
+    background: var(--brand);
+  }
+  .icabv-records .sidebar .nav-item {
+    color: #a1a1aa;
+  }
+  .icabv-records .sidebar .nav-item.active {
+    color: white;
+  }
+}
+
+.admin-church-brand {
+  background: transparent;
+  text-align: left;
+}
+.church-member .icabv-identity {
+  flex: 1;
+  min-width: 0;
+}
+.church-member .icabv-identity > span {
+  min-width: 0;
+}
+.church-member .icabv-identity small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 170px;
+}
+
+@media (min-width: 901px) {
+  .admin-open-member {
+    display: none;
+  }
+}
+
+.account-readiness {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brand);
+  padding: 16px 18px;
+  border-radius: 8px;
+}
+.account-readiness strong {
+  font-size: 13px;
+}
+.account-readiness p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 6px;
+}
+.icabv-main .card > form + form {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  margin-top: 12px;
+}
+.icabv-main .card > form h2 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.icabv-main .card > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.icabv-main .card > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 68px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.icabv-main .card > ul > li > strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.icabv-main .card > ul > li > label {
+  min-width: 145px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.icabv-main .card > ul > li > label select {
+  min-height: 38px;
+  padding: 8px;
+  font-size: 12px;
+}
+.icabv-main .actions {
+  gap: 10px;
+}
+@media (max-width: 560px) {
+  .icabv-main .card > ul > li {
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .icabv-main .card > ul > li > label {
+    min-width: 120px;
+    max-width: 48%;
+  }
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 6px;
+}
+.card-actions > .primary,
+.card-actions > .secondary {
+  width: auto;
+  max-width: 100%;
+  min-height: 40px;
+}
+.church-admin .card-actions > .secondary {
+  background: var(--surface);
+}
+.icabv-card > .icabv-card {
+  background: var(--soft);
+}
+/* Louvor and EBD use the same church components and responsive shell. */
+.module-page {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+.module-heading h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin: 8px 0;
+}
+.module-heading p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.module-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 3px 0 12px;
+  max-width: 100%;
+}
+.module-tabs button {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.module-filters {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.module-filters label {
+  flex: 1;
+  min-width: 150px;
+}
+.module-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.module-span {
+  grid-column: 1/-1;
+}
+.module-editor form {
+  display: grid;
+  gap: 20px;
+}
+.module-editor h2 {
+  margin-bottom: 16px;
+}
+.module-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.module-row > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.module-row h3,
+.module-page p {
+  overflow-wrap: anywhere;
+}
+.module-page .icabv-card {
+  display: grid;
+  gap: 16px;
+}
+.module-page .icabv-card > .icabv-card {
+  padding: 16px;
+  box-shadow: none;
+}
+.module-page input[type="checkbox"],
+.module-page input[type="radio"] {
+  width: 19px;
+  height: 19px;
+  accent-color: #991b1b;
+}
+.module-page select[multiple] {
+  min-height: 112px;
+}
+.module-list {
+  display: grid;
+  gap: 12px;
+}
+.module-report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.module-report-row span,
+.module-report-row p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+.module-playlist ol {
+  padding-left: 22px;
+}
+.module-playlist li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.module-playlist li > span {
+  display: block;
+  margin-bottom: 8px;
+}
+.song-sheet {
+  overflow: auto;
+  max-height: 65vh;
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 12px;
+  line-height: 1.9;
+}
+.song-sheet pre {
+  font-family: "Consolas", monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.module-metronome {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.module-metronome input {
+  max-width: 140px;
+}
+.module-prose {
+  white-space: pre-wrap;
+  line-height: 1.85;
+}
+.module-choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.module-page fieldset {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.module-page legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+.module-page fieldset textarea {
+  width: 100%;
+  min-height: 120px;
+}
+.module-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.module-stats strong {
+  font-size: 32px;
+}
+.module-stats small {
+  color: var(--muted);
+}
+.module-table-wrap {
+  overflow: auto;
+  max-width: 100%;
+}
+.module-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.module-table-wrap td,
+.module-table-wrap th {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.module-page progress {
+  display: block;
+  width: 100%;
+  height: 20px;
+  accent-color: #991b1b;
+  margin: 12px 0;
+}
+.module-year-chart {
+  display: grid;
+  gap: 8px;
+}
+.module-year-chart > div {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) 30px;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+.module-year-chart meter {
+  width: 100%;
+  height: 18px;
+}
+.bible-verses {
+  max-height: 65vh;
+  overflow: auto;
+  line-height: 1.9;
+}
+.bible-verses p {
+  margin-bottom: 14px;
+}
+.bible-verses sup {
+  color: #b54b4b;
+  font-weight: 700;
+}
+.module-page details {
+  padding: 12px 0;
+}
+.module-page summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.module-page details p {
+  margin: 10px 0;
+}
+.module-page .icabv-field small {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.module-page .icabv-field input[type="range"] {
+  padding: 0;
+}
+.module-page a.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  .module-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .module-stats {
+    grid-template-columns: 1fr;
+  }
+  .module-heading h1 {
+    font-size: 26px;
+  }
+  .module-page .module-row {
+    align-items: stretch;
+  }
+  .module-page .module-row > .card-actions {
+    width: 100%;
+  }
+  .song-sheet {
+    padding: 14px;
+  }
+  .module-page fieldset {
+    padding: 14px;
+  }
+  .module-page .module-filters {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .module-page .icabv-card {
+    padding: 20px;
+  }
+  .module-page .module-tabs {
+    margin-right: -4px;
+  }
+  .module-page .card-actions > button {
+    flex: 1;
+  }
+  .module-playlist li .card-actions > button {
+    min-width: 40px;
+  }
+}
+@media print {
+  .church-admin-sidebar,
+  .icabv-bottom,
+  .icabv-header,
+  .module-tabs,
+  button,
+  .module-editor,
+  .module-metronome {
+    display: none !important;
+  }
+  .icabv-main {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .song-sheet,
+  .module-table-wrap {
+    max-height: none;
+    overflow: visible;
+  }
+  .icabv-card {
+    break-inside: avoid;
+    color: #111;
+    background: white;
+    border: 1px solid #ddd;
+  }
+}
+.module-page progress::-webkit-progress-bar {
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+.module-page progress::-webkit-progress-value {
+  background: #991b1b;
+  border-radius: 8px;
+}
+.module-page progress::-moz-progress-bar {
+  background: #991b1b;
+  border-radius: 8px;
+}
+.module-page meter::-webkit-meter-optimum-value {
+  background: #991b1b;
+}
+.module-page meter::-moz-meter-bar {
+  background: #991b1b;
+}
+
+/* Community care: reuse the app's cards and form controls. */
+.care-page h1, .care-birthdays h2 { display: flex; align-items: center; gap: 10px; }
+.care-birthday-list { list-style: none; padding: 0; margin: 16px 0; }
+.care-birthday-list li { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border, #e5e7eb); }
+.care-date { font-weight: 700; font-variant-numeric: tabular-nums; }
+.care-today .care-date { color: #b45309; }
+.care-badge { display: inline-block; padding: 4px 9px; border-radius: 8px; background: rgb(180 83 9 / 10%); font-size: .8rem; }
+.care-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px; }
+.care-item { min-width: 0; }
+.care-item form { display: grid; gap: 12px; }
+.care-item progress { width: 100%; accent-color: #991b1b; }
+.care-item h3, .care-receipt strong { overflow-wrap: anywhere; }
+.care-totals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 20px 0; }
+.care-totals dt { font-size: .75rem; }
+.care-totals dd { font-size: 1.5rem; font-weight: 700; margin: 6px 0 0; }
+.care-description { white-space: pre-wrap; overflow-wrap: anywhere; }
+.care-receipts { display: grid; gap: 16px; }
+.care-receipt { display: grid; gap: 10px; border-top: 1px solid var(--border, #e5e7eb); padding: 18px 0; }
+.care-receipt > span { font-size: .85rem; }
+.care-receipt button { justify-self: start; }
+
+.sync-strip { background: var(--surface); border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; padding: 8px 24px; }
+.sync-strip-summary { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.sync-strip .text-btn { min-height: 32px; font-size: 12px; }
+.sync-details { max-width: 760px; margin: 12px auto; }
+.sync-details article { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line); }
+.sync-details small { display: block; }
+.church-admin .sync-strip { margin-left: 260px; }
+.notification-trigger { position: relative; }
+.notification-count, .notification-warning { position: absolute; top: 0; right: 0; min-width: 18px; height: 18px; padding: 0 3px; display: grid; place-items: center; border-radius: 20px; background: #991b1b; color: white; font-size: 10px; line-height: 1; }
+.notification-backdrop { position: fixed; inset: 0; z-index: 100; background: rgb(0 0 0 / 35%); display: flex; justify-content: flex-end; }
+.notification-panel { background: var(--surface); color: var(--text); width: min(100%, 440px); height: 100dvh; overflow-y: auto; padding: 24px; box-shadow: -10px 0 40px rgb(0 0 0 / 15%); }
+.notification-panel > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+.notification-panel h2 { font-size: 23px; }
+.notification-panel h3 { font-size: 16px; margin: 8px 0; overflow-wrap: anywhere; }
+.notification-panel p { font-size: 14px; line-height: 1.6; }
+.notification-panel small { color: var(--muted); }
+.notification-list article { border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 12px 0; }
+.notification-list .notification-unread { border-left: 4px solid var(--brand); background: var(--brand-tint); }
+.notification-panel .card-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.notification-panel .text-btn { background: transparent; color: var(--text); padding: 8px 0; display: inline-flex; align-items: center; }
+@media(max-width: 960px) { .church-admin .sync-strip { margin-left: 0; } .sync-strip { padding: 8px 16px; } }
+
+.identity-review { margin-block: 1rem; }
+.identity-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; min-width: 0; border: 0; padding: 0; }
+.identity-columns > * { min-width: 0; }
+.identity-details { padding: .75rem; border: 1px solid var(--border); border-radius: .75rem; margin-block: .75rem; overflow-wrap: anywhere; }
+.identity-details small { display: block; }
+.identity-review label { display: grid; gap: .4rem; margin-block: .75rem; }
+.identity-review input, .identity-review select, .identity-review textarea { max-width: 100%; width: 100%; }
+.identity-review input[type=checkbox] { width: auto; justify-self: start; }
+.identity-review pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 22rem; overflow: auto; font-size: .8rem; }
+.identity-review details { margin-block: 1rem; }
+.identity-review summary { cursor: pointer; }
+.identity-suggestion, .identity-conflict { border-block-end: 1px solid var(--border); padding-block: .75rem; }
+@media(max-width: 720px) { .identity-columns { grid-template-columns: minmax(0, 1fr); } }
+
+.identity-review dl { overflow-wrap: anywhere; }
+.identity-review dt { font-weight: 600; margin-block-start: .5rem; }
+.identity-review dd { margin: .2rem 0; }

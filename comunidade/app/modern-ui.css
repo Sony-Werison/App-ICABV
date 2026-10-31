@@ -1,0 +1,1186 @@
+/* One presentation layer for member, ministry and administrative workspaces. */
+:root {
+  --church-red: #ff0000;
+  --brand: var(--church-red);
+  --brand-strong: #cc0000;
+  --brand-tint: #fff0f0;
+  --accent-text: #c40000;
+  --accent-icon: var(--church-red);
+  --paper: #f5f6f8;
+  --app-gradient: linear-gradient(145deg, #f5f6f8 0%, #fafafb 48%, #eef0f4 100%);
+  --surface: #ffffff;
+  --soft: #f0f2f5;
+  --text: #202329;
+  --muted: #5c626d;
+  --line: #dce0e6;
+  --border: var(--line);
+  --focus: var(--church-red);
+  --ui-radius: 12px;
+  --ui-shadow: 0 3px 16px #17203906;
+  --ui-success: #14623b;
+  --ui-error: #a52127;
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  --brand: var(--church-red);
+  --brand-strong: #cc0000;
+  --brand-tint: #301919;
+  --accent-text: var(--text);
+  --accent-icon: var(--church-red);
+  --paper: #191919;
+  --app-gradient: linear-gradient(145deg, #191919 0%, #1e1f21 48%, #171819 100%);
+  --surface: #191919;
+  --soft: #242629;
+  --text: #f3f4f6;
+  --muted: #b0b5bf;
+  --line: #3a3d43;
+  --focus: var(--church-red);
+  --ui-shadow: none;
+  --ui-success: #94dbb4;
+  --ui-error: var(--text);
+  color-scheme: dark;
+}
+body { background: var(--paper) var(--app-gradient) fixed; color: var(--text); font-family: Inter,"Segoe UI",system-ui,sans-serif; font-size: 16px; line-height: 1.55; }
+*, *::before, *::after { box-sizing: border-box; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+button, a { touch-action: manipulation; }
+button, .primary, .secondary, .text-btn, .icon-btn { transition: background-color 180ms ease,border-color 180ms ease,color 180ms ease; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+:is(button,a,input,select,textarea,summary):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.icabv-main, .module-page, .icabv-records main, .icabv-card, .card, .panel, .module-row > *, .card-actions { min-width: 0; }
+.icabv-main h1, .page-heading h1 { font-size: clamp(25px,3vw,32px); line-height: 1.2; font-weight: 700; letter-spacing: -.7px; }
+.icabv-main h2, .icabv-title { font-size: 20px; line-height: 1.35; font-weight: 650; letter-spacing: -.3px; }
+.icabv-main h3 { font-size: 17px; line-height: 1.4; font-weight: 650; }
+.icabv-main :is(h1,h2,h3,h4), .notification-panel :is(h2,h3) { overflow-wrap: anywhere; }
+.icabv-main :is(p,.icabv-body), .icabv-records p { font-size: 14px; line-height: 1.65; }
+.icabv-main small, .icabv-field small { font-size: 12px; line-height: 1.5; color: var(--muted); }
+.church-label { font-size: 11px; color: var(--muted); line-height: 1.5; letter-spacing: .9px; }
+.icabv-main .icabv-card, .icabv-main .card, .icabv-records :is(.panel,.stat,.care-card) { padding: 20px; border: 1px solid var(--line); border-radius: var(--ui-radius); background: var(--surface); box-shadow: var(--ui-shadow); }
+.icabv-card > .icabv-card, .ui-disclosure-content > .icabv-card { box-shadow: none; }
+.icabv-main .primary, .icabv-main .secondary, .icabv-records :is(.primary,.secondary), .notification-panel :is(.primary,.secondary) { min-height: 44px; border-radius: 10px; padding: 10px 15px; font-size: 14px; font-weight: 600; line-height: 1.45; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-align: center; }
+.primary { background: var(--brand); color: #fff; border: 1px solid var(--brand); }
+.primary:hover:not(:disabled) { background: var(--brand-strong); }
+.secondary { background: var(--surface); color: var(--text); border: 1px solid var(--line); }
+.secondary:hover:not(:disabled) { background: var(--soft); border-color: var(--muted); }
+.text-btn, .icabv-main .text-btn, .member-heading button, .member-heading .text-btn { min-height: 44px; font-size: 14px; color: var(--accent-text); padding: 8px 4px; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-width: 44px; min-height: 44px; border-radius: 10px; }
+.icon-btn:hover { background: var(--soft); color: var(--text); }
+.icabv-main :is(input,select,textarea), .icabv-records :is(.form-grid input,.form-grid select,.form-grid textarea), .notification-panel :is(input,select) { min-height: 44px; width: 100%; max-width: 100%; padding: 10px 12px; font-size: 16px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); color: var(--text); }
+.icabv-main textarea { min-height: 104px; resize: vertical; }
+.icabv-main label, .icabv-field { font-size: 14px; font-weight: 500; gap: 7px; }
+.icabv-main input:is([type="checkbox"],[type="radio"]) { width: 20px; height: 20px; min-height: 20px; accent-color: var(--brand); flex-shrink: 0; }
+.icabv-main label:has(>input:is([type="checkbox"],[type="radio"])) { min-height: 44px; flex-direction: row; align-items: center; justify-content: flex-start; gap: 10px; }
+.ui-required, .ui-field-error { color: var(--ui-error) !important; }
+.ui-field-error { font-weight: 500; }
+.icabv-main :is(form,.module-form-grid) { gap: 16px; }
+.module-editor > h2 { margin-bottom: 4px; }
+.module-form-grid { align-items: start; }
+.card-actions, .icabv-main .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.icabv-message, .account-readiness, .church-empty { padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--soft); color: var(--text); line-height: 1.6; }
+.icabv-message[role="alert"], .ui-field-error { border-color: var(--ui-error); }
+.church-empty { text-align: center; color: var(--muted); margin-block: 8px; }
+.ui-disclosure { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: var(--ui-radius); background: var(--surface); }
+.ui-disclosure > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 14px 16px; cursor: pointer; color: var(--text); }
+.ui-disclosure > summary::-webkit-details-marker, .ui-tab-more > summary::-webkit-details-marker, .ui-workspace-nav summary::-webkit-details-marker { display: none; }
+.ui-disclosure > summary strong { font-size: 15px; font-weight: 600; }
+.ui-disclosure > summary small { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); }
+.ui-disclosure[open] > summary { border-bottom: 1px solid var(--line); }
+.ui-disclosure[open] > summary > svg { transform: rotate(180deg); }
+.ui-disclosure-content { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.ui-disclosure-content > .module-editor { border: 0; padding: 0; }
+.ui-collection-items { display: flex; flex-direction: column; gap: 10px; }
+.ui-collection { width: 100%; min-width: 0; }
+.ui-results { margin-bottom: 10px; color: var(--muted); font-size: 13px; }
+.ui-pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; margin-top: 12px; border-top: 1px solid var(--line); }
+.ui-pagination > span { white-space: nowrap; font-size: 13px; color: var(--muted); }
+.ui-loading { display: grid; gap: 12px; padding: 16px; color: var(--muted); font-size: 14px; }
+.ui-skeleton { display: block; height: 18px; width: 85%; border-radius: 6px; background: var(--soft); animation: ui-pulse 1.4s ease-in-out infinite alternate; }
+.ui-skeleton:last-child { width: 60%; }
+@keyframes ui-pulse { to { opacity: .45; } }
+.module-tabs { display: flex; flex-wrap: wrap; align-items: start; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.icabv-main .module-tabs > button { min-height: 44px; border: 0; background: transparent; color: var(--muted); font-weight: 500; }
+.icabv-main .module-tabs > button[aria-current] { background: var(--brand-tint); color: var(--accent-text); }
+.ui-tab-more { min-width: 130px; flex: 0 1 auto; max-width: 100%; }
+.ui-tab-more > summary { min-height: 44px; cursor: pointer; list-style: none; display: flex; gap: 10px; align-items: center; justify-content: space-between; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; font-size: 14px; }
+.ui-tab-more > div { padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+.ui-tab-more[open] { flex-basis: 100%; }
+.ui-tab-more[open] > summary { width: fit-content; }
+.module-heading p { color: var(--muted); max-width: 65ch; }
+.module-row, .module-report-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.module-report-row { border-bottom: 1px solid var(--line); padding: 12px 0; }
+.module-report-row p, .module-row p { color: var(--muted); margin-top: 4px; }
+.module-heading { margin-bottom: 4px; }
+.icabv-platform { background: transparent; }
+.icabv-platform.church-member { max-width: 1040px; background: transparent; }
+.church-member .icabv-main { max-width: none; padding: 24px 32px 112px; gap: 24px; }
+.church-member .icabv-header { padding-inline: 32px; border-bottom: 1px solid var(--line); height: 80px; }
+.church-member .icabv-bottom { width: min(1040px,100%); }
+.church-member .icabv-bottom button { flex:1; min-width:0; padding:8px 2px; font-size:clamp(10px,2.5vw,12px); gap:4px; min-height:52px; }
+.church-member .icabv-bottom button[aria-current] { color: var(--accent-text); }
+.church-member .icabv-bottom button[aria-current]::after { content:none; }
+.member-intro { padding: 0; }
+.member-intro .member-welcome { font-size: 14px; margin-bottom: 10px; }
+.member-intro > p:last-child { font-size: 14px; }
+.program-card { min-height: 180px; flex-basis: 62%; border-radius: var(--ui-radius); padding: 20px; }
+.program-card h3 { color: #fff; font-size: 22px; }
+.program-facts, .program-kicker { font-size: 13px; }
+.member-shortcuts button strong, .member-menu strong { font-size: 14px; }
+.member-shortcuts button { min-height: 84px; }
+.member-menu { display: flex; flex-direction: column; gap: 16px; }
+.member-menu > div { display: grid; gap: 12px; }
+.member-menu .ui-disclosure { border: 1px solid var(--line); }
+.member-menu .ui-disclosure-content { padding: 0 12px; gap: 0; }
+.member-menu .ui-disclosure button { min-height: 60px; padding: 12px 4px; width: 100%; }
+.member-menu .ui-disclosure summary strong { font-size: 16px; }
+.church-admin .icabv-main { padding: 28px 32px 40px; gap: 24px; max-width: 1700px; }
+.church-admin-sidebar { padding: 24px 16px 16px; border-right: 1px solid #ffffff12; }
+.admin-workspace { margin-block: 24px; }
+.church-admin-sidebar nav button, .church-admin-sidebar nav summary { font-size: 14px; color: #c7cbd2; min-height: 46px; }
+.church-admin-sidebar nav button[aria-current] { background: var(--church-red); color: #000; }
+.church-admin-sidebar nav button > span:not(.admin-selected-dot) { flex: 1; }
+.ui-workspace-nav > details > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 11px; padding: 12px 13px; border-radius: 8px; }
+.ui-workspace-nav > details > summary:hover { background: #ffffff09; }
+.ui-workspace-nav > details > summary > span { flex: 1; }
+.ui-workspace-nav > details > div { margin-top: 6px; border-top: 1px solid #ffffff16; padding-top: 8px; }
+.church-admin .icabv-header { height: 72px; padding-inline: 32px; }
+.management-heading p { font-size: 14px; max-width: 65ch; }
+.management-heading h1 { font-size: 30px !important; }
+.management-module-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.management-module-grid > button { padding: 16px; min-height: 96px; border-radius: 12px; }
+.management-module-grid strong { font-size: 15px; }
+.management-module-grid small, .management-stats small { font-size: 12px; color: var(--muted); }
+.management-module-grid > button > svg:last-child { width: 16px; }
+.management-stats { gap: 12px; }
+.management-stats article { padding: 18px; border-radius: 12px; }
+.management-stats strong { font-size: 27px; }
+.sync-strip { font-size: 12px; padding-block: 5px; background: var(--paper); }
+.sync-strip-summary { min-height: 28px; }
+.sync-strip:has(.sync-details) { padding-bottom: 16px; }
+.sync-details { max-height: min(60dvh,500px); overflow-y: auto; }
+.identity-review { margin: 0; }
+.identity-details small { overflow-wrap: anywhere; }
+.identity-review fieldset { margin: 0; }
+.identity-review .identity-picker { border: 0; }
+.identity-review .identity-columns { gap: 20px; }
+.ui-people-list { list-style: none; padding: 0 !important; margin: 0; display: grid; gap: 8px; }
+.ui-people-list > li { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.ui-people-list label { min-width: 140px; max-width: 45%; }
+.icabv-auth { max-width: 440px; width: 100%; margin: 12px auto 0; padding: 24px !important; gap: 16px; }
+.icabv-auth h1 { font-size: clamp(16px, 4.4vw, 26px); line-height: 1.2; letter-spacing: -.65px; white-space: nowrap; }
+.icabv-auth > p { font-size: 16px; line-height: 1.5; }
+.icabv-auth form { gap: 12px; }
+@media (max-width: 560px) {
+  .icabv-auth { max-width: 440px; padding: 20px !important; }
+  .icabv-auth .text-btn { align-self: flex-start; padding-inline: 0; }
+}
+.notification-panel { border-radius: 16px; background: var(--surface); box-shadow: 0 16px 60px #0004; }
+.notification-panel > header { position: sticky; top: 0; z-index: 1; background: var(--surface); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.notification-panel h3 { font-size: 16px; }
+.notification-panel p { font-size: 14px; }
+.notification-panel small { color: var(--muted); font-size: 12px; }
+.notification-unread { border-inline-start: 3px solid var(--accent-icon); }
+.module-table-wrap, .table-scroll { max-width: 100%; overflow: auto; border: 1px solid var(--line); border-radius: 12px; }
+.icabv-main table, .icabv-records table { width: 100%; border-collapse: collapse; }
+.icabv-main th, .icabv-records th { position: sticky; top: 0; z-index: 1; background: var(--soft); color: var(--text); text-align: left; font-size: 13px; }
+.icabv-main td, .icabv-records td { font-size: 14px; padding: 12px; color: var(--text); }
+.icabv-records .table-scroll { max-height: 65dvh; }
+.icabv-records .table-scroll tbody tr:hover { background: var(--soft); }
+.icabv-records .topbar { min-height: 64px; }
+.icabv-records :is(.toolbar,.topbar) input, .icabv-records select { min-height: 44px; font-size: 16px; color: var(--text); }
+.icabv-records :is(.toolbar,.topbar) { gap: 12px; }
+.icabv-records .nav-item { min-height: 44px; font-size: 14px; }
+.icabv-records .modal { border: 1px solid var(--line); border-radius: 16px; }
+.icabv-records .modal header, .icabv-records .modal-footer { padding: 20px 24px; background: var(--surface); }
+.icabv-records .modal-footer { position: sticky; bottom: 0; border-top: 1px solid var(--line); }
+.icabv-records .form-grid { gap: 16px; }
+.icabv-records .form-grid label { font-size: 14px; color: var(--text); }
+.icabv-records .modal p { color: var(--text); font-size: 14px; }
+.icabv-records .row-actions button { min-width: 44px; min-height: 44px; }
+.icabv-records .stat > small, .icabv-records .panel-heading p { font-size: 13px; }
+.reading-body, .bible-verses { font-size: 17px; line-height: 1.85; color: var(--text); max-width: 72ch; }
+.bible-verses { margin-inline: auto; }
+.bible-verses sup { color: var(--accent-text); font-weight: 600; padding-right: 5px; }
+.reading-page h2 { color: var(--text); }
+.reading-page blockquote { color: var(--text); background: var(--soft); border-color: var(--brand); }
+html[data-theme="dark"] :is(.content-card,.cell-card,.prayer-card,.prayer-form,.hub-search,.content-filters button,.hub-tabs,.content-dialog) { background: var(--surface); border-color: var(--line); color: var(--text); }
+html[data-theme="dark"] :is(.content-info h2,.content-excerpt,.cell-description,.prayer-card>p,.prayer-card time,.reading-body,.hub-search input,.prayer-form label,.cell-leader,.cell-facts span,.hub-intro p) { color: var(--text); }
+@media(min-width:901px) { .ui-collection.module-list > .ui-collection-items { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); } .module-list .module-row { align-items: start; flex-direction: column; } }
+@media(max-width:1100px) { .management-module-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:900px) {
+  .church-admin-sidebar { padding: 16px; }
+  .admin-church-brand > span { font-size: 19px; }
+  .church-admin-sidebar .ui-workspace-nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); overflow: visible; gap: 4px; margin-top: 12px; }
+  .church-admin-sidebar .ui-workspace-nav > button { min-width: 0; width: 100%; font-size: 12px; padding: 10px 6px; gap: 5px; justify-content: center; flex-direction: column; text-align: center; }
+  .ui-workspace-nav > details { min-width: 0; }
+  .church-admin-sidebar .ui-workspace-nav summary { min-height: 64px; padding: 10px 6px; font-size: 12px; flex-direction: column; justify-content: center; gap: 4px; text-align: center; }
+  .ui-workspace-nav > details[open] { grid-column: 1/-1; }
+  .ui-workspace-nav > details[open] > summary { flex-direction: row; min-height: 44px; }
+  .ui-workspace-nav > details > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px; }
+  .church-admin-sidebar .ui-workspace-nav details button { width: 100%; min-width: 0; white-space: normal; text-align: left; font-size: 13px; }
+  .admin-selected-dot { display: none; }
+  .church-admin .icabv-header { height: 64px; padding: 10px 16px; }
+  .church-admin .icabv-main { margin: 0; width: 100%; padding: 24px 20px; }
+}
+@media(max-width:600px) {
+  .church-member .icabv-header { padding: 12px 14px; height: auto; min-height: 72px; gap: 6px; }
+  .church-member .icabv-identity small { display: none; }
+  .church-member .icabv-identity strong { font-size: 17px; }
+  .church-member .icabv-identity img { width: 32px; height: 32px; }
+  .icabv-header > div { flex-shrink: 0; gap: 0; }
+  .church-member .icabv-main, .church-admin .icabv-main { padding-inline: 16px; gap: 20px; }
+  .icabv-main .icabv-card, .icabv-main .card { padding: 16px; }
+  .icabv-main .icabv-card .icabv-card { padding: 14px; }
+  .module-heading h1 { margin-block: 5px 8px; }
+  .module-tabs { gap: 4px; }
+  .icabv-main .module-tabs > button { font-size: 13px; padding-inline: 10px; }
+  .module-row, .module-report-row { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .module-filters { align-items: stretch; }
+  .module-filters > label { min-width: 0; flex: 1 1 150px; }
+  .module-form-grid, .identity-columns { grid-template-columns: minmax(0,1fr); }
+  .ui-disclosure-content { padding: 14px; }
+  .program-card { flex-basis: 88%; min-height: 176px; }
+  .member-heading { gap: 10px; flex-wrap: wrap; }
+  .member-heading h2 { font-size: 19px; }
+  .management-heading h1 { font-size: 27px !important; }
+  .management-module-grid { grid-template-columns: minmax(0,1fr); }
+  .management-module-grid > button { min-height: 80px; }
+  .management-stats article { padding: 14px; }
+  .ui-people-list > li { align-items: flex-start; }
+  .ui-people-list label { min-width: 125px; }
+  .ui-pagination { gap: 6px; }
+  .ui-pagination .secondary { padding-inline: 10px; font-size: 13px; }
+  .icabv-records .toolbar, .icabv-records .toolbar-right { flex-wrap: wrap; align-items: stretch; }
+  .icabv-records .toolbar-right { width: 100%; }
+  .icabv-records .toolbar-right select { flex: 1; min-width: 0; }
+  .icabv-records .modal { width: 100%; }
+  .icabv-records .modal-footer { padding: 16px; }
+  .notification-panel { width: 100%; max-height: 94dvh; border-radius: 16px 16px 0 0; }
+  .notification-backdrop { align-items: flex-end; padding: 0; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print { .ui-pagination,.ui-results,.module-tabs,.sync-strip,.ui-workspace-nav { display: none !important; } .ui-disclosure:not([open]) > .ui-disclosure-content { display: flex; } }
+
+.ui-search { margin-block: 4px 16px; }
+.ui-search > span:last-child { position: relative; display: flex; align-items: center; }
+.ui-search > span:last-child > svg { position: absolute; inset-inline-start: 13px; color: var(--muted); pointer-events: none; }
+.icabv-main .ui-search input { padding-inline-start: 42px; }
+.ui-collection { scroll-margin-top: 24px; }
+
+@media(max-width:600px) {
+ .ui-responsive-table { border: 0; border-radius: 0; max-height: none !important; overflow: visible; }
+ .ui-responsive-table table, .ui-responsive-table tbody { display: block; width: 100%; min-width: 0; }
+ .ui-responsive-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+ .ui-responsive-table tbody tr { display: block; border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-bottom: 12px; background: var(--surface); }
+ .icabv-records .ui-responsive-table td, .icabv-main .ui-responsive-table td { display: grid; grid-template-columns: minmax(90px,35%) minmax(0,1fr); gap: 8px; padding: 9px 0; border: 0; font-size: 14px; white-space: normal; overflow-wrap: anywhere; }
+ .ui-responsive-table td::before { content: attr(data-label); font-weight: 500; color: var(--muted); font-size: 12px; }
+ .ui-responsive-table td > small { grid-column: 2; }
+ .ui-responsive-table td > span { white-space: normal; }
+ .ui-responsive-table tbody th { display: block; position: static; padding: 0 0 10px; background: transparent; border-bottom: 1px solid var(--line); }
+}
+@media print { .ui-responsive-table table { display: table; } .ui-responsive-table tbody { display: table-row-group; } .ui-responsive-table thead { position: static; width: auto; height: auto; clip-path: none; display: table-header-group; } .ui-responsive-table tbody tr { display: table-row; } .ui-responsive-table td, .ui-responsive-table th { display: table-cell !important; } .ui-responsive-table td::before { display: none; } }
+.ui-skip-link { position: fixed; inset: 8px auto auto 8px; z-index: 9999; padding: 12px 18px; color: #fff; background: var(--brand); border-radius: 8px; transform: translateY(-150%); }
+.ui-skip-link:focus { transform: translateY(0); }
+
+.ui-collection.module-list { display: block; }
+
+.icabv-records .money-positive { color: var(--ui-success); font-weight: 600; }
+.icabv-records .money-negative { color: var(--ui-error); font-weight: 600; }
+.icabv-records .badge { font-size: 12px; min-height: 28px; padding: 4px 9px; white-space: normal; line-height: 1.4; }
+.icabv-records .badge.green { background: var(--soft); color: var(--ui-success); }
+.icabv-records .badge.red { background: var(--brand-tint); color: var(--ui-error); }
+
+.icabv-main summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+.icabv-main button:not([class]), .admin-sidebar-foot > button, .icabv-records .care-card button { min-height: 44px; }
+.icabv-main button:not([class]) { padding: 9px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 8px; font-size: 14px; }
+.icabv-main button:not([class]):hover { background: var(--soft); }
+.sync-strip.is-synced { padding-block: 2px; }
+.sync-strip.is-synced .sync-strip-summary { min-height: 20px; }
+.ui-tab-more { min-width: 70px; }
+.ui-tab-more > summary[aria-current] { color: var(--accent-text); border-color: var(--accent-text); }
+@media(max-width:600px) {
+ .module-tabs { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); align-items: start; }
+ .icabv-main .module-tabs > button { padding: 8px 4px; white-space: normal; font-size: 12px; height: 48px; }
+ .module-tabs > .ui-tab-more { min-width: 0; }
+ .ui-tab-more > summary { min-height: 48px; padding: 8px; justify-content: center; font-size: 13px; }
+ .ui-tab-current { display: none; }
+ .ui-tab-more[open] { grid-column: 1/-1; }
+ .ui-tab-more[open] > summary { min-width: 72px; }
+ .ui-tab-more[open] .ui-tab-current { display: inline; }
+ .module-page .module-filters { display: flex; gap: 12px; flex-wrap: wrap; }
+ .module-page .module-filters > label:first-child { flex: 1 1 100%; }
+ .module-page .module-filters > label:not(:first-child) { flex: 1 1 150px; }
+ .module-page .module-filters > button { align-self: end; }
+ .church-member .icabv-main .icabv-back { margin-bottom: -10px; }
+}
+
+.ui-current-section { display: none; }
+.ui-workspace-nav summary[aria-current] { background: #ffffff0b; color: #fff; }
+.icabv-records .ui-workspace-nav > details > summary { color: #c7cbd2; min-height: 46px; font-size: 14px; }
+.icabv-records .ui-workspace-nav > details > div { padding-inline: 0; }
+.icabv-records .ui-workspace-nav { display: flex; flex-direction: column; overflow: visible; }
+.ui-disclosure summary small { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media(max-width:900px) {
+ .icabv-records .sidebar .ui-workspace-nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); overflow: visible; gap: 4px; }
+ .icabv-records .sidebar .ui-workspace-nav > button { min-width: 0; white-space: normal; font-size: 12px; flex-direction: column; gap: 4px; padding: 10px 4px; text-align: center; justify-content: center; }
+ .icabv-records .ui-workspace-nav > details > summary { justify-content: center; flex-direction: column; min-height: 64px; font-size: 12px; padding: 10px 4px; }
+ .icabv-records .ui-workspace-nav > details[open] > summary { flex-direction: row; min-height: 44px; }
+ .icabv-records .ui-workspace-nav > details[open] { grid-column: 1/-1; }
+ .icabv-records .ui-workspace-nav > details > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) { .ui-current-section { display: block; grid-column: 1/-1; color: var(--text); font-size: 15px; font-weight: 600; padding-top: 8px; } }
+
+.member-menu-icon, .member-shortcuts button > span, .module-symbol, .management-stat-icon { color: var(--accent-icon); }
+.care-page h1 > svg, .care-birthdays h2 > svg, .care-today .care-date { color: var(--accent-text); }
+.care-item progress { accent-color: var(--accent-text); }
+.icabv-records .bars > div, .icabv-records .legend i { background: var(--accent-text); }
+.icabv-main .icabv-title { color: var(--text); }
+.icabv-header .icabv-identity small { font-size: 12px; }
+.church-admin .icabv-header .icabv-identity small { font-size: 11px; }
+
+.module-page .icabv-card { gap: 12px; }
+.care-item .care-totals { margin-block: 10px; }
+.care-item .care-totals dd { font-size: 23px; margin-block: 4px 0; }
+.care-item .care-totals dt { color: var(--muted); font-size: 12px; }
+.care-item progress { height: 8px; }
+.notification-panel { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+
+@media print {
+ :root, html[data-theme="dark"] { --text:#111; --muted:#444; --surface:#fff; --paper:#fff; --soft:#f3f3f3; --line:#ccc; --accent-text:#111; color-scheme:light; }
+ body { background:#fff; color:#111; }
+ .ui-skip-link { display:none; }
+ .icabv-card, .card, .panel { box-shadow:none !important; break-inside:avoid; }
+ .ui-collection.module-list > .ui-collection-items { display:block; }
+ .icabv-main .ui-responsive-table th { color:#111; background:#f3f3f3; }
+}
+
+:root { --control-line:#858b96; }
+html[data-theme="dark"] { --control-line:#727985; }
+.icabv-main :is(input,select,textarea), .icabv-records :is(.form-grid input,.form-grid select,.form-grid textarea) { border-color:var(--control-line); }
+.icabv-main input:is([type="checkbox"],[type="radio"]) { accent-color:var(--accent-text); }
+.icabv-main :is(input,select,textarea):disabled { border-color:var(--line); }
+.member-menu .ui-disclosure-content > button { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; }
+.member-menu .ui-disclosure-content > button:last-child { border-bottom:0; }
+.member-heading button:not([class]) { border:0; background:transparent; padding-inline:0; }
+.admin-sidebar-foot small, .icabv-records .sidebar .profile small { font-size:12px; color:#b0b5bf; }
+.admin-church-brand small { font-size:10px; color:#b0b5bf; letter-spacing:1px; }
+
+@media(min-width:601px) { .module-table-wrap { max-height:65dvh; } }
+@media print {
+ .module-table-wrap, .table-scroll { max-height:none !important; overflow:visible !important; }
+ .ui-responsive-table th { position:static !important; }
+ .ui-responsive-table tbody tr { break-inside:avoid; }
+}
+/* Member home: clear priorities and compact access to everyday tasks. */
+.member-intro { container-type:inline-size; }
+.icabv-main .member-intro h1 { font-size:clamp(15px,5.5cqw,32px); line-height:1.25; white-space:nowrap; letter-spacing:-.6px; margin-bottom:0; }
+.member-announcements .member-news { gap:8px; }
+.member-announcements .member-news article { padding:14px 16px; }
+.member-announcements .church-label { display:none; }
+.member-announcements .member-news h3 { font-size:16px; margin:0 0 6px; }
+.member-announcements .member-news p { margin:0; line-height:1.6; }
+.member-program .program-carousel { display:grid; gap:8px; overflow:visible; padding:0; }
+.member-program .program-card { display:flex; flex-direction:row; align-items:center; gap:12px; width:100%; min-height:76px; padding:12px 14px; border:1px solid var(--line); background:var(--surface); color:var(--text); border-radius:10px; }
+.member-program .program-card:hover { background:var(--soft); border-color:var(--church-red); }
+.program-date { display:flex; flex-direction:column; justify-content:center; align-items:center; width:44px; min-height:48px; flex-shrink:0; border-radius:8px; background:var(--brand-tint); color:var(--accent-text); }
+.program-date strong { font-size:20px; line-height:1.1; }
+.program-date > span { font-size:11px; text-transform:uppercase; }
+.program-summary { display:grid; gap:5px; flex:1; min-width:0; }
+.program-summary > strong { font-size:15px; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.program-summary > span { color:var(--muted); font-size:12px; line-height:1.4; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.program-card > svg { color:var(--muted); flex-shrink:0; }
+.member-access-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.member-access { display:flex; flex-direction:row; align-items:center; gap:10px; min-height:60px; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--text); text-align:left; }
+.member-access > span { display:flex; color:var(--accent-icon); flex-shrink:0; }
+.member-access strong { font-size:14px; line-height:1.4; font-weight:600; }
+.member-access:hover { background:var(--soft); border-color:var(--church-red); }
+.icabv-header .icabv-brand { align-items:center; gap:4px; min-width:0; }
+.icabv-header .icabv-header-actions { align-items:center; }
+.sync-control { position:relative; flex-shrink:0; --sync-color:#257247; }
+.sync-control.is-offline { --sync-color:#9b640c; }
+.sync-control.is-syncing, .sync-control.is-checking { --sync-color:#86630b; }
+.sync-control.is-review { --sync-color:#b42332; }
+html[data-theme="dark"] .sync-control { --sync-color:#94dbb4; }
+html[data-theme="dark"] .sync-control.is-offline { --sync-color:#ffba78; }
+html[data-theme="dark"] .sync-control:is(.is-syncing,.is-checking) { --sync-color:#f4d074; }
+html[data-theme="dark"] .sync-control.is-review { --sync-color:var(--church-red); }
+.sync-control .sync-trigger { width:44px; height:44px; min-height:44px; color:var(--sync-color); position:relative; }
+.sync-pending-dot { position:absolute; top:9px; right:8px; width:6px; height:6px; border-radius:50%; background:currentColor; }
+.sync-popover { position:absolute; top:calc(100% + 12px); left:0; width:min(380px,calc(100vw - 32px)); max-height:calc(100dvh - 160px); overflow-y:auto; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--text); box-shadow:0 12px 40px #0003; z-index:95; }
+.sync-popover-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.sync-popover h2 { font-size:17px; margin:0; }
+.sync-popover p { font-size:13px; line-height:1.6; margin:8px 0; }
+.sync-popover .sync-message { display:flex; align-items:center; gap:8px; color:var(--sync-color); font-weight:600; }
+.sync-message svg { flex-shrink:0; }
+.sync-popover .sync-details { margin:12px 0 0; max-height:none; overflow:visible; }
+.sync-popover .sync-details small { color:var(--muted); font-size:12px; line-height:1.5; }
+@media(max-width:600px) {
+ .member-access { flex-direction:column; justify-content:center; gap:8px; padding:12px 4px; text-align:center; min-height:76px; }
+ .member-access strong { font-size:12px; }
+ .sync-popover { position:fixed; left:16px; top:76px; }
+}
+@media(max-width:380px) { .icabv-header .icabv-brand .icabv-identity img { display:none; } }
+@media print { .sync-control { display:none; } }
+@media(max-width:600px) {
+ .icabv-header .icabv-identity small { display:none; }
+ .icabv-header .icabv-identity strong { font-size:17px; }
+ .icabv-header .icabv-identity img { width:32px; height:32px; }
+ .icabv-header .icabv-identity { gap:8px; }
+ .church-admin .icabv-header { padding-inline:14px; gap:6px; }
+}
+
+/* Saturated red for symbols; readable red for smaller text in dark mode. */
+.care-page h1 > svg, .care-birthdays h2 > svg, .church-member .icabv-bottom button[aria-current] > svg { color:var(--accent-icon); }
+
+/* Visit opportunities and mutual completion records. */
+.ebd-view-switcher { display:grid; gap:10px; }
+.ebd-view-switcher h2 { margin:0; font-size:16px; }
+.ebd-view-switcher > div { display:flex; flex-wrap:wrap; gap:8px; }
+.visits-page { display:grid; gap:18px; }
+.visits-preferences { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.visit-preference { display:grid; align-content:start; gap:12px; }
+.visit-preference h2 { display:flex; align-items:center; gap:9px; margin:0; font-size:17px; }
+.visit-preference h2 svg { color:var(--accent-icon); }
+.visit-preference > p, .visits-section > p { margin:0; color:var(--muted); font-size:14px; }
+.visit-weekdays { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px; }
+.visit-weekdays button { min-height:38px; padding:5px 2px; border:1px solid var(--line); border-radius:9px; background:var(--surface); color:var(--text); font-size:12px; }
+.visit-weekdays button[aria-pressed="true"] { border-color:var(--accent-icon); background:var(--brand-tint); color:var(--accent-text); font-weight:650; }
+.visit-frequency { display:grid; grid-template-columns:1fr 1.5fr; gap:10px; }
+.visit-preference-actions { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; }
+.ui-module-dialog > .visit-preference { padding:14px 16px 16px; }
+.icabv-header .icabv-brand { gap:14px; }
+.icabv-header .icabv-menu-button { display:inline-flex; flex:none; }
+ .visit-preference-link { display:flex; align-items:center; justify-content:center; min-height:72px; padding:12px; text-align:center; cursor:pointer; }
+.visit-preference-link > span { display:grid; gap:5px; flex:1; }
+.visit-preference-link > span { justify-items:center; gap:4px; }
+.visit-preference-link > span > span { font-size:14px; line-height:1.3; }
+.visit-preference-link strong { color:var(--accent-text); font-size:17px; line-height:1.2; letter-spacing:.02em; }
+.visit-preference-link small { color:var(--muted); }
+.visits-page .visit-preference-link { display:grid; grid-template-columns:40px minmax(0,1fr); align-items:center; justify-items:stretch; gap:12px; min-height:92px; padding:14px; text-align:left; border-color:color-mix(in srgb,var(--accent-icon) 28%,var(--line)); background:linear-gradient(135deg,var(--surface),var(--soft)); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease; }
+.visits-page .visit-preference-link:hover { transform:translateY(-2px); border-color:var(--accent-icon); box-shadow:0 8px 20px #0002; }
+.visits-page .visit-preference-link > .visit-preference-icon { display:grid; place-items:center; width:40px; height:40px; border-radius:12px; background:var(--brand-tint); color:var(--accent-icon); }
+.visits-page .visit-preference-link > .visit-walk-icon { position:relative; }
+.visit-walk-icon > svg:last-child { position:absolute; right:3px; bottom:3px; padding:2px; border-radius:50%; background:var(--surface); }
+.visits-page .visit-preference-link > span:last-child { display:grid; justify-items:start; gap:3px; min-width:0; }
+.visits-page .visit-preference-link > span:last-child > span { font-size:12px; color:var(--muted); }
+.visits-page .visit-preference-link strong { font-size:15px; }
+.visits-page .visit-preference-link small { font-size:11px; line-height:1.35; }
+.visit-back { display:flex; align-items:center; gap:9px; justify-self:start; min-height:48px; padding:10px 14px; font-size:16px; font-weight:650; }
+.visit-preference > [data-slot="calendar"] { align-self:start; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+.visit-preference .visit-selected-days { color:var(--muted); font-size:13px; }
+.visit-preference .agenda-calendar { max-width:560px; }
+.visit-preference .agenda-calendar-day[disabled] { opacity:.35; }
+.visit-preference .visit-selected-days { line-height:1.6; }
+.notification-push-control { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:center; padding:12px 14px; border-bottom:1px solid var(--line); }
+.notification-push-control > div { display:grid; gap:3px; }
+.notification-push-control small,.notification-push-control p { color:var(--muted); font-size:12px; margin:0; }
+.notification-push-control p { grid-column:1/-1; }
+.schedule-month-picker { max-width:240px; margin:12px 0; }
+.schedule-upcoming-list { display:grid; list-style:none; padding:0; margin:0; }
+.schedule-upcoming-list li { display:grid; grid-template-columns:110px minmax(0,1fr) auto; gap:14px; align-items:center; padding:14px 4px; border-top:1px solid var(--line); }
+.schedule-upcoming-list time { color:var(--muted); font-size:13px; text-transform:capitalize; }
+.schedule-upcoming-list li > div { display:grid; gap:4px; }
+.schedule-upcoming-list li span { color:var(--muted); font-size:13px; }
+.visit-preference > .secondary { justify-self:start; }
+.visits-section { display:grid; gap:10px; }
+.visits-section > .member-heading { margin-bottom:0; }
+.visit-opportunities, .visit-history { display:grid; gap:10px; }
+.visit-opportunity, .visit-history-row { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:12px; }
+.visit-date-icon { display:grid; place-items:center; width:42px; height:42px; border-radius:12px; background:var(--brand-tint); color:var(--accent-icon); }
+.visit-opportunity p, .visit-history-row p { margin:4px 0 0; color:var(--muted); font-size:13px; }
+.visit-opportunity small { display:block; margin-top:4px; color:var(--muted); }
+.visit-confirmations { display:grid; gap:4px; color:var(--muted); font-size:12px; }
+.visit-confirmations .is-confirmed { color:var(--accent-text); }
+.visit-outcome-form { display:grid; gap:8px; min-width:190px; }
+.visit-outcome-form .icabv-field { gap:4px; font-size:12px; }
+.icabv-header-actions .icabv-menu-button { display:inline-flex; }
+@media(max-width:620px) {
+ .visits-preferences { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+ .visit-opportunity { grid-template-columns:auto minmax(0,1fr); }
+ .visit-opportunity > button { grid-column:2; justify-self:start; }
+ .visit-history-row { grid-template-columns:minmax(0,1fr); }
+ .schedule-upcoming-list li { grid-template-columns:1fr auto; gap:8px; }
+ .schedule-upcoming-list li > div { grid-column:1/-1; grid-row:2; }
+}
+
+/* Red sampled from the church logo: RGB(255, 0, 0). */
+.primary { color:#000; }
+.primary:hover:not(:disabled) { color:#fff; }
+.icabv-main .text-btn, .icabv-library summary, .icabv-main .eyebrow { color:var(--accent-text); }
+.program-date, .program-date strong, .program-date > span { color:var(--text); }
+.icabv-main .module-tabs > button[aria-current], .ui-tab-more > summary[aria-current] { border-color:var(--church-red); }
+.care-item progress { accent-color:var(--church-red); }
+.icabv-records .bars > div, .icabv-records .legend i { background:var(--church-red); }
+html[data-theme="dark"] .icabv-main .text-btn, html[data-theme="dark"] .icabv-library summary, html[data-theme="dark"] .icabv-main .eyebrow { color:var(--text); }
+html[data-theme="dark"] .icabv-shortcuts > button > span { color:var(--church-red); }
+
+/* Monthly schedules: dates by row, functions by column. */
+.schedule-board { display:grid; gap:16px; min-width:0; width:100%; }
+.schedule-board-heading { text-align:center; padding-top:8px; }
+.schedule-board-heading h2 { margin:0; font-size:24px; line-height:1.4; }
+.schedule-board-heading h2 > span { text-transform:none; }
+.schedule-board-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:end; gap:12px; }
+.schedule-month-control { grid-column:2; display:flex; align-items:center; gap:4px; min-width:0; }
+.schedule-month-control label { min-width:0; }
+.schedule-board .schedule-month-control input { margin:0; width:180px; min-height:44px; padding:8px 10px; border:1px solid var(--control-line); border-radius:8px; background:var(--surface); color:var(--text); font-size:15px; }
+.schedule-board .schedule-group-filter { grid-column:1 / -1; justify-self:end; display:grid; gap:4px; font-size:12px; color:var(--muted); }
+.schedule-board .schedule-group-filter select { min-height:44px; max-width:240px; background:var(--surface); color:var(--text); border:1px solid var(--control-line); padding:8px 12px; border-radius:8px; font-size:14px; }
+.schedule-table-wrap { width:100%; max-height:65dvh; overflow:auto; border:1px solid var(--line); border-radius:12px; overscroll-behavior:contain; }
+.schedule-board .schedule-table { width:100%; border-collapse:separate; border-spacing:0; white-space:normal; }
+.schedule-board .schedule-table th, .schedule-board .schedule-table td { padding:16px; border:0; border-bottom:1px solid var(--line); background:var(--surface); color:var(--text); vertical-align:middle; text-transform:none; letter-spacing:normal; font-size:14px; }
+.schedule-board .schedule-table thead th { position:sticky; top:0; z-index:2; background:var(--soft); font-weight:600; text-align:left; white-space:nowrap; }
+.schedule-table th > span { display:flex; align-items:center; gap:9px; }
+.schedule-table th svg { color:var(--muted); flex-shrink:0; }
+.schedule-board .schedule-table th:first-child { position:sticky; left:0; z-index:1; min-width:112px; }
+.schedule-board .schedule-table thead th:first-child { z-index:3; }
+.schedule-board .schedule-table td { min-width:160px; }
+.schedule-board .schedule-table tr:last-child > * { border-bottom:0; }
+.schedule-board time { display:flex; flex-direction:column; gap:3px; font-size:14px; }
+.schedule-board time > span { text-transform:capitalize; font-weight:500; }
+.schedule-board time > strong { font-size:14px; font-weight:600; }
+.schedule-cell-entries { display:grid; gap:6px; }
+.schedule-cell-content, .schedule-board .schedule-cell-button { display:grid; gap:6px; background:transparent; color:var(--text); padding:0; margin:0; width:100%; text-align:left; border:0; border-radius:8px; }
+.schedule-person { display:flex; align-items:center; gap:9px; min-height:44px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+.schedule-avatar { display:grid; place-items:center; width:26px; height:26px; flex-shrink:0; background:var(--soft); color:var(--muted); border-radius:50%; font-size:10px; font-weight:700; }
+.schedule-person > span:last-child { display:grid; gap:2px; min-width:0; }
+.schedule-person strong { font-size:14px; font-weight:500; line-height:1.4; overflow-wrap:anywhere; }
+.schedule-name-line { display:block; }
+.schedule-person small, .schedule-cell-group { font-size:11px; color:var(--muted); line-height:1.4; }
+.schedule-cell-button:hover .schedule-person { border-color:var(--church-red); background:var(--soft); }
+.schedule-unassigned { display:inline-block; padding:8px 10px; color:var(--muted); font-size:13px; }
+.schedule-canceled { color:var(--ui-error); font-size:12px; }
+.schedule-board .schedule-board-hint { color:var(--muted); font-size:12px; margin:0; }
+.schedule-weekday-short { display:none; }
+.records-panel > .schedule-board { padding:20px; }
+@media(max-width:700px) {
+ .schedule-board-heading { text-align:left; }
+ .schedule-board-heading h2 { font-size:20px; }
+ .schedule-table-wrap { display:block; max-height:none; overflow:visible; }
+ .schedule-board .schedule-table { table-layout:fixed; min-width:0; width:100%; }
+ .schedule-date-column { width:12%; }
+ .schedule-board .schedule-table th, .schedule-board .schedule-table td { padding:8px 3px; min-width:0; width:auto; font-size:10px; overflow-wrap:anywhere; }
+ .schedule-board .schedule-table th:first-child { min-width:0; position:static; }
+ .schedule-board .schedule-table thead th { position:static; white-space:normal; font-size:10px; line-height:1.35; }
+ .schedule-table th > span { display:block; }
+ .schedule-table th svg { display:none; }
+ .schedule-board time { gap:3px; font-size:9px; line-height:1.3; }
+ .schedule-board time > strong { font-size:10px; font-weight:600; white-space:nowrap; }
+ .schedule-weekday-full { display:none; }
+ .schedule-weekday-short { display:block; }
+ .schedule-board .schedule-person { display:block; padding:4px 2px; min-height:0; border:0; border-radius:4px; }
+ .schedule-avatar { display:none; }
+ .schedule-board .schedule-person strong { font-size:clamp(10px,2.2vw,12px); line-height:1.4; font-weight:500; }
+ .schedule-person small, .schedule-cell-group { font-size:9px; line-height:1.3; overflow-wrap:anywhere; }
+ .schedule-cell-entries, .schedule-cell-content, .schedule-board .schedule-cell-button { gap:5px; min-width:0; }
+ .schedule-board .schedule-cell-button { min-height:44px; }
+ .schedule-unassigned { padding:4px 1px; font-size:9px; }
+ .schedule-canceled { font-size:9px; }
+ .schedule-group-filter { width:100%; }
+ .schedule-board .schedule-group-filter select { max-width:none; width:100%; }
+ .records-panel > .schedule-board { padding:12px 8px; }
+ .icabv-main .icabv-card:has(> .schedule-board) { padding-inline:8px; }
+}
+
+@media print {
+ .schedule-board-toolbar, .schedule-board-hint { display:none; }
+ .schedule-table-wrap { display:block; max-height:none; overflow:visible; }
+ .schedule-mobile-list { display:none; }
+ .schedule-board .schedule-table th { position:static; }
+ .schedule-board .schedule-table td { min-width:0; }
+ .schedule-avatar { display:none; }
+}
+
+.schedule-board .schedule-person strong { color:var(--text); }
+.schedule-board .schedule-cell-button { min-height:44px; }
+
+
+/* Compact month view: centered names and no per-cult menus. */
+.schedule-board .schedule-table td, .schedule-cell-content, .schedule-board .schedule-cell-button { text-align:center; }
+.schedule-person { justify-content:center; }
+.schedule-person > span:last-child { text-align:center; }
+@media(max-width:700px) {
+ .schedule-board { gap:10px; }
+ .schedule-board-heading { padding-top:0; }
+ .schedule-board-heading h2 { font-size:18px; line-height:1.3; }
+ .schedule-board .schedule-table td { padding:4px 2px; }
+ .schedule-board .schedule-person { padding:2px 0; }
+ .schedule-board .schedule-person strong { line-height:1.25; }
+ .schedule-cell-entries, .schedule-cell-content, .schedule-board .schedule-cell-button { gap:2px; }
+ .schedule-board .schedule-board-hint { margin:0; line-height:1.4; }
+}
+/* Balanced alignment and a clearer date column. */
+.schedule-board .schedule-table thead th { text-align:center; }
+.schedule-table th > span { justify-content:center; }
+.schedule-cell-content, .schedule-board .schedule-cell-button { align-content:center; }
+.schedule-person { align-items:center; }
+.schedule-board .schedule-table tbody th[scope="row"] { text-align:center; background:var(--soft); }
+.schedule-board time { align-items:center; font-variant-numeric:tabular-nums; }
+@media(max-width:700px) {
+ .schedule-date-column { width:14%; }
+ .schedule-board .schedule-table tbody th[scope="row"] { padding:4px 2px; }
+ .schedule-board time { gap:4px; }
+ .schedule-board time > .schedule-weekday-short { font-size:11px; font-weight:600; color:var(--muted); }
+ .schedule-board time > strong { font-size:12px; font-weight:700; line-height:1.3; }
+ .schedule-board .schedule-person { display:flex; align-items:center; justify-content:center; }
+}
+@media(max-width:700px) {
+ .schedule-date-column { width:15%; }
+ .schedule-board .schedule-table td, .schedule-board .schedule-table tbody th[scope="row"] { padding:2px; }
+}
+
+/* Compact agenda with complete event-day markers. */
+.icabv-header-actions .sync-popover { left:auto; right:0; }
+.agenda-calendar { width:100%; max-width:none; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:var(--surface); align-self:stretch; }
+.agenda-calendar-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.icabv-main .agenda-calendar-heading h3 { font-size:17px; margin:0; text-align:center; }
+.agenda-calendar .agenda-calendar-table { width:100%; table-layout:fixed; min-width:0; border-collapse:separate; border-spacing:2px; white-space:normal; }
+.agenda-calendar .agenda-calendar-table th, .agenda-calendar .agenda-calendar-table td { padding:0; border:0; background:transparent; color:var(--text); text-align:center; vertical-align:middle; min-width:0; }
+.agenda-calendar .agenda-calendar-table th { font-size:11px; color:var(--muted); text-transform:none; letter-spacing:0; height:24px; }
+.agenda-calendar .agenda-calendar-table tr:hover { background:transparent; }
+.agenda-calendar .agenda-calendar-day { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:3px; min-height:44px; width:100%; border:1px solid transparent; border-radius:8px; background:transparent; color:var(--text); padding:4px 0; font-size:13px; }
+.agenda-calendar-day.has-events { font-weight:700; }
+.agenda-calendar-day[aria-current="date"] { border-color:var(--control-line); }
+.agenda-calendar .agenda-calendar-day:hover { background:transparent; }
+.agenda-calendar .agenda-calendar-day[aria-pressed="true"] { background:transparent; color:var(--text); border-color:var(--church-red); }
+.agenda-calendar-legend { display:flex; align-items:center; justify-content:center; gap:8px; color:var(--muted); font-size:11px; }
+.agenda-calendar-legend .text-btn { font-size:12px; }
+.agenda-results-heading { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+.agenda-results-heading h3 { text-transform:none; }
+.agenda-results-heading h3::first-letter { text-transform:uppercase; }
+@media(max-width:600px) { .icabv-header-actions .sync-popover { left:16px; right:auto; } }
+@media(max-width:380px) { .agenda-calendar { padding:8px 6px; } }
+
+.agenda-calendar-markers { display:flex; align-items:center; justify-content:center; gap:3px; min-height:11px; color:var(--church-red); }
+.agenda-calendar-legend .agenda-calendar-key { display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px; }
+.agenda-calendar .agenda-calendar-filter { display:inline-flex; align-items:center; gap:5px; min-height:36px; padding:6px; border:1px solid transparent; border-radius:6px; background:transparent; color:var(--muted); font-size:11px; }
+.agenda-calendar .agenda-calendar-filter[aria-pressed="true"] { border-color:var(--line); background:var(--soft); color:var(--text); }
+.agenda-calendar .agenda-calendar-filter[aria-pressed="false"] svg { opacity:.4; }
+.agenda-calendar-filter svg { flex-shrink:0; }
+.agenda-calendar .agenda-event-icon { color:var(--church-red); }
+.agenda-calendar, .agenda-commitment-card { --agenda-birthday:#946000; --agenda-schedule:#006b9b; }
+html[data-theme="dark"] :is(.agenda-calendar, .agenda-commitment-card) { --agenda-birthday:#f6c453; --agenda-schedule:#63c9f2; }
+:is(.agenda-calendar, .agenda-commitment-card) .agenda-birthday-icon { color:var(--agenda-birthday); }
+:is(.agenda-calendar, .agenda-commitment-card) .agenda-schedule-icon { color:var(--agenda-schedule); }
+.agenda-commitment-card { display:grid; gap:8px; }
+.agenda-commitment-heading { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:12px; color:var(--muted); }
+.agenda-commitment-heading svg { color:var(--church-red); flex-shrink:0; }
+.agenda-commitment-heading time { margin-left:auto; font-size:12px; }
+.agenda-commitment-card h3 { margin:0; }
+.agenda-commitment-status, .agenda-sources-status { color:var(--muted); }
+@media(max-width:380px) { .agenda-calendar-legend .agenda-calendar-key { gap:4px 7px; font-size:10px; } }
+
+/* Compact cards shared by the home screen and the date-grouped Agenda. */
+.compact-card { min-width:0; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+.compact-card .compact-row { display:flex; align-items:center; gap:12px; width:100%; min-height:72px; padding:10px 14px; border:0; border-radius:10px; background:transparent; color:var(--text); text-align:left; }
+.compact-card button.compact-row:hover { background:var(--soft); }
+.compact-card button.compact-row:focus-visible { outline-offset:-3px; }
+.compact-summary-text { display:block; flex:1; min-width:0; }
+.compact-summary-text > strong { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:15px; line-height:1.35; font-weight:650; }
+.compact-summary-text > span { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:5px; color:var(--muted); font-size:12px; line-height:1.4; }
+.compact-summary-text > span > svg { display:inline-block; vertical-align:-2px; margin-right:5px; }
+.compact-chevron { flex-shrink:0; color:var(--muted); transition:transform .18s; }
+.is-expanded .compact-chevron { transform:rotate(90deg); }
+.compact-symbol { display:grid; place-items:center; flex-shrink:0; width:36px; height:36px; border-radius:8px; background:var(--brand-tint); color:var(--church-red); }
+.compact-card.is-expanded .compact-summary-text > :is(strong,span) { white-space:pre-wrap; overflow:visible; overflow-wrap:anywhere; }
+.compact-details { display:grid; gap:12px; padding:4px 14px 14px; }
+.compact-details > button { justify-self:start; }
+.member-announcements .member-news .compact-card { padding:0; border-radius:10px; }
+.member-commitments .member-news .compact-card { padding:0; border-radius:10px; }
+.member-announcements .compact-row { min-height:64px; }
+.icabv-main .agenda-date-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:4px 10px; margin:16px 0 0; font-size:14px; line-height:1.5; }
+.agenda-date-heading > span { color:var(--muted); font-size:12px; font-weight:500; text-transform:capitalize; }
+.agenda-date-heading > strong { color:var(--text); font-size:14px; font-weight:650; }
+.agenda-compact-list .ui-collection-items { gap:8px; }
+.agenda-compact-list .ui-collection-items > .agenda-date-heading:first-child { margin-top:0; }
+@media(max-width:380px) { .compact-card .compact-row { gap:9px; padding:10px; } .compact-summary-text > strong { font-size:14px; } }
+
+/* Worship: a quiet library, focused reading and progressive editing. */
+.worship-page { gap:12px; }
+.worship-page .module-heading { margin-bottom:0; }
+.worship-page .module-heading h1 { margin:4px 0; }
+.worship-page .module-tabs { padding-bottom:8px; }
+.worship-page .church-label { display:flex; align-items:center; gap:6px; }
+.worship-library-toolbar { display:flex; gap:12px; align-items:end; }
+.worship-search { flex:1; min-width:0; }
+.worship-search > span { display:flex; position:relative; align-items:center; }
+.worship-search svg { position:absolute; left:12px; color:var(--muted); pointer-events:none; }
+.worship-search input { width:100%; padding-left:38px; }
+.worship-library-toolbar > button { display:inline-flex; gap:6px; align-items:center; flex-shrink:0; }
+.worship-library-options { display:flex; align-items:start; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+.worship-library-options > details { width:auto; min-width:0; flex:0 0 auto; }
+.worship-library-options > details[open] { flex-basis:100%; }
+.worship-library-options > details > summary { padding:8px 12px; }
+.worship-library-options .ui-disclosure-content { width:100%; background:var(--surface); }
+.worship-quick-filters { display:flex; gap:4px; flex-wrap:wrap; }
+.worship-quick-filters button { min-height:44px; padding:8px 12px; border:1px solid var(--line); border-radius:8px; background:transparent; color:var(--muted); font-size:13px; }
+.worship-quick-filters button[aria-pressed="true"] { color:var(--text); border-color:var(--church-red); background:var(--brand-tint); font-weight:600; }
+.worship-results { display:flex; align-items:center; gap:12px; justify-content:space-between; color:var(--muted); font-size:12px; }
+.worship-filter-panel { display:grid; grid-template-columns:minmax(0,1fr); align-items:stretch; justify-content:stretch; width:100%; gap:8px; }
+.worship-category-filters,.worship-filter-panel > .worship-quick-filters { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; padding:4px; border-radius:7px; background:var(--soft); }
+.worship-category-filters button { display:grid; place-content:center; gap:3px; min-height:48px; padding:5px 3px; border:0; border-radius:4px; background:transparent; color:var(--muted); font-size:12px; }
+.worship-category-filters small { font-size:10px; font-weight:400; }
+.worship-filter-panel > .worship-quick-filters { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.worship-filter-panel > .worship-quick-filters button { min-height:36px; border:0; border-radius:4px; font-size:12px; padding:6px 4px; }
+.worship-category-filters button[aria-pressed="true"],.worship-filter-panel > .worship-quick-filters button[aria-pressed="true"] { background:var(--surface); color:var(--text); font-weight:600; }
+.worship-version-select { max-width:440px; }
+.worship-version-editor { display:grid; gap:12px; margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:8px; min-width:0; }
+.worship-version-editor legend { padding:0 6px; font-size:13px; color:var(--muted); }
+.worship-song-list .ui-results { display:none; }
+.worship-song-list .worship-song-row { padding:0; border-radius:10px; }
+.worship-song-row > .module-row { display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; gap:0; }
+.worship-song-open { display:flex; align-items:center; gap:12px; flex:1; min-width:0; padding:12px; min-height:76px; background:transparent; color:var(--text); text-align:left; border-radius:10px; }
+.worship-song-open:hover { background:var(--soft); }
+.worship-song-copy { flex:1; min-width:0; }
+.icabv-main .worship-song-copy h3 { font-size:15px; margin:0 0 4px; line-height:1.4; overflow-wrap:anywhere; }
+.icabv-main .worship-song-copy p { color:var(--muted); font-size:12px; line-height:1.45; margin:0; }
+.worship-key { display:inline-flex; justify-content:center; align-items:center; flex-shrink:0; min-width:40px; min-height:40px; padding:4px; background:var(--soft); border:1px solid var(--line); border-radius:8px; font-weight:700; font-size:14px; color:var(--text); }
+.worship-song-open > svg { flex-shrink:0; color:var(--muted); }
+.worship-song-options { position:relative; flex-shrink:0; padding-right:8px; }
+.worship-song-options > summary { list-style:none; display:grid; place-items:center; width:44px; min-height:44px; border-radius:8px; color:var(--muted); cursor:pointer; }
+.worship-song-options > summary::-webkit-details-marker { display:none; }
+.worship-song-options > summary:hover { background:var(--soft); }
+.worship-song-options > div { position:absolute; right:8px; top:44px; z-index:10; display:grid; gap:4px; min-width:190px; padding:8px; background:var(--surface); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 24px #0003; }
+.worship-song-options .secondary { width:100%; text-align:left; }
+.worship-song-row:nth-last-child(-n+3) .worship-song-options > div { top:auto; bottom:44px; }
+.ui-module-dialog { width:min(1040px,calc(100% - 24px)); max-height:calc(100dvh - 24px); margin:auto; padding:0; overflow:auto; background:var(--surface); color:var(--text); border-color:var(--line); }
+.ui-module-dialog::backdrop { background:#0009; backdrop-filter:blur(3px); }
+.ui-module-dialog-heading { display:flex; justify-content:space-between; gap:12px; align-items:center; position:sticky; top:0; z-index:5; padding:12px 18px; border-bottom:1px solid var(--line); background:var(--surface); }
+.ui-module-dialog-heading h2 { font-size:17px; font-weight:650; letter-spacing:0; margin:0; }
+.ui-module-dialog > :is(.module-editor,.icabv-card) { border:0; box-shadow:none; margin:0; padding:18px; border-radius:0; }
+.ui-module-dialog > .icabv-message { margin:12px 18px; }
+.song-reader { display:grid; gap:12px; }
+.song-reader .module-row h2 { font-size:21px; margin:0; line-height:1.35; }
+.song-reader > .module-row { flex-direction:row; align-items:center; flex-wrap:nowrap; }
+.song-reader > .module-row > h2 { flex:1; }
+.song-reader > .module-row > .worship-key { flex:none; width:44px; }
+.song-reader > p { color:var(--muted); margin:0; }
+.song-reader .reader-controls { gap:6px; }
+.reader-controls .secondary { display:inline-flex; align-items:center; justify-content:center; gap:4px; padding:8px 10px; min-height:44px; }
+.song-reader .reader-controls .secondary { flex:0 0 auto; min-height:36px; padding:5px 8px; border-color:transparent; background:transparent; color:var(--muted); font-size:12px; font-weight:400; }
+.song-reader .reader-controls .secondary:hover { background:var(--soft); color:var(--text); }
+.song-pdf-links { display:flex; flex-wrap:wrap; gap:8px; }
+.song-pdf-links a { display:inline-flex; align-items:center; gap:5px; min-height:36px; font-size:12px; }
+.song-sheet-container { position:relative; min-width:0; min-height:180px; }
+.song-reader .song-sheet { max-height:55dvh; min-height:180px; margin:0; padding:16px; background:var(--soft); border:1px solid var(--line); border-radius:10px; overscroll-behavior:contain; }
+.song-font-controls { position:absolute; right:12px; bottom:12px; z-index:2; display:flex; gap:4px; padding:4px; border:1px solid var(--line); border-radius:999px; background:color-mix(in srgb,var(--surface) 88%,transparent); box-shadow:0 3px 12px #0003; backdrop-filter:blur(8px); }
+.song-font-controls .icon-btn { display:grid; place-items:center; width:36px; min-width:36px; height:36px; min-height:36px; padding:0; border:0; border-radius:50%; color:var(--text); }
+.song-font-controls .icon-btn:hover:not(:disabled) { background:var(--soft); }
+.song-font-controls .icon-btn:disabled { opacity:.4; }
+.song-sheet pre { overflow-wrap:anywhere; }
+.ui-module-dialog-fullscreen[open] { position:fixed; inset:0; width:100%; max-width:none; height:100dvh; max-height:none; margin:0; border:0; border-radius:0; display:flex; flex-direction:column; overflow:hidden; }
+.ui-module-dialog-fullscreen > .ui-module-dialog-heading { flex:none; padding-top:max(8px,env(safe-area-inset-top)); padding-left:max(12px,env(safe-area-inset-left)); padding-right:max(12px,env(safe-area-inset-right)); }
+.ui-module-dialog-fullscreen > .song-reader { flex:1; min-height:0; display:flex; flex-direction:column; gap:8px; overflow:auto; padding-bottom:max(12px,env(safe-area-inset-bottom)); }
+.ui-module-dialog-fullscreen .song-reader > * { flex-shrink:0; }
+.ui-module-dialog-fullscreen .song-reader > .song-sheet-container { display:flex; flex:1 0 160px; min-height:160px; }
+.ui-module-dialog-fullscreen .song-sheet-container > .song-sheet { flex:1; min-height:160px; max-height:none; }
+body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
+.worship-hint { color:var(--muted); font-size:13px; line-height:1.55; }
+.worship-count { font-size:12px; color:var(--muted); }
+.worship-page .module-playlist { display:grid; gap:12px; margin-bottom:18px; }
+.worship-page .module-playlist ol { margin:0; padding-left:24px; }
+.worship-page .module-playlist li { align-items:center; padding:8px 0; gap:8px; }
+.worship-page .module-playlist .card-actions { flex-shrink:0; gap:4px; }
+.worship-page .module-playlist li .secondary { min-width:44px; min-height:44px; padding:8px; }
+.worship-role-picker { align-self:start; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+.worship-role-picker summary { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:48px; padding:10px 12px; cursor:pointer; font-weight:600; }
+.worship-role-picker summary small { color:var(--muted); font-size:12px; font-weight:400; margin-left:auto; }
+.worship-role-picker summary svg { flex-shrink:0; transition:transform .18s; }
+.worship-role-picker[open] summary svg { transform:rotate(180deg); }
+.worship-role-picker fieldset { max-height:220px; overflow:auto; margin:0; border:0; padding:0 8px 8px; }
+.worship-role-picker label { display:flex; flex-direction:row; gap:10px; align-items:center; min-height:44px; padding:6px; font-size:13px; cursor:pointer; }
+.worship-role-picker input[type="checkbox"] { width:18px; height:18px; min-height:18px; padding:0; accent-color:var(--church-red); }
+.worship-service-editor > .module-form-grid { margin-bottom:18px; }
+.worship-live-status { display:flex; align-items:center; gap:6px; font-size:13px; padding:10px 12px; background:var(--soft); border-radius:8px; }
+.worship-live-status svg { color:var(--ui-success); }
+.worship-page .worship-team-row { display:flex; flex-direction:row; gap:12px; align-items:center; flex-wrap:wrap; padding:14px; }
+.worship-team-row > div { flex:1; min-width:140px; }
+.worship-team-row h3 { font-size:15px; margin:0 0 4px; }
+.worship-team-row p { font-size:12px; color:var(--muted); }
+.worship-avatar { display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--soft); color:var(--muted); font-size:13px; flex-shrink:0; }
+@media(max-width:600px) { .worship-page .module-heading > :is(.church-label,p) { display:none; } .worship-library-toolbar { gap:8px; } .worship-new-label { display:none; } .worship-library-toolbar > button::after { content:"Nova"; } .worship-quick-filters button { padding-inline:10px; } .worship-library-options { gap:6px; } .worship-library-options > details > summary { padding:8px; font-size:12px; gap:6px; } .ui-module-dialog > :is(.module-editor,.icabv-card) { padding:12px; } .ui-module-dialog-heading { padding:8px 12px; } .song-reader .song-sheet { padding:12px; } .reader-controls { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); } .reader-controls .secondary { font-size:12px; padding:8px 5px; } .worship-team-row > button { margin-left:50px; } }
+@media print { body:has(.ui-module-dialog[open] .song-reader) .module-page > :not(.ui-module-dialog[open]:has(.song-reader)) { display:none!important; } .ui-module-dialog[open] { position:static; max-height:none; width:100%; overflow:visible; border:0; } .ui-module-dialog-heading,.reader-controls,.song-font-controls,.song-reader > .ui-disclosure,.song-reader > .worship-quick-filters { display:none!important; } .song-reader { break-inside:auto; } .song-reader .song-sheet { max-height:none; overflow:visible; border:0; } }
+@media print { body:has(.ui-module-dialog-fullscreen[open]) { overflow:visible; } .ui-module-dialog-fullscreen[open] { display:block; height:auto; } .ui-module-dialog-fullscreen > .song-reader { display:block; overflow:visible; } .ui-module-dialog-fullscreen .song-sheet-container,.ui-module-dialog-fullscreen .song-reader > .song-sheet { min-height:0; } }
+@media(max-width:600px) { .song-reader .reader-controls { display:flex; flex-wrap:wrap; gap:2px 8px; } }
+.schedule-board .schedule-table tbody td,.schedule-board .schedule-table tbody th[scope="row"] { padding-top:14px; padding-bottom:14px; }
+.schedule-board .schedule-person { padding-top:6px; padding-bottom:6px; }
+.schedule-view-tabs { display:flex; justify-content:center; gap:6px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:8px; }
+.schedule-view-tab { min-height:44px; padding:8px 12px; border:0; border-radius:8px; background:transparent; color:var(--muted); font-size:13px; }
+.schedule-view-tab[aria-current="page"] { background:var(--soft); color:var(--text); font-weight:600; }
+.weekend-meetings { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.weekend-meeting { padding:16px; border:1px solid var(--line); border-radius:10px; }
+.icabv-main .weekend-meeting h3 { font-size:15px; margin:0 0 6px; }
+.weekend-meeting > p,.weekend-meeting > small { color:var(--muted); font-size:12px; }
+.weekend-meeting dl { display:grid; gap:8px; margin:14px 0; }
+.weekend-meeting > .weekend-multimedia { display:flex; flex-wrap:wrap; gap:5px; margin:0 0 12px; color:var(--muted); font-size:11px; line-height:1.4; }
+.weekend-multimedia > span { opacity:.75; }
+.weekend-meeting dl > div { display:grid; grid-template-columns:80px minmax(0,1fr); gap:8px; font-size:13px; }
+.weekend-meeting dt { color:var(--muted); }
+.weekend-meeting dd { margin:0; overflow-wrap:anywhere; }
+.weekend-meeting > .secondary { font-size:12px; padding:6px 10px; }
+.repertoire-navigation { display:grid; gap:4px; }
+.repertoire-navigation > div { display:flex; align-items:center; gap:6px; }
+.repertoire-navigation label { flex:1; min-width:0; }
+.repertoire-navigation small { color:var(--muted); font-size:11px; text-align:center; }
+
+/* EBD: distinguish learning, teaching and administration without changing access. */
+.ebd-page { gap:12px; }
+.ebd-page .module-heading { margin:0; }
+.ebd-page .module-heading h1 { margin:4px 0; }
+.ebd-page .church-label { display:flex; align-items:center; gap:6px; }
+.ebd-page .ebd-class-picker { max-width:480px; }
+.ebd-student-context { display:grid; gap:12px; }
+.ebd-class-overview > .module-row { flex-direction:row; flex-wrap:wrap; align-items:center; }
+.ebd-class-overview h2 { margin:0; }
+.ebd-page .ebd-muted { color:var(--muted); font-size:12px; line-height:1.5; margin:0; }
+.ebd-badge { display:inline-flex; align-items:center; gap:4px; font-size:11px; line-height:1.5; color:var(--muted); padding:3px 7px; background:var(--soft); border:1px solid var(--line); border-radius:6px; }
+.ebd-badge.is-done { color:var(--ui-success); }
+.ebd-badge.is-muted { color:var(--muted); }
+.ebd-shortcuts { display:flex; flex-wrap:wrap; gap:8px; }
+.ebd-shortcuts > .secondary { flex:1; min-width:130px; font-size:13px; justify-content:start; }
+.ebd-shortcuts svg { flex-shrink:0; color:var(--church-red); }
+.ebd-page .ebd-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.ebd-page .ebd-stats > article { padding:12px; gap:6px; }
+.ebd-stats > article > span { font-size:12px; color:var(--muted); }
+.ebd-stats > article > strong { font-size:25px; line-height:1.2; }
+.ebd-stats > article > small { font-size:11px; }
+.ebd-week { padding:14px; border:1px solid var(--line); border-radius:10px; }
+.ebd-week .module-row { flex-direction:row; align-items:center; flex-wrap:wrap; gap:6px; }
+.ebd-week h3 { font-size:15px; margin:0; }
+.ebd-week .module-row > span { font-size:11px; color:var(--muted); }
+.ebd-week ol { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); list-style:none; padding:0; margin:14px 0 0; gap:6px; }
+.ebd-week li { display:grid; justify-items:center; gap:5px; }
+.ebd-week li > span { display:grid; place-items:center; width:34px; height:34px; border:1px solid var(--line); border-radius:50%; font-size:12px; }
+.ebd-week li > small { font-size:10px; }
+.ebd-week .is-done > span { color:var(--ui-success); background:var(--soft); }
+.ebd-week .is-today > span { border-color:var(--church-red); }
+.ebd-staff-activities { display:grid; gap:12px; min-width:0; }
+.ebd-weekly-activity { display:grid; gap:12px; min-width:0; padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+.ebd-weekly-activity > header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.ebd-weekly-activity > header .church-label { display:block; margin-bottom:4px; font-size:9px; letter-spacing:.12em; }
+.ebd-weekly-activity > header h2 { margin:0; font-size:19px; }
+.ebd-weekly-nav { display:flex; align-items:center; gap:8px; }
+.ebd-weekly-nav .icon-btn { min-width:38px; min-height:38px; border-radius:50%; }
+.ebd-weekly-nav > strong { min-width:132px; text-align:center; font-size:12px; font-weight:650; text-transform:capitalize; }
+.ebd-weekly-table-scroll { overflow:auto; border:1px solid var(--line); border-radius:8px; overscroll-behavior-inline:contain; }
+.ebd-weekly-table { width:100%; min-width:630px; border-collapse:collapse; table-layout:fixed; font-size:12px; }
+.ebd-weekly-table th,.ebd-weekly-table td { height:34px; padding:5px 8px; border-bottom:1px solid var(--line); text-align:center; }
+.ebd-weekly-table thead th { position:sticky; top:0; background:var(--soft); color:var(--muted); font-size:10px; letter-spacing:.04em; }
+.ebd-weekly-table thead th:first-child,.ebd-weekly-table tbody th { position:sticky; left:0; z-index:1; width:150px; text-align:left; background:var(--surface); }
+.ebd-weekly-table thead th:first-child { z-index:2; background:var(--soft); }
+.ebd-weekly-table thead th > span,.ebd-weekly-table thead th > small { display:block; }
+.ebd-weekly-table thead th > small { margin-top:2px; font-size:9px; font-weight:500; }
+.ebd-weekly-table tbody th { font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ebd-weekly-table tbody tr:last-child > * { border-bottom:0; }
+.ebd-weekly-day-icons { display:inline-flex; align-items:center; justify-content:center; gap:3px; color:var(--ui-success); }
+.ebd-weekly-day-icons .is-video,.ebd-weekly-day-icons .is-bible-complete { color:var(--ui-success); }
+.ebd-weekly-day-icons .is-bible-partial { color:#d99b16; }
+.ebd-weekly-day-icons > small { font-size:9px; font-weight:700; }
+.ebd-weekly-empty { color:var(--church-red); }
+.ebd-weekly-total { color:var(--church-red); font-size:16px; font-weight:750; }
+.ebd-weekly-total.has-entries { color:#e5a91b; }
+.ebd-weekly-legend { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0; color:var(--muted); font-size:10px; }
+.ebd-weekly-legend svg { margin-left:5px; }
+.ebd-attendance-sheet { display:grid; gap:16px; min-width:0; }
+.ebd-attendance-role { display:grid; place-items:center; min-height:48px; border:1px solid var(--line); border-radius:14px; background:var(--soft); font-size:16px; font-weight:700; }
+.ebd-attendance-role-top { margin:0 0 8px; }
+.ebd-compact-attendance .ebd-class-picker[hidden] { display:none; }
+.ebd-attendance-meta { display:grid; grid-template-columns:minmax(135px,.8fr) minmax(160px,1fr) minmax(180px,1.4fr) auto; align-items:end; gap:10px; }
+.ebd-attendance-meta .icabv-field { gap:5px; }
+.ebd-save-topic { min-height:42px; }
+.ebd-attendance-table-scroll { min-width:0; max-width:100%; overflow:hidden; border:1px solid var(--line); border-top:0; border-radius:8px; }
+.ebd-attendance-table { width:100%; min-width:0; border-collapse:collapse; table-layout:fixed; }
+.ebd-attendance-table th,.ebd-attendance-table td { height:42px; padding:7px 9px; border-bottom:1px solid var(--line); text-align:center; }
+.ebd-attendance-table thead th { background:var(--soft); color:var(--muted); font-size:12px; font-weight:650; border-top:0; border-bottom:0; box-shadow:none; }
+.ebd-attendance-table thead th:first-child,.ebd-attendance-table tbody th { position:sticky; left:0; z-index:1; width:190px; text-align:left; background:var(--surface); }
+.ebd-attendance-table thead th:first-child { z-index:2; background:var(--soft); padding-left:14px; border-bottom:0; box-shadow:none; }
+.ebd-attendance-table thead th > span,.ebd-attendance-table thead th > small { display:block; }
+.ebd-attendance-table thead th > small { margin-top:2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:9px; font-weight:400; }
+.ebd-attendance-table tbody th { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; font-weight:600; padding-left:14px; }
+.ebd-attendance-table tbody tr,.ebd-attendance-table tbody tr:hover,.ebd-attendance-table tbody tr:focus { background:transparent; outline:0; }
+.ebd-attendance-table tbody tr:last-child > * { border-bottom:0; }
+.ebd-attendance-mark { display:inline-grid; place-items:center; width:22px; height:22px; padding:0; border:1.5px solid var(--muted); border-radius:50%; background:transparent; color:var(--church-red); cursor:pointer; }
+.ebd-attendance-mark > span { width:7px; height:7px; border-radius:50%; background:transparent; }
+.ebd-attendance-mark.is-marked { border-color:var(--church-red); background:var(--brand-tint); }
+.ebd-attendance-mark.is-marked > span { background:var(--church-red); }
+.ebd-attendance-mark:disabled { opacity:.4; cursor:not-allowed; }
+.ebd-criterion-unavailable { color:var(--muted); }
+.ebd-attendance-hint { margin:0; color:var(--muted); font-size:11px; }
+.ebd-mark-column { display:grid; place-items:center; width:24px; height:22px; margin:3px auto 0; padding:0; border:1px solid var(--line); border-radius:6px; background:transparent; color:var(--muted); }
+.ebd-mark-column[aria-pressed="true"] { color:var(--church-red); border-color:var(--church-red); }
+.ebd-mark-column:disabled { opacity:.4; cursor:not-allowed; }
+.ebd-save-attendance { width:100%; min-height:48px; color:#fff!important; background:#b00000!important; border-color:#b00000!important; font-weight:750; box-shadow:0 3px 12px color-mix(in srgb,var(--church-red) 24%,transparent); }
+.ebd-save-attendance:hover:not(:disabled) { background:#880000!important; border-color:#880000!important; }
+.ebd-topic-warning { margin:0; color:var(--church-red); font-size:13px; font-weight:650; }
+.ebd-activity-modules { display:grid; gap:12px; }
+.ebd-filters { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:12px; align-items:end; }
+.ebd-activity-row { display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); }
+.ebd-activity-row:last-child { border-bottom:0; }
+.ebd-activity-row > div { flex:1; min-width:0; }
+.ebd-activity-row h3 { font-size:15px; line-height:1.4; margin:0 0 4px; }
+.ebd-page .ebd-activity-row p { color:var(--muted); font-size:12px; line-height:1.5; margin:0 0 6px; }
+.ebd-type-icon { display:grid; place-items:center; width:34px; height:34px; flex-shrink:0; background:var(--soft); border-radius:8px; color:var(--church-red); }
+.ebd-study-clock { padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--soft); }
+.ebd-executor .module-prose { max-width:75ch; line-height:1.8; }
+.ebd-executor > .module-row { flex-direction:row; flex-wrap:wrap; align-items:center; }
+.ebd-executor fieldset { border-radius:10px; }
+.ebd-executor legend { font-size:14px; line-height:1.5; }
+.ebd-page .module-choice,.ebd-page .icabv-field:has(>input[type="checkbox"]) { display:flex; flex-direction:row; align-items:center; gap:10px; min-height:44px; cursor:pointer; }
+.ebd-page input:is([type="checkbox"],[type="radio"]) { min-height:18px; height:18px; width:18px; padding:0; accent-color:var(--church-red); flex-shrink:0; }
+.ebd-page .icabv-field > input[type="checkbox"] { order:-1; }
+.ebd-attendance-counts { display:flex; flex-wrap:wrap; gap:6px; }
+.ebd-attendance-counts > span { padding:5px 8px; font-size:12px; border-radius:6px; background:var(--soft); color:var(--muted); }
+.ebd-answers { display:grid; gap:10px; padding:12px; background:var(--soft); border-radius:8px; }
+.ebd-answers h3 { font-size:14px; margin:0; }
+.ebd-answers p { margin:0; }
+.ebd-page .module-year-chart { margin-top:12px; }
+.ebd-page .module-report-row { padding-block:10px; }
+@media(max-width:600px) { .ebd-page .module-heading > :is(.church-label,p) { display:none; } .ebd-page .ebd-stats > article { padding:10px; } .ebd-stats > article > span { font-size:11px; } .ebd-stats > article > strong { font-size:22px; } .ebd-stats > article > small { font-size:10px; } .ebd-filters { grid-template-columns:minmax(0,1fr); } .ebd-activity-row { flex-wrap:wrap; gap:8px; } .ebd-activity-row > .secondary { margin-left:42px; } .ebd-week { padding:10px; } .ebd-week ol { gap:2px; } .ebd-week li > span { width:30px; height:30px; } .ebd-weekly-activity { padding:10px; } .ebd-weekly-activity > header { flex-direction:column; align-items:stretch; } .ebd-weekly-nav { justify-content:space-between; } .ebd-weekly-table { min-width:590px; } .ebd-weekly-table th,.ebd-weekly-table td { padding-inline:5px; } .ebd-weekly-table thead th:first-child,.ebd-weekly-table tbody th { width:135px; } .ebd-attendance-meta { grid-template-columns:minmax(0,1fr) minmax(0,1fr); } .ebd-lesson-topic { grid-column:1/-1; } .ebd-attendance-sheet { padding:12px; } .ebd-attendance-table th,.ebd-attendance-table td { padding:5px 2px; } .ebd-attendance-table thead th { font-size:10px; } .ebd-attendance-table thead th > small { font-size:8px; } .ebd-attendance-table thead th:first-child,.ebd-attendance-table tbody th { width:29%; font-size:10px; } .ebd-attendance-table thead th:first-child { padding-left:10px; } .ebd-attendance-table tbody th { padding-left:10px; } .ebd-mark-column { width:22px; height:20px; } }
+
+.duty-roster-groups { display:grid; gap:12px; margin-block:20px; }
+.duty-roster li { padding-block:3px; }
+
+.weekend-meeting { min-width:0; }
+.weekend-meetings:has(> :only-child) { grid-template-columns:minmax(0,1fr); }
+.weekend-meeting > .secondary { width:100%; white-space:normal; }
+.weekend-meeting > .secondary svg { flex-shrink:0; }
+@media (max-width:600px) {
+ .weekend-meetings { gap:10px; }
+ .weekend-meeting { padding:12px; }
+ .weekend-meeting dl > div { grid-template-columns:minmax(0,1fr); gap:2px; }
+}
+
+.icabv-main .weekend-meeting h3 { display:flex; align-items:center; gap:7px; }
+.weekend-meeting h3 svg { flex-shrink:0; color:var(--muted); }
+.icabv-main .weekend-meeting > .secondary { background:var(--brand-tint); border-color:color-mix(in srgb,var(--church-red) 30%,var(--line)); font-weight:650; }
+.icabv-main .weekend-meeting > .secondary:hover { border-color:var(--church-red); }
+
+.sync-control .sync-trigger { opacity:.72; }
+.sync-control .sync-trigger:is(:hover,:focus-visible) { opacity:1; }
+.song-reader .reader-controls { justify-content:center; }
+.song-sheet[data-view="lyrics"] pre { font-family:Inter,"Segoe UI",system-ui,sans-serif; line-height:1.8; letter-spacing:.01em; }
+.repertoire-navigation .icon-btn { border:1px solid var(--line); background:var(--soft); color:var(--text); }
+.repertoire-navigation .icon-btn:not(:disabled) { border-color:color-mix(in srgb,var(--church-red) 30%,var(--line)); background:var(--brand-tint); }
+.repertoire-navigation .icon-btn:disabled { opacity:.4; }
+[data-colored-group] { border-inline-start:4px solid var(--schedule-group-color); background:color-mix(in srgb,var(--schedule-group-color) 10%,transparent); }
+[data-colored-group] .schedule-person strong,.duty-group summary strong { background:var(--schedule-group-color); color:var(--schedule-group-ink,#151515); padding:4px 10px; border-radius:6px; }
+.duty-group > summary { border-inline-start:5px solid var(--schedule-group-color); }
+
+.agenda-calendar { --agenda-birthday:#707783; }
+html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
+.member-menu-group { border:1px solid var(--line); border-radius:var(--ui-radius); background:var(--surface); }
+.member-menu-group > h2 { padding:12px 16px; margin:0; border-bottom:1px solid var(--line); font-size:15px; }
+.member-menu-group > div { padding:0 12px; }
+.member-menu-group button { width:100%; min-height:60px; border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; }
+.duty-group-participants { padding:20px; }
+.duty-group-participants li { padding-block:5px; }
+/* Keep page names available to screen readers without repeating the navigation labels. */
+#main-content[data-member-page]:not([data-member-page="home"]) > :is(div,section) > :is(h1,h2.icabv-title),
+#main-content[data-member-page]:not([data-member-page="home"]) > :is(div,section) > header.module-heading > :is(h1,.church-label),
+#main-content[data-member-page]:not([data-member-page="home"]) > :is(div,section) > header.member-heading > div > :is(h1,.church-label) {
+ position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important;
+}
+
+#main-content[data-member-page="birthdays"] > .care-birthdays > .member-heading > h2 {
+ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+.agenda-commitments { gap:10px; }
+.agenda-commitments .agenda-results-heading h3 { margin:0; }
+.care-birthdays { gap:4px; }
+.care-birthdays > .member-heading { margin-bottom:0; }
+.care-birthdays .care-birthday-list { margin:0; }
+
+.member-birthdays > .member-heading { margin-bottom:15px; }
+.member-birthday-cards { display:grid; gap:8px; }
+
+:is(.member-announcements,.member-program,.member-birthdays) > .member-heading { margin-bottom:4px; }
+.announcement-full-text,.event-dialog-content { padding:20px; }
+.announcement-full-text,.event-information-text { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.7; }
+.event-dialog-content { display:flex; flex-direction:column; gap:12px; }
+.event-dialog-content dl { display:grid; gap:12px; margin:0; }
+.event-dialog-content dt { color:var(--muted); font-size:12px; }
+.event-dialog-content dd { margin:0; }
+.schedule-board .schedule-group-with-members { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:12px; padding:4px 8px; }
+.schedule-inline-participants { display:grid; gap:6px; min-width:0; text-align:left; font-size:13px; line-height:1.5; overflow-wrap:anywhere; font-weight:400; }
+.schedule-inline-participants b { font-weight:600; }
+/* The management workspace shares one shell and one set of domain modules. */
+.church-admin { --church-red:#dc2626; --brand-strong:#b91c1c; --focus:#dc2626; }
+.church-admin .primary { background:#dc2626; border-color:#dc2626; color:#fff; }
+.church-admin .icabv-main { width:min(calc(100% - 248px),1500px); max-width:1500px; margin-left:calc(248px + max(0px,(100vw - 248px - 1500px)/2)); }
+.church-admin .admin-workspace { display:none; }
+.church-admin-sidebar .ui-workspace-nav { overflow-y:auto; min-height:0; }
+.workspace-nav-group { display:grid; gap:3px; margin-top:16px; }
+.church-admin-sidebar nav .workspace-nav-group > p { display:block; margin:0 10px 5px; font-size:12px; font-weight:500; color:#b8bec8; text-transform:uppercase; letter-spacing:.06em; }
+.church-admin-sidebar nav .workspace-nav-group button { min-width:0; width:100%; }
+.church-admin-sidebar nav .workspace-nav-group button[aria-current] { background:#dc262622; color:#fff; box-shadow:inset 3px 0 #ef4444; }
+.management-breadcrumb { display:flex; align-items:center; gap:8px; min-width:0; font-size:13px; }
+.management-breadcrumb > span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.admin-account-menu { position:relative; }
+.admin-account-menu > summary { display:grid; place-items:center; min-width:44px; min-height:44px; cursor:pointer; list-style:none; }
+.admin-account-menu > div { position:absolute; right:0; top:100%; z-index:60; display:grid; gap:12px; min-width:220px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:0 8px 30px #0003; }
+.church-admin .icabv-footer { font-size:12px; padding-top:20px; color:var(--muted); }
+.church-admin .management-stat-icon,.church-admin .module-symbol { color:var(--text); background:var(--brand-tint); }
+.records-workspace { min-width:0; display:grid; gap:20px; }
+.records-embedded-shell > .main-shell { margin-left:0; width:100%; min-height:0; }
+.records-embedded-shell .records-content { width:100%; max-width:none; margin:0; padding:0; }
+.records-embedded .page-heading { margin-bottom:24px; }
+.archive-destinations { display:flex; flex-wrap:wrap; gap:8px; }
+.archive-record dl { display:grid; gap:12px; }
+.archive-record dt { color:var(--muted); font-size:13px; }
+.archive-record dd { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+.people-heading { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.people-heading > div { display:flex; gap:8px; flex-wrap:wrap; }
+.people-filters { display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; }
+.people-filters > * { min-width:0; }
+.people-identity { display:flex; gap:12px; align-items:center; min-width:0; flex:1; }
+.people-avatar { display:grid; place-items:center; flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--soft); font-size:13px; color:var(--text); }
+.people-status,.publication-badge { display:inline-block; padding:4px 9px; border-radius:6px; background:var(--soft); font-size:12px; color:var(--text); }
+.people-status.is-unreviewed { background:#a162071f; }
+.record-title { display:inline-flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.demo-badge { padding:2px 7px; border-radius:5px; background:#a1620726; color:var(--text); font-size:12px; font-weight:500; }
+.community-unit-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.community-unit-heading h3 { margin:0; font-size:17px; }
+.community-unit-facts { display:flex; flex-wrap:wrap; gap:12px 28px; margin:0; }
+.community-unit-facts dt { display:flex; gap:6px; align-items:center; color:var(--muted); font-size:13px; }
+.community-unit-facts dd { margin:3px 0 0; font-size:14px; }
+.community-primary-actions { display:flex; flex-wrap:wrap; align-items:start; gap:10px; }
+.community-card-options { position:relative; }
+.community-card-options > summary { cursor:pointer; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; list-style:none; }
+.community-card-options > div { display:grid; gap:8px; padding:12px 0; }
+.community-card-options button { text-align:left; }
+.birthday-month-navigation { display:flex; justify-content:center; align-items:center; gap:8px; }
+.birthday-month-navigation label { width:210px; max-width:calc(100% - 104px); }
+.birthday-sharing-hint { color:var(--muted); font-size:13px; }
+.care-upcoming { border-inline-start:3px solid #7189a4; padding-inline-start:10px; }
+.church-admin .worship-page .module-tabs button[aria-current] { box-shadow:inset 0 -3px #dc2626; }
+.church-admin .worship-filter-panel > .worship-quick-filters { display:flex; justify-content:center; flex-wrap:wrap; background:transparent; gap:8px; }
+.church-admin .worship-filter-panel > .worship-quick-filters button { border:1px solid var(--line); border-radius:20px; padding-inline:18px; }
+.church-admin .money-positive { color:var(--ui-success); }
+.church-admin .money-negative { color:var(--ui-error); }
+.church-admin :is(input,select,textarea):focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+@media(max-width:900px) {
+ .church-admin .icabv-main { width:100%; margin-left:0; padding:24px 16px; }
+ .church-admin-sidebar .ui-workspace-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+ .workspace-nav-group { margin-top:6px; align-content:start; }
+ .church-admin-sidebar nav .workspace-nav-group button { font-size:13px; padding:8px; text-align:left; }
+ .church-admin .icabv-header { padding-inline:16px; }
+ .management-breadcrumb > span { max-width:150px; }
+ .people-filters { grid-template-columns:1fr 1fr; }
+ .people-filters > :first-child { grid-column:1/-1; }
+ .records-embedded-shell .records-content { padding:0; }
+}
+@media(max-width:560px) {
+ .people-identity { flex-basis:100%; }
+ .ui-people-list > li { flex-wrap:wrap; gap:10px; }
+ .ui-people-list > li > .secondary { margin-left:auto; }
+ .management-breadcrumb > span { max-width:95px; }
+ .church-admin .icabv-header { gap:6px; padding-inline:8px; }
+ .church-admin .icabv-header { height:auto; flex-wrap:wrap; padding-block:8px; }
+ .church-admin .icabv-brand { flex:1 1 100%; min-width:0; }
+ .church-admin .icabv-header-actions { gap:0; margin-left:auto; }
+}
+@media(max-width:400px) {
+ .schedule-board .schedule-group-with-members { gap:8px; padding-inline:2px; }
+ .schedule-inline-participants { font-size:12px; }
+}
+
+.ebd-weekly-status { margin:0; color:var(--muted); font-size:13px; }
+.ebd-weekly-error { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--soft); }
+@media(max-width:600px) {
+  .ebd-weekly-table { min-width:0; width:100%; font-size:10px; }
+  .ebd-weekly-table th,.ebd-weekly-table td { height:32px; padding:3px 1px; }
+  .ebd-weekly-table thead th:first-child,.ebd-weekly-table tbody th { width:100px; max-width:100px; padding-left:6px; }
+  .ebd-weekly-table tbody th { font-size:9px; }
+  .ebd-weekly-table th:last-child,.ebd-weekly-table td:last-child { width:34px; }
+  .ebd-weekly-day-icons { gap:1px; }
+  .ebd-weekly-day-icons > svg { width:12px; height:12px; }
+  .visit-walk-icon > svg:last-child { position:static; right:auto; bottom:auto; padding:0; border-radius:0; background:transparent; }
+}
+
+/* Adjustments from the latest screen review. */
+.worship-category-filters button { min-height:36px; }
+.schedule-board .schedule-table thead th:nth-child(3),
+.schedule-board .schedule-table thead th:nth-child(5) { background:color-mix(in srgb,var(--church-red) 5%,var(--soft)); box-shadow:inset 0 -1px 0 color-mix(in srgb,var(--church-red) 28%,var(--line)); }
+.schedule-board .schedule-table tbody td:nth-child(3),
+.schedule-board .schedule-table tbody td:nth-child(5) { background:var(--surface); }
+.schedule-board .schedule-person strong { background:transparent!important; color:var(--text)!important; padding:0!important; border-radius:0!important; }
+.icabv-startup-loading { min-height:calc(100dvh - 190px); display:grid; place-items:center; color:var(--accent-icon); }
+.icabv-startup-spinner { animation:icabv-spin 1s linear infinite; }
+@keyframes icabv-spin { to { transform:rotate(360deg); } }
+.visits-saved-availability { display:grid; gap:7px; }
+.visits-saved-availability h2 { margin:0 0 2px; }
+.visits-saved-availability p { margin:0; color:var(--muted); font-size:13px; line-height:1.55; }
+.visits-saved-availability strong { color:var(--text); }
+.song-chord-sheet { min-width:100%; font-family:Consolas,"Courier New",monospace; white-space:pre; }
+.song-chord-line { position:relative; min-width:100%; min-height:2.35em; padding-top:1.12em; margin-bottom:.12em; line-height:1.25; white-space:pre; }
+.song-chord-label { position:absolute; top:0; color:var(--accent-text); font-size:.78em; font-weight:750; line-height:1; white-space:pre; }
+.song-chord-lyrics { display:block; min-height:1.2em; line-height:1.25; white-space:pre; }
+.member-menu-entry { display:grid; gap:3px; text-align:left; }
+.member-menu-entry > strong { font-weight:650; }
+.member-menu-entry > small { color:var(--muted); font-size:11px; }
+.ebd-weekly-day-icons { width:100%; min-height:24px; display:flex; align-items:center; justify-content:center; gap:4px; }
+.ebd-weekly-day-icons > svg { flex:none; display:block; }
+.member-weekend { display:grid; gap:12px; padding:16px; border:1px solid var(--line); border-radius:14px; background:linear-gradient(140deg,var(--soft),var(--surface)); }
+.member-weekend > .member-heading { margin:0; }
+.member-weekend > .member-heading h2 { margin:0; font-size:18px; }
+.member-weekend .weekend-meeting { background:var(--surface); box-shadow:var(--ui-shadow); }
+.ebd-weekly-table thead th { border-bottom:0!important; box-shadow:none!important; text-align:center; vertical-align:middle; }
+.ebd-weekly-table thead th:first-child { text-align:left; padding-left:8px; }
+.ebd-weekly-table tbody tr,.ebd-weekly-table tbody tr:hover,.ebd-weekly-table tbody tr:focus,.ebd-weekly-table tbody th,.ebd-weekly-table tbody td { background:transparent!important; }
+.ebd-weekly-table tbody td { padding-inline:0; vertical-align:middle; }
+.ebd-weekly-table tbody td:not(:last-child) { padding-inline:0!important; text-align:center!important; vertical-align:middle!important; }
+.ebd-weekly-day-icons { display:grid!important; grid-auto-flow:column; grid-auto-columns:12px; align-items:center; justify-content:center; justify-items:center; width:100%!important; min-width:100%; margin-inline:auto; }
+.ebd-weekly-day-icons > svg { display:block; position:static!important; float:none!important; margin:0 auto!important; transform:none!important; }
+.ebd-weekly-total.is-low { color:#e45454; }
+.ebd-weekly-total.is-medium { color:#d9a51d; }
+.ebd-weekly-total.is-high { color:#31a36a; }
+.ebd-attendance-table thead th { border-bottom:0!important; box-shadow:none!important; }
+.ebd-attendance-table thead th:first-child { border-bottom:0!important; box-shadow:none!important; }
+.ebd-teacher-class { margin:0; color:var(--muted); font-size:13px; }
+.ebd-annual-history { display:grid; gap:12px; }
+.ebd-annual-history h2,.ebd-annual-history p { margin:0; }
+.ebd-annual-history .module-row > div:first-child > p { color:var(--muted); font-size:12px; }
+.ebd-annual-history .module-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.ebd-history-legend { display:flex; flex-wrap:wrap; gap:14px; color:var(--muted); font-size:11px; }
+.ebd-history-legend > span { display:inline-flex; align-items:center; gap:6px; }
+.ebd-history-legend i { width:9px; height:9px; border-radius:3px; background:#4285f4; }
+.ebd-history-legend i.is-presence { background:#28a36a; }
+.ebd-annual-chart { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:6px; min-width:0; padding:10px 0 4px; border-bottom:1px solid var(--line); }
+.ebd-annual-month { display:grid; grid-template-rows:96px auto auto; justify-items:center; align-items:end; gap:4px; min-width:0; }
+.ebd-annual-bars { display:flex; align-items:end; justify-content:center; gap:3px; width:100%; height:100%; border-bottom:1px solid var(--line); }
+.ebd-annual-bars > span { display:block; width:min(12px,32%); min-height:0; border-radius:4px 4px 0 0; background:#4285f4; }
+.ebd-annual-bars > .is-presence { background:#28a36a; }
+.ebd-annual-month > strong { font-size:10px; text-transform:capitalize; }
+.ebd-annual-month > small { color:var(--muted); font-size:8px; white-space:nowrap; }
+.ebd-annual-chart-note { color:var(--muted); font-size:10px; }
+.ebd-profile-picker { display:grid; gap:12px; width:min(100%,680px); margin-inline:auto; }
+.ebd-profile-picker h1,.ebd-profile-picker p { margin:0; }
+.ebd-profile-picker > p { color:var(--muted); }
+.ebd-profile-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:4px; }
+.ebd-profile-option { display:grid; align-content:start; justify-items:start; gap:7px; min-height:148px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--text); text-align:left; cursor:pointer; }
+.ebd-profile-option > svg { color:var(--accent-icon); margin-bottom:2px; }
+.ebd-profile-option:not(:disabled):hover { border-color:var(--accent-icon); background:var(--soft); }
+.ebd-profile-option strong { font-size:15px; }
+.ebd-profile-option span { color:var(--muted); font-size:12px; line-height:1.45; }
+.ebd-profile-option small { font-size:11px; }
+.ebd-profile-option.is-unavailable { opacity:.42; filter:saturate(.45); cursor:not-allowed; }
+.ebd-teacher-navigation { display:grid; gap:8px; }
+.icabv-main .ebd-profile-pill { display:grid; place-items:center; width:100%; min-height:48px; padding:8px 14px; color:var(--text); }
+.icabv-main .ebd-profile-back { justify-self:start; min-height:36px; padding:6px 10px; font-size:12px; }
+.ebd-teacher-navigation .module-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; padding-bottom:8px; }
+.icabv-main .ebd-teacher-navigation .module-tabs > button { width:100%; padding-inline:4px; white-space:nowrap; font-size:12px; }
+.ebd-attendance-counts { justify-content:center; text-align:center; }
+@media(max-width:600px) {
+  .member-weekend { padding:12px; }
+  .ebd-annual-chart { gap:2px; }
+  .ebd-annual-month { grid-template-rows:80px auto auto; gap:3px; }
+  .ebd-annual-month > strong { font-size:9px; }
+  .ebd-annual-month > small { font-size:7px; }
+  .ebd-profile-options { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(154px,auto)); gap:8px; }
+  .ebd-profile-option { min-height:154px; padding:12px; }
+  .ebd-profile-option > span { font-size:11px; }
+  .icabv-main .ebd-teacher-navigation .module-tabs > button { font-size:11px; }
+  .schedule-board .schedule-table td:last-child { padding-left:5px; padding-right:9px; }
+  .schedule-board .schedule-table td:last-child .schedule-person strong { font-size:clamp(9px,1.8vw,10px); }
+  .ebd-weekly-day-icons { min-height:22px; gap:3px; }
+}

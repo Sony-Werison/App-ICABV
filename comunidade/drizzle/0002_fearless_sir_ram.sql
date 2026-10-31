@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `access_church_member` ON `church_access` (`church_owner`,`member_id`);

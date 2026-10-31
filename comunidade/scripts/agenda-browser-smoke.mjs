@@ -1,0 +1,97 @@
+// Calendar integration with isolated Supabase responses. No real data is modified.
+import {chromium} from '@playwright/test';
+import {readFileSync,mkdirSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const host=readFileSync(new URL('../.env.local',import.meta.url),'utf8').match(/^NEXT_PUBLIC_SUPABASE_URL=(.*)$/m)[1].trim().replace(/^['"]|['"]$/g,'');
+const base=process.env.ICABV_TEST_URL||'http://localhost:5173',ref=new URL(host).hostname.split('.')[0];
+const uid='61000000-0000-4000-8000-000000000001',pid='71000000-0000-4000-8000-000000000001';
+const token='eyJhbGciOiJIUzI1NiJ9.'+Buffer.from(JSON.stringify({sub:uid,role:'authenticated',aud:'authenticated',exp:Math.floor(Date.now()/1000)+3600})).toString('base64url')+'.signature';
+const user={id:uid,email:'calendar@example.invalid',aud:'authenticated',role:'authenticated',email_confirmed_at:new Date().toISOString(),app_metadata:{},user_metadata:{},created_at:new Date().toISOString()};
+const session={access_token:token,refresh_token:'calendar-test-only',expires_in:3600,expires_at:Math.floor(Date.now()/1000)+3600,token_type:'bearer',user};
+const month=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo'}).format(new Date()).slice(0,7);
+const nextDate=new Date(`${month}-15T12:00:00Z`);nextDate.setUTCMonth(nextDate.getUTCMonth()+1);const nextMonth=nextDate.toISOString().slice(0,7);
+const event=(id,title,day,category='Culto',status='published',m=month)=>({id,title,description:'Descrição fictícia',starts_at:`${m}-${day}T12:00:00Z`,ends_at:`${m}-${day}T14:00:00Z`,location:'Igreja',category,status,capacity:null,audience:'public'});
+const events=[...Array.from({length:22},(_,i)=>event('e'+i,'Evento de teste '+i,'06')),event('late','Evento após a primeira página','20','Encontro'),event('draft','Rascunho','08','Culto','draft'),event('cancel','Cancelado','09','Culto','canceled'),event('next','Evento do próximo mês','02','Encontro','published',nextMonth)];
+events.push(event('today','Evento de hoje','15'));
+const requestedPages=[],countBatches=[],errors=[];
+const browser=await chromium.launch({headless:true});
+try {
+ const context=await browser.newContext({viewport:{width:390,height:844}});
+ await context.addInitScript(({key,session})=>{localStorage.setItem(key,JSON.stringify(session));localStorage.setItem('icabv-theme','dark');},{key:`sb-${ref}-auth-token`,session});
+ await context.route(host+'/**',async route=>{
+  const req=route.request(),url=new URL(req.url()),name=url.pathname.split('/').at(-1);let data=[];
+  if(url.pathname.startsWith('/auth/'))data=user;
+  else if(name==='persons')data=[{id:pid,auth_user_id:uid,full_name:'Pessoa Teste',onboarded_at:new Date().toISOString()}];
+  else if(name==='my_roles')data=['admin'];
+  else if(name==='browse_events'){
+    const args=req.postDataJSON();assert.equal(args.include_past,true);
+    requestedPages.push(args.page);
+    data=events.filter(e=>(!args.search||e.title.toLowerCase().includes(args.search.toLowerCase()))&&(!args.category||e.category.toLowerCase()===args.category.toLowerCase())).slice(args.page*20,args.page*20+21);
+  } else if(name==='event_availability_for'){const ids=req.postDataJSON().events;countBatches.push(ids.length);assert.ok(ids.length<=20);}
+  if(req.headers().accept?.includes('vnd.pgrst.object')&&Array.isArray(data))data=data[0]??null;
+  await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(data)});
+ });
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ await page.clock.setFixedTime(new Date(`${month}-15T15:00:00Z`));
+ mkdirSync('test-results/agenda',{recursive:true});
+ await page.goto(base+'/app?tab=agenda');
+ await page.getByRole('heading',{name:'Agenda',exact:true}).waitFor();
+ const calendar=page.locator('.agenda-calendar');
+ await calendar.getByRole('button',{name:/20 .* · 1 evento$/}).waitFor();
+ assert.ok(requestedPages.includes(1),'Calendário inclui a segunda página');
+ assert.equal(await calendar.locator('.has-events').count(),3,'Rascunhos e cancelados não marcam dias');
+ await page.getByText('Evento de teste 0',{exact:true}).waitFor();
+ assert.equal(await page.getByText('Evento do próximo mês',{exact:true}).count(),0);
+ assert.equal(await page.locator('.agenda-date-heading').count(),0,'Datas ficam apenas nos cards');
+ await page.getByText('Evento de teste 0',{exact:true}).waitFor();
+ await calendar.getByRole('button',{name:/6 .* · 22 eventos$/}).click();
+ await page.getByText('Evento de teste 0',{exact:true}).waitFor();
+ assert.equal(await page.locator('.agenda-date-heading').count(),0,'Cards não repetem cabeçalhos de data');
+ await page.locator('.agenda-compact-list').getByRole('button',{name:'Próxima',exact:true}).click();
+ assert.equal(await page.locator('.agenda-date-heading').count(),0,'Paginação mantém a lista compacta');
+ await page.getByText('Evento de teste 8',{exact:true}).waitFor();
+ await page.locator('.agenda-compact-list').getByRole('button',{name:'Anterior',exact:true}).click();
+ assert.ok(countBatches.includes(20),'Contagens respeitam o limite da API');
+ await calendar.getByRole('button',{name:/20 .* · 1 evento$/}).click();
+ await page.getByText('Evento após a primeira página',{exact:true}).waitFor();
+ assert.equal(await page.getByText('Evento de teste 0',{exact:true}).count(),0);
+ assert.equal(await page.getByText('Evento do próximo mês',{exact:true}).count(),0,'Selecionar uma data continua filtrando a lista');
+ await page.getByRole('button',{name:'Ver evento: Evento após a primeira página',exact:true}).click();
+ await page.getByRole('button',{name:'Compartilhar evento',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Fechar detalhes: Evento após a primeira página',exact:true}).click();
+ await calendar.getByRole('button',{name:/, 8 de .* · 0 eventos$/}).click();
+ await page.locator('.agenda-commitments').waitFor({state:'hidden'});
+ await page.getByRole('button',{name:'Ver mês completo',exact:true}).click();
+ assert.equal(await page.getByText('Evento do próximo mês',{exact:true}).count(),0);
+ await page.getByText('Evento de teste 0',{exact:true}).waitFor();
+ await calendar.getByRole('button',{name:'Próximo mês da agenda',exact:true}).click();
+ await page.getByText('Evento do próximo mês',{exact:true}).waitFor();
+ assert.equal(await calendar.locator('.has-events').count(),1);
+ await calendar.getByRole('button',{name:'Mês anterior da agenda',exact:true}).click();
+ assert.equal(await page.getByText('Evento do próximo mês',{exact:true}).count(),0);
+ await calendar.getByRole('button',{name:/6 .* · 22 eventos$/}).waitFor();
+ await calendar.locator('.agenda-calendar-day').first().focus();
+ await page.keyboard.press('ArrowRight');
+ assert.equal(await calendar.locator('.agenda-calendar-day').nth(1).evaluate(el=>el===document.activeElement),true);
+ for(const width of [320,390,575,1440]){
+  await page.setViewportSize({width,height:900});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Agenda cabe em ${width}px`);
+  const bounds=await calendar.boundingBox(),other=await page.locator('.agenda-commitments').boundingBox();assert.equal(bounds.x,other.x);assert.equal(bounds.width,other.width,'Calendário usa as mesmas margens da lista');
+  assert.equal(await calendar.evaluate(el=>el.getBoundingClientRect().height<400),true,'Calendário compacto');
+  assert.equal(await page.locator('.agenda-compact-list .compact-card').first().evaluate(el=>el.getBoundingClientRect().height<=90),true,'Compromisso usa linha compacta');
+ }
+ await page.setViewportSize({width:390,height:844});
+ const filters=calendar.getByRole('group',{name:'Compromissos visíveis',exact:true});
+ assert.equal(await page.getByText('Buscar e filtrar eventos',{exact:true}).count(),0);
+ assert.equal(await page.getByLabel('Buscar evento ou local',{exact:true}).count(),0);
+ await filters.getByRole('button',{name:'Aniversários',exact:true}).click();
+ assert.equal(await calendar.locator('.has-events').count(),0,'Filtro de eventos remove os marcadores');
+ assert.equal(await page.getByText('Evento do próximo mês',{exact:true}).count(),0,'Filtro também remove eventos da lista');
+ await filters.getByRole('button',{name:'Aniversários',exact:true}).click();
+ await calendar.getByRole('button',{name:/6 .* · 22 eventos$/}).waitFor();
+ assert.equal(await calendar.locator('.agenda-event-icon').count(),4,'Ícone de calendário na legenda e nos dias com eventos');
+ await page.screenshot({path:'test-results/agenda/calendar-mobile.png',fullPage:false});
+ assert.deepEqual(errors,[]);
+ console.log('OK: calendário completo, dias destacados, seleção, mês seguinte, filtros, teclado, detalhes, lotação em lotes e responsividade.');
+ await context.close();
+} finally {await browser.close();}

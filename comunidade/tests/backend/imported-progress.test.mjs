@@ -1,0 +1,41 @@
+import {PGlite} from '@electric-sql/pglite';
+import {readFile,readdir} from 'node:fs/promises';
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+test('EBD importada: histórico conclui módulo, bloqueia reenvio e participa dos limites de estudo',async()=>{
+ const db=new PGlite();try{
+  await db.exec("create role anon nologin;create role authenticated nologin;create schema auth;create table auth.users(id uuid primary key,raw_user_meta_data jsonb,email text,email_confirmed_at timestamptz);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated,anon;grant execute on function auth.uid() to authenticated,anon;");
+  const dir=new URL('../../backend/supabase/migrations/',import.meta.url);
+  for(const f of (await readdir(dir)).filter(n=>n.endsWith('.sql')&&!n.startsWith('202610220021')&&!n.startsWith('202610220022')).sort())await db.exec(await readFile(new URL(f,dir),'utf8'));
+  const uid='10000000-0000-4000-8000-000000000099';await db.query('insert into auth.users(id) values($1)',[uid]);
+  const one=async(sql,args=[]) => (await db.query(sql,args)).rows[0];
+  const p=(await one('select id from public.persons where auth_user_id=$1',[uid])).id;
+  const c=(await one("insert into public.ebd_classes(name) values('Turma de regressão') returning id")).id;
+  const m=(await one("insert into public.ebd_modules(class_id,title,daily_limit) values($1,'Módulo antigo',1) returning id",[c])).id;
+  const next=(await one("insert into public.ebd_modules(class_id,title) values($1,'Módulo seguinte') returning id",[c])).id;
+  await db.query("insert into public.ebd_class_members(class_id,person_id,role,module_id,next_module_id) values($1,$2,'student',$3,$4)",[c,p,m,next]);
+  const a=(await one("insert into public.ebd_activities(module_id,title,kind,published,questions) values($1,'Leitura importada','bible',true,'[]') returning id",[m])).id;
+  const b=(await one("insert into public.ebd_activities(module_id,title,kind,published,questions) values($1,'Próxima leitura','bible',true,'[]') returning id",[m])).id;
+  await db.query("insert into public.ebd_legacy_history(id,person_id,class_id,title,activity_id,created_at) values(gen_random_uuid(),$1,$2,'Leitura importada',$3,now())",[p,c,a]);
+  await db.query("select set_config('request.jwt.claim.sub',$1,false)",[uid]);await db.exec('set role authenticated');
+  await assert.rejects(db.query('select public.submit_ebd_activity($1,$2)',[b,{}]),/study_limit_reached/);
+  await assert.rejects(db.query('select public.advance_ebd_module($1)',[c]),/module_incomplete/);
+  await db.exec('reset role');await db.query('update public.ebd_modules set daily_limit=0,weekly_bible_limit=1 where id=$1',[m]);await db.exec('set role authenticated');
+  await assert.rejects(db.query('select public.submit_ebd_activity($1,$2)',[b,{}]),/study_limit_reached/);
+  await db.exec('reset role');await db.query('update public.ebd_modules set weekly_bible_limit=0 where id=$1',[m]);await db.exec('set role authenticated');
+  await assert.rejects(db.query('select public.submit_ebd_activity($1,$2)',[a,{reflection:'Resposta preservada'}]),/already_submitted/);
+  await db.exec('reset role');await db.query("insert into public.ebd_legacy_history(id,person_id,class_id,title,activity_id,created_at) values(gen_random_uuid(),$1,$2,'Segunda leitura',$3,now())",[p,c,b]);await db.exec('set role authenticated');
+  await db.query('select public.advance_ebd_module($1)',[c]);
+  assert.equal((await one('select module_id from public.ebd_class_members where class_id=$1 and person_id=$2',[c,p])).module_id,next);
+  assert.equal((await one('select count(*)::int n from public.ebd_submissions')).n,0);
+  await db.exec('reset role');
+  await db.query("insert into public.legacy_mapping values('ebd','activity','source-class:module:7',$1)",[a]);
+  await db.exec(await readFile(new URL('202610220021_imported_activity_order.sql',dir),'utf8'));
+  assert.equal((await one('select position from public.ebd_activities where id=$1',[a])).position,7);
+  await db.exec(await readFile(new URL('202610220022_ebd_history_queries.sql',dir),'utf8'));
+  await db.query("insert into public.role_assignments(person_id,role) values($1,'admin')",[p]);
+  await db.exec('set role authenticated');
+  await db.query('select public.save_ebd_activity($1,$2,$3)',[a,{module_id:m,title:'Atividade reordenada',kind:'bible',questions:[],position:3},{}]);
+  assert.equal((await one('select position from public.ebd_activities where id=$1',[a])).position,3);
+ }finally{await db.close();}
+});
