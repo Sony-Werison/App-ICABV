@@ -144,7 +144,7 @@ export class OfflineTransport {
           if (response.status >= 500 || response.status === 408 || response.status === 429) break;
           next.state = "review";
           const failure = data as { message?: string; code?: string };
-          next.error = response.status === 401 ? "Entre novamente para enviar esta alteração." : failure.message?.includes("version_conflict") || failure.message?.includes("offline_conflict") ? "O registro mudou no servidor. Confira a versão atual antes de refazer esta alteração." : "O servidor não aceitou esta alteração. Confira os dados e seu acesso antes de tentar novamente.";
+          next.error = response.status === 401 ? "Entre novamente para enviar esta alteração." : failure.message?.includes("version_conflict") || failure.message?.includes("offline_conflict") ? "O registro mudou no servidor. Confira a versão atual antes de refazer esta alteração." : next.command.kind === "rpc" && next.command.target === "save_visit_availability" && failure.code === "22023" && failure.message === "invalid_availability" ? "A disponibilidade foi rejeitada. Confira os dias e a frequência ou selecione datas a partir de hoje, dentro dos próximos 90 dias." : "O servidor não aceitou esta alteração. Confira os dados e seu acesso antes de tentar novamente.";
           await this.store.put(next);
           this.results.set(next.id, { data: null, error: { ...failure, message: failure.message ?? next.error }, status: response.status });
           break;

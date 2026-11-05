@@ -51,14 +51,14 @@ export function ScheduleBoard({ entries, month: controlledMonth, onMonthChange, 
   return <section className="schedule-board" aria-label={`${label} de ${monthLabel(month)}`}>
     <div className="schedule-board-toolbar">
       <div className="schedule-month-control"><button className="icon-btn" type="button" aria-label="Mês anterior da escala" onClick={()=>moveMonth(-1)}><ChevronLeft size={19}/></button>
-        <label><span className="sr-only">Mês da escala</span><input aria-label="Mês da escala" type="month" value={month} onChange={e=>changeMonth(e.target.value)}/></label>
+        <label><span className="sr-only">Mês da escala</span><input aria-label="Mês da escala" lang="pt-BR" type="month" value={month} onChange={e=>changeMonth(e.target.value)}/></label>
         <button className="icon-btn" type="button" aria-label="Próximo mês da escala" onClick={()=>moveMonth(1)}><ChevronRight size={19}/></button>
       </div>
       {groups.length>1&&<label className="schedule-group-filter">Equipe<select aria-label="Equipe da escala" value={activeGroup} onChange={e=>setGroup(e.target.value)}><option value="">Todas as equipes</option>{groups.map(value=><option key={value}>{value}</option>)}</select></label>}
     </div>
     {rows.length?<>
       <div className="schedule-table-wrap" role="region" aria-label="Quadro mensal de escalas" tabIndex={0}>
-        <table className="schedule-table"><colgroup><col className="schedule-date-column"/>{columns.map(role=><col key={role}/>)}</colgroup><caption className="sr-only">{label} de {monthLabel(month)}</caption><thead><tr><th scope="col">Data</th>{columns.map(role=><th scope="col" key={role}><span><RoleIcon role={role}/>{role}</span></th>)}</tr></thead>
+        <table className="schedule-table"><colgroup><col className="schedule-date-column"/>{columns.map(role=><col key={role}/>)}</colgroup><caption className="sr-only">{label} de {monthLabel(month)}</caption><thead><tr><th scope="col">Data</th>{columns.map(role=><th scope="col" key={role}><span><RoleIcon role={role}/>{role==="Multimídia"?<abbr title="Multimídia">Multim.</abbr>:role}</span></th>)}</tr></thead>
           <tbody>{rows.map(row=><tr key={row.date}><th scope="row"><DateLabel date={row.date}/></th>{row.cells.map(cell=><td key={cell.role}>{renderEntries(cell.entries,cell.role,row.date)}</td>)}</tr>)}</tbody>
         </table>
       </div>

@@ -209,20 +209,10 @@ export function People({
   };
   return (
     <section className="card people-workspace">
-      <header className="people-heading">
-        <div>
-          <span className="eyebrow">CADASTROS DA COMUNIDADE</span>
-          <h1>Pessoas</h1>
-          <p className="people-intro">Um cadastro único reúne identidade, situação, contatos, equipes e perfis de acesso.</p>
-        </div>
-        <div className="people-actions">
-          <button className="primary" onClick={()=>setDialog("create")}>Cadastrar pessoa</button>
-          {admin&&<button className="secondary" onClick={()=>setDialog("normalize")}>Normalizar cadastros</button>}
-          {admin&&<button className="secondary" onClick={()=>setDialog("identity")}>Revisar duplicados</button>}
-        </div>
-      </header>
+      <header className="people-heading"><h1>Pessoas</h1></header>
       <div className="people-filters">
         <SearchField label="Buscar pessoa" value={search} onChange={value=>{setSearch(value);setPage(0);}}/>
+        <button className="primary people-create-person" onClick={()=>setDialog("create")}>Cadastrar pessoa</button>
         <label className="icabv-field">Situação<select aria-label="Filtrar situação das pessoas" value={status} onChange={e=>{setStatus(e.target.value);setPage(0);}}><option value="all">Todas</option><option value="unreviewed">Pendente de revisão</option><option value="visitor">Visitante confirmado</option><option value="member">Membro</option><option value="leader">Líder</option></select></label>
         <label className="icabv-field">Grupo ou equipe<select aria-label="Filtrar grupo ou equipe" value={unit} onChange={e=>{setUnit(e.target.value);setPage(0);}}><option value="">Todos</option>{units.data?.map(u=><option value={u.id} key={u.id}>{u.title}</option>)}</select></label>
       </div>
@@ -276,7 +266,7 @@ export function People({
                 {!!p.roles?.length && <span className="people-tags">{p.roles.map(role=><span key={role}>{roleLabels[role]}</span>)}</span>}
                 {!!p.units?.length && <small>{p.units.map(u=>u.title).join(" · ")}</small>}
               </div>
-              <button className="secondary" aria-label={`Editar perfil: ${p.full_name}`} onClick={()=>{setEditing(p);setEditError("");}}>Editar perfil</button>
+              <button className="secondary" aria-label={`Editar perfil: ${p.full_name}`} onClick={()=>{setEditing(p);setEditError("");}}>Editar</button>
             </li>
           ))}
         </ul>

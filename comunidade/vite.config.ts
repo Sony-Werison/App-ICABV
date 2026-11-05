@@ -45,6 +45,10 @@ export default defineConfig(async ({ command }) => {
 
   return {
     server: {
+      // The local preview redirects WebSocket upgrades and makes Vite's HMR
+      // client retry until vinext's dev server crashes. HMR is unnecessary
+      // for serving the portable local preview.
+      ...(managedLinux ? {} : { hmr: false }),
       ...(managedLinux
         ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
         : {}),

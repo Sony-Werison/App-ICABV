@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "./supabase";
 import { ChevronDown } from "lucide-react";
@@ -62,9 +62,16 @@ export function useModuleRows<T>(
 export function useModuleAction() {
   const client = useQueryClient(),
     lock = useRef(false);
+  const messageTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [busy, setBusy] = useState(false),
     [message, setMessage] = useState(""),
     [failed, setFailed] = useState(false);
+  const showMessage = (value: string) => {
+    if (messageTimer.current) clearTimeout(messageTimer.current);
+    setMessage(value);
+    messageTimer.current = setTimeout(() => setMessage(""), 3500);
+  };
+  useEffect(() => () => { if (messageTimer.current) clearTimeout(messageTimer.current); }, []);
   async function act(
     task: () => PromiseLike<{ error: unknown }> | Promise<unknown>,
     success = "Salvo com sucesso.",
@@ -72,13 +79,14 @@ export function useModuleAction() {
     if (lock.current) return false;
     lock.current = true;
     setBusy(true);
+    if (messageTimer.current) clearTimeout(messageTimer.current);
     setMessage("");
     setFailed(false);
     const before = offlineVersion();
     try {
       const r = await task();
       if (r && typeof r === "object" && "error" in r && r.error) throw r.error;
-      setMessage(savedMessage(before, success));
+      showMessage(savedMessage(before, success));
       await client.invalidateQueries({ queryKey: ["modules"] });
       return true;
     } catch (e) {
@@ -88,7 +96,7 @@ export function useModuleAction() {
       const normalizedReason = reason.toLowerCase();
       const errorCode = e && typeof e === "object" && "code" in e ? String((e as { code: unknown }).code) : "";
       setFailed(true);
-        setMessage(
+        showMessage(
           errorCode === "42702"
             ? "O servidor ainda está usando a versão antiga do cadastro de visitas. Atualize as migrações do banco e tente sincronizar novamente."
             :

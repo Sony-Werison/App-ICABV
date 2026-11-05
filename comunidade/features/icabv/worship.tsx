@@ -5,7 +5,6 @@ import { supabase } from "./supabase";
 import {
   ModuleForm,
   ModuleState,
-  ModuleTabs,
   csvData,
   downloadData,
   moduleRpc,
@@ -42,7 +41,6 @@ import { Disclosure, PagedList, searchText } from "./presentation";
 import {Search,Music2,ChevronRight,MoreHorizontal,ArrowUp,ArrowDown,Trash2,Plus,Play,Pause,Radio,FileText,ZoomIn,ZoomOut} from "lucide-react";
 import {WorshipDialog,WorshipRolePicker} from "./worship-ui";
 
-const tabs = ["Biblioteca"];
 const SONG_PAGE_SIZE = 12;
 const localDate = (iso: string) => formatBrasilia(iso);
 export function Worship({
@@ -58,6 +56,9 @@ export function Worship({
   initialSection?: string;
   initialServiceId?: string;
 }) {
+  const tabs = manager
+    ? ["Biblioteca", "Escalas", "Calendário mensal", "Ensaios", "Sala ao vivo", "Histórico", "Equipe", "Configurações"]
+    : ["Biblioteca", "Escalas", "Calendário mensal", "Ensaios", "Sala ao vivo", "Histórico"];
   const [tab, setTab] = useState(initialSection && tabs.includes(initialSection) ? initialSection : "Biblioteca"),
     [search, setSearch] = useState(""),
     [category, setCategory] = useState("Todas"),
@@ -119,11 +120,6 @@ export function Worship({
     return () => { cancelled = true; };
   }, [songs.data, backgroundAttempt]);
   const filteredSongs=rows.filter(s=>!s.archived&&(category==="Todas"||s.category===category)&&(quickFilter!=="new"||s.is_new)&&(quickFilter!=="chords"||songHasChords(s))&&searchText(s.title+" "+s.artist+" "+s.lyrics).includes(searchText(search))).sort((a,b)=>a.title.localeCompare(b.title,"pt-BR"));
-  const change = (next: string) => {
-    setTab(next);
-    setEditing(undefined);
-    setSong(null);
-  };
   const saveSong = async (v: Data) => {
     let pdf_links: { name: string; url: string }[] = [];
     try {
@@ -159,22 +155,14 @@ export function Worship({
         <h1>Louvor</h1>
         <p>Músicas e preparação dos cultos.</p>
       </header>
-      {tabs.length > 1 && <ModuleTabs
-        tabs={tabs}
-        current={tab}
-        onChange={change}
-        label="Áreas do Louvor"
-        unified
-        primaryTabs={["Biblioteca", "Escalas", "Sala ao vivo", "Ensaios"]}
-      />}
       {editing===undefined&&action.notice}
       <ModuleState query={songs}>
             {tab === "Biblioteca" && (
               <>
                 <div className="worship-library-toolbar">
                   <label className="icabv-field worship-search">
-                    Buscar músicas
-                    <span><Search size={18} aria-hidden="true"/><input type="search" placeholder="Título, artista ou trecho da letra"
+                    <span className="worship-search-label">Buscar músicas</span>
+                    <span><Search size={18} aria-hidden="true"/><input type="search" placeholder="Título, artista ou letra"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                     /></span>
@@ -401,7 +389,7 @@ export function SongReader({
       {navigation}
       <div className="module-row">
         <h2>{song.title}</h2>
-        <span className="worship-key" aria-label={`Tom atual: ${transposeChord(content.musical_key,transposition)}`}>{content.musical_key==="N/A"?"—":transposeChord(content.musical_key,transposition)}</span>
+        {showingChords&&<span className="worship-key" aria-label={`Tom atual: ${transposeChord(content.musical_key,transposition)}`}>{content.musical_key==="N/A"?"—":transposeChord(content.musical_key,transposition)}</span>}
       </div>
       <p>
         {song.artist}

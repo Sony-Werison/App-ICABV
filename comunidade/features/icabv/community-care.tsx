@@ -31,7 +31,7 @@ export function Birthdays({ compact = false, weekly = false, date, onNavigate }:
   const daily=compact&&!weekly&&!date;
   if((daily||date||weekly)&&query.isSuccess&&rows.length===0)return null;
   return <section className={`${daily?"member-birthdays":"icabv-card"} care-birthdays`}>
-    <div className="member-heading"><h2>Aniversariantes {date ? "do dia" : weekly ? "da semana" : compact ? "de hoje" : "da igreja"}</h2>
+    <div className="member-heading"><h2>{compact&&<Cake size={16} aria-hidden="true"/>}{compact?"Aniversariantes hoje":`Aniversariantes ${date ? "do dia" : weekly ? "da semana" : "da igreja"}`}</h2>
       {(compact || weekly || date) && <button onClick={() => onNavigate?.("birthdays")}>Ver todos <ChevronRight size={15} /></button>}
     </div>
     {!compact && !weekly && !date && <><p className="birthday-sharing-hint">Para aparecer no informe, preencha sua data de nascimento e ative “Compartilhar meu aniversário com a igreja” no Perfil. Apenas o dia e o mês são exibidos.</p><div className="birthday-month-navigation"><button type="button" className="icon-btn" aria-label="Mês anterior dos aniversariantes" onClick={()=>{setMonth(month===1?12:month-1);setPage(0);}}>‹</button><label className="icabv-field"><span className="sr-only">Mês</span>
@@ -40,7 +40,7 @@ export function Birthdays({ compact = false, weekly = false, date, onNavigate }:
       </select>
     </label><button type="button" className="icon-btn" aria-label="Próximo mês dos aniversariantes" onClick={()=>{setMonth(month===12?1:month+1);setPage(0);}}>›</button></div></>}
     <ModuleState query={query}>
-      {rows.length ? daily?<div className="member-birthday-cards">{rows.map(person=><CompactCard key={person.person_id} title={person.full_name} date={today} icon={Cake} description={person.anniversary_type==="wedding"?<span className="care-badge">Casamento</span>:"Aniversário"}/>)}</div>:<ul className="care-birthday-list">{rows.map(p => {
+      {rows.length ? daily?<div className="member-birthday-cards icabv-card">{rows.map(person=><CompactCard key={person.person_id} title={person.full_name} titleIcon={Cake} date={today} description={person.anniversary_type==="wedding"?<span className="care-badge">Casamento</span>:"Aniversário"}/>)}</div>:<ul className="care-birthday-list">{rows.map(p => {
         const isToday = p.birth_month === currentMonth && p.birth_day === Number(today.slice(8, 10));
         const year=Number(today.slice(0,4)),now=Date.parse(`${today}T00:00:00Z`),anniversary=Date.UTC(year,p.birth_month-1,p.birth_day),days=Math.round(((anniversary<now?Date.UTC(year+1,p.birth_month-1,p.birth_day):anniversary)-now)/86400000);
         return <li key={p.person_id} className={isToday ? "care-today" : days<=7?"care-upcoming":""}>

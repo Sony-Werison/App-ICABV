@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { LoadingState, Disclosure, PagedList } from "./presentation";
 import { Linking, ScrollView, Share, Text, View } from "./web-native";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -12,9 +12,8 @@ import { useAgendaCommitments } from "./agenda-commitments";
 import { AgendaCommitmentCard } from "./agenda-commitment-card";
 import {ModuleDialog} from "./module-dialog";
 import { CompactCard } from "./compact-card";
-import {Birthdays} from "./community-care";
 import {RecordTitle} from "./record-title";
-import { calendarDate, eventsInMonth, eventOnDate, loadAgendaPages } from "./agenda-calendar-model";
+import { calendarDate, eventsInMonth, loadAgendaPages } from "./agenda-calendar-model";
 
 export type Event = {
   id: string;
@@ -473,17 +472,17 @@ export function Agenda({
   onLogin: () => void;
   onNavigate?: (tab:string,section?:string,key?:string)=>void;
 }) {
-  const [visibility,setVisibility]=useState<AgendaVisibility>({events:true,birthdays:true,schedules:true});
+  const [visibility,setVisibility]=useState<AgendaVisibility>({events:true,birthdays:false,schedules:false});
   const [month,setMonth]=useState(()=>calendarDate(new Date().toISOString()).slice(0,7));
   const [selectedDate,setSelectedDate]=useState<string|null>(null);
   const [selected,setSelected]=useState<string|null>(null);
   const events=useQuery({queryKey:["core","calendar-events"],queryFn:()=>loadAgendaPages<Event>(page=>rpc("browse_events",{page,search:"",category:"",include_past:true}))});
   const personal=useAgendaCommitments(personId,month);
   const visibleCommitments=personal.items.filter(item=>item.kind==="birthday"?visibility.birthdays:visibility.schedules);
-  const visiblePersonal=visibleCommitments.filter(item=>item.kind==="schedule"&&(!selectedDate||item.date===selectedDate));
+  const visiblePersonal=visibleCommitments;
   const monthly=eventsInMonth(visibility.events?events.data??[]:[],month);
-  const upcoming=monthly.filter(event=>!selectedDate||eventOnDate(event,selectedDate));
-  const agendaRows=[...upcoming.map(event=>({kind:"event" as const,id:`event:${event.id}`,date:selectedDate??(calendarDate(event.starts_at).slice(0,7)<month?`${month}-01`:calendarDate(event.starts_at)),time:new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit"}).format(new Date(event.starts_at)),event})),...visiblePersonal.map(item=>({kind:"personal" as const,id:item.id,date:item.date,time:item.time??"",item}))].sort((a,b)=>a.date.localeCompare(b.date)||a.time.localeCompare(b.time)||a.id.localeCompare(b.id));
+  const upcoming=monthly;
+  const agendaRows=[...upcoming.map(event=>({kind:"event" as const,id:`event:${event.id}`,date:calendarDate(event.starts_at),time:new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit"}).format(new Date(event.starts_at)),event})),...visiblePersonal.map(item=>({kind:"personal" as const,id:item.id,date:item.date,time:item.time??"",item}))].sort((a,b)=>(selectedDate?(a.date===selectedDate? -1:0)-(b.date===selectedDate? -1:0):0)||a.date.localeCompare(b.date)||a.time.localeCompare(b.time)||a.id.localeCompare(b.id));
   const hideCommitments=agendaRows.length===0&&!events.isPending&&!events.error&&!personal.pending&&!personal.paused&&!personal.errors.length;
 
   const counts = useQuery({
@@ -500,16 +499,19 @@ export function Agenda({
       <Title>Agenda</Title>
       <AgendaCalendar visibility={visibility} onVisibilityChange={value=>{setVisibility(value);setSelected(null);}} commitments={visibleCommitments} events={monthly} month={month} selectedDate={selectedDate} loading={events.isPending} onMonthChange={value=>{setMonth(value);setSelectedDate(null);setSelected(null);}} onSelectDate={value=>{setSelectedDate(value);setSelected(null);}}/>
       {hideCommitments?(selectedDate?<button className="text-btn" onClick={()=>{setSelectedDate(null);setSelected(null);}}>Ver mês completo</button>:null):<section className="icabv-card agenda-commitments" aria-label="Eventos e minhas escalas">
-      <div className="agenda-results-heading"><h3>{selectedDate?new Intl.DateTimeFormat("pt-BR",{weekday:"long",day:"numeric",month:"long",timeZone:"UTC"}).format(new Date(`${selectedDate}T12:00:00Z`)):"Compromissos do mês"}</h3>{selectedDate&&<button className="text-btn" onClick={()=>{setSelectedDate(null);setSelected(null);}}>Ver mês completo</button>}</div>
       <Status pending={events.isPending} error={events.error} empty={false} retry={()=>void events.refetch()}/>
       {personal.pending&&<p className="agenda-sources-status" role="status">Carregando aniversários e suas escalas…</p>}
       {personal.paused&&<p className="agenda-sources-status" role="status">Alguns compromissos ainda não estão disponíveis neste dispositivo. Serão carregados quando a conexão voltar.</p>}
       {personal.errors.length>0&&<div className="agenda-sources-status" role="alert"><p>Não foi possível carregar {personal.errors.join(", ")}. Os demais compromissos continuam disponíveis.</p><button className="text-btn" onClick={personal.retry}>Tentar carregar novamente</button></div>}
-      {(agendaRows.length>0||(!events.isPending&&!events.error&&!personal.pending&&!personal.paused&&!personal.errors.length))&&<PagedList className="agenda-compact-list" label="compromissos" pageSize={20} resetKey={`${month}|${selectedDate}|${visibility.events}|${visibility.birthdays}|${visibility.schedules}`} empty={selectedDate?"Nenhum compromisso nesta data.":"Nenhum compromisso neste mês."}>
-      {agendaRows.map(row => {
-        if(row.kind==="personal")return <AgendaCommitmentCard key={row.id} item={row.item} onNavigate={onNavigate}/>;
+      {(agendaRows.length>0||(!events.isPending&&!events.error&&!personal.pending&&!personal.paused&&!personal.errors.length))&&<PagedList className="agenda-compact-list" label="ocorrências" pageSize={20} resetKey={`${month}|${selectedDate}|${visibility.events}|${visibility.birthdays}|${visibility.schedules}`} empty="Nenhuma ocorrência neste mês.">
+      {agendaRows.map((row,index) => {
+        const selectedOccurrence=row.date===selectedDate;
+        const previous=agendaRows[index-1];
+        const startsOtherOccurrences=selectedDate&&!selectedOccurrence&&previous?.date===selectedDate;
+        const occurrenceSeparator=selectedDate&&startsOtherOccurrences?<div className="agenda-occurrence-separator" aria-hidden="true"/>:null;
+        if(row.kind==="personal")return <Fragment key={row.id}>{occurrenceSeparator}<div className={selectedOccurrence?"agenda-occurrence-selected":undefined}><AgendaCommitmentCard item={row.item} onNavigate={onNavigate}/></div></Fragment>;
         const e=row.event;
-        return <CompactCard key={row.id} title={e.title} date={row.date} description={`${row.time} · Brasília${e.location?` · ${e.location}`:""}`} onClick={()=>setSelected(selected===e.id?null:e.id)} label={`${selected===e.id?"Fechar detalhes":"Ver evento"}: ${e.title}`} expanded={selected===e.id}>
+        return <Fragment key={row.id}>{occurrenceSeparator}<div className={selectedOccurrence?"agenda-occurrence-selected":undefined}><CompactCard title={e.title} date={row.date} description={`${row.time} · Brasília${e.location?` · ${e.location}`:""}`} onClick={()=>setSelected(selected===e.id?null:e.id)} label={`${selected===e.id?"Fechar detalhes":"Ver evento"}: ${e.title}`} expanded={selected===e.id}>
           <Body>{e.category} · {date(e.starts_at)}</Body>
           <Body>
             {e.capacity === null
@@ -519,11 +521,10 @@ export function Agenda({
           {selected === e.id && (
             <EventDetail event={e} personId={personId} onLogin={onLogin} />
           )}
-        </CompactCard>;
+        </CompactCard></div></Fragment>;
       })}
       </PagedList>}
       </section>}
-      <Birthdays weekly date={selectedDate??undefined} onNavigate={tab=>onNavigate?.(tab)}/>
     </View>
   );
 }
@@ -873,8 +874,8 @@ export function Prayers({
     </View>
   );
 }
-export function CoreManagement() {
-  const [section, setSection] = useState<"posts" | "events" | "links">("posts");
+export function CoreManagement({eventsOnly=false,postsOnly=false}:{eventsOnly?:boolean;postsOnly?:boolean}={}) {
+  const [section, setSection] = useState<"posts" | "events" | "links">(eventsOnly?"events":"posts");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [url, setUrl] = useState("");
@@ -939,15 +940,13 @@ export function CoreManagement() {
     (/^\d+$/.test(capacity) &&
       Number(capacity) > 0 &&
       Number(capacity) <= 100000);
+  const sectionOptions = eventsOnly ? ["events"] as const : postsOnly ? ["posts"] as const : ["posts", "events", "links"] as const;
   return (
     <View style={gap}>
-      <Title>Gestão</Title>
-      <Body>
-        Prepare um rascunho ou publique conteúdo aprovado pela igreja. Confira o
-        público antes de publicar.
-      </Body>
+      <Title>{eventsOnly?"Eventos da igreja":postsOnly?"Comunicados da igreja":"Gestão"}</Title>
+      <Body>{eventsOnly?"Cadastre eventos, defina datas, locais, vagas e quem pode ver cada publicação.":postsOnly?"Escreva avisos para a comunidade, revise o público e publique quando estiver pronto.":"Prepare um rascunho ou publique conteúdo aprovado pela igreja. Confira o público antes de publicar."}</Body>
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 4 }}>
-        {(["posts", "events", "links"] as const).map((s) => (
+        {sectionOptions.map((s) => (
           <Action
             key={s}
             secondary={section !== s}
@@ -1172,9 +1171,7 @@ export function CoreManagement() {
           />
           {posts.data?.map((p) => (
             <Card key={p.id}>
-              <Body>
-                <RecordTitle title={p.title}/> · {p.published ? "Publicado" : "Rascunho"}
-              </Body>
+              <Body><RecordTitle title={p.title}/> · {p.published ? "Publicado" : "Rascunho"}{p.audience==="authenticated"?" · Pessoas conectadas":" · Público"}</Body>
               <Action
                 secondary
                 disabled={busy}
@@ -1186,7 +1183,7 @@ export function CoreManagement() {
                   setPublished(p.published);
                 }}
               >
-                Editar aviso
+                {postsOnly?"Editar comunicado":"Editar aviso"}
               </Action>
               <Action
                 secondary
@@ -1202,7 +1199,7 @@ export function CoreManagement() {
                   });
                 }}
               >
-                {p.published ? "Retirar aviso" : "Publicar aviso"}
+                {p.published ? postsOnly?"Retirar comunicado":"Retirar aviso" : postsOnly?"Publicar comunicado":"Publicar aviso"}
               </Action>
             </Card>
           ))}

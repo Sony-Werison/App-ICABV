@@ -459,6 +459,10 @@ html[data-theme="dark"] .sync-control.is-review { --sync-color:var(--church-red)
 .visits-page .visit-preference-link { display:grid; grid-template-columns:40px minmax(0,1fr); align-items:center; justify-items:stretch; gap:12px; min-height:92px; padding:14px; text-align:left; border-color:color-mix(in srgb,var(--accent-icon) 28%,var(--line)); background:linear-gradient(135deg,var(--surface),var(--soft)); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease; }
 .visits-page .visit-preference-link:hover { transform:translateY(-2px); border-color:var(--accent-icon); box-shadow:0 8px 20px #0002; }
 .visits-page .visit-preference-link > .visit-preference-icon { display:grid; place-items:center; width:40px; height:40px; border-radius:12px; background:var(--brand-tint); color:var(--accent-icon); }
+.visits-page .visits-preferences-top .visit-preference-link { border-color:color-mix(in srgb,#a9ceb0 45%,var(--line)); }
+.visits-page .visits-preferences-top .visit-preference-link:hover { border-color:#a9ceb0; }
+.visits-page .visits-preferences-top .visit-preference-link > .visit-preference-icon { color:#a9ceb0; }
+.visits-page .visits-preferences-top .visit-preference-link > .visit-preference-icon { background:color-mix(in srgb,#a9ceb0 16%,var(--surface)); }
 .visits-page .visit-preference-link > .visit-walk-icon { position:relative; }
 .visit-walk-icon > svg:last-child { position:absolute; right:3px; bottom:3px; padding:2px; border-radius:50%; background:var(--surface); }
 .visits-page .visit-preference-link > span:last-child { display:grid; justify-items:start; gap:3px; min-width:0; }
@@ -503,9 +507,8 @@ html[data-theme="dark"] .sync-control.is-review { --sync-color:var(--church-red)
  .schedule-upcoming-list li > div { grid-column:1/-1; grid-row:2; }
 }
 
-/* Red sampled from the church logo: RGB(255, 0, 0). */
-.primary { color:#000; }
-.primary:hover:not(:disabled) { color:#fff; }
+/* Red sampled from the church logo: RGB(255, 0, 0). Keep CTA labels legible. */
+.primary, .primary:hover:not(:disabled) { color:#fff; }
 .icabv-main .text-btn, .icabv-library summary, .icabv-main .eyebrow { color:var(--accent-text); }
 .program-date, .program-date strong, .program-date > span { color:var(--text); }
 .icabv-main .module-tabs > button[aria-current], .ui-tab-more > summary[aria-current] { border-color:var(--church-red); }
@@ -643,6 +646,8 @@ html[data-theme="dark"] .icabv-shortcuts > button > span { color:var(--church-re
 .agenda-calendar .agenda-calendar-day:hover { background:transparent; }
 .agenda-calendar .agenda-calendar-day[aria-pressed="true"] { background:transparent; color:var(--text); border-color:var(--church-red); }
 .agenda-calendar-legend { display:flex; align-items:center; justify-content:center; gap:8px; color:var(--muted); font-size:11px; }
+.agenda-calendar-tabs { margin:-2px 0 4px; }
+.agenda-calendar-today { justify-content:flex-end; margin-top:2px; }
 .agenda-calendar-legend .text-btn { font-size:12px; }
 .agenda-results-heading { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; }
 .agenda-results-heading h3 { text-transform:none; }
@@ -653,11 +658,11 @@ html[data-theme="dark"] .icabv-shortcuts > button > span { color:var(--church-re
 .agenda-calendar-markers { display:flex; align-items:center; justify-content:center; gap:3px; min-height:11px; color:var(--church-red); }
 .agenda-calendar-legend .agenda-calendar-key { display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px; }
 .agenda-calendar .agenda-calendar-filter { display:inline-flex; align-items:center; gap:5px; min-height:36px; padding:6px; border:1px solid transparent; border-radius:6px; background:transparent; color:var(--muted); font-size:11px; }
-.agenda-calendar .agenda-calendar-filter[aria-pressed="true"] { border-color:var(--line); background:var(--soft); color:var(--text); }
-.agenda-calendar .agenda-calendar-filter[aria-pressed="false"] svg { opacity:.4; }
+.agenda-calendar .agenda-calendar-filter[aria-selected="true"] { border-color:var(--line); background:var(--soft); color:var(--text); }
+.agenda-calendar .agenda-calendar-filter[aria-selected="false"] svg { opacity:.4; }
 .agenda-calendar-filter svg { flex-shrink:0; }
 .agenda-calendar .agenda-event-icon { color:var(--church-red); }
-.agenda-calendar, .agenda-commitment-card { --agenda-birthday:#946000; --agenda-schedule:#006b9b; }
+.agenda-calendar, .agenda-commitment-card { --agenda-birthday:#f6c453; --agenda-schedule:#006b9b; }
 html[data-theme="dark"] :is(.agenda-calendar, .agenda-commitment-card) { --agenda-birthday:#f6c453; --agenda-schedule:#63c9f2; }
 :is(.agenda-calendar, .agenda-commitment-card) .agenda-birthday-icon { color:var(--agenda-birthday); }
 :is(.agenda-calendar, .agenda-commitment-card) .agenda-schedule-icon { color:var(--agenda-schedule); }
@@ -807,16 +812,32 @@ body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
 .schedule-view-tab { min-height:44px; padding:8px 12px; border:0; border-radius:8px; background:transparent; color:var(--muted); font-size:13px; }
 .schedule-view-tab[aria-current="page"] { background:var(--soft); color:var(--text); font-weight:600; }
 .weekend-meetings { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
-.weekend-meeting { padding:16px; border:1px solid var(--line); border-radius:10px; }
+.weekend-meeting { padding:12px; border:1px solid var(--line); border-radius:10px; }
 .icabv-main .weekend-meeting h3 { font-size:15px; margin:0 0 6px; }
 .weekend-meeting > p,.weekend-meeting > small { color:var(--muted); font-size:12px; }
-.weekend-meeting dl { display:grid; gap:8px; margin:14px 0; }
-.weekend-meeting > .weekend-multimedia { display:flex; flex-wrap:wrap; gap:5px; margin:0 0 12px; color:var(--muted); font-size:11px; line-height:1.4; }
+.weekend-meeting dl { display:grid; gap:5px; margin:8px 0; }
+.weekend-meeting > .weekend-multimedia { display:flex; flex-wrap:wrap; gap:5px; margin:0 0 7px; color:var(--muted); font-size:11px; line-height:1.35; }
 .weekend-multimedia > span { opacity:.75; }
-.weekend-meeting dl > div { display:grid; grid-template-columns:80px minmax(0,1fr); gap:8px; font-size:13px; }
+.weekend-meeting dl > div { display:grid; grid-template-columns:68px minmax(0,1fr); gap:6px; font-size:12px; line-height:1.35; }
 .weekend-meeting dt { color:var(--muted); }
 .weekend-meeting dd { margin:0; overflow-wrap:anywhere; }
 .weekend-meeting > .secondary { font-size:12px; padding:6px 10px; }
+.weekend-meeting > .weekend-no-repertoire {
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:44px;
+  margin-top:5px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:transparent;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.55;
+  text-align:center;
+}
 .repertoire-navigation { display:grid; gap:4px; }
 .repertoire-navigation > div { display:flex; align-items:center; gap:6px; }
 .repertoire-navigation label { flex:1; min-width:0; }
@@ -879,6 +900,7 @@ body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
 .ebd-weekly-total { color:var(--church-red); font-size:16px; font-weight:750; }
 .ebd-weekly-total.has-entries { color:#e5a91b; }
 .ebd-weekly-legend { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0; color:var(--muted); font-size:10px; }
+.icabv-main .ebd-weekly-legend { justify-content:center; text-align:center; font-size:11px; line-height:1.3; }
 .ebd-weekly-legend svg { margin-left:5px; }
 .ebd-attendance-sheet { display:grid; gap:16px; min-width:0; }
 .ebd-attendance-role { display:grid; place-items:center; min-height:48px; border:1px solid var(--line); border-radius:14px; background:var(--soft); font-size:16px; font-weight:700; }
@@ -896,6 +918,9 @@ body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
 .ebd-attendance-table thead th > span,.ebd-attendance-table thead th > small { display:block; }
 .ebd-attendance-table thead th > small { margin-top:2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:9px; font-weight:400; }
 .ebd-attendance-table tbody th { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; font-weight:600; padding-left:14px; }
+.ebd-compact-attendance .ebd-attendance-table tbody th { overflow:visible; overflow-wrap:anywhere; text-overflow:clip; white-space:normal; }
+.ebd-compact-attendance .ebd-attendance-table thead th:first-child,.ebd-compact-attendance .ebd-attendance-table tbody th { width:calc(100% - (var(--ebd-criterion-count) + 1) * 44px); }
+.ebd-compact-attendance .ebd-attendance-table thead th:not(:first-child),.ebd-compact-attendance .ebd-attendance-table tbody td { width:44px; }
 .ebd-attendance-table tbody tr,.ebd-attendance-table tbody tr:hover,.ebd-attendance-table tbody tr:focus { background:transparent; outline:0; }
 .ebd-attendance-table tbody tr:last-child > * { border-bottom:0; }
 .ebd-attendance-mark { display:inline-grid; place-items:center; width:22px; height:22px; padding:0; border:1.5px solid var(--muted); border-radius:50%; background:transparent; color:var(--church-red); cursor:pointer; }
@@ -944,15 +969,20 @@ body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
 .weekend-meeting > .secondary { width:100%; white-space:normal; }
 .weekend-meeting > .secondary svg { flex-shrink:0; }
 @media (max-width:600px) {
- .weekend-meetings { gap:10px; }
- .weekend-meeting { padding:12px; }
- .weekend-meeting dl > div { grid-template-columns:minmax(0,1fr); gap:2px; }
+ .weekend-meetings { gap:8px; }
+ .weekend-meeting { padding:9px; }
+ .icabv-main .weekend-meeting h3 { font-size:13px; margin-bottom:3px; }
+ .weekend-meeting > p,.weekend-meeting > small { font-size:10px; line-height:1.3; }
+ .weekend-meeting dl { gap:4px; margin:6px 0; }
+ .weekend-meeting dl > div { grid-template-columns:52px minmax(0,1fr); gap:4px; font-size:10px; line-height:1.25; }
+ .weekend-meeting > .weekend-multimedia { gap:3px; margin-bottom:5px; font-size:10px; line-height:1.25; }
 }
 
 .icabv-main .weekend-meeting h3 { display:flex; align-items:center; gap:7px; }
 .weekend-meeting h3 svg { flex-shrink:0; color:var(--muted); }
 .icabv-main .weekend-meeting > .secondary { background:var(--brand-tint); border-color:color-mix(in srgb,var(--church-red) 30%,var(--line)); font-weight:650; }
 .icabv-main .weekend-meeting > .secondary:hover { border-color:var(--church-red); }
+.icabv-main .weekend-meeting > p:not(.weekend-multimedia) { font-size:11px; }
 
 .sync-control .sync-trigger { opacity:.72; }
 .sync-control .sync-trigger:is(:hover,:focus-visible) { opacity:1; }
@@ -966,7 +996,7 @@ body:has(.ui-module-dialog-fullscreen[open]) { overflow:hidden; }
 .duty-group > summary { border-inline-start:5px solid var(--schedule-group-color); }
 
 .agenda-calendar { --agenda-birthday:#707783; }
-html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
+html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#f6c453; }
 .member-menu-group { border:1px solid var(--line); border-radius:var(--ui-radius); background:var(--surface); }
 .member-menu-group > h2 { padding:12px 16px; margin:0; border-bottom:1px solid var(--line); font-size:15px; }
 .member-menu-group > div { padding:0 12px; }
@@ -986,6 +1016,8 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
 
 .agenda-commitments { gap:10px; }
 .agenda-commitments .agenda-results-heading h3 { margin:0; }
+.agenda-occurrence-selected { padding:4px; border:1px solid color-mix(in srgb,var(--church-red) 55%,var(--line)); border-radius:12px; background:color-mix(in srgb,var(--church-red) 8%,transparent); }
+.agenda-occurrence-separator { height:10px; border-top:1px solid var(--line); margin:4px 0; }
 .care-birthdays { gap:4px; }
 .care-birthdays > .member-heading { margin-bottom:0; }
 .care-birthdays .care-birthday-list { margin:0; }
@@ -1019,6 +1051,16 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
 .admin-account-menu > summary { display:grid; place-items:center; min-width:44px; min-height:44px; cursor:pointer; list-style:none; }
 .admin-account-menu > div { position:absolute; right:0; top:100%; z-index:60; display:grid; gap:12px; min-width:220px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:0 8px 30px #0003; }
 .church-admin .icabv-footer { font-size:12px; padding-top:20px; color:var(--muted); }
+.church-admin-bottom { display:none; }
+.management-placeholder { max-width:720px; }
+.management-agenda-page { display:grid; gap:14px; width:min(100%,1040px); margin-inline:auto; }
+.management-agenda-heading { display:grid; gap:6px; }
+.management-agenda-heading .eyebrow { margin:0; }
+.management-agenda-heading h1,.management-agenda-heading p { margin:0; }
+.management-agenda-heading p { color:var(--muted); }
+.management-agenda-tabs { display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--line); }
+.management-agenda-tabs button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:42px; padding:8px 12px; border-bottom:2px solid transparent; background:transparent; color:var(--muted); }
+.management-agenda-tabs button[aria-current="page"] { border-color:var(--church-red); color:var(--text); font-weight:650; }
 .church-admin .management-stat-icon,.church-admin .module-symbol { color:var(--text); background:var(--brand-tint); }
 .records-workspace { min-width:0; display:grid; gap:20px; }
 .records-embedded-shell > .main-shell { margin-left:0; width:100%; min-height:0; }
@@ -1084,6 +1126,98 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
  .schedule-inline-participants { font-size:12px; }
 }
 
+/* Demo is presented at the iPhone 14 CSS viewport (390 × 844). */
+.icabv-device-preview {
+  width:390px;
+  height:844px;
+  min-height:0 !important;
+  max-width:calc(100vw - 40px) !important;
+  max-height:calc(100dvh - 40px);
+  margin:20px auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+  border:10px solid #171717;
+  border-radius:42px;
+  box-shadow:0 24px 70px #0004;
+  scrollbar-width:thin;
+  position:relative;
+  isolation:isolate;
+}
+.icabv-device-preview .icabv-header,
+.icabv-device-preview .icabv-bottom {
+  width:100%;
+}
+.icabv-device-preview .icabv-bottom { position:sticky; }
+.icabv-device-preview .icabv-demo-banner { margin:12px; }
+@media(max-width:430px) {
+  .icabv-device-preview {
+    max-width:100vw !important;
+    max-height:100dvh;
+    width:100vw;
+    height:100dvh;
+    margin:0 auto;
+    border:0;
+    border-radius:0;
+  }
+}
+
+/* Management navigation opens as a vertical drawer from the header. */
+.church-admin-sidebar,
+.church-admin-bottom { display:none !important; }
+.church-admin .icabv-header,
+.church-admin .icabv-main {
+  margin-left:0;
+  width:100%;
+  max-width:none;
+}
+.church-admin .icabv-bottom {
+  width:min(640px,100%);
+  justify-content:center;
+  padding-top:8px;
+  background:var(--surface);
+  border-color:var(--line);
+  box-shadow:0 -4px 18px #00000008;
+}
+.church-admin .icabv-bottom button { min-width:92px; min-height:58px; gap:4px; font-size:12px; }
+.church-admin .icabv-bottom button[aria-current] { color:var(--muted); background:var(--soft); }
+.church-admin .icabv-bottom button[aria-current] svg { color:var(--muted); }
+.church-admin .icabv-header {
+  position:relative;
+  z-index:40;
+}
+.management-menu-page { display:grid; gap:22px; width:min(100%,1040px); margin:0 auto; }
+.management-menu-heading { display:grid; gap:6px; }
+.management-menu-heading .management-return-app { margin-top:8px; }
+.management-menu-heading .eyebrow { margin:0; }
+.management-menu-heading h1 { margin:0; }
+.management-menu-heading p { color:var(--muted); margin:0; }
+.management-menu-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.management-menu-card {
+  display:grid;
+  justify-items:start;
+  align-content:start;
+  gap:8px;
+  min-height:145px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--surface);
+  color:var(--text);
+  text-align:left;
+  box-shadow:var(--ui-shadow);
+}
+.management-menu-card:hover,.management-menu-card[aria-current="page"] { background:var(--soft); border-color:color-mix(in srgb,var(--muted) 38%,var(--line)); }
+.management-menu-icon { display:grid; place-items:center; width:46px; height:46px; border-radius:50%; background:var(--soft); color:var(--muted); }
+.management-menu-card strong { font-size:15px; }
+.management-menu-card small { color:var(--muted); font-size:12px; line-height:1.45; }
+.management-return-app { display:inline-flex; align-items:center; justify-self:start; gap:8px; min-height:42px; padding:8px 12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--muted); }
+.management-return-app:hover { background:var(--soft); color:var(--text); }
+@media(max-width:700px) {
+ .management-menu-page { gap:16px; }
+ .management-menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+ .management-menu-card { min-height:130px; padding:14px; }
+}
+
 /* Mobile-first management directory and profile editor. */
 .people-workspace { gap: 20px; }
 .people-intro { max-width: 62ch; color: var(--muted); margin: 6px 0 0; }
@@ -1123,6 +1257,59 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
  .person-card .people-identity, .person-card-meta { grid-column: 1 / -1; }
  .person-card > .secondary { grid-column: 2; grid-row: 3; }
  .profile-form-grid, .profile-check-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:900px) {
+ .church-admin-sidebar { display:none; }
+ .church-admin .icabv-main { padding-bottom:92px; }
+ .church-admin-bottom { display:flex; width:100%; }
+ .church-admin-bottom button { flex:1; min-width:0; }
+}
+@media(max-width:900px) {
+ .church-admin .icabv-header {
+   height:auto;
+   min-height:72px;
+   padding:12px 14px;
+   border-bottom:1px solid var(--line);
+   background:var(--surface);
+   gap:6px;
+   flex-wrap:nowrap;
+ }
+ .church-admin .icabv-brand { flex:0 1 auto; min-width:0; }
+ .church-admin .icabv-identity { gap:8px; }
+ .church-admin .icabv-identity img { display:block; width:32px; height:32px; }
+ .church-admin .icabv-identity strong { font-size:17px; color:var(--text); }
+ .church-admin .icabv-identity small { display:none; }
+ .church-admin .icabv-header-actions { gap:0; margin-left:auto; }
+ .church-admin .icabv-header-actions > .icon-btn,
+ .church-admin .admin-account-menu > summary { color:var(--muted); }
+ .church-admin-bottom {
+   width:min(640px,100%);
+   padding-top:9px;
+   padding-bottom:calc(8px + env(safe-area-inset-bottom));
+   background:var(--surface);
+   border-top:1px solid var(--line);
+   box-shadow:0 -4px 18px #00000003;
+ }
+ .church-admin-bottom button {
+   min-height:52px;
+   padding:8px 2px;
+   gap:4px;
+   color:var(--muted);
+   font-size:clamp(10px,2.5vw,12px);
+   background:transparent;
+   border-radius:10px;
+ }
+ .church-admin-bottom button[aria-current] {
+   color:var(--brand);
+   background:none;
+ }
+ .church-admin-bottom button[aria-current]::after {
+   content:"";
+   width:4px;
+   height:4px;
+   border-radius:50%;
+   background:var(--brand);
+ }
 }
 
 @media(max-width:420px) {
@@ -1173,6 +1360,8 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
 .member-weekend .weekend-meeting { background:var(--surface); box-shadow:var(--ui-shadow); }
 .ebd-weekly-table thead th { border-bottom:0!important; box-shadow:none!important; text-align:center; vertical-align:middle; }
 .ebd-weekly-table thead th:first-child { text-align:left; padding-left:8px; }
+.ebd-weekly-table thead th { border-top:0!important; }
+.ebd-weekly-table tbody tr:first-child > * { border-top:1px solid var(--line); }
 .ebd-weekly-table tbody tr,.ebd-weekly-table tbody tr:hover,.ebd-weekly-table tbody tr:focus,.ebd-weekly-table tbody th,.ebd-weekly-table tbody td { background:transparent!important; }
 .ebd-weekly-table tbody td { padding-inline:0; vertical-align:middle; }
 .ebd-weekly-table tbody td:not(:last-child) { padding-inline:0!important; text-align:center!important; vertical-align:middle!important; }
@@ -1183,6 +1372,17 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
 .ebd-weekly-total.is-high { color:#31a36a; }
 .ebd-attendance-table thead th { border-bottom:0!important; box-shadow:none!important; }
 .ebd-attendance-table thead th:first-child { border-bottom:0!important; box-shadow:none!important; }
+.ebd-compact-attendance .ebd-attendance-table thead th { border-bottom:1px solid var(--text)!important; }
+.ebd-compact-attendance .ebd-attendance-table thead th:not(:first-child) { letter-spacing:0; }
+.ebd-compact-attendance .ebd-attendance-table thead th:not(:first-child) > span { overflow-wrap:anywhere; white-space:normal; font-size:8px; line-height:1.15; }
+.ebd-compact-attendance .ebd-attendance-table-scroll { overflow-x:auto; overflow-y:hidden; }
+.ebd-compact-attendance .ebd-attendance-table { width:max-content; min-width:100%; table-layout:auto; border-collapse:separate; border-spacing:0; }
+.ebd-compact-attendance .ebd-attendance-table thead th:first-child,.ebd-compact-attendance .ebd-attendance-table tbody th { width:auto; }
+.ebd-compact-attendance .ebd-attendance-table thead th:not(:first-child),.ebd-compact-attendance .ebd-attendance-table tbody td { width:auto; }
+.ebd-compact-attendance .ebd-attendance-table thead th:not(:first-child) > span { white-space:nowrap; overflow-wrap:normal; }
+.ebd-compact-attendance .ebd-attendance-table tbody th,.ebd-compact-attendance .ebd-attendance-table tbody td { border-bottom:0; }
+.ebd-compact-attendance .ebd-attendance-table tbody th,.ebd-compact-attendance .ebd-attendance-table tbody td { border-top:0!important; border-bottom:0!important; }
+.ebd-compact-attendance .ebd-attendance-meta input { font-size:12px; }
 .ebd-teacher-class { margin:0; color:var(--muted); font-size:13px; }
 .ebd-annual-history { display:grid; gap:12px; }
 .ebd-annual-history h2,.ebd-annual-history p { margin:0; }
@@ -1213,12 +1413,20 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
 .ebd-profile-option.is-unavailable { opacity:.42; filter:saturate(.45); cursor:not-allowed; }
 .ebd-teacher-navigation { display:grid; gap:8px; }
 .icabv-main .ebd-profile-pill { display:grid; place-items:center; width:100%; min-height:48px; padding:8px 14px; color:var(--text); }
+.icabv-main .ebd-profile-pill .ebd-teacher-class { font-size:12px; line-height:1.3; }
 .icabv-main .ebd-profile-back { justify-self:start; min-height:36px; padding:6px 10px; font-size:12px; }
 .ebd-teacher-navigation .module-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; padding-bottom:8px; }
 .icabv-main .ebd-teacher-navigation .module-tabs > button { width:100%; padding-inline:4px; white-space:nowrap; font-size:12px; }
 .ebd-attendance-counts { justify-content:center; text-align:center; }
 @media(max-width:600px) {
   .member-weekend { padding:12px; }
+  .member-weekend .weekend-meeting > p { line-height:1.25; }
+  .member-weekend .weekend-meeting > small {
+    display:block;
+    line-height:1.05;
+  }
+  .member-weekend .weekend-meeting > p:not(.weekend-multimedia) { margin:0; }
+  .member-weekend .weekend-meeting dl { margin-block:4px; }
   .ebd-annual-chart { gap:2px; }
   .ebd-annual-month { grid-template-rows:80px auto auto; gap:3px; }
   .ebd-annual-month > strong { font-size:9px; }
@@ -1231,3 +1439,257 @@ html[data-theme="dark"] .agenda-calendar { --agenda-birthday:#969da8; }
   .schedule-board .schedule-table td:last-child .schedule-person strong { font-size:clamp(9px,1.8vw,10px); }
   .ebd-weekly-day-icons { min-height:22px; gap:3px; }
 }
+
+/* Member home refinements. */
+.member-community-highlights { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; align-items:start; }
+.member-community-highlights > :is(.member-announcements,.member-birthdays) { min-width:0; }
+.member-community-highlights .compact-row { gap:8px; padding:8px; }
+.member-community-highlights .compact-symbol { width:30px; height:30px; }
+.weekend-meeting > .weekend-no-repertoire { line-height:1.7; }
+.member-commitments .compact-card .compact-row { min-height:60px; padding-block:7px; }
+.member-commitments .compact-summary-text > span { margin-top:3px; line-height:1.3; }
+@media(max-width:600px) { .member-community-highlights { gap:8px; } .member-community-highlights .compact-summary-text > strong { font-size:13px; } .member-community-highlights .compact-summary-text > span { white-space:normal; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; } }
+
+/* Member home spacing and headings. */
+.church-member .icabv-main { gap:14px; }
+.church-member .member-intro { padding-top:0; }
+.member-community-highlights > :is(.member-announcements,.member-birthdays) > .member-heading { flex-wrap:nowrap; gap:4px; }
+.member-community-highlights .member-heading h2 { min-width:0; white-space:nowrap; font-size:clamp(12px,3.7vw,16px); letter-spacing:-.35px; }
+.member-weekend > .member-heading h2,.icabv-main h2.member-commitments-title { font-size:clamp(12px,3.7vw,16px); letter-spacing:-.35px; }
+.member-community-highlights .member-heading button, .member-commitments > .member-heading button { display:none; }
+.member-community-highlights { gap:8px; }
+.member-community-highlights > :is(.member-announcements,.member-birthdays) > .member-heading { margin-bottom:2px; }
+.member-commitments .member-news { gap:5px; }
+.member-commitments .agenda-commitment-card { gap:5px; }
+.member-commitments .compact-summary-text > span { overflow:hidden; text-overflow:ellipsis; }
+@media(max-width:380px) { .member-community-highlights .member-heading h2 { font-size:12px; letter-spacing:-.45px; } }
+
+/* Member home card readability. */
+.member-weekend .weekend-meetings { grid-template-columns:minmax(0,1fr); }
+.member-weekend .weekend-meeting { padding:12px; }
+.member-weekend .weekend-meeting h3 { font-size:16px; }
+.member-weekend .weekend-meeting dl > div { font-size:13px; line-height:1.45; }
+.member-weekend .weekend-meeting > p:not(.weekend-multimedia) { font-size:12px; font-weight:650; }
+.member-weekend .weekend-multimedia > span { display:none; }
+.member-community-highlights .member-heading h2 { display:flex; align-items:center; gap:5px; }
+.member-community-highlights .member-heading h2 svg { flex:0 0 auto; }
+.member-community-highlights .compact-symbol { display:none; }
+.member-birthday-cards .compact-summary-text > span { display:none; }
+.member-birthday-cards .compact-summary-text > strong { white-space:normal; overflow:visible; text-overflow:clip; overflow-wrap:anywhere; font-size:14px; line-height:1.3; }
+.member-welcome-emphasis { font-weight:700; }
+@media(max-width:600px) { .member-weekend .weekend-meetings { grid-template-columns:minmax(0,1fr); } .member-weekend .weekend-meeting dl > div { font-size:14px; } }
+
+/* Revert weekend card stacking; compact birthday cards. */
+.member-weekend .weekend-meetings { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.member-birthday-cards .program-date { display:none; }
+.member-announcements .member-heading h2 svg { color:#f6c453; }
+@media(max-width:600px) { .member-weekend .weekend-meetings { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+.member-weekend .weekend-meeting dd { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; overflow-wrap:normal; }
+.member-weekend .weekend-meeting > .weekend-multimedia { flex-wrap:nowrap; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.member-weekend .weekend-multimedia > span { display:inline; }
+
+.member-weekend .weekend-meeting dl > div { grid-template-columns:48px minmax(0,1fr); gap:3px; font-size:10px; line-height:1.25; }
+.member-weekend .weekend-meeting dt,.member-weekend .weekend-meeting dd { min-width:0; white-space:nowrap; font-size:10px; }
+.member-weekend .weekend-meeting dd { overflow:hidden; text-overflow:ellipsis; }
+.member-weekend .weekend-meeting > .weekend-multimedia { flex-wrap:wrap; white-space:normal; overflow:visible; font-size:9px; line-height:1.25; }
+.member-weekend .weekend-meeting > .weekend-multimedia { color:var(--text); }
+.member-weekend .weekend-multimedia > span { flex-shrink:0; }
+
+.member-weekend .weekend-meeting h3 { flex-wrap:nowrap; white-space:nowrap; font-size:12px; line-height:1.2; gap:4px; }
+.member-weekend .weekend-meeting h3 svg.lucide-sun { color:#f6c453; flex:0 0 auto; }
+.member-weekend .weekend-meeting h3 svg.lucide-moon { color:#93c5fd; flex:0 0 auto; }
+.member-community-highlights .member-birthdays .member-heading h2 svg { color:#f6c453; }
+
+.member-announcements .compact-summary-text > strong { white-space:normal; overflow:visible; text-overflow:clip; overflow-wrap:anywhere; }
+.member-announcements .compact-summary-text > span { white-space:normal; display:block; overflow:visible; text-overflow:clip; -webkit-line-clamp:unset; }
+.member-birthday-cards .compact-summary-text > strong { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; overflow-wrap:normal; font-size:11px; line-height:1.35; }
+
+.member-announcements .compact-summary-text > span { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.member-weekend { padding:0; border:0; border-radius:0; background:transparent; }
+
+.member-weekend > .member-heading h2,.member-commitments-title { display:flex; align-items:center; gap:7px; }
+.member-weekend > .member-heading h2 svg,.member-commitments-title svg { flex:0 0 auto; }
+
+.member-community-highlights .member-heading h2 svg,.member-weekend > .member-heading h2 svg,.member-commitments-title svg { color:var(--text); }
+
+.member-community-highlights .member-birthdays .member-heading h2 svg { color:var(--text) !important; }
+
+/* Louvor and schedule refinements. */
+.worship-results { font-size:11px; line-height:1.25; opacity:.65; }
+.worship-search-label { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+.schedule-board .schedule-table thead th:nth-child(3),.schedule-board .schedule-table thead th:nth-child(5) { background:var(--soft); box-shadow:none; }
+.schedule-board .schedule-table tbody td:nth-child(3),.schedule-board .schedule-table tbody td:nth-child(5) { background:var(--surface); }
+.schedule-cell-button:hover .schedule-person { border-color:transparent; background:transparent; }
+.schedule-board .schedule-table tbody tr:hover > * { background-color:inherit; }
+
+/* Compact worship and schedule mobile layouts. */
+.worship-results { font-size:10px; line-height:1.2; opacity:.55; }
+.worship-song-list .ui-collection-items { gap:5px; }
+.worship-song-open { min-height:58px; padding:8px 10px; }
+.schedule-upcoming-list { gap:0; }
+.schedule-upcoming-list li { padding:7px 2px; gap:4px 8px; }
+.schedule-upcoming-list li > div { gap:2px; }
+.schedule-upcoming-list li > .text-btn { min-height:30px; padding:4px 2px; font-size:11px; }
+.schedule-view-tabs { flex-wrap:nowrap; justify-content:space-between; gap:2px; }
+.schedule-view-tab { flex:1 1 0; min-width:0; min-height:38px; padding:6px 2px; font-size:10px; white-space:nowrap; }
+.schedule-cell-button:hover,.schedule-cell-button:focus-visible { background:transparent!important; }
+.schedule-cell-button:hover .schedule-person,.schedule-cell-button:focus-visible .schedule-person { border-color:transparent!important; background:transparent!important; box-shadow:none!important; }
+.schedule-board .schedule-month-control input { height:36px; min-height:36px; padding:5px 8px; font-size:13px; }
+.schedule-view-tabs { padding-bottom:3px; }
+.schedule-view-tab { min-height:32px; padding-block:4px; }
+.schedule-board .schedule-table tbody tr:hover,.schedule-board .schedule-table tbody tr:hover > * { background:transparent; }
+
+.visit-opportunity-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; align-items:start; }
+.visit-opportunity-grid > .visits-section { min-width:0; gap:7px; }
+.visit-opportunity-grid .member-heading h2 { font-size:clamp(12px,3.5vw,16px); line-height:1.3; }
+.visit-opportunity-grid .church-empty,.visit-opportunity-grid > .visits-section > p { font-size:12px; line-height:1.4; }
+.visit-opportunity-grid .visit-opportunity { padding:10px; }
+
+.visits-page > .visits-section:last-child > p { font-size:12px; line-height:1.45; }
+.visits-page .visits-saved-availability { gap:4px; padding:10px 12px; }
+.visits-page .visits-saved-availability h2 { margin:0; font-size:15px; line-height:1.3; }
+.visits-page .visits-saved-availability p { font-size:11px; line-height:1.4; }
+.visits-page .visit-opportunity-grid { gap:8px; }
+.visits-page .visit-opportunity-grid > .visits-section { gap:5px; }
+
+.visit-opportunity-grid { align-items:stretch; }
+.visit-opportunity-grid > .visits-section { display:flex; flex-direction:column; height:100%; }
+.visit-opportunity-grid .visits-section > .church-empty { flex:1; display:flex; align-items:center; justify-content:center; }
+.icabv-main p.worship-results { font-size:11px!important; line-height:1.25!important; }
+.schedule-board .schedule-table abbr[title] { text-decoration:none; }
+.schedule-board .schedule-table td:last-child .schedule-cell-entries { gap:0; }
+.schedule-board .schedule-table td:last-child .schedule-person { min-height:0; padding-block:1px; }
+.schedule-board .schedule-table td:last-child .schedule-person strong { line-height:1.15; }
+.visit-weekdays { grid-template-columns:repeat(7,minmax(0,38px)); justify-content:center; gap:5px; }
+.visit-weekdays button { display:grid; place-items:center; text-align:center; }
+.visits-page > .icabv-message { position:fixed; z-index:150; top:calc(68px + env(safe-area-inset-top)); left:50%; width:min(420px,calc(100vw - 32px)); padding:10px 14px; transform:translateX(-50%); box-shadow:0 8px 30px #0004; }
+.visits-page > .icabv-message[role="status"] { border-color:#3f8f62; background:#153a29; color:#e8f7ed; animation:availability-toast-in .24s ease-out both; }
+@keyframes availability-toast-in { from { opacity:0; transform:translate(-50%,-8px) scale(.98); } to { opacity:1; transform:translate(-50%,0) scale(1); } }
+@media(prefers-reduced-motion:reduce) { .visits-page > .icabv-message[role="status"] { animation:none; } }
+
+/* Compact notification center. */
+.notification-panel { padding:12px 14px calc(12px + env(safe-area-inset-bottom)); }
+.notification-panel > header { padding-bottom:8px; }
+.notification-panel > header h2 { font-size:19px; line-height:1.2; }
+.notification-panel > header small { font-size:10px; }
+.notification-push-control { gap:6px 8px; padding:7px 0; }
+.notification-push-control > div { gap:1px; }
+.notification-push-control strong { font-size:12px; line-height:1.25; }
+.notification-push-control small,.notification-push-control p { font-size:10px; line-height:1.3; }
+.notification-push-control .secondary { min-height:32px; padding:5px 8px; font-size:10px; }
+.notification-list { display:grid; gap:6px; margin-top:7px; }
+.notification-list > article { display:grid; gap:3px; padding:8px 10px; border:1px solid var(--line); border-inline-start:3px solid var(--accent-icon); border-radius:9px; background:var(--soft); }
+.notification-list .church-label { font-size:8px; line-height:1.2; letter-spacing:.08em; }
+.notification-list h3 { font-size:13px; line-height:1.25; }
+.notification-list p { margin:0; color:var(--muted); font-size:11px; line-height:1.3; }
+.notification-list article > small { font-size:9px; line-height:1.2; }
+.notification-list .card-actions { gap:12px; margin-top:1px; }
+.notification-list .card-actions .text-btn { min-height:26px; padding:3px 0; font-size:10px; }
+
+/* Requested screen refinements. */
+.icabv-auth .text-btn { align-self:center; justify-content:center; }
+.member-birthday-cards.icabv-card { gap:0; padding:8px 12px; }
+.member-birthday-cards.icabv-card > .compact-card { border:0; border-radius:0; background:transparent; box-shadow:none; }
+.member-birthday-cards.icabv-card > .compact-card + .compact-card { border-top:1px solid var(--line); }
+.member-birthday-cards.icabv-card .compact-row { min-height:42px; padding:7px 2px; }
+.member-birthday-cards .compact-summary-text > strong { white-space:normal; overflow:visible; text-overflow:clip; overflow-wrap:anywhere; font-size:11px; }
+.member-weekend .weekend-meeting > p:not(.weekend-multimedia) { margin:0 0 5px; }
+.member-weekend .weekend-meeting > .weekend-no-repertoire { font-size:9px; line-height:1.35; }
+.visits-page { gap:8px; }
+.church-admin .icabv-main { padding-bottom:28px; }
+.management-home-return { display:inline-flex; align-items:center; align-self:flex-start; gap:7px; min-height:36px; padding:6px 10px; border:1px solid var(--line); border-radius:9px; background:var(--surface); color:var(--muted); font-size:12px; }
+.management-home-return svg { transform:rotate(180deg); }
+.management-home-return:hover { background:var(--soft); color:var(--text); }
+.church-admin .icabv-bottom { display:none; }
+.people-workspace { gap:10px; padding:12px; }
+.people-heading { align-items:center; gap:6px; }
+.people-heading > div:first-child { display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 8px; }
+.people-heading .eyebrow { font-size:9px; letter-spacing:.1em; }
+.people-heading h1 { font-size:22px; line-height:1.15; }
+.people-intro { grid-column:1 / -1; margin:2px 0 0; font-size:12px; line-height:1.4; }
+.people-actions { width:100%; justify-content:stretch; gap:6px; }
+.people-actions > button { flex:1 1 0; min-width:0; min-height:38px; padding:7px 8px; font-size:11px; }
+.people-filters { gap:8px; }
+@media(max-width:420px) {
+  .people-workspace { gap:8px; padding:10px; }
+  .people-heading { gap:5px; }
+  .people-heading h1 { font-size:20px; }
+  .people-intro { font-size:11px; }
+  .people-actions { display:grid; grid-template-columns:1fr 1fr; }
+  .people-actions > button:first-child { grid-column:1 / -1; }
+  .people-actions > button { width:100%; min-height:36px; font-size:10px; }
+}
+.church-admin .icabv-main .people-workspace { padding:10px; }
+
+/* People directory: search and creation share the first row. */
+.church-admin .people-heading { margin:0; }
+.church-admin .people-filters { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:end; gap:8px; }
+.church-admin .people-filters > .ui-search { grid-column:1; margin:0; }
+.church-admin .people-filters > .people-create-person { grid-column:2; min-width:124px; min-height:44px; padding:8px 10px; white-space:nowrap; font-size:12px; }
+.church-admin .people-filters > .icabv-field:not(.ui-search) { margin:0; }
+.church-admin .people-workspace > .people-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.church-admin .people-filters > .ui-search { grid-column:1; }
+.church-admin .people-filters > .people-create-person { grid-column:2; }
+
+/* Keep each person entry on one compact row. */
+.church-admin .icabv-main .people-workspace .ui-people-list > li.person-card { display:grid!important; grid-template-columns:minmax(0,1fr) auto auto; align-items:center!important; gap:6px!important; padding:8px 0!important; }
+.church-admin .people-workspace .person-card .people-identity { min-width:0; flex:initial; gap:7px; }
+.church-admin .people-workspace .people-avatar { width:30px; height:30px; font-size:10px; }
+.church-admin .people-workspace .people-identity > span:last-child { min-width:0; }
+.church-admin .people-workspace .people-identity strong,.church-admin .people-workspace .people-identity small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.church-admin .people-workspace .people-identity strong { font-size:12px; }
+.church-admin .people-workspace .people-identity small { max-width:116px; font-size:9px; }
+.church-admin .people-workspace .person-card-meta { min-width:0; flex:initial; }
+.church-admin .people-workspace .person-card-meta .people-status { padding:3px 5px; font-size:9px; line-height:1.25; white-space:nowrap; }
+.church-admin .people-workspace .person-card > .secondary { grid-column:auto; grid-row:auto; width:auto; min-width:0; min-height:32px; margin:0; padding:4px 7px; font-size:10px; white-space:nowrap; }
+.church-admin .icabv-main .people-workspace .person-card > :is(.people-identity,.person-card-meta,.secondary) { grid-column:auto!important; grid-row:auto!important; }
+
+/* Match announcements to the dynamic birthday block beside them. */
+.member-community-highlights { align-items:stretch; }
+.member-community-highlights > .member-announcements { display:flex; flex-direction:column; }
+.member-community-highlights > .member-announcements .member-news { flex:1; min-height:0; }
+.member-community-highlights > .member-announcements .member-news > .compact-card { display:flex; flex:1; min-height:0; }
+.member-community-highlights > .member-announcements .compact-card > .compact-row { flex:1; min-height:0; }
+.member-birthday-cards.icabv-card { padding:6px 10px; }
+.member-birthday-cards.icabv-card .compact-row { min-height:30px; padding:3px 2px; }
+.member-birthday-cards .compact-summary-text > strong { display:flex; align-items:center; gap:6px; }
+.member-birthday-cards .compact-summary-text > strong svg { flex:0 0 auto; }
+.member-birthday-cards .compact-summary-text > strong { line-height:1.2; }
+.member-birthday-cards.icabv-card > .compact-card + .compact-card { border-top:0; }
+
+/* EBD student activity detail and printable annual report. */
+.ebd-weekly-student-button { display:block; width:100%; padding:0; border:0; background:none; color:inherit; font:inherit; font-weight:inherit; text-align:left; text-decoration:underline; text-decoration-color:transparent; text-underline-offset:3px; cursor:pointer; }
+.ebd-weekly-student-button:hover,.ebd-weekly-student-button:focus-visible { color:var(--accent-icon); text-decoration-color:currentColor; outline:none; }
+.ebd-weekly-student-summary { display:grid; gap:14px; padding:18px; }
+.ebd-weekly-summary-period { margin:0; color:var(--muted); font-size:12px; }
+.ebd-weekly-summary-stats { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.ebd-weekly-summary-stats article { display:grid; gap:3px; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--soft); }
+.ebd-weekly-summary-stats strong { font-size:22px; line-height:1.1; }
+.ebd-weekly-summary-stats span,.ebd-weekly-summary-list small { color:var(--muted); font-size:11px; }
+.ebd-weekly-summary-list { display:grid; gap:0; margin:0; padding:0; list-style:none; }
+.ebd-weekly-summary-list li { display:grid; grid-template-columns:30px minmax(0,1fr) auto; align-items:center; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); }
+.ebd-weekly-summary-list li:last-child { border-bottom:0; }
+.ebd-weekly-summary-icon { display:grid; place-items:center; width:30px; height:30px; border-radius:8px; background:var(--soft); color:var(--accent-icon); }
+.ebd-weekly-summary-list li > div { display:grid; gap:2px; min-width:0; }
+.ebd-weekly-summary-list li > div strong { overflow-wrap:anywhere; font-size:13px; }
+.ebd-weekly-summary-status { color:var(--muted); font-size:11px; white-space:nowrap; }
+.ebd-weekly-summary-status.is-graded { color:var(--ui-success); }
+.ebd-report-heading { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.ebd-report-heading h2 { margin:0; }
+.ebd-report-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; width:min(100%,560px); }
+.ebd-report-charts { display:grid; gap:12px; min-width:0; }
+.ebd-report-line-chart { min-width:0; padding:12px 14px 8px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+.ebd-report-line-chart h3 { margin:0 0 4px; font-size:13px; font-weight:650; }
+.ebd-report-line-chart svg { display:block; width:100%; height:auto; overflow:visible; }
+.ebd-chart-gridline { stroke:var(--line); stroke-width:1; }
+.ebd-chart-y-label,.ebd-chart-x-label { fill:var(--text); font:15px Inter,"Segoe UI",sans-serif; text-transform:capitalize; }
+.ebd-chart-line { fill:none; stroke:#3b82f6; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+.ebd-chart-point { fill:var(--surface); stroke:#3b82f6; stroke-width:2.5; vector-effect:non-scaling-stroke; }
+.ebd-chart-month,.ebd-chart-month * { cursor:pointer!important; }
+.ebd-chart-month:focus { outline:none; }
+.ebd-chart-month:focus .ebd-chart-point,.ebd-chart-month.is-selected .ebd-chart-point { fill:#3b82f6; stroke:var(--text); stroke-width:3; }
+.ebd-chart-detail { margin:4px 2px 0; padding:8px 10px; border-left:3px solid #3b82f6; border-radius:4px; background:var(--soft); color:var(--text); font-size:12px; line-height:1.4; }
+.ebd-report-line-chart > svg { touch-action:pan-y; }
+@media(max-width:600px) { .ebd-report-heading { align-items:stretch; flex-direction:column; } .ebd-report-heading .ebd-report-filters { gap:6px; } .ebd-report-line-chart { padding:10px 8px 5px; } .ebd-report-line-chart h3 { padding-inline:5px; } .ebd-chart-y-label,.ebd-chart-x-label { font-size:15px; } }

@@ -7,33 +7,35 @@ export type AppNotification = { key: string; version: string; kind: string; titl
 type Feed = { items: AppNotification[]; unread_count: number; total_count: number };
 function vapidKeyBytes(value:string) { const base64=value.replace(/-/g,"+").replace(/_/g,"/")+"=".repeat((4-value.length%4)%4);return Uint8Array.from(atob(base64),char=>char.charCodeAt(0)); }
 export function NotificationBell({ userId, onNavigate }: { userId: string; onNavigate: (tab: string, section?: string, key?: string) => void }) {
-  const [open, setOpen] = useState(false), [page, setPage] = useState(0), [message, setMessage] = useState(""), [pushMessage,setPushMessage]=useState(""), [pushEnabled,setPushEnabled]=useState<boolean|null>(null), [pushBusy,setPushBusy]=useState(false);
+  const [open, setOpen] = useState(false), [page, setPage] = useState(0), [message, setMessage] = useState(""), [pushMessage,setPushMessage]=useState(""), [pushEnabled,setPushEnabled]=useState<boolean|null>(null), [pushBlocked,setPushBlocked]=useState(false), [pushBusy,setPushBusy]=useState(false);
+  const autoPushAttempted = useRef(false);
   const panel = useRef<HTMLDivElement>(null), client = useQueryClient();
   const query = useQuery({ queryKey: ["notifications", userId, page], queryFn: async () => {
     const r = await supabase!.rpc("notification_feed", { page_number: page });
     if (r.error) throw r.error;
     return r.data as Feed;
   }, refetchInterval: 60000 });
-  useEffect(()=>{if(!("serviceWorker" in navigator))return;void navigator.serviceWorker.ready.then(registration=>registration.pushManager.getSubscription()).then(subscription=>setPushEnabled(!!subscription)).catch(()=>setPushEnabled(false));},[]);
+  useEffect(()=>{if(!("serviceWorker" in navigator)||autoPushAttempted.current)return;autoPushAttempted.current=true;void navigator.serviceWorker.ready.then(async registration=>{const subscription=await registration.pushManager.getSubscription();if(subscription){setPushEnabled(true);setPushBlocked(false);return;}setPushEnabled(false);if(!("Notification" in window)){setPushBlocked(true);setPushMessage("Este navegador não oferece notificações push.");return;}if(Notification.permission==="denied"){setPushBlocked(true);setPushMessage("Permissão bloqueada. Ative as notificações do site nas configurações do navegador.");return;}await enablePush();}).catch(()=>setPushEnabled(false));},[]);
   async function enablePush(){
     setPushBusy(true);setPushMessage("");
     try{
       const publicKey=process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
       if(!publicKey)throw Error("O envio de push ainda não foi configurado no servidor.");
-      if(!("Notification" in window)||!("PushManager" in window))throw Error("Este navegador não oferece notificações push.");
+      if(!("Notification" in window)||!("PushManager" in window)){setPushBlocked(true);throw Error("Este navegador não oferece notificações push.");}
       let permission=Notification.permission;if(permission==="default")permission=await Notification.requestPermission();
-      if(permission!=="granted")throw Error("Ative as notificações do ICABV nas configurações do navegador.");
+      if(permission!=="granted"){setPushBlocked(permission==="denied");throw Error(permission==="denied"?"Permissão bloqueada. Ative as notificações do site nas configurações do navegador.":"Permita as notificações do ICABV no navegador para ativar o push.");}
+      setPushBlocked(false);
       const registration=await navigator.serviceWorker.ready;
       const subscription=await registration.pushManager.getSubscription()||await registration.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidKeyBytes(publicKey)});
       const saved=await supabase!.rpc("save_my_push_subscription",{subscription:{...subscription.toJSON(),user_agent:navigator.userAgent}});
       if(saved.error)throw saved.error;
-      setPushEnabled(true);setPushMessage("Push ativado neste dispositivo.");
+      setPushEnabled(true);setPushBlocked(false);setPushMessage("Push ativado neste dispositivo.");
     }catch(error){setPushMessage(error instanceof Error?error.message:"Não foi possível ativar o push neste dispositivo.");}
     finally{setPushBusy(false);}
   }
   async function disablePush(){
     setPushBusy(true);setPushMessage("");
-    try{const registration=await navigator.serviceWorker.ready;const subscription=await registration.pushManager.getSubscription();if(subscription){const removed=await supabase!.rpc("remove_my_push_subscription",{push_endpoint:subscription.endpoint});if(removed.error)throw removed.error;await subscription.unsubscribe();}setPushEnabled(false);setPushMessage("Push desativado neste dispositivo.");}
+    try{const registration=await navigator.serviceWorker.ready;const subscription=await registration.pushManager.getSubscription();if(subscription){const removed=await supabase!.rpc("remove_my_push_subscription",{push_endpoint:subscription.endpoint});if(removed.error)throw removed.error;await subscription.unsubscribe();}setPushEnabled(false);setPushBlocked(false);setPushMessage("Push desativado neste dispositivo.");}
     catch(error){setPushMessage(error instanceof Error?error.message:"Não foi possível desativar o push neste dispositivo.");}
     finally{setPushBusy(false);}
   }
@@ -68,7 +70,7 @@ export function NotificationBell({ userId, onNavigate }: { userId: string; onNav
     </button>
     {open && <div className="notification-backdrop" onClick={() => setOpen(false)}><div id="notification-center" role="dialog" aria-modal="true" aria-label="Notificações" tabIndex={-1} ref={panel} className="notification-panel" onClick={e => e.stopPropagation()}>
       <header><div><h2>Notificações</h2><small>{unread} não lidas</small></div><button className="icon-btn" aria-label="Fechar notificações" onClick={() => setOpen(false)}><X size={20} /></button></header>
-      <section className="notification-push-control"><div><strong>Avisos neste dispositivo</strong><small>{pushEnabled?"Este dispositivo pode receber push.":"Ative o push para receber avisos fora do app."}</small></div>{pushEnabled?<button className="secondary" disabled={pushBusy} onClick={()=>void disablePush()}>{pushBusy?"Salvando…":"Desativar push"}</button>:<button className="secondary" disabled={pushBusy} onClick={()=>void enablePush()}>{pushBusy?"Ativando…":"Ativar push"}</button>}{pushMessage&&<p role="status">{pushMessage}</p>}</section>
+      <section className="notification-push-control"><div><strong>Avisos neste dispositivo</strong><small>{pushEnabled?"Este dispositivo pode receber push.":pushBlocked?"Permissão bloqueada neste navegador.":"Ative o push para receber avisos fora do app."}</small></div>{pushEnabled?<button className="secondary" disabled={pushBusy} onClick={()=>void disablePush()}>{pushBusy?"Salvando…":"Desativar push"}</button>:<button className="secondary" disabled={pushBusy||pushBlocked} onClick={()=>void enablePush()}>{pushBusy?"Ativando…":pushBlocked?"Permissão bloqueada":"Ativar push"}</button>}{pushMessage&&<p role="status">{pushMessage}</p>}</section>
       {query.isPending ? <p role="status">Carregando notificações…</p> : query.error ? <div role="alert"><p>Não foi possível carregar suas notificações.</p><button className="secondary" onClick={() => void query.refetch()}>Tentar novamente</button></div> : !query.data?.items.length ? <p>Nenhuma notificação no momento.</p> : <div className="notification-list">{query.data.items.map(n => <article key={n.key} className={n.read_at ? "" : "notification-unread"}>
         <span className="church-label">{n.actionable ? "PRECISA DA SUA ATENÇÃO" : "IGREJA ICABV"}</span><h3>{n.title}</h3><p>{n.body}</p>
         <small>{new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" }).format(new Date(n.occurred_at))}</small>
