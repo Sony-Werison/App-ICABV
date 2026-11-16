@@ -6,6 +6,7 @@ import {Disclosure,PagedList,SearchField,searchText} from "./presentation";
 import {ebdDate,ebdToday,kindLabel,studyWeek} from "./ebd-ui-model";
 import type {Activity,EbdMember,EbdModule,LegacyHistory,Submission} from "./ebd-model";
 import {moduleRows} from "./module-ui";
+import {ModuleDialog} from "./module-dialog";
 import {supabase} from "./supabase";
 
 const studyDayFormatter=new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"});
@@ -38,7 +39,7 @@ async function warmEbdHistory(queryClient:ReturnType<typeof useQueryClient>,clas
   ]);
 }
 export function EbdWeeklyActivityTable({classId,students,activities}:{classId:string;students:EbdMember[];activities:Activity[]}){
-  const [weekStart,setWeekStart]=useState(()=>mondayOf(ebdToday()));
+  const [weekStart,setWeekStart]=useState(()=>mondayOf(ebdToday())),[selectedStudent,setSelectedStudent]=useState<EbdMember|null>(null);
   const queryClient=useQueryClient(),backgroundStarted=useRef(false),studentIds=students.map(student=>student.person_id).sort();
   const weeklyQuery=useQuery({queryKey:["modules","ebd-weekly-submissions",classId,weekStart,studentIds],queryFn:()=>fetchWeeklySubmissions(queryClient,classId,studentIds,weekStart),enabled:students.length>0});
   useEffect(()=>{
@@ -48,27 +49,28 @@ export function EbdWeeklyActivityTable({classId,students,activities}:{classId:st
     return()=>clearTimeout(timer);
   },[weeklyQuery.isSuccess,queryClient,classId]);
   const submissions=weeklyQuery.data??[];
-  const dates=Array.from({length:7},(_,index)=>addDays(weekStart,index));
-  const kindById=new Map(activities.map(activity=>[activity.id,activity.kind]));
+  const dates=Array.from({length:6},(_,index)=>addDays(weekStart,index));
+  const kindById=new Map(activities.map(activity=>[activity.id,activity.kind])),activityById=new Map(activities.map(activity=>[activity.id,activity]));
   const rows=[...students].sort((a,b)=>a.full_name.localeCompare(b.full_name,"pt-BR")).map(student=>{
     const entries=submissions.filter(submission=>{
       const kind=submission.kind??kindById.get(submission.activity_id??"")??"manual";
       return submission.person_id===student.person_id&&(submission.kind!==undefined||!submission.activity_id||kindById.has(submission.activity_id))&&!(["class_evaluation","sunday_presence","daily_grade","weekly_grade"].includes(kind));
     });
     const byDay=dates.map(date=>entries.filter(submission=>studyDayFormatter.format(new Date(submission.created_at))===date));
-    return {student,byDay,total:byDay.filter(day=>day.length>0).length};
+    return {student,entries,byDay,total:byDay.filter(day=>day.length>0).length};
   });
-  const rangeLabel=`${shortWeekdayDate(weekStart)} – ${shortWeekdayDate(dates[6])} ${dates[6].slice(0,4)}`;
-  const labels=["SEG","TER","QUA","QUI","SEX","SÁB","DOM"];
+  const rangeLabel=`${shortWeekdayDate(weekStart)} – ${shortWeekdayDate(dates[5])} ${dates[5].slice(0,4)}`;
+  const labels=["SEG","TER","QUA","QUI","SEX","SÁB"];
   return <section className="ebd-weekly-activity" aria-label="Atividades semanais dos alunos">
-    <header><div><span className="church-label">ACOMPANHAMENTO DA TURMA</span><h2>Semanal</h2></div><div className="ebd-weekly-nav"><button type="button" className="icon-btn" aria-label="Semana anterior" onClick={()=>setWeekStart(addDays(weekStart,-7))}><ChevronLeft size={18}/></button><strong>{rangeLabel}</strong><button type="button" className="icon-btn" aria-label="Próxima semana" onClick={()=>setWeekStart(addDays(weekStart,7))}><ChevronRight size={18}/></button></div></header>
-    {students.length>0&&weeklyQuery.isPending?<p className="ebd-weekly-status" role="status">Carregando as atividades desta semana…</p>:weeklyQuery.isError?<div className="ebd-weekly-error" role="alert"><span>Não foi possível carregar esta semana.</span><button type="button" className="text-btn" onClick={()=>void weeklyQuery.refetch()}>Tentar novamente</button></div>:<div className="ebd-weekly-table-scroll" role="region" aria-label={`Atividades de ${rangeLabel}`} tabIndex={0}><table className="ebd-weekly-table"><caption className="sr-only">Entregas de atividades por aluno, dia da semana e total entre {rangeLabel}</caption><thead><tr><th scope="col">Aluno</th>{dates.map((date,index)=><th scope="col" key={date}><span>{labels[index]}</span><small>{date.slice(8)}</small></th>)}<th scope="col">TOT</th></tr></thead><tbody>{rows.map(({student,byDay,total})=><tr key={student.person_id}><th scope="row">{student.full_name}</th>{byDay.map((day,index)=>{
+    <header><div><span className="church-label">ACOMPANHAMENTO DA TURMA</span></div><div className="ebd-weekly-nav"><button type="button" className="icon-btn" aria-label="Semana anterior" onClick={()=>setWeekStart(addDays(weekStart,-7))}><ChevronLeft size={18}/></button><strong>{rangeLabel}</strong><button type="button" className="icon-btn" aria-label="Próxima semana" onClick={()=>setWeekStart(addDays(weekStart,7))}><ChevronRight size={18}/></button></div></header>
+    {students.length>0&&weeklyQuery.isPending?<p className="ebd-weekly-status" role="status">Carregando as atividades desta semana…</p>:weeklyQuery.isError?<div className="ebd-weekly-error" role="alert"><span>Não foi possível carregar esta semana.</span><button type="button" className="text-btn" onClick={()=>void weeklyQuery.refetch()}>Tentar novamente</button></div>:<div className="ebd-weekly-table-scroll" role="region" aria-label={`Atividades de ${rangeLabel}`} tabIndex={0}><table className="ebd-weekly-table"><caption className="sr-only">Entregas de atividades por aluno, dia da semana e total entre {rangeLabel}</caption><thead><tr><th scope="col">Aluno</th>{dates.map((date,index)=><th scope="col" key={date}><span>{labels[index]}</span><small>{date.slice(8)}</small></th>)}<th scope="col">TOT</th></tr></thead><tbody>{rows.map(({student,entries,byDay,total})=><tr key={student.person_id}><th scope="row"><button className="ebd-weekly-student-button" type="button" onClick={()=>setSelectedStudent(student)} aria-label={`Ver atividades de ${student.full_name} na semana de ${rangeLabel}`}>{student.full_name}</button></th>{byDay.map((day,index)=>{
       const kindOf=(submission:WeeklySubmission)=>(submission.kind??kindById.get(submission.activity_id??"")??"manual").includes("video")?"video":"bible";
       const kinds=[...new Set(day.map(kindOf))];
-      return <td key={dates[index]} aria-label={`${student.full_name}, ${labels[index]} ${dates[index].slice(8)}: ${day.length} entregas`} title={`${day.length} ${day.length===1?"atividade entregue":"atividades entregues"}`}><span className="ebd-weekly-day-icons">{day.length?kinds.map(kind=>{const Icon=kind==="bible"?BookOpen:Play;const bibleDone=kind==="bible"&&day.filter(submission=>kindOf(submission)==="bible").every(submission=>submission.score!==null&&submission.score!==undefined&&Number(submission.score)>=10);const colorClass=kind==="video"?"is-video":bibleDone?"is-bible-complete":"is-bible-partial";return <Icon key={kind} className={colorClass} size={15} aria-hidden="true"/>;}):<X className="ebd-weekly-empty" size={14} aria-hidden="true"/>}</span></td>;
-    })}<td className={`ebd-weekly-total ${total/7<=.2?"is-low":total/7<=.8?"is-medium":"is-high"}`} aria-label={`${total} dias com atividades na semana`}>{total}</td></tr>)}</tbody></table></div>}
+      return <td key={dates[index]} aria-label={`${student.full_name}, ${labels[index]} ${dates[index].slice(8)}: ${day.length} entregas`} title={`${day.length} ${day.length===1?"atividade entregue":"atividades entregues"}`}><span className="ebd-weekly-day-icons">{day.length?kinds.map(kind=>{const Icon=kind==="bible"?BookOpen:Play;const bibleDone=kind==="bible"&&day.filter(submission=>kindOf(submission)==="bible").every(submission=>submission.score!==null&&submission.score!==undefined&&Number(submission.score)>=10);const colorClass=kind==="video"?"is-video":bibleDone?"is-bible-complete":"is-bible-partial";return <Icon key={kind} className={colorClass} size={15} aria-hidden="true"/>;}):dates[index]<ebdToday()?<X className="ebd-weekly-empty" size={14} aria-hidden="true"/>:null}</span></td>;
+    })}<td className={`ebd-weekly-total ${total/6<=.2?"is-low":total/6<=.8?"is-medium":"is-high"}`} aria-label={`${total} dias com atividades na semana`}>{total}</td></tr>)}</tbody></table></div>}
     {!rows.length&&<p className="church-empty">Nenhum aluno está vinculado a esta turma.</p>}
     <p className="ebd-weekly-legend"><BookOpen size={13} aria-hidden="true"/> Leitura bíblica <Play size={13} aria-hidden="true"/> Vídeo</p>
+    {selectedStudent&&<ModuleDialog title={`Resumo semanal · ${selectedStudent.full_name}`} onClose={()=>setSelectedStudent(null)}><section className="ebd-weekly-student-summary"><p className="ebd-weekly-summary-period">{rangeLabel}</p>{(()=>{const row=rows.find(item=>item.student.person_id===selectedStudent.person_id);const entries=row?.entries??[];const uniqueDays=row?.total??0;return <><div className="ebd-weekly-summary-stats"><article><strong>{entries.length}</strong><span>atividades entregues</span></article><article><strong>{uniqueDays}/6</strong><span>dias com atividade</span></article></div>{entries.length?<ol className="ebd-weekly-summary-list">{entries.slice().sort((a,b)=>a.created_at.localeCompare(b.created_at)).map((entry,index)=>{const activity=activityById.get(entry.activity_id??"");const title=activity?.title??"Atividade entregue";const date=studyDayFormatter.format(new Date(entry.created_at));return <li key={`${entry.activity_id??"legacy"}-${entry.created_at}-${index}`}><span className="ebd-weekly-summary-icon">{(entry.kind??activity?.kind??"").includes("video")?<Play size={16}/>:<BookOpen size={16}/>}</span><div><strong>{title}</strong><small>{ebdDate(date)} · {kindLabel[activity?.kind??entry.kind??""]??"Atividade"}</small></div><span className={`ebd-weekly-summary-status${entry.status==="graded"?" is-graded":""}`}>{entry.status==="graded"?`Nota ${entry.score??"—"}`:"Entregue"}</span></li>;})}</ol>:<p className="church-empty">Nenhuma atividade entregue nesta semana.</p>}</>;})()}</section></ModuleDialog>}
   </section>;
 }
 

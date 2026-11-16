@@ -12,6 +12,7 @@ import {calendarDate} from "./agenda-calendar-model";
 import {WeekendServices} from "./weekend-services";
 import {useAgendaCommitments} from "./agenda-commitments";
 import {AgendaCommitmentCard} from "./agenda-commitment-card";
+import {Cake,Megaphone,CalendarDays} from "lucide-react";
 export function MemberHome({
   name,
   personId,
@@ -59,15 +60,15 @@ export function MemberHome({
   return (
     <>
       <section className="member-intro">
-        <p className="member-welcome">
+        <p className="member-welcome member-welcome-emphasis">
           Olá, {name.split(" ")[0]}. Que bom ter você aqui.
         </p>
-        <h1>Igreja Cristã no Alto da Boa Vista</h1>
       </section>
       <WeekendServices />
+      <div className="member-community-highlights">
       {(news.isPending||news.isError||!!news.data?.length)&&<section className="member-announcements">
         <div className="member-heading">
-          <h2>Comunicados</h2>
+          <h2><Megaphone size={16} aria-hidden="true"/>Comunicados</h2>
           <button onClick={() => onNavigate("content")}>
             Ver conteúdos <ChevronRight size={15} />
           </button>
@@ -92,6 +93,7 @@ export function MemberHome({
         )}
       </section>}
       <Birthdays compact onNavigate={onNavigate} />
+      </div>
       {(events.isPending||events.isError||!!events.data?.length)&&<section className="member-program">
         <div className="member-heading">
           <h2>Próximo evento</h2>
@@ -119,7 +121,7 @@ export function MemberHome({
         )}
       </section>}
       <section className="member-program member-commitments">
-        <div className="member-heading"><h2>Próximos compromissos</h2><button onClick={() => onNavigate("agenda")}>Ver agenda <ChevronRight size={15}/></button></div>
+        <div className="member-heading"><h2 className="member-commitments-title"><CalendarDays size={18} aria-hidden="true"/>Próximos compromissos</h2><button onClick={() => onNavigate("agenda")}>Ver agenda <ChevronRight size={15}/></button></div>
         {commitments.pending ? <p className="church-empty">Carregando seus compromissos…</p> : commitments.errors.length ? <div className="church-empty" role="alert"><p>Não foi possível carregar alguns compromissos.</p><button className="text-btn" onClick={commitments.retry}>Tentar novamente</button></div> : commitments.upcoming.filter(item=>item.kind==="schedule").length ? <div className="member-news">{commitments.upcoming.filter(item=>item.kind==="schedule").slice(0,3).map(item=><AgendaCommitmentCard key={item.id} item={item} onNavigate={onNavigate}/>)}</div> : <p className="church-empty">Você não tem compromissos próximos cadastrados.</p>}
       </section>
       {selectedEvent&&<EventDialog event={selectedEvent} personId={personId} onLogin={()=>onNavigate("profile")} onClose={()=>setSelectedEvent(null)}/>}

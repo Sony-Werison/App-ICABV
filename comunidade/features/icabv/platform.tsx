@@ -31,15 +31,13 @@ import {
   DoorOpen,
   LoaderCircle,
 } from "lucide-react";
-import { WorkspaceNavigation, SearchField, searchText } from "./presentation";
+import { SearchField, searchText } from "./presentation";
 import { AccountStatus, actionError } from "./account-status";
 import { SchedulesPage } from "./schedules-page";
 import { MemberHome } from "./member-home";
 import { ManagementHome } from "./management-home";
 import {
   ChevronRight,
-  LayoutDashboard,
-  ArrowUpRight,
 } from "lucide-react";
 import { TextLibrary } from "./text-library";
 import { supabase } from "./supabase";
@@ -83,6 +81,8 @@ const routeTabs = new Set([
   "manage",
   "people",
   "core-manage",
+  "management-agenda",
+  "management-announcements",
   "finance",
   "records",
 ]);
@@ -230,6 +230,16 @@ function Shell({
     capabilities.ebd_manager ||
     capabilities.ebd_teacher ||
     capabilities.ebd_observer;
+  const managementLinks = [
+    ...(managePeople ? [{ id: "people", label: "Membros", description: "Cadastros e perfis", icon: UsersRound }] : []),
+    ...(managePeople ? [{ id: "management-agenda", label: "Agenda", description: "Eventos e escalas", icon: CalendarDays }] : []),
+    ...(managePeople ? [{ id: "management-announcements", label: "Comunicados", description: "Avisos da igreja", icon: MessageCircleHeart }] : []),
+    ...(managePeople ? [{ id: "records", label: "Registros", description: "Pessoas e atividades", icon: ClipboardList }] : []),
+    ...(finance ? [{ id: "finance", label: "Financeiro", description: "Entradas e relatórios", icon: Wallet }] : []),
+    ...(capabilities.louvor_manager ? [{ id: "louvor", label: "Louvor", description: "Músicas e escalas", icon: Music2 }] : []),
+    ...(capabilities.ebd_manager || capabilities.ebd_teacher || capabilities.ebd_observer ? [{ id: "ebd", label: "Escola Dominical", description: "Classes e atividades", icon: GraduationCap }] : []),
+    ...(managePeople ? [{ id: "core-manage", label: "Conteúdos", description: "Materiais e publicações", icon: BookOpen }] : []),
+  ];
   function navigate(next: string) {
     setNoticeTarget(null);
     const nextWorkspace =
@@ -312,114 +322,25 @@ function Shell({
   return (
     <div
       className={
-        "icabv-platform " + (managementView ? "church-admin" : "church-member")
+        "icabv-platform " + (demo ? "icabv-device-preview " : "") + (managementView ? "church-admin" : "church-member")
       }
     >
       <a className="ui-skip-link" href="#main-content">Ir para o conteúdo</a>
-      {managementView && (
-        <aside className="church-admin-sidebar">
-          <button
-            type="button"
-            className="admin-church-brand"
-            onClick={() => navigate("manage")}
-          >
-            <Image
-              src="/logo-icabv.png"
-              alt="ICABV"
-              width={38}
-              height={38}
-              unoptimized
-            />
-            <span>
-              ICABV<small>GESTÃO DA IGREJA</small>
-            </span>
-          </button>
-          <div className="admin-workspace">
-            <span className="workspace-mark">I</span>
-            <div>
-              <strong>Alto da Boa Vista</strong>
-              <small>Espaço da igreja</small>
-            </div>
-          </div>
-          <WorkspaceNavigation key={tab} current={tab} onNavigate={navigate} items={[
-              {
-                id: "manage",
-                label: "Visão geral",
-                icon: LayoutDashboard,
-                show: true,
-              },
-              {
-                id: "people",
-                label: "Pessoas",
-                icon: UsersRound,
-                show: managePeople,
-              },
-              {
-                id: "core-manage",
-                label: "Eventos e conteúdos",
-                icon: CalendarDays,
-                show: managePeople,
-              },
-              { id: "food-drive", label: "Cestas básicas", icon: ShoppingBasket, show: managePeople },
-              { id: "birthdays", label: "Aniversariantes", icon: Cake, show: managePeople },
-              { id: "prayers", label: "Pedidos de oração", icon: MessageCircleHeart, show: managePeople },
-              {
-                id: "community",
-                label: "Grupos e encontros",
-                icon: UsersRound,
-                show: managePeople,
-              },
-              {
-                id: "ministries",
-                label: "Equipes e escalas",
-                icon: ClipboardList,
-                show: managePeople,
-              },
-              {
-                id: "records",
-                label: "Finanças e arquivo",
-                icon: BookOpen,
-                show: managePeople || finance,
-              },
-              {
-                id: "louvor",
-                label: "Louvor",
-                icon: Music2,
-                show: capabilities.louvor_manager,
-              },
-              {
-                id: "ebd",
-                label: "Painel EBD",
-                icon: GraduationCap,
-                show:
-                  capabilities.ebd_manager ||
-                  capabilities.ebd_teacher ||
-                  capabilities.ebd_observer,
-              },
-              {
-                id: "finance",
-                label: "Simulador financeiro",
-                icon: Wallet,
-                show: finance,
-              },
-            ]
-              .filter((n) => n.show)} />
-          <div className="admin-sidebar-foot">
-            <button onClick={() => navigate("home")}>
-              <ArrowUpRight size={17} />
-              Abrir app da igreja
-            </button>
-            <span className="admin-account-avatar">{name[0]}</span>
-            <div>
-              <strong>{name}</strong>
-              <small>{admin ? "Administrador" : "Gestão"}</small>
-            </div>
-          </div>
-        </aside>
-      )}
       <header className="icabv-header">
         <div className="icabv-brand">
-        {managementView?<nav className="management-breadcrumb" aria-label="Localização no painel"><button className="text-btn" onClick={()=>navigate('manage')}>Gestão</button><ChevronRight size={15}/><span>{({'manage':'Visão geral','people':'Pessoas','core-manage':'Eventos e conteúdos','community':'Grupos e encontros','ministries':'Equipes e escalas','records':'Finanças e arquivo','finance':'Simulador financeiro','prayers':'Pedidos de oração','birthdays':'Aniversariantes','food-drive':'Cestas básicas','louvor':'Louvor','ebd':'Painel EBD'} as Record<string,string>)[tab]??'Gestão'}</span></nav>:
+        {managementView?<a href="/gestao?tab=manage" className="icabv-identity">
+          <Image
+            unoptimized
+            src="/logo-icabv.png"
+            alt="Logo ICABV"
+            width={52}
+            height={52}
+          />
+          <span>
+            <strong>ICABV</strong>
+            <small>Igreja Cristã no Alto da Boa Vista</small>
+          </span>
+        </a>:
         <a href="/app" className="icabv-identity">
           <Image
             unoptimized
@@ -435,27 +356,7 @@ function Shell({
         </a>}
         </div>
         <div className="icabv-header-actions">
-          {managementView && (
-            <button
-              className="icon-btn admin-open-member"
-              aria-label="Abrir app da igreja"
-              title="Abrir app da igreja"
-              onClick={() => navigate("home")}
-            >
-              <Home size={19} />
-            </button>
-          )}
           {session && !demo && <SyncStatus key={session.user.id} userId={session.user.id} />}
-          {session && hasManagement && !managementView && (
-            <button
-              className="icon-btn"
-              aria-label="Abrir gestão"
-              title="Abrir gestão"
-              onClick={() => navigate("manage")}
-            >
-              <Settings size={19} />
-            </button>
-          )}
           {themeButton}
           {session && (
             <NotificationBell onNavigate={(tab, section, key) => { navigate(tab); setNoticeTarget({ tab, section, key }); }} userId={session.user.id} />
@@ -480,6 +381,7 @@ function Shell({
           value={{ ready: !!profile.data, manager: managePeople }}
         >
           {demo && <DemoBanner />}
+          {managementView && tab !== "manage" && <button type="button" className="management-home-return" onClick={() => navigate("manage")}><ChevronRight size={16} aria-hidden="true"/> Início da gestão</button>}
           {!ready ? (
             <div className="icabv-startup-loading" role="status" aria-label="Carregando aplicativo">
               <LoaderCircle className="icabv-startup-spinner" size={42} strokeWidth={1.7} aria-hidden="true" />
@@ -537,10 +439,17 @@ function Shell({
                 </button>
               </form>
               {!supabase && (
-                <p role="alert">
-                  Configure a URL e a chave pública do Supabase para habilitar o
-                  acesso.
-                </p>
+                <>
+                  <p role="alert">
+                    Configure a URL e a chave pública do Supabase para habilitar o
+                    acesso real.
+                  </p>
+                  {process.env.NODE_ENV === "development" && (
+                    <a className="secondary" href="/demo?perfil=membro">
+                      Explorar demonstração com dados fictícios
+                    </a>
+                  )}
+                </>
               )}
             </section>
           ) : reset ? (
@@ -606,7 +515,23 @@ function Shell({
             </section>
           ) : (
             <>
-              {tab === "home" ? (
+              {managementView && tab === "manage" ? (
+                <section className="management-menu-page" aria-labelledby="management-menu-title">
+                  <header className="management-menu-heading">
+                    <h1 id="management-menu-title">Gestão da igreja</h1>
+                    <button type="button" className="management-return-app" onClick={() => navigate("home")}><Home size={17}/> Voltar ao app da igreja</button>
+                  </header>
+                  <nav className="management-menu-grid" aria-label="Áreas de gestão">
+                    {managementLinks.map((link) => (
+                      <button type="button" className="management-menu-card" key={link.id} aria-current={tab === link.id ? "page" : undefined} onClick={() => navigate(link.id)}>
+                        <span className="management-menu-icon"><link.icon size={23} aria-hidden="true" /></span>
+                        <strong>{link.label}</strong>
+                        <small>{link.description}</small>
+                      </button>
+                    ))}
+                  </nav>
+                </section>
+              ) : tab === "home" ? (
                 <>
                   <MemberHome name={name} personId={profile.data?.id} onNavigate={navigate} />
                 </>
@@ -701,15 +626,11 @@ function Shell({
                   <PersonContacts personId={profile.data!.id} />
                 </section>
               ) : tab === "manage" && hasManagement ? (
-                <>
-                  <ManagementHome
-                    name={name}
-                    people={managePeople}
-                    finance={finance}
-                    capabilities={capabilities}
-                    onNavigate={navigate}
-                  />
-                </>
+                <ManagementHome name={name} people={managePeople} finance={finance} capabilities={capabilities} onNavigate={navigate} />
+              ) : tab === "management-agenda" && managePeople ? (
+                <ManagementAgenda personId={profile.data!.id} admin={admin} manager={managePeople} />
+              ) : tab === "management-announcements" && managePeople ? (
+                <CoreManagement postsOnly/>
               ) : tab === "people" && managePeople ? (
                 <People busy={busy} run={run} admin={admin} />
               ) : tab === "core-manage" && managePeople ? (
@@ -737,14 +658,17 @@ function Shell({
       </main>
       {session && !reset && profile.data && !managementView && (
         <nav className="icabv-bottom" aria-label="Navegação do aplicativo">
-          {[
+          {(managementView
+            ? [{ id: "manage", label: "Gestão", icon: Settings }]
+            : [
             { id: "home", label: "Início", icon: Home },
             { id: "agenda", label: "Agenda", icon: CalendarDays },
             { id: "louvor", label: "Louvor", icon: Music2 },
             { id: "schedules", label: "Escalas", icon: ClipboardList },
             { id: "visits", label: "Visitas", icon: DoorOpen },
             { id: "ebd", label: "EBD", icon: GraduationCap },
-          ].map((l) => (
+            ...(hasManagement ? [{ id: "manage", label: "Gestão", icon: Settings }] : []),
+          ]).map((l) => (
             <button
               key={l.id}
               aria-current={tab === l.id ? "page" : undefined}
@@ -784,6 +708,28 @@ function DemoBanner() {
       </div>
     </aside>
   );
+}
+
+function ManagementPlaceholder({ title, description }: { title: string; description: string }) {
+  return (
+    <section className="icabv-card management-placeholder">
+      <span className="eyebrow">EM CONSTRUÇÃO</span>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </section>
+  );
+}
+
+function ManagementAgenda({personId,admin,manager}:{personId:string;admin:boolean;manager:boolean}) {
+  const [section,setSection]=useState<"events"|"scales">("events");
+  return <section className="management-agenda-page" aria-labelledby="management-agenda-title">
+    <header className="management-agenda-heading"><span className="eyebrow">PLANEJAMENTO DA IGREJA</span><h1 id="management-agenda-title">Gestão de agenda</h1><p>Organize eventos e escalas da comunidade.</p></header>
+    <nav className="management-agenda-tabs" aria-label="Seções da gestão de agenda">
+      <button type="button" aria-current={section==="events"?"page":undefined} onClick={()=>setSection("events")}><CalendarDays size={17} aria-hidden="true"/> Eventos</button>
+      <button type="button" aria-current={section==="scales"?"page":undefined} onClick={()=>setSection("scales")}><ClipboardList size={17} aria-hidden="true"/> Escalas de culto</button>
+    </nav>
+    {section==="events"?<CoreManagement eventsOnly/>:<Worship key="management-agenda-worship" manager={manager} personId={personId} admin={admin} initialSection="Escalas"/>}
+  </section>;
 }
 
 function MemberMenu({

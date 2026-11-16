@@ -40,6 +40,7 @@ import {kindLabel,ebdToday,ebdDate} from "./ebd-ui-model";
 import {GraduationCap,ClipboardCheck,MessageSquare,BookOpen,Check,UserRound,UsersRound,Settings,ArrowLeft} from "lucide-react";
 
 const today = ebdToday;
+const reportMonthFormatter=new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"});
 const ebdRoleOptions = [
   { role:"student", label:"Aluno", description:"Acesse atividades, aulas e seu histórico.", icon:UserRound },
   { role:"teacher", label:"Professor", description:"Gerencie atividades, chamadas, gravações e histórico.", icon:GraduationCap },
@@ -124,20 +125,19 @@ export function Ebd({
       {!viewRole ? <section className="icabv-card ebd-profile-picker" aria-labelledby="ebd-profile-title">
         <span className="church-label"><GraduationCap size={15} aria-hidden="true"/> ESCOLA BÍBLICA DOMINICAL</span>
         <h1 id="ebd-profile-title">Escolha seu perfil de acesso</h1>
-        <p>Selecione como deseja acessar a Escola Bíblica Dominical.</p>
         {profiles.isPending&&<p role="status">Carregando seus perfis…</p>}
         {profiles.isError&&<p role="alert">Não foi possível carregar seus perfis da EBD. Tente novamente.</p>}
         <div className="ebd-profile-options">{ebdRoleOptions.map(option=>{
           const available=profileRoles.includes(option.role);
           const Icon=option.icon;
           return <button type="button" key={option.role} className={`ebd-profile-option${available?"":" is-unavailable"}`} disabled={!available||profiles.isPending} aria-disabled={!available} onClick={()=>chooseRole(option.role)}>
-            <Icon size={28} strokeWidth={1.8} aria-hidden="true"/><strong>{option.label}</strong><span>{option.description}</span>{!available&&<small>Sem acesso neste perfil</small>}
+            <Icon size={28} strokeWidth={1.8} aria-hidden="true"/><strong>{option.label}</strong><span>{option.description}</span>
           </button>;
         })}</div>
         {!profiles.isPending&&profiles.isSuccess&&!profileRoles.length&&<p>Seu acesso à EBD ainda não está vinculado a um perfil. Peça à secretaria que confirme seu vínculo.</p>}
       </section> : <>
         {viewRole==="teacher"?<section className="ebd-teacher-navigation" aria-label="Navegação do professor">
-          <div className="ebd-attendance-role ebd-profile-pill">Professor</div>
+          <div className="ebd-attendance-role ebd-profile-pill"><strong>Professor</strong><p className="ebd-teacher-class" aria-label="Turma do professor">{c?`Turma: ${c.name}`:"Sua turma ainda não está vinculada."}</p></div>
           <button type="button" className="secondary ebd-profile-back" onClick={openRolePicker}><ArrowLeft size={16} aria-hidden="true"/>Voltar à seleção de perfil</button>
           <ModuleTabs current={tab} onChange={requestTabChange} label="Áreas da EBD" unified tabs={roleTabs}/>
         </section>:<>
@@ -160,7 +160,7 @@ export function Ebd({
           <EbdSettings classes={classes.data ?? []} admin={admin} />
         ) : (
           <>
-            {viewRole==="teacher"?<p className="ebd-teacher-class" aria-label="Turma do professor">{c?`Turma: ${c.name}`:"Sua turma ainda não está vinculada."}</p>:<label className="icabv-field ebd-class-picker">
+            {viewRole!=="teacher"&&<label className="icabv-field ebd-class-picker">
               Turma
               <select
                 value={c?.id ?? ""}
@@ -236,9 +236,9 @@ function ClassWorkspace({
 }) {
   const [reviewOpen,setReviewOpen]=useState(false);
   const staffActivityView=tab==="Atividades"&&(viewRole==="teacher"||viewRole==="management");
-  const needsStudy=( ["Meu painel","Atividades","Histórico","Relatórios","Correções"].includes(tab)&&!staffActivityView)||reviewOpen;
-  const needsCurriculum=needsStudy||staffActivityView||tab==="Módulos e atividades";
-  const needsAttendance=["Meu painel","Relatórios"].includes(tab)||(viewRole==="teacher"&&["Chamada","Chamadas","Diário e presença","Histórico"].includes(tab));
+  const needsStudy=( ["Meu painel","Atividades","Relatórios","Correções"].includes(tab)&&!staffActivityView)||(tab==="Histórico"&&viewRole!=="teacher")||reviewOpen;
+  const needsCurriculum=needsStudy||staffActivityView||tab==="Módulos e atividades"||(viewRole==="teacher"&&tab==="Histórico");
+  const needsAttendance=["Meu painel","Relatórios"].includes(tab)||(viewRole==="teacher"&&["Chamada","Chamadas","Diário e presença"].includes(tab));
   const members = useQuery({
     queryKey: ["modules", "ebd-directory", c.id],
     queryFn: () =>
@@ -379,8 +379,8 @@ function ClassWorkspace({
                   query={recordings}
                 />
               )}
-              {tab === "Histórico" && teacher&&<EbdAnnualHistoryChart members={students.filter(student=>student.role==="student")} submissions={delivered} attendance={attendance.data??[]} activities={lessons}/>}
-              {tab === "Histórico" && (
+              {tab === "Histórico" && teacher&&<EbdAnnualHistoryChart classId={c.id} className={c.name} classStartDate={c.start_date} members={students} activities={lessons}/>}
+              {tab === "Histórico" && !teacher&&(
                 <SubmissionHistory
                   submissions={delivered}
                   activities={lessons}
@@ -810,30 +810,39 @@ function SubmissionHistory({
     </>
   );
 }
-function EbdAnnualHistoryChart({members,submissions,attendance,activities}:{members:EbdMember[];submissions:Submission[];attendance:Attendance[];activities:Activity[]}){
-  const thisYear=today().slice(0,4),[year,setYear]=useState(thisYear),[personId,setPersonId]=useState("");
+function EbdAnnualHistoryChart({classId,className,classStartDate,members,activities}:{classId:string;className:string;classStartDate:string;members:EbdMember[];activities:Activity[]}){
+  const thisYear=today().slice(0,4),firstYear=Math.max(Number(classStartDate?.slice(0,4))||Number(thisYear),Number(thisYear)-20),[year,setYear]=useState(thisYear),[personId,setPersonId]=useState("");
   const orderedMembers=[...members].sort((a,b)=>a.full_name.localeCompare(b.full_name,"pt-BR")),person=orderedMembers.find(member=>member.person_id===personId)??orderedMembers[0];
-  const years=[...new Set([thisYear,...submissions.map(item=>item.created_at.slice(0,4)),...attendance.map(item=>item.lesson_date.slice(0,4))])].filter(value=>/^\d{4}$/.test(value)).sort((a,b)=>b.localeCompare(a));
-  const excludedKinds=["class_evaluation","sunday_presence","daily_grade","weekly_grade"];
-  const entries=person?submissions.filter(item=>item.person_id===person.person_id&&item.created_at.startsWith(year+"-")&&!excludedKinds.includes(activities.find(activity=>activity.id===item.activity_id)?.kind??"")):[];
-  const monthly=Array.from({length:12},(_,index)=>{
-    const month=year+"-"+String(index+1).padStart(2,"0"),lessons=person?attendance.filter(item=>item.person_id===person.person_id&&item.lesson_date.startsWith(month)):[];
-    return {label:new Intl.DateTimeFormat("pt-BR",{month:"short",timeZone:"UTC"}).format(new Date(Date.UTC(Number(year),index,1))).replace(".",""),activities:entries.filter(item=>item.created_at.startsWith(month)).length,present:lessons.filter(item=>item.present).length,lessons:lessons.length};
-  });
-  const maxActivities=Math.max(1,...monthly.map(item=>item.activities));
+  const years=Array.from({length:Number(thisYear)-firstYear+1},(_,index)=>String(Number(thisYear)-index)),kindById=new Map(activities.map(activity=>[activity.id,activity.kind]));
+  const report=useQuery({queryKey:["modules","ebd-student-report",classId,person?.person_id,year],enabled:!!person,staleTime:60_000,queryFn:async()=>{
+    if(!person)return [] as {label:string;activities:number;attendance:number;present:number;lessons:number}[];
+    const from=`${year}-01-01T00:00:00-03:00`,to=`${year}-09-01T00:00:00-03:00`,excluded=new Set(["class_evaluation","sunday_presence","daily_grade","weekly_grade"]);
+    const readSubmissions=async()=>{const rows:{activity_id:string;created_at:string}[]=[];for(let offset=0;;offset+=500){const result=await supabase!.from("ebd_submissions").select("activity_id,created_at").eq("person_id",person.person_id).gte("created_at",from).lt("created_at",to).order("created_at").range(offset,offset+499);if(result.error)throw result.error;rows.push(...result.data);if(result.data.length<500)break;}return rows;};
+    const readLegacy=async()=>{const rows:{kind:string;created_at:string}[]=[];for(let offset=0;;offset+=500){const result=await supabase!.from("ebd_legacy_history").select("kind,created_at").eq("class_id",classId).eq("person_id",person.person_id).gte("created_at",from).lt("created_at",to).order("created_at").range(offset,offset+499);if(result.error)throw result.error;rows.push(...result.data);if(result.data.length<500)break;}return rows;};
+    const readAttendance=async()=>{const rows:{lesson_date:string;present:boolean}[]=[];for(let offset=0;;offset+=500){const result=await supabase!.from("ebd_attendance").select("lesson_date,present").eq("class_id",classId).eq("person_id",person.person_id).gte("lesson_date",`${year}-01-01`).lt("lesson_date",`${year}-09-01`).order("lesson_date").range(offset,offset+499);if(result.error)throw result.error;rows.push(...result.data);if(result.data.length<500)break;}return rows;};
+    const [submitted,legacy,attendance]=await Promise.all([readSubmissions(),readLegacy(),readAttendance()]);
+    const months=Array.from({length:8},(_,index)=>{const month=`${year}-${String(index+1).padStart(2,"0")}`,label=new Intl.DateTimeFormat("pt-BR",{month:"short",timeZone:"UTC"}).format(new Date(Date.UTC(Number(year),index,1))).replace(".","");return {month,label,activities:0,attendance:0,present:0,lessons:0};});
+    const monthMap=new Map(months.map(item=>[item.month,item]));
+    for(const row of submitted)if(kindById.has(row.activity_id)&&!excluded.has(kindById.get(row.activity_id)??"")){const month=reportMonthFormatter.format(new Date(row.created_at)).slice(0,7),item=monthMap.get(month);if(item)item.activities++;}
+    for(const row of legacy)if(!excluded.has(row.kind)){const month=reportMonthFormatter.format(new Date(row.created_at)).slice(0,7),item=monthMap.get(month);if(item)item.activities++;}
+    for(const row of attendance){const item=monthMap.get(row.lesson_date.slice(0,7));if(item){item.lessons++;if(row.present)item.present++;}}
+    for(const item of months)item.attendance=item.lessons?Math.round(item.present/item.lessons*100):0;
+    return months;
+  }});
   return <section className="icabv-card ebd-annual-history" aria-labelledby="ebd-annual-history-title">
-    <div className="module-row"><div><h2 id="ebd-annual-history-title">Presenças e atividades no ano</h2><p>Resumo mensal por aluno.</p></div><div className="module-filters"><label className="icabv-field">Aluno<select value={person?.person_id??""} onChange={event=>setPersonId(event.target.value)} disabled={!orderedMembers.length}>{orderedMembers.map(member=><option key={member.person_id} value={member.person_id}>{member.full_name}</option>)}</select></label><label className="icabv-field">Ano<select value={year} onChange={event=>setYear(event.target.value)}>{years.map(value=><option key={value} value={value}>{value}</option>)}</select></label></div></div>
-    {!person?<p className="church-empty">Nenhum aluno vinculado a esta turma.</p>:<>
-      <div className="ebd-history-legend"><span><i className="is-activity"/>Atividades enviadas</span><span><i className="is-presence"/>Presença nas aulas</span></div>
-      <div className="ebd-annual-chart" role="list" aria-label={`${person.full_name}: atividades e presenças por mês em ${year}`}>
-        {monthly.map(item=>{const presence=item.lessons?Math.round(item.present/item.lessons*100):0,activityHeight=Math.round(item.activities/maxActivities*100);return <div className="ebd-annual-month" role="listitem" key={item.label}>
-          <div className="ebd-annual-bars" role="img" aria-label={`${item.label}: ${item.activities} atividades, ${item.present} presenças em ${item.lessons} aulas`} title={`${item.label}: ${item.activities} atividades · ${item.present}/${item.lessons} presenças`}><span className="is-activity" style={{height:`${activityHeight}%`}}/><span className="is-presence" style={{height:`${presence}%`}}/></div>
-          <strong>{item.label}</strong><small>{item.activities} · {item.present}/{item.lessons}</small>
-        </div>;})}
-      </div>
-      <p className="ebd-annual-chart-note">Atividades · presenças/aulas registradas</p>
-    </>}
+    <header className="ebd-report-heading"><div><span className="church-label">{className}</span><h2 id="ebd-annual-history-title">Relatório de atividades</h2></div><div className="ebd-report-filters"><label className="icabv-field">Aluno<select value={person?.person_id??""} onChange={event=>setPersonId(event.target.value)} disabled={!orderedMembers.length}>{orderedMembers.map(member=><option key={member.person_id} value={member.person_id}>{member.full_name}</option>)}</select></label><label className="icabv-field">Ano<select value={year} onChange={event=>setYear(event.target.value)}>{years.map(value=><option key={value} value={value}>{value}</option>)}</select></label></div></header>
+    {!person?<p className="church-empty">Nenhum aluno vinculado a esta turma.</p>:report.isError?<p className="ebd-weekly-error" role="alert">Não foi possível carregar os gráficos deste aluno. Tente novamente.</p>:<div className="ebd-report-charts" aria-busy={report.isPending}>
+      {report.isPending?<p className="ebd-weekly-status" role="status">Carregando gráficos…</p>:<><EbdMonthlyLineChart title="Atividades entregues" months={report.data??[]} valueKey="activities" format={value=>String(value)} detail={month=>`${month.activities} atividades entregues em ${month.label}.`} color="activity"/><EbdMonthlyLineChart title="Presença nas aulas" months={report.data??[]} valueKey="attendance" format={value=>`${value}%`} detail={month=>`${month.present} presenças em ${month.lessons} aulas · ${month.attendance}% de frequência em ${month.label}.`} color="attendance"/></>}
+    </div>}
   </section>;
+}
+
+function EbdMonthlyLineChart({title,months,valueKey,format,detail,color}:{title:string;months:{label:string;activities:number;attendance:number;present:number;lessons:number}[];valueKey:"activities"|"attendance";format:(value:number)=>string;detail:(month:{label:string;activities:number;attendance:number;present:number;lessons:number})=>string;color:"activity"|"attendance"}){
+  const [selected,setSelected]=useState<number|null>(null),width=480,height=250,left=48,right=16,top=24,bottom=55,plotWidth=width-left-right,plotHeight=height-top-bottom,values=months.map(month=>month[valueKey]),maximum=valueKey==="attendance"?100:Math.max(1,...values),points=values.map((value,index)=>({x:left+(months.length<=1?0:index*plotWidth/(months.length-1)),y:top+plotHeight-(value/maximum)*plotHeight,value})),path=points.map((point,index)=>`${index?"L":"M"}${point.x},${point.y}`).join(" ");
+  return <section className={`ebd-report-line-chart is-${color}`} aria-label={title}><h3>{title}</h3><svg viewBox={`0 0 ${width} ${height}`} role="group" aria-label={`${title} por mês, de janeiro a agosto`}>
+    {[0,0.5,1].map(fraction=>{const y=top+plotHeight-plotHeight*fraction,label=Math.round(maximum*fraction);return <g key={fraction}><line className="ebd-chart-gridline" x1={left} x2={width-right} y1={y} y2={y}/><text className="ebd-chart-y-label" x={left-9} y={y+5} textAnchor="end">{format(label)}</text></g>;})}
+    <path className="ebd-chart-line" d={path}/>{points.map((point,index)=><g key={months[index].label} className={`ebd-chart-month${selected===index?" is-selected":""}`} role="button" tabIndex={0} aria-pressed={selected===index} aria-label={`${months[index].label}: ${format(point.value)}. Clique para ver detalhes.`} onClick={()=>setSelected(selected===index?null:index)} onKeyDown={event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();setSelected(selected===index?null:index);}}}><circle className="ebd-chart-point" cx={point.x} cy={point.y} r={5}><title>{`${months[index].label}: ${format(point.value)}`}</title></circle><text className="ebd-chart-x-label" x={point.x} y={height-18} textAnchor="middle">{months[index].label}</text></g>)}
+  </svg>{selected!==null&&<p className="ebd-chart-detail" aria-live="polite">{detail(months[selected])}</p>}</section>;
 }
 function Answers({
   submission: s,
@@ -954,7 +963,10 @@ function AttendanceBook({
   useEffect(()=>{setTopic(session?.topic??"");setDraft({});},[c.id,date,session?.id,session?.topic]);
   const recordFor=(student:EbdMember)=>attendance.find(item=>item.person_id===student.person_id&&item.lesson_date===date);
   const valueFor=(student:EbdMember):AttendanceDraft=>draft[student.person_id]??{present:recordFor(student)?.present??false,criteria:recordFor(student)?.criteria??{}};
-  const criteria=c.criteria.filter((criterion)=>criterion.trim());
+  const criteria=c.criteria.filter((criterion)=>{
+    const normalized=criterion.trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR");
+    return normalized!=="presenca";
+  });
   const topicDirty=topic!==(session?.topic??"");
   const hasChanges=Object.keys(draft).length>0||topicDirty;
   useEffect(()=>{onDirtyChange(hasChanges);return()=>onDirtyChange(false);},[hasChanges,onDirtyChange]);
@@ -1008,15 +1020,14 @@ function AttendanceBook({
             <label className="icabv-field">Professor<input value={teacherName} readOnly/></label>
             <label className="icabv-field ebd-lesson-topic">Tema da aula<input value={topic} maxLength={200} disabled={action.busy} aria-invalid={!!topicWarning} aria-describedby={topicWarning?"ebd-topic-warning":undefined} onChange={event=>{setTopic(event.target.value);if(event.target.value.trim())setTopicWarning("");}} placeholder="Digite o tema da aula"/></label>
           </div>
-          <div className="ebd-attendance-counts" role="status"><span>{students.filter(student=>marked(student,null)).length} presentes</span><span>{students.length-students.filter(student=>marked(student,null)).length} ausentes</span>{hasChanges&&<span>Alterações pendentes</span>}</div>
           <div className="ebd-attendance-table-scroll" role="region" aria-label={`Chamada de ${c.name} em ${date}`} tabIndex={0}>
             <table className="ebd-attendance-table" style={{"--ebd-criterion-count":Math.max(criteria.length,1)} as React.CSSProperties}><caption className="sr-only">Presença e critérios da aula de {date}</caption><thead><tr><th scope="col">Aluno</th><th scope="col"><span>Presença</span><button type="button" className="ebd-mark-column" onClick={()=>toggleColumn(null)} disabled={!students.length||action.busy} aria-pressed={students.length>0&&students.every(student=>marked(student,null))} aria-label={`${students.length>0&&students.every(student=>marked(student,null))?"Desmarcar":"Marcar"} presença de todos`} title="Marcar ou desmarcar todos"><Check size={13} aria-hidden="true"/></button></th>{criteria.map((criterion,index)=><th scope="col" key={`${criterion}-${index}`}><span title={criterion}>{criterion}</span><button type="button" className="ebd-mark-column" onClick={()=>toggleColumn(criterion)} disabled={!students.length||action.busy} aria-pressed={students.length>0&&students.every(student=>marked(student,criterion))} aria-label={`${students.length>0&&students.every(student=>marked(student,criterion))?"Desmarcar":"Marcar"} ${criterion} de todos`} title="Marcar ou desmarcar todos"><Check size={13} aria-hidden="true"/></button></th>)}</tr></thead><tbody>
               {[...students].sort((a,b)=>a.full_name.localeCompare(b.full_name,"pt-BR")).map(student=><tr key={student.person_id}><th scope="row">{student.full_name}</th><td>{markButton(student,null,"presença")}</td>{criteria.map((criterion)=><td key={criterion}>{markButton(student,criterion,criterion)}</td>)}</tr>)}
             </tbody></table>
           </div>
           {!students.length&&<p className="church-empty">Vincule os alunos à turma para preencher a chamada.</p>}
-          <p className="ebd-attendance-hint">As marcações e o tema da aula ficam pendentes até serem salvos.</p>
           {topicWarning&&<p className="ebd-topic-warning" id="ebd-topic-warning" role="alert">{topicWarning}</p>}
+          <div className="ebd-attendance-counts" role="status"><span>{students.filter(student=>marked(student,null)).length} presentes</span><span>{students.length-students.filter(student=>marked(student,null)).length} ausentes</span>{hasChanges&&<span>Alterações pendentes</span>}</div>
           <button type="button" className="primary ebd-save-attendance" aria-label="Salvar chamada e tema da aula" disabled={!hasChanges||action.busy} onClick={()=>void saveAll()}>{action.busy?"Salvando…":"Salvar"}</button>
         </section>
       </ModuleState>
@@ -1219,13 +1230,12 @@ function Recordings({
   recordings: Recording[];
   query: { isPending: boolean; error: unknown; refetch: () => unknown };
 }) {
-  const [search, setSearch] = useState(""),[status,setStatus]=useState("all"),[openId,setOpenId]=useState<string|null>(null), [editing, setEditing] = useState<Recording | null | undefined>(),
+  const [search, setSearch] = useState(""),[openId,setOpenId]=useState<string|null>(null), [editing, setEditing] = useState<Recording | null | undefined>(),
     action = useModuleAction();
   return (
     <>
       {editing===undefined&&action.notice}
-      {teacher&&<button className="primary" onClick={()=>setEditing(null)}>Nova gravação</button>}
-      {teacher && editing!==undefined&&(
+            {teacher && editing!==undefined&&(
         <ModuleDialog title={editing ? "Editar gravação" : "Cadastrar gravação de aula"} onClose={()=>setEditing(undefined)}>
         {action.failed&&action.notice}
         <ModuleForm
@@ -1273,9 +1283,8 @@ function Recordings({
       )}
       <ModuleState query={query}>
         <SearchField label="Buscar aulas" value={search} onChange={setSearch} />
-        <label className="icabv-field">Situação da aula<select aria-label="Situação da aula" value={status} onChange={event=>setStatus(event.target.value)}><option value="all">Todas</option><option value="available">Com gravação</option><option value="missing">Sem gravação</option><option value="canceled">Canceladas</option></select></label>
-        <PagedList label="aulas" resetKey={c.id + search+status} empty={recordings.length ? undefined : "Nenhuma gravação disponível."}>
-        {[...recordings].reverse().filter(r => searchText(r.title + " " + r.teacher + " " + r.lesson_date).includes(searchText(search))&&(status==="all"||(status==="canceled"?r.status==="canceled":r.status!=="canceled"&&(status==="available"?safeHttps(r.url):!safeHttps(r.url))))).map((r) => (
+        <PagedList label="aulas" resetKey={c.id + search} empty={recordings.length ? undefined : "Nenhuma gravação disponível."}>
+        {[...recordings].reverse().filter(r => searchText(r.title + " " + r.teacher + " " + r.lesson_date).includes(searchText(search))).map((r) => (
           <CompactCard key={r.id} date={r.lesson_date} title={r.title} description={`${r.teacher||"Professor não informado"} · ${r.status==="canceled"?"Aula cancelada":r.published?"Publicada":"Rascunho"}`} expanded={openId===r.id} label={`${openId===r.id?"Recolher":"Ver"} aula: ${r.title}`} onClick={()=>setOpenId(openId===r.id?null:r.id)}>
             {r.status === "canceled" && r.justification && <p>Motivo: {r.justification}</p>}
             {r.status !== "canceled" && !safeHttps(r.url) && <p>Esta aula ainda não tem um link de gravação cadastrado.</p>}

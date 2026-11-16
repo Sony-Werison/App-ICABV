@@ -36,4 +36,4 @@ supabase functions deploy dispatch-push --project-ref ynkfmuseiancpnyloraf
 supabase secrets set --env-file "$env:LOCALAPPDATA\ICABV\push-secrets\dispatch.env" --project-ref ynkfmuseiancpnyloraf
 ```
 
-Depois, atualize o app e escolha **Ativar push** no sino de notificações em cada dispositivo. O envio só começa depois que as migrations, as chaves VAPID e a Edge Function estiverem publicados.
+Depois, atualize o app. A inscrição do dispositivo é tentada automaticamente no primeiro acesso; o navegador pode pedir autorização. Se a permissão já tiver sido negada ou bloqueada, use as configurações do navegador e depois **Ativar push** no sino de notificações. O envio só começa depois que as migrations, as chaves VAPID e a Edge Function estiverem publicados.

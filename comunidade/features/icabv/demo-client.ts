@@ -248,7 +248,7 @@ export function createDemoClient(): SupabaseClient {
     }
     if (name === "module_capabilities") return ok({louvor_manager:manager,ebd_manager:manager,ebd_teacher:false,ebd_observer:manager});
     if (name === "management_people") {
-      const items = tables.persons.map((p) => ({
+      const items = (tables.persons as Array<Row & { full_name: string }>).map((p) => ({
         ...p,
         membership_reviewed_at: p.id === id ? new Date().toISOString() : null,
         email: p.id === id ? "exemplo@demo.invalid" : "maria@demo.invalid",

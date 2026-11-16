@@ -29,7 +29,8 @@
     "test:agenda": "node scripts/agenda-browser-smoke.mjs",
     "test:agenda:personal": "node scripts/agenda-personal-browser-smoke.mjs",
     "test:worship": "node scripts/worship-ui-smoke.mjs",
-    "test:ebd": "node scripts/ebd-ui-smoke.mjs"
+    "test:ebd": "node scripts/ebd-ui-smoke.mjs",
+    "provision:ebd-test-users": "node --env-file-if-exists=.env.local scripts/provision-ebd-test-users.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

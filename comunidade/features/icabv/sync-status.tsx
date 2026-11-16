@@ -13,7 +13,6 @@ function changeLabel(change:PendingChange){
   return change.description;
 }
 function changeError(change:PendingChange){
-  if(change.state==="review"&&change.command.kind==="rpc"&&change.command.target==="save_visit_availability"&&change.error?.startsWith("O servidor não aceitou"))return "O servidor rejeitou o cadastro de visitas por um erro na função do banco. Atualize a migração de visitas e tente sincronizar novamente.";
   return change.error??"A alteração precisa de revisão.";
 }
 export function SyncStatus({ userId }: { userId: string }) {

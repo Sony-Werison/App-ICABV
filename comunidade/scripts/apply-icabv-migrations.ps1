@@ -1,3 +1,4 @@
+param([string]$OnlyVersion)
 $ErrorActionPreference='Stop'
 $projectRef='ynkfmuseiancpnyloraf'
 if (-not ('IcabvSupabaseCredential' -as [type])) {
@@ -26,8 +27,14 @@ try {
   @{version='202610300039';name='push_subscriptions'},
   @{version='202610300040';name='push_delivery'},
   @{version='202610310041';name='fix_visit_availability_parameter_ambiguity'},
-  @{version='202610310042';name='ebd_lesson_sessions'}
+  @{version='202610310042';name='ebd_lesson_sessions'},
+  @{version='202611040043';name='prune_expired_visit_availability'}
  )
+ if($OnlyVersion){
+  $selected=@($migrations|Where-Object{$_.version -eq $OnlyVersion})
+  if($selected.Count -ne 1){throw "Unknown ICABV migration version: $OnlyVersion"}
+  $migrations=$selected
+ }
  foreach($migration in $migrations){
   $state=Invoke-DbSql "select exists(select 1 from supabase_migrations.schema_migrations where version='$($migration.version)') as applied;"
   if($state.applied){Write-Output "$($migration.version) already applied.";continue}
